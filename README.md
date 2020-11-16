@@ -1,7 +1,7 @@
 # ISA-laboratories
 Here it is possible to find the laboratory activities of the students:
 
-Antona Gaspare è bello
+Antona Gaspare
 
 Barrera Alessandro
 
