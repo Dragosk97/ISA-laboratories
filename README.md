@@ -1,5 +1,8 @@
 # ISA-laboratories
-Here it is possible to find the laboratory activities of the students: \n
-Antona Gaspare \n
-Barrera Alessandro \n
+Here it is possible to find the laboratory activities of the students:
+
+Antona Gaspare
+
+Barrera Alessandro
+
 Liu Huicai
