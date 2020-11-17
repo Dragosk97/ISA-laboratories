@@ -1,0 +1,128 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity fsm_opt is
+    port (
+        VIN : in std_logic;
+        clk : in std_logic;
+        rst_n : in std_logic;
+        tc : in std_logic;
+        reg_rst_n : out std_logic;
+        reg_in_en : out std_logic;
+        reg_coeff_en : out std_logic;
+        reg_out_en : out std_logic;
+        reg_sample_en : out std_logic;
+        counter_en : out std_logic;
+        VOUT : out std_logic
+    );
+end entity;
+
+architecture behavioural of fsm_opt is
+
+    type state_type is (reset, idle_1, idle_2, start_pipe, exec, exec_cont, wait_state_1, wait_state_2);
+    signal present_state, next_state : state_type;
+
+	 begin
+	 
+ 		   state_assignment_proc : process(clk, rst_n)
+			begin
+				if rst_n = '0' then
+							present_state <= reset;
+				elsif rising_edge(clk) then 
+							present_state <= next_state;
+				end if;
+			end process;
+            
+            next_state_proc : process(present_state, VIN, tc)
+        begin
+   
+            case present_state is
+                when reset =>   next_state <= idle_1;
+                when idle_1 =>    if VIN = '0' then
+                                    next_state <= idle_1;
+                                else
+                                    next_state <= start_pipe;
+                                end if;
+                when start_pipe => if tc = '0' then
+                                        if VIN = '0' then
+                                            next_state <= idle_2;
+                                        else
+                                            next_state <= start_pipe;                                                        
+                                        end if ;
+                                    elsif VIN = '0' then
+                                            next_state <= wait_state_2;
+                                        else
+                                            next_state <= exec;
+                                    end if;
+                when idle_2 =>  if VIN = '0' then
+                                    next_state <= idle_2;
+                                else
+                                    next_state <= start_pipe;
+                                end if;
+                                
+                when exec =>    if VIN = '1' then
+                                    next_state <= exec_cont;
+                                else
+                                    next_state <= wait_state_1;
+                                end if;
+                when exec_cont => if VIN = '1' then
+                                    next_state <= exec_cont;
+                                else
+                                    next_state <= wait_state_1;
+                                end if;
+                when wait_state_1 => if VIN = '1' then
+                                    next_state <= exec;
+                                else
+                                    next_state <= wait_state_2;
+                                end if;
+                when wait_state_2 => if VIN = '1' then
+                                        next_state <= exec;
+                                    else
+                                        next_state <= wait_state_2;
+                                end if;
+					 when others => next_state <= reset;	
+            end case;
+       end process;
+    
+        output_gen : process(present_state)
+        begin
+            reg_rst_n <= '1';
+            reg_in_en <= '1';
+            reg_coeff_en <= '0';
+            reg_out_en <= '0';
+            reg_sample_en <= '0';
+            VOUT <= '0';
+	    counter_en <= '0';
+
+            case present_state is
+                when reset =>   reg_rst_n <= '0';
+                                reg_in_en <= '0';
+                                reg_out_en <= '0';
+                                reg_sample_en <= '0';
+
+                when idle_1 =>  reg_sample_en <= '0';
+                                reg_out_en <= '0';
+                                reg_coeff_en <= '1';
+                when idle_2 =>  reg_sample_en <= '0';
+                                reg_out_en <= '0';
+                                reg_coeff_en <= '0';
+                when start_pipe =>  reg_sample_en <= '1';
+                                    counter_en <= '1';
+                
+                when exec =>    reg_sample_en <= '1';
+                                reg_out_en <= '1';
+                						  
+                when exec_cont => reg_out_en <= '1';
+                                  reg_sample_en <= '1';
+                                  VOUT <= '1';
+                
+                when wait_state_1 => VOUT <= '1';
+
+                when wait_state_2 =>  VOUT <= '0'; --default signal assigments
+				   
+				when others => --default signal assigments
+   
+            end case;
+        end process;
+end behavioural;
