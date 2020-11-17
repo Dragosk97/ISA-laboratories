@@ -1,0 +1,1 @@
+/home/isa17/Desktop/lab1_coeff/optimized_design/netlist/FIR_opt.sdc
