@@ -1,0 +1,117 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR8_nbit7_TOT
+Version: O-2018.06-SP4
+Date   : Mon Nov  9 15:53:53 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: datapath_FIR/Reg_Sample5/q_reg[3]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: datapath_FIR/Reg_out/q_reg[6]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR8_nbit7_TOT     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  datapath_FIR/Reg_Sample5/q_reg[3]/CK (DFF_X1)           0.00       0.00 r
+  datapath_FIR/Reg_Sample5/q_reg[3]/Q (DFF_X1)            0.10       0.10 r
+  datapath_FIR/Reg_Sample5/q[3] (GenericReg_regwidth7_4)
+                                                          0.00       0.10 r
+  datapath_FIR/mult_210/a[3] (datapath_DW_mult_tc_18)     0.00       0.10 r
+  datapath_FIR/mult_210/U217/Z (BUF_X1)                   0.05       0.14 r
+  datapath_FIR/mult_210/U215/Z (XOR2_X1)                  0.08       0.22 r
+  datapath_FIR/mult_210/U311/ZN (NAND2_X1)                0.03       0.25 f
+  datapath_FIR/mult_210/U381/ZN (OAI22_X1)                0.04       0.29 r
+  datapath_FIR/mult_210/U342/ZN (INV_X1)                  0.03       0.32 f
+  datapath_FIR/mult_210/U77/S (FA_X1)                     0.13       0.45 r
+  datapath_FIR/mult_210/U76/S (FA_X1)                     0.12       0.57 f
+  datapath_FIR/mult_210/U305/ZN (NAND2_X1)                0.04       0.61 r
+  datapath_FIR/mult_210/U326/ZN (OAI21_X1)                0.04       0.64 f
+  datapath_FIR/mult_210/U247/ZN (AOI21_X1)                0.06       0.70 r
+  datapath_FIR/mult_210/U230/ZN (XNOR2_X1)                0.07       0.77 r
+  datapath_FIR/mult_210/product[9] (datapath_DW_mult_tc_18)
+                                                          0.00       0.77 r
+  datapath_FIR/add_7_root_add_0_root_add_245/B[3] (datapath_DW01_add_26)
+                                                          0.00       0.77 r
+  datapath_FIR/add_7_root_add_0_root_add_245/U75/ZN (OR2_X1)
+                                                          0.04       0.81 r
+  datapath_FIR/add_7_root_add_0_root_add_245/U79/ZN (NAND2_X1)
+                                                          0.03       0.84 f
+  datapath_FIR/add_7_root_add_0_root_add_245/U92/ZN (XNOR2_X1)
+                                                          0.06       0.90 f
+  datapath_FIR/add_7_root_add_0_root_add_245/SUM[3] (datapath_DW01_add_26)
+                                                          0.00       0.90 f
+  datapath_FIR/add_2_root_add_0_root_add_245/B[3] (datapath_DW01_add_9)
+                                                          0.00       0.90 f
+  datapath_FIR/add_2_root_add_0_root_add_245/U87/ZN (NOR2_X1)
+                                                          0.05       0.95 r
+  datapath_FIR/add_2_root_add_0_root_add_245/U90/ZN (OAI21_X1)
+                                                          0.03       0.98 f
+  datapath_FIR/add_2_root_add_0_root_add_245/U77/ZN (AOI21_X1)
+                                                          0.06       1.04 r
+  datapath_FIR/add_2_root_add_0_root_add_245/U95/ZN (OAI21_X1)
+                                                          0.03       1.07 f
+  datapath_FIR/add_2_root_add_0_root_add_245/U80/ZN (XNOR2_X1)
+                                                          0.06       1.13 f
+  datapath_FIR/add_2_root_add_0_root_add_245/SUM[5] (datapath_DW01_add_9)
+                                                          0.00       1.13 f
+  datapath_FIR/add_1_root_add_0_root_add_245/B[5] (datapath_DW01_add_10)
+                                                          0.00       1.13 f
+  datapath_FIR/add_1_root_add_0_root_add_245/U81/ZN (NOR2_X1)
+                                                          0.05       1.18 r
+  datapath_FIR/add_1_root_add_0_root_add_245/U96/ZN (OAI21_X1)
+                                                          0.03       1.21 f
+  datapath_FIR/add_1_root_add_0_root_add_245/U77/ZN (INV_X1)
+                                                          0.03       1.24 r
+  datapath_FIR/add_1_root_add_0_root_add_245/U88/ZN (OAI21_X1)
+                                                          0.03       1.27 f
+  datapath_FIR/add_1_root_add_0_root_add_245/U86/ZN (XNOR2_X1)
+                                                          0.06       1.33 f
+  datapath_FIR/add_1_root_add_0_root_add_245/SUM[6] (datapath_DW01_add_10)
+                                                          0.00       1.33 f
+  datapath_FIR/add_0_root_add_0_root_add_245/B[6] (datapath_DW01_add_18)
+                                                          0.00       1.33 f
+  datapath_FIR/add_0_root_add_0_root_add_245/U73/ZN (OR2_X1)
+                                                          0.05       1.38 f
+  datapath_FIR/add_0_root_add_0_root_add_245/U70/ZN (AND2_X1)
+                                                          0.04       1.42 f
+  datapath_FIR/add_0_root_add_0_root_add_245/U69/ZN (XNOR2_X1)
+                                                          0.05       1.47 f
+  datapath_FIR/add_0_root_add_0_root_add_245/SUM[6] (datapath_DW01_add_18)
+                                                          0.00       1.47 f
+  datapath_FIR/Reg_out/d[6] (GenericReg_regwidth7_0)      0.00       1.47 f
+  datapath_FIR/Reg_out/U5/ZN (AOI22_X1)                   0.05       1.51 r
+  datapath_FIR/Reg_out/U21/ZN (INV_X1)                    0.02       1.54 f
+  datapath_FIR/Reg_out/q_reg[6]/D (DFF_X1)                0.01       1.54 f
+  data arrival time                                                  1.54
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  datapath_FIR/Reg_out/q_reg[6]/CK (DFF_X1)               0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -1.54
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.65
+
+
+1

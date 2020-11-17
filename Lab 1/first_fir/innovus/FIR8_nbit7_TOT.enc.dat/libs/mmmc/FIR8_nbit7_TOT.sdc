@@ -1,0 +1,1 @@
+/home/isa17/Desktop/lab1_coeff/first_fir/netlist/FIR8_nbit7_TOT.sdc

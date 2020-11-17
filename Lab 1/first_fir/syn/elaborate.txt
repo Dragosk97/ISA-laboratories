@@ -1,0 +1,50 @@
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'FIR8_nbit7_TOT'.
+Information: Building the design 'datapath'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 37 in file
+	'../src/fsm.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            46            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 69 in file
+	'../src/fsm.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            72            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fsm line 28 in file
+		'../src/fsm.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  present_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'GenericReg' instantiated from design 'datapath' with
+	the parameters "regwidth=7". (HDL-193)
+
+Inferred memory devices in process
+	in routine GenericReg_regwidth7 line 17 in file
+		'../src/GenericReg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
