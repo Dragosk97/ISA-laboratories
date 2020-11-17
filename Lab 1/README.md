@@ -1,6 +1,6 @@
 # Integrated systems architecture
 
-#### 2020/21
+### 2020/21
 
 ## Lab 1: Digital Filter
 
