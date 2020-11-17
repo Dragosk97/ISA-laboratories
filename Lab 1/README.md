@@ -1,6 +1,6 @@
 # Integrated systems architecture
 
-### 2020/21
+#### 2020/21
 
 ## Lab 1: Digital Filter
 
@@ -9,11 +9,29 @@ Students:
 -	Barrera Alessandro	275337
 -	Liu Huicai		273375
 
+The directories are organized as:
+- **./c_model**
+    contains:
+    - *myfilter.c*
+        C source code which models the filter
+    - *myfilter*
+        executable program
+    - *output_c_7.txt*
+        modelled filter output
+- **./matlab**
+    - *my_fir_filter.m* and *myfir_design.m*
+        Matlab scripts for filter design
+    - *resultsm.txt*
+        Matlab filter output
+    - *samples.txt*
+        generated input samples
+- **./first_fir**
+- **./optimized_design**
+
 Two architectures are presented as required in the assignment.
 The directory **./first_fir** contains the first design, while the directory
 **./optimized_design** contains the advanced architecture. Each of these
 directories contains the following:
-
 - **./src**
 	contains the VHDL source code of the design
 - **./tb**
