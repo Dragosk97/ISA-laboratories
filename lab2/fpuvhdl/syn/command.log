@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Nov 24 10:42:19 2020
+#@ # Date:   Tue Nov 24 11:01:59 2020
 #@ # Run by: isa17@localhost.localdomain
 #@ 
 
@@ -43015,7 +43015,7 @@ source freq_area.scr
 #@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
 #@ uniquify
 #@ link
-#@ create_clock -name MY_CLK -period 1.50 clk
+#@ create_clock -name MY_CLK -period 1.56 clk
 #@ set_dont_touch_network MY_CLK
 #@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 #@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
@@ -43024,6 +43024,3 @@ source freq_area.scr
 #@ set_load $OLOAD [all_outputs]
 #@ ungroup -all -flatten
 #@ compile
-#@ report_timing > report_timing_default_4.txt
-#@ # -- End source freq_area.scr
-
