@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Nov 24 11:01:59 2020
+#@ # Date:   Tue Nov 24 12:30:34 2020
 #@ # Run by: isa17@localhost.localdomain
 #@ 
 
@@ -42999,8 +42999,8 @@ gui_start
 #@ 
 #@ # -- End source /software/synopsys/syn_current_64.18/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
-source freq_area.scr
-#@ # -- Starting source freq_area.scr
+source freq_area_PPARCH.scr
+#@ # -- Starting source freq_area_PPARCH.scr
 
 #@ analyze -f vhdl -lib WORK ../common/fpnormalize_fpnormalize.vhd
 #@ analyze -f vhdl -lib WORK ../common/packfp_packfp.vhd
@@ -43015,7 +43015,7 @@ source freq_area.scr
 #@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
 #@ uniquify
 #@ link
-#@ create_clock -name MY_CLK -period 1.56 clk
+#@ create_clock -name MY_CLK -period 1.45 clk
 #@ set_dont_touch_network MY_CLK
 #@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 #@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
@@ -43023,4 +43023,9 @@ source freq_area.scr
 #@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 #@ set_load $OLOAD [all_outputs]
 #@ ungroup -all -flatten
+#@ set_implementation DW02_mult/pparch [find cell *mult*]
 #@ compile
+#@ report_timing > report_timing_PPARCH_2.txt
+#@ # -- End source freq_area_PPARCH.scr
+
+report_area > report_area_PPARCH.txt
