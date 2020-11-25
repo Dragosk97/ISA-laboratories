@@ -262,7 +262,7 @@
 /software/synopsys/syn_current_64.18/auxx/gui/dv/dv_path_cat_view.tcl
 /software/synopsys/syn_current_64.18/auxx/gui/common/table/table.tcl
 /software/synopsys/syn_current_64.18/auxx/gui/common/table/table_internal.tcl
-/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/freq_area_PPARCH.scr
+/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/compultra_script.scr
 /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/common/fpnormalize_fpnormalize.vhd
 /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
 /software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb
@@ -271,11 +271,14 @@
 /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/common/unpackfp_unpackfp.vhd
 /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd
 /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd
-/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct.vhd
+/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct_optreg.vhd
 /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd
 /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd
 /software/synopsys/syn_current_64.18/libraries/syn/gtech.db
 /software/synopsys/syn_current_64.18/libraries/syn/standard.sldb
-/home/isa17/synopsys_cache_O-2018.06-SP4/DW01/DW01_add/rpl/8/NangateOpenCellLibrary_typical_ecsm_nowlm_5697/element.ddc
-/home/isa17/synopsys_cache_O-2018.06-SP4/DW01/DW01_inc/rpl/25/NangateOpenCellLibrary_typical_ecsm_nowlm_5697/element.ddc
+/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
+/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/alib-52/NangateOpenCellLibrary_typical_ecsm_nowlm.db.alib
+/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
+/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/alib-52/NangateOpenCellLibrary_typical_ecsm_nowlm.db.alib
+/home/isa17/synopsys_cache_O-2018.06-SP4/DW01/DW01_NAND2/str/NangateOpenCellLibrary_typical_ecsm_nowlm_5697/element.ddc
 /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
