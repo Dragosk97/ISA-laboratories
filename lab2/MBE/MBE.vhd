@@ -9,8 +9,8 @@ generic(nbit : integer)
         b0 : in std_logic_vector; 
         b1 : in std_logic_vector;
         b2 : in std_logic_vector;
-        pp : out std_logic_vector(nbit downto 0);
-    )
+        pp : out std_logic_vector(nbit downto 0)
+    );
 end entity;
 
 architecture behavioural of MBE_n is 
