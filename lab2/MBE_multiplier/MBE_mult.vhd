@@ -37,8 +37,7 @@ mbe_pp0: MBE_n generic map (24) port map(
 			b0 => '0',
 			b1 => b(0),
 			b2 => b(1),
-			pp=> mbe_out(0),
-);
+			pp=> mbe_out(0));
 
 mult_pp: for i in 1 to 11
 	generate 
@@ -47,8 +46,7 @@ mult_pp: for i in 1 to 11
 			b0 => b(2*i-1),
 			b1 => b(2*i),
 			b2 => b(2*i+1),
-			pp=> mbe_out(i)
-		);
+			pp=> mbe_out(i));
 	end generate;
 
 mbe_pp12: MBE_n generic map (24) port map(
@@ -56,8 +54,7 @@ mbe_pp12: MBE_n generic map (24) port map(
 			b0 => b(23),
 			b1 => '0',
 			b2 => '0',
-			pp=> mbe_out(12),
-);
+			pp=> mbe_out(12));
 
 --input DADDA
 in_dadda(0) <= NOT(b(1)) & b(1) & b(1) & mbe_out(0) & b(1);
