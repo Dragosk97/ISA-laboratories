@@ -5,11 +5,11 @@ USE ieee.numeric_std.all;
 entity MBE_n is
 generic(nbit : integer)
     port(
-        a : in std_logic_vector(nbit-1 downto 0);
-        b0 : in std_logic_vector; 
-        b1 : in std_logic_vector;
-        b2 : in std_logic_vector;
-        pp : out std_logic_vector(nbit downto 0);
+        a : in unsigned(nbit-1 downto 0);
+        b0 : in unsigned; 
+        b1 : in unsigned;
+        b2 : in unsigned;
+        pp : out unsigned(nbit downto 0);
     )
 end entity;
 
