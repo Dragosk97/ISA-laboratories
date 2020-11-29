@@ -1,9 +1,0 @@
-H 2141964 11 3 0 4 1 0 0 0 0
-L 4 ieee 19 $MODEL_TECH/../ieee
-L 3 std 18 $MODEL_TECH/../std
-L 4 work 6 ./work
-D 19 ./work.clk_gen(beh) nD9Sig5H:3NWYQd_Kg6SN1 0 1
-D 32 ./work.counter_nbit(behavioural) mh;X42l`mcGQLVPb02YXo3 2 1
-D 25 ./work.mbe_n(behavioural) R>3X2@G?j5[6VRJj<k<RN0 1 1
-D 11 ./work.tb_m am0DKiA>Pj@VIAdT9l28h0 3 0
-2 4 fast 0 mHFaVOe9fiO?27bE8S=i83 0 3 1
