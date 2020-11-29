@@ -14,18 +14,24 @@ generic(nbit : integer);
 end entity;
 
 architecture behavioural of MBE_n is 
+
+    signal pp_i : std_logic_vector(nbit downto 0);
+
 begin
+
     process(a,b0,b1,b2)
     begin
         if (NOT(b1 XOR b0) AND (NOT(b2 XOR b1))) = '1' then
-            pp <= (others => '0');
+            pp_i <= (others => '0');
         elsif (b1 XOR b0) = '1' then 
-            pp <= '0' & a;
+            pp_i <= '0' & a;
         else
-            pp <= a & '0';
+            pp_i <= a & '0';
         end if;
     end process;
-            
+    
+    pp <= pp_i xor b2;
+    
 end architecture;
 
 
