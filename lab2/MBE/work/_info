@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab2\MBE
+Eclk_gen
+Z1 w1606661401
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z3 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z5 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab2\MBE
+Z6 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/clk_gen.vhd
+Z7 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/clk_gen.vhd
+l0
+L6
+V][:O6Ce[9TFz7d3>@O1cZ2
+Z8 OV;C;6.6d;45
+32
+Z9 o-work work -O0
+Z10 tExplicit 1
+!s100 ?g5R[8?<^2KjL]am2<mkC1
+Abeh
+R2
+R3
+R4
+DEx4 work 7 clk_gen 0 22 ][:O6Ce[9TFz7d3>@O1cZ2
+l18
+L12
+VGzjTT1o^`?bW@]gULHO^T3
+R8
+32
+Z11 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 15 std_logic_arith
+Mx1 4 ieee 18 std_logic_unsigned
+R9
+R10
+!s100 3n]n:Xil<0_6M5^k]CFeZ3
+Ecounter_nbit
+Z12 w1606661811
+Z13 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R4
+R5
+Z14 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/Counter_nbit.vhd
+Z15 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/Counter_nbit.vhd
+l0
+L5
+VA4l@VRm;AH8mIZ6IgG<VL0
+R8
+32
+R9
+R10
+!s100 fbG9J3KLnLiXNSo=eJVdQ1
+Abehavioural
+R13
+R4
+DEx4 work 12 counter_nbit 0 22 A4l@VRm;AH8mIZ6IgG<VL0
+l16
+L14
+VKaWTYkjk^Z4zfj0^oUVfW1
+!s100 Lh;C5]nDEJW;NnGjmi=Sh2
+R8
+32
+Z16 Mx2 4 ieee 14 std_logic_1164
+Z17 Mx1 4 ieee 11 numeric_std
+R9
+R10
+Embe_n
+Z18 w1606662781
+R13
+R4
+R5
+Z19 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/MBE.vhd
+Z20 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/MBE.vhd
+l0
+L5
+VQG3N0E;HTOBU7LB1??CPP2
+!s100 ;I@8N;jif9kS[__O:15gP3
+R8
+32
+R9
+R10
+Abehavioural
+R13
+R4
+Z21 DEx4 work 5 mbe_n 0 22 QG3N0E;HTOBU7LB1??CPP2
+l17
+L16
+Z22 VdHVoROfWTMF]QU0?R]AE20
+Z23 !s100 PJ?Llg`RFDmShi1Sn05OK3
+R8
+32
+R16
+R17
+R9
+R10
+vtb_m
+IjM:;M;mRP>SVgmWSG??z31
+V?BNI9GT?GclfhRAlBIo8i1
+R5
+w1606662219
+8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/tb_m.v
+FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE/tb_m.v
+L0 3
+OV;L;6.6d;45
+r1
+31
+R9
+!s100 bgYd6eNN9oE1il939m@H@1
+!s85 0
+!s101 -O0
