@@ -12,3 +12,4 @@ begin
     cout <= a and b;
 
 end architecture;
+

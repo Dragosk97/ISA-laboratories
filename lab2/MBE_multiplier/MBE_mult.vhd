@@ -89,11 +89,43 @@ generate
 	dadda_i(0)(i)(2*(i-1)) <= in_dadda(i-1)(0);
 	dadda_i(0)(i-1)(28) <= in_dadda(i)(27 - 2*(i-1));
 	
-	for j in 2 to i
-	generate
-		dadda_i(0)(i-j)(27-i downto 26 i+j) <= in_dadda(i)(27-i+j downto 26-i+j)
-	end generate;
+	--for j in 2 to i
+	--generate
+	--	dadda_i(0)(i-j)(27-i downto 26 i+j) <= in_dadda(i)(27-i+j downto 26-i+j)
+	--end generate;
+
 end generate;
+
+--questo generate si può anche spostare su
+dadda_left_tree : for i in 1 to 11
+generate
+for j in 2 to i 
+	generate
+		
+		if j = 11 then 
+		dadda_i(0)(0)(47) <= in_dadda(11)(27));
+		else
+		dadda_i(0)(i-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(i)(27+2*(-i+j) downto 26+2*(-i+j));
+		end if;
+
+	end generate;
+
+end generate
+--ultima riga, ovvero i = 12
+for j in 2 to 11 
+	generate
+		
+		if j = 11 then 
+		dadda_i(0)(1)(47) <= in_dadda(12)(26));
+		else
+		dadda_i(0)(12-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(12)(27+2*(-11+j) downto 26+2*(-11+j) );
+		end if;
+
+	end generate;
+--------------------------------------------------------------------
+
+
+
 
 dadda_i(0)(12)(27 downto 24) <= in_dadda(12)(3 downto 0);
 dadda_i(0)(12)(22) <= in_dadda(11)(0);
