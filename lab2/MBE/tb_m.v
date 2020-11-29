@@ -26,7 +26,7 @@ module tb_m ();
       .n(3)
       )
       cnt_3bit (
-         .EN(1),
+         .EN(RST_n_i),
 			.RST_n(RST_n_i),
 			.CLK(CLK_i),
 			.Q(B_i)

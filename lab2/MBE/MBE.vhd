@@ -13,10 +13,17 @@ generic(nbit : integer);
     );
 end entity;
 
+<<<<<<< HEAD
 architecture behavioural of MBE_n is 
 
     signal pp_i : std_logic_vector(nbit downto 0);
 
+=======
+architecture behavioural of MBE_n is
+
+  signal pp_i : std_logic_vector(nbit downto 0);
+  
+>>>>>>> 19f67e784bc757d295cfc50248f44e546aa95b00
 begin
 
     process(a,b0,b1,b2)
@@ -29,8 +36,13 @@ begin
             pp_i <= a & '0';
         end if;
     end process;
+<<<<<<< HEAD
     
     pp <= pp_i xor b2;
+=======
+
+    pp <= pp_i XOR ""&b2;
+>>>>>>> 19f67e784bc757d295cfc50248f44e546aa95b00
     
 end architecture;
 
