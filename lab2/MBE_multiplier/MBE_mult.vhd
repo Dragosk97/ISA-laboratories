@@ -13,12 +13,12 @@ end MBE_mult;
 ARCHITECTURE behavioural of MBE_mult IS 
 
 component MBE_n is
-generic(nbit : integer)
+generic(nbit : integer);
     port(
         a : in std_logic_vector(nbit-1 downto 0);
-        b0 : in std_logic_vector; 
-        b1 : in std_logic_vector;
-        b2 : in std_logic_vector;
+        b0 : in std_logic; 
+        b1 : in std_logic;
+        b2 : in std_logic;
         pp : out std_logic_vector(nbit downto 0)
     );
 end component;
@@ -32,19 +32,22 @@ SIGNAL in_dadda : array_s;
 
 --
 type array_int is array (0 to 47) of integer;
-type array_stage_int is array (0 to 5) of array_int
+type array_stage_int is array (0 to 5) of array_int;
 
 type array_target is array (0 to 5) of integer;
 
 type array_matrix is array (0 to 12) of std_logic_vector(47 downto 0);
 type array_stage is array(0 to 5) of array_matrix;
-SIGNAL dadda_i is array_stage;
+SIGNAL dadda_i : array_stage;
+SIGNAL zero : std_logic;
 
 BEGIN
 --MBE
+zero <= '0';
+
 mbe_pp0: MBE_n generic map (24) port map(
 			a => a,
-			b0 => '0',
+			b0 => zero,
 			b1 => b(0),
 			b2 => b(1),
 			pp=> mbe_out(0));
@@ -62,8 +65,8 @@ mult_pp: for i in 1 to 11
 mbe_pp12: MBE_n generic map (24) port map(
 			a => a,
 			b0 => b(23),
-			b1 => '0',
-			b2 => '0',
+			b1 => zero,
+			b2 => zero,
 			pp=> mbe_out(12));
 
 --input DADDA
@@ -71,80 +74,139 @@ in_dadda(0) <= NOT(b(1)) & b(1) & b(1) & mbe_out(0) & b(1);
  
 input_dadda : for i in 1 to 10
 	generate
-		in_dadda(i) <= '1' & NOT(b(2*i+1)) & mbe_out(i) & b(2*i+1);
+		in_dadda(i)(27 downto 0) <= '1' & NOT(b(2*i+1)) & mbe_out(i) & b(2*i+1);
 	end generate;
 	
-in_dadda(11) <= NOT(b(2*11+1)) & mbe_out(11) & b(2*11+1);
-in_dadda(12) <= mbe_out(12) (23 downto 0);
+in_dadda(11)(26 downto 0) <= NOT(b(2*11+1)) & mbe_out(11) & b(2*11+1);
+in_dadda(12)(23 downto 0) <= mbe_out(12) (23 downto 0);
 
 
 
 -- Initialization of dadda_i(0)
 
+-- First row
 dadda_i(0)(0)(27 downto 0) <= in_dadda(0)(28 downto 1);
 
+-- Middle row
 dadda_init : for i in 1 to 11
 generate
 	dadda_i(0)(i)(27 downto 2*i) <= in_dadda(i)(28 -2*i downto 1);
 	dadda_i(0)(i)(2*(i-1)) <= in_dadda(i-1)(0);
+	
+	-- column 28 lifts of one position 
 	dadda_i(0)(i-1)(28) <= in_dadda(i)(27 - 2*(i-1));
 	
-	--for j in 2 to i
-	--generate
-	--	dadda_i(0)(i-j)(27-i downto 26 i+j) <= in_dadda(i)(27-i+j downto 26-i+j)
-	--end generate;
+	-- each column lifts as much as possible
+	middle_row_lift: for j in 2 to i 
+	generate
+		last_midcol_lift: if j = 11 generate 
+			dadda_i(0)(0)(47) <= in_dadda(11)(26);
+		end generate;
+		midcol_lift: if j < 11 generate
+			dadda_i(0)(i-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(i)(27+2*(-i+j) downto 26+2*(-i+j));
+		end generate;
+	end generate;
 
 end generate;
 
---questo generate si può anche spostare su
-dadda_left_tree : for i in 1 to 11
-generate
-for j in 2 to i 
-	generate
-		
-		if j = 11 then 
-		dadda_i(0)(0)(47) <= in_dadda(11)(27));
-		else
-		dadda_i(0)(i-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(i)(27+2*(-i+j) downto 26+2*(-i+j));
-		end if;
-
-	end generate;
-
-end generate
---ultima riga, ovvero i = 12
-for j in 2 to 11 
-	generate
-		
-		if j = 11 then 
-		dadda_i(0)(1)(47) <= in_dadda(12)(26));
-		else
-		dadda_i(0)(12-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(12)(27+2*(-11+j) downto 26+2*(-11+j) );
-		end if;
-
-	end generate;
---------------------------------------------------------------------
-
-
-
+--Last row, i = 12
 
 dadda_i(0)(12)(27 downto 24) <= in_dadda(12)(3 downto 0);
 dadda_i(0)(12)(22) <= in_dadda(11)(0);
 
-dadda_transp : for 
+-- column 28 bit lift
+dadda_i(0)(11)(28) <= in_dadda(12)(4);
 
-for stage in 0 to 4
+lastrow_lift: for j in 2 to 11 
 generate
-	variable row_num : array_stage_int;
-	constant row_target : array_target := {13, 9, 6, 4, 3, 2};
-	row_num(0) := {2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2};
-begin
 	
-	for column in 0 to 47
-	generate
-		if row_num(stage)
+	lastrow_lastcol_lift: if j = 11 generate 
+	dadda_i(0)(1)(47) <= in_dadda(12)(23);
 	end generate;
-	
+	lastrow_midcol_lift: if j < 11 generate
+	dadda_i(0)(12-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(12)(23+2*(-11+j) downto 22+2*(-11+j) );
+	end generate;
 
 end generate;
+
+--------------------------------------------------------------------
+
+process
+
+variable row_num : array_stage_int;
+variable diff : integer;
+variable num_HA, num_FA, num_unproc : integer;
+variable num_carry : integer := 0;
+constant row_target : array_target := (13, 9, 6, 4, 3, 2);
+
+
+begin
+
+	row_num(0) := (2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2);
+
+	Dadda_alg: for stage in 0 to 4
+	generate
+	begin
+
+		column_elab: for col in 0 to 47
+		generate
+			no_reduction: if row_num(stage)(col) + num_carry <= row_target(stage+1) generate
+				row_num(stage+1)(col) = row_num(stage)(col);
+				num_carry := 0;
+			end generate;
+			
+			yes_reduction: if row_num(stage)(col) + num_carry > row_target(stage+1) generate
+				diff := row_num(stage)(col) + num_carry - row_target(stage+1);	
+				num_FA := diff / 2;
+				num_HA := diff mod 2;
+				num_unproc := row_num(stage)(col) - 3*num_FA - 2*num_HA;
+				
+				FA_gen : for i in 0 to num_FA
+				generate
+					FA_inst : FA port map(
+						a <= dadda_i(stage)(col)(3*i),
+						b <= dadda_i(stage)(col)(3*i+1),
+						cin <= dadda_i(stage)(col)(3*i+2),
+						s <= dadda_i(stage+1)(col)(i+num_carry),
+						cout <= dadda_i(stage+1)(col+1)(i)
+					); 
+				end generate;
+
+				HA_gen : for i in 0 to num_HA
+				generate
+					HA_inst : HA port map(
+						a <= dadda_i(stage)(col)(3*num_FA + 2*i),
+						b <= dadda_i(stage)(col)(3*num_FA + 2*i + 1),
+						s <= dadda_i(stage+1)(col)(num_carry + num_FA + i),
+						cout <= dadda_i(stage+1)(col+1)(num_FA+i)
+					);
+				end generate;
+
+				Unprocessed_propagation: for i in 0 to num_unproc 
+				generate
+					dadda_i(stage+1)(col)(num_carry + num_FA + num_HA + i) <= dadda_i(stage)(col)(3*num_FA + 2*num_HA + i);
+				end generate;
+
+				row_num(stage+1)(col) <= row_num(stage)(col) - 2*num_FA - num_HA + num_carry;
+				num_carry := num_FA + num_HA;
+
+			end generate;
+		end generate;
+		num_carry := 0;
+
+	end generate;
+
+	wait;
+end process;
+
+
+ last_HA : HA port map(
+	 dadda_i(5)(0)(0),
+	 dadda_i(5)(0)(1),
+	 p(0),
+	 dadda_i(5)(1)(1)
+ );
+
+ p(47 downto 1) <= std_logic_vector( unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(0)(47 downto 1)) );
 
 end behavioural; 

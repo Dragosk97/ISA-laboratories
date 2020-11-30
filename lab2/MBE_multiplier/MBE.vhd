@@ -30,8 +30,11 @@ begin
         end if;
     end process;
 
-    pp <= pp_i XOR ""&b2;
-    
+    ca1: for i in 0 to nbit
+    generate
+        pp(i) <= pp_i(i) XOR b2;
+    end generate;
+
 end architecture;
 
 
