@@ -41,7 +41,7 @@ type array_stage_int is array (0 to 5) of array_int;
 
 type array_target is array (0 to 5) of integer;
 
-type array_matrix is array (0 to 12) of std_logic_vector(47 downto 0);
+type array_matrix is array (0 to 12) of std_logic_vector(48 downto 0);
 type array_stage is array(0 to 5) of array_matrix;
 SIGNAL dadda_i : array_stage;
 SIGNAL zero : std_logic;
@@ -173,25 +173,16 @@ begin
 				num_unproc := row_num(stage)(col) - 3*num_FA - 2*num_HA;
 			
 				--FA_gen : 
-				for i in 0 to num_FA loop
-				--generate
-					-- FA_inst : FA port map(
-					-- 	a <= dadda_i(stage)(col)(3*i),
-					-- 	b <= dadda_i(stage)(col)(3*i+1),
-					-- 	cin <= dadda_i(stage)(col)(3*i+2),
-					-- 	s <= dadda_i(stage+1)(col)(i+num_carry),
-					-- 	cout <= dadda_i(stage+1)(col+1)(i)
-					-- ); 
-				--end generate;
+				for i in 0 to num_FA-1 loop
 					
 				--sum_FA
-					dadda_i(stage+1)(col)(i+num_carry) <= dadda_i(stage)(col)(3*i) XOR dadda_i(stage)(col)(3*i+1) XOR dadda_i(stage)(col)(3*i+2);
+					dadda_i(stage+1)(i+num_carry)(col) <= dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col) XOR dadda_i(stage)(3*i+2)(col);
 				--cout_FA
-					dadda_i(stage+1)(col+1)(i) <= ((dadda_i(stage)(col)(3*i) XOR dadda_i(stage)(col)(3*i+1)) AND dadda_i(stage)(col)(3*i+2)) OR (dadda_i(stage)(col)(3*i) AND dadda_i(stage)(col)(3*i+1));
+					dadda_i(stage+1)(i)(col+1) <= ((dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col)) AND dadda_i(stage)(3*i+2)(col)) OR (dadda_i(stage)(3*i)(col) AND dadda_i(stage)(3*i+1)(col));
 				end loop;
 			
 				--HA_gen : 
-				for i in 0 to num_HA loop
+				for i in 0 to num_HA-1 loop
 				--generate
 					-- HA_inst : HA port map(
 					-- 	a <= dadda_i(stage)(col)(3*num_FA + 2*i),
@@ -199,15 +190,15 @@ begin
 					-- 	s <= dadda_i(stage+1)(col)(num_carry + num_FA + i),
 					-- 	cout <= dadda_i(stage+1)(col+1)(num_FA+i)
 					-- );
-					dadda_i(stage+1)(col)(num_carry + num_FA + i) <= dadda_i(stage)(col)(3*num_FA + 2*i) XOR dadda_i(stage)(col)(3*num_FA + 2*i + 1);
-					dadda_i(stage+1)(col+1)(num_FA+i) <= dadda_i(stage)(col)(3*num_FA + 2*i) AND dadda_i(stage)(col)(3*num_FA + 2*i + 1);
+					dadda_i(stage+1)(num_carry + num_FA + i)(col) <= dadda_i(stage)(3*num_FA + 2*i)(col) XOR dadda_i(stage)(3*num_FA + 2*i + 1)(col);
+					dadda_i(stage+1)(num_FA+i)(col+1) <= dadda_i(stage)(3*num_FA + 2*i)(col) AND dadda_i(stage)(3*num_FA + 2*i + 1)(col);
 				--end generate;
 				end loop;
 
 				--Unprocessed_propagation: 
-				for i in 0 to num_unproc loop
+				for i in 0 to num_unproc-1 loop
 				--generate
-					dadda_i(stage+1)(col)(num_carry + num_FA + num_HA + i) <= dadda_i(stage)(col)(3*num_FA + 2*num_HA + i);
+					dadda_i(stage+1)(num_carry + num_FA + num_HA + i)(col) <= dadda_i(stage)(3*num_FA + 2*num_HA + i)(col);
 				--end generate;
 				end loop;
 
@@ -224,7 +215,7 @@ end process;
 
  last_HA : HA port map(
 	 dadda_i(5)(0)(0),
-	 dadda_i(5)(0)(1),
+	 dadda_i(5)(1)(0),
 	 p(0),
 	 dadda_i(5)(1)(1)
  );
