@@ -11,8 +11,7 @@ entity data_sink is
   port (
     CLK   : in std_logic;
     RST_n : in std_logic;
-    VIN   : in std_logic;
-    DIN   : in std_logic_vector(7 downto 0));
+    p   : in std_logic_vector(47 downto 0));
 end data_sink;
 
 architecture beh of data_sink is
@@ -20,16 +19,16 @@ architecture beh of data_sink is
 begin  -- beh
 
   process (CLK, RST_n)
-    file res_fp : text open WRITE_MODE is "./results.txt";
+    file res_fp : text open WRITE_MODE is "./results_modelsim.txt";
     variable line_out : line;    
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
       null;
     elsif CLK'event and CLK = '1' then  -- rising clock edge
-      if (VIN = '1') then
-        write(line_out, conv_integer(signed(DIN)));
-        writeline(res_fp, line_out);
-      end if;
+     
+      write(line_out, p, right, 48);
+      writeline(res_fp, line_out);
+    
     end if;
   end process;
 
