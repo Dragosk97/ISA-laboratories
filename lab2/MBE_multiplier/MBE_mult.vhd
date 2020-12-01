@@ -135,77 +135,85 @@ end generate;
 
 --------------------------------------------------------------------
 
-process(dadda_i)
+{{ netlist_str }}
 
-variable row_num : array_stage_int;
-variable diff : integer;
-variable num_HA, num_FA, num_unproc : integer;
-variable num_carry : integer := 0;
-constant row_target : array_target := (13, 9, 6, 4, 3, 2);
+-- process(dadda_i)
 
-begin
+-- constant row_num : array_stage_int := ((2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2),
+-- (2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,8,7,7,6,6,5,5,4,4,3,3,2),
+-- (2,1,3,2,4,3,5,4,6,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,4,4,3,3,2),
+-- (2,1,3,2,4,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,2),
+-- (2,1,3,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3),
+-- (2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2));
+-- variable diff : integer;
+-- variable num_HA, num_FA, num_unproc : integer;
+-- variable num_carry : integer := 0;
+-- constant row_target : array_target := (13, 9, 6, 4, 3, 2);
 
-	diff := 0;
-	num_HA := 0;
-	num_FA := 0;
-	num_unproc := 0;
-	row_num(0) := (2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2);
+-- begin
 
-	--Dadda_alg: 
-	for stage in 0 to 4 loop
+-- 	diff := 0;
+-- 	num_HA := 0;
+-- 	num_FA := 0;
+-- 	num_unproc := 0;
 
-		--column_elab:
-		for col in 0 to 47 loop
-			--no_reduction:
-			if row_num(stage)(col) + num_carry <= row_target(stage+1) then
-				row_num(stage+1)(col) := row_num(stage)(col);
-				num_carry := 0;
+-- 	--Dadda_alg: 
+-- 	for stage in 0 to 4 loop
+
+-- 		--column_elab:
+-- 		for col in 0 to 47 loop
+-- 			--no_reduction:
+-- 			if row_num(stage)(col) + num_carry <= row_target(stage+1) then
+-- 				--dadda_i(stage+1)(num_carry to row_num(stage)(col) + num_carry - 1)(col) <= dadda_i(stage)(0 to row_num(stage)(col) - 1)(col);
+-- 				for i in 0 to row_num(stage)(col) - 1 loop
+-- 					dadda_i(stage+1)(i+num_carry)(col) <= dadda_i(stage)(i)(col);
+-- 				end loop;
+-- 				num_carry := 0;
+
+-- 			--yes_reduction: 
+-- 			else
+-- 				diff := row_num(stage)(col) + num_carry - row_target(stage+1);	
+-- 				num_FA := diff / 2;
+-- 				num_HA := diff mod 2;
+-- 				num_unproc := row_num(stage)(col) - 3*num_FA - 2*num_HA;
 			
-			--yes_reduction: 
-			else
-				diff := row_num(stage)(col) + num_carry - row_target(stage+1);	
-				num_FA := diff / 2;
-				num_HA := diff mod 2;
-				num_unproc := row_num(stage)(col) - 3*num_FA - 2*num_HA;
-			
-				--FA_gen : 
-				for i in 0 to num_FA-1 loop
+-- 				--FA_gen : 
+-- 				for i in 0 to num_FA-1 loop
 					
-				--sum_FA
-					dadda_i(stage+1)(i+num_carry)(col) <= dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col) XOR dadda_i(stage)(3*i+2)(col);
-				--cout_FA
-					dadda_i(stage+1)(i)(col+1) <= ((dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col)) AND dadda_i(stage)(3*i+2)(col)) OR (dadda_i(stage)(3*i)(col) AND dadda_i(stage)(3*i+1)(col));
-				end loop;
+-- 				--sum_FA
+-- 					dadda_i(stage+1)(i+num_carry)(col) <= dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col) XOR dadda_i(stage)(3*i+2)(col);
+-- 				--cout_FA
+-- 					dadda_i(stage+1)(i)(col+1) <= ((dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col)) AND dadda_i(stage)(3*i+2)(col)) OR (dadda_i(stage)(3*i)(col) AND dadda_i(stage)(3*i+1)(col));
+-- 				end loop;
 			
-				--HA_gen : 
-				for i in 0 to num_HA-1 loop
-					dadda_i(stage+1)(num_carry + num_FA + i)(col) <= dadda_i(stage)(3*num_FA + 2*i)(col) XOR dadda_i(stage)(3*num_FA + 2*i + 1)(col);
-					dadda_i(stage+1)(num_FA+i)(col+1) <= dadda_i(stage)(3*num_FA + 2*i)(col) AND dadda_i(stage)(3*num_FA + 2*i + 1)(col);
-				end loop;
+-- 				--HA_gen : 
+-- 				for i in 0 to num_HA-1 loop
+-- 					dadda_i(stage+1)(num_carry + num_FA + i)(col) <= dadda_i(stage)(3*num_FA + 2*i)(col) XOR dadda_i(stage)(3*num_FA + 2*i + 1)(col);
+-- 					dadda_i(stage+1)(num_FA+i)(col+1) <= dadda_i(stage)(3*num_FA + 2*i)(col) AND dadda_i(stage)(3*num_FA + 2*i + 1)(col);
+-- 				end loop;
 
-				--Unprocessed_propagation: 
-				for i in 0 to num_unproc-1 loop
-					dadda_i(stage+1)(num_carry + num_FA + num_HA + i)(col) <= dadda_i(stage)(3*num_FA + 2*num_HA + i)(col);
-				end loop;
+-- 				--Unprocessed_propagation: 
+-- 				for i in 0 to num_unproc-1 loop
+-- 					dadda_i(stage+1)(num_carry + num_FA + num_HA + i)(col) <= dadda_i(stage)(3*num_FA + 2*num_HA + i)(col);
+-- 				end loop;
 
-				row_num(stage+1)(col) := row_num(stage)(col) - 2*num_FA - num_HA + num_carry;
-				num_carry := num_FA + num_HA;
+-- 				num_carry := num_FA + num_HA;
 
-			end if;
-		end loop;
-		num_carry := 0;
+-- 			end if;
+-- 		end loop;
+-- 		num_carry := 0;
 
-	end loop;
+-- 	end loop;
 
-end process;
+-- end process;
 
- last_HA : HA port map(
-	 dadda_i(5)(0)(0),
-	 dadda_i(5)(1)(0),
-	 p(0),
-	 dadda_i(5)(1)(1)
- );
+last_HA : HA port map(
+	dadda_i(5)(0)(0),
+	dadda_i(5)(1)(0),
+	p(0),
+	dadda_i(5)(1)(1)
+);
 
- p(47 downto 1) <= std_logic_vector(unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(0)(47 downto 1)));
-
+p(47 downto 1) <= std_logic_vector(unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(0)(47 downto 1)));
+ 
 end behavioural; 
