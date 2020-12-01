@@ -1,0 +1,115 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab2\MBE_multiplier
+Efa
+Z1 w1606584191
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab2\MBE_multiplier
+Z4 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/FA.vhd
+Z5 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/FA.vhd
+l0
+L4
+VzXHPk;=35OnYN[EPY_:7H3
+Z6 OV;C;6.6d;45
+32
+Z7 o-work work -O0
+Z8 tExplicit 1
+!s100 JkFUAQK3l<kSmokWgEYQH1
+Astruct
+R2
+DEx4 work 2 fa 0 22 zXHPk;=35OnYN[EPY_:7H3
+l10
+L9
+VNMeO?@jlGbV1^>^oS<nPX0
+R6
+32
+Z9 Mx1 4 ieee 14 std_logic_1164
+R7
+R8
+!s100 HI^:0]YRhc<ZHKmME0UBM2
+Eha
+Z10 w1606744065
+R2
+R3
+Z11 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/HA.vhd
+Z12 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/HA.vhd
+l0
+L4
+V>088?eoOVMk^18cP`ohLF2
+R6
+32
+R7
+R8
+!s100 II9:E4QH9FSQVeXKB`RGa1
+Astruct
+R2
+DEx4 work 2 ha 0 22 >088?eoOVMk^18cP`ohLF2
+l10
+L9
+Vkk=J;Qch_Xz^06OWa2RaW3
+R6
+32
+R9
+R7
+R8
+!s100 VFi_Rc@j=`]LeZR^R41Ae0
+Embe_mult
+Z13 w1606814769
+Z14 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R2
+R3
+Z15 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
+Z16 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
+l0
+L5
+V;5dRRo6hAChkk;bKEGR;L0
+!s100 =2`K>6ZMPLYE^=R1nYzl23
+R6
+32
+R7
+R8
+Abehavioural
+R14
+R2
+Z17 DEx4 work 8 mbe_mult 0 22 ;5dRRo6hAChkk;bKEGR;L0
+l49
+L13
+VQ1D1_R9@FMi^X3h]1SCJP1
+!s100 AlTkdaC_53?IZaaAgWG060
+R6
+32
+Z18 Mx2 4 ieee 14 std_logic_1164
+Z19 Mx1 4 ieee 11 numeric_std
+R7
+R8
+Embe_n
+Z20 w1606747280
+R14
+R2
+R3
+Z21 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/MBE.vhd
+Z22 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab2/MBE_multiplier/MBE.vhd
+l0
+L5
+VQG3N0E;HTOBU7LB1??CPP2
+R6
+32
+R7
+R8
+!s100 ;I@8N;jif9kS[__O:15gP3
+Abehavioural
+R14
+R2
+DEx4 work 5 mbe_n 0 22 QG3N0E;HTOBU7LB1??CPP2
+l20
+L16
+VzzccabX<;GA?HFd9C@YLe2
+!s100 KM2gGR^_ADegbZ4JCz?Tg0
+R6
+32
+R18
+R19
+R7
+R8

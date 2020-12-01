@@ -136,7 +136,7 @@ end generate;
 
 --------------------------------------------------------------------
 
-process (dadda_i)
+process(dadda_i)
 
 variable row_num : array_stage_int;
 variable diff : integer;
@@ -146,6 +146,10 @@ constant row_target : array_target := (13, 9, 6, 4, 3, 2);
 
 begin
 
+	diff := 0;
+	num_HA := 0;
+	num_FA := 0;
+	num_unproc := 0;
 	row_num(0) := (2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2);
 
 	--Dadda_alg: 
