@@ -23,6 +23,11 @@ generic(nbit : integer);
     );
 end component;
 
+component HA is
+	port (a, b: in std_logic;
+			s, cout : out std_logic);
+end component;
+
 type array_mbe IS array (0 to 12) of std_logic_vector (24 downto 0);
 SIGNAL mbe_out : array_mbe;
 
@@ -131,7 +136,7 @@ end generate;
 
 --------------------------------------------------------------------
 
-process
+process (dadda_i)
 
 variable row_num : array_stage_int;
 variable diff : integer;
@@ -139,66 +144,83 @@ variable num_HA, num_FA, num_unproc : integer;
 variable num_carry : integer := 0;
 constant row_target : array_target := (13, 9, 6, 4, 3, 2);
 
-
 begin
 
 	row_num(0) := (2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2);
 
-	Dadda_alg: for stage in 0 to 4
-	generate
-	begin
+	--Dadda_alg: 
+	for stage in 0 to 4 loop
+	--generate
+	--begin
 
-		column_elab: for col in 0 to 47
-		generate
-			no_reduction: if row_num(stage)(col) + num_carry <= row_target(stage+1) generate
-				row_num(stage+1)(col) = row_num(stage)(col);
+		--column_elab:
+		for col in 0 to 47 loop
+		--generate
+			--no_reduction:
+			if row_num(stage)(col) + num_carry <= row_target(stage+1) then
+			--generate
+				row_num(stage+1)(col) := row_num(stage)(col);
 				num_carry := 0;
-			end generate;
+			--end generate;
 			
-			yes_reduction: if row_num(stage)(col) + num_carry > row_target(stage+1) generate
+			--yes_reduction: 
+			else
+				-- row_num(stage)(col) + num_carry > row_target(stage+1) then
+			--generate
 				diff := row_num(stage)(col) + num_carry - row_target(stage+1);	
 				num_FA := diff / 2;
 				num_HA := diff mod 2;
 				num_unproc := row_num(stage)(col) - 3*num_FA - 2*num_HA;
-				
-				FA_gen : for i in 0 to num_FA
-				generate
-					FA_inst : FA port map(
-						a <= dadda_i(stage)(col)(3*i),
-						b <= dadda_i(stage)(col)(3*i+1),
-						cin <= dadda_i(stage)(col)(3*i+2),
-						s <= dadda_i(stage+1)(col)(i+num_carry),
-						cout <= dadda_i(stage+1)(col+1)(i)
-					); 
-				end generate;
+			
+				--FA_gen : 
+				for i in 0 to num_FA loop
+				--generate
+					-- FA_inst : FA port map(
+					-- 	a <= dadda_i(stage)(col)(3*i),
+					-- 	b <= dadda_i(stage)(col)(3*i+1),
+					-- 	cin <= dadda_i(stage)(col)(3*i+2),
+					-- 	s <= dadda_i(stage+1)(col)(i+num_carry),
+					-- 	cout <= dadda_i(stage+1)(col+1)(i)
+					-- ); 
+				--end generate;
+					
+				--sum_FA
+					dadda_i(stage+1)(col)(i+num_carry) <= dadda_i(stage)(col)(3*i) XOR dadda_i(stage)(col)(3*i+1) XOR dadda_i(stage)(col)(3*i+2);
+				--cout_FA
+					dadda_i(stage+1)(col+1)(i) <= ((dadda_i(stage)(col)(3*i) XOR dadda_i(stage)(col)(3*i+1)) AND dadda_i(stage)(col)(3*i+2)) OR (dadda_i(stage)(col)(3*i) AND dadda_i(stage)(col)(3*i+1));
+				end loop;
+			
+				--HA_gen : 
+				for i in 0 to num_HA loop
+				--generate
+					-- HA_inst : HA port map(
+					-- 	a <= dadda_i(stage)(col)(3*num_FA + 2*i),
+					-- 	b <= dadda_i(stage)(col)(3*num_FA + 2*i + 1),
+					-- 	s <= dadda_i(stage+1)(col)(num_carry + num_FA + i),
+					-- 	cout <= dadda_i(stage+1)(col+1)(num_FA+i)
+					-- );
+					dadda_i(stage+1)(col)(num_carry + num_FA + i) <= dadda_i(stage)(col)(3*num_FA + 2*i) XOR dadda_i(stage)(col)(3*num_FA + 2*i + 1);
+					dadda_i(stage+1)(col+1)(num_FA+i) <= dadda_i(stage)(col)(3*num_FA + 2*i) AND dadda_i(stage)(col)(3*num_FA + 2*i + 1);
+				--end generate;
+				end loop;
 
-				HA_gen : for i in 0 to num_HA
-				generate
-					HA_inst : HA port map(
-						a <= dadda_i(stage)(col)(3*num_FA + 2*i),
-						b <= dadda_i(stage)(col)(3*num_FA + 2*i + 1),
-						s <= dadda_i(stage+1)(col)(num_carry + num_FA + i),
-						cout <= dadda_i(stage+1)(col+1)(num_FA+i)
-					);
-				end generate;
-
-				Unprocessed_propagation: for i in 0 to num_unproc 
-				generate
+				--Unprocessed_propagation: 
+				for i in 0 to num_unproc loop
+				--generate
 					dadda_i(stage+1)(col)(num_carry + num_FA + num_HA + i) <= dadda_i(stage)(col)(3*num_FA + 2*num_HA + i);
-				end generate;
+				--end generate;
+				end loop;
 
-				row_num(stage+1)(col) <= row_num(stage)(col) - 2*num_FA - num_HA + num_carry;
+				row_num(stage+1)(col) := row_num(stage)(col) - 2*num_FA - num_HA + num_carry;
 				num_carry := num_FA + num_HA;
 
-			end generate;
-		end generate;
+			end if;
+		end loop;
 		num_carry := 0;
 
-	end generate;
+	end loop;
 
-	wait;
 end process;
-
 
  last_HA : HA port map(
 	 dadda_i(5)(0)(0),
@@ -207,6 +229,6 @@ end process;
 	 dadda_i(5)(1)(1)
  );
 
- p(47 downto 1) <= std_logic_vector( unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(0)(47 downto 1)) );
+ p(47 downto 1) <= std_logic_vector(unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(0)(47 downto 1)));
 
 end behavioural; 
