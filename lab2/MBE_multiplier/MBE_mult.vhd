@@ -86,7 +86,6 @@ in_dadda(11)(26 downto 0) <= NOT(b(2*11+1)) & mbe_out(11) & b(2*11+1);
 in_dadda(12)(23 downto 0) <= mbe_out(12) (23 downto 0);
 
 
-
 -- Initialization of dadda_i(0)
 
 -- First row
@@ -134,8 +133,6 @@ generate
 
 end generate;
 
---------------------------------------------------------------------
-
 process (dadda_i)
 
 variable row_num : array_stage_int;
@@ -150,23 +147,16 @@ begin
 
 	--Dadda_alg: 
 	for stage in 0 to 4 loop
-	--generate
-	--begin
 
 		--column_elab:
 		for col in 0 to 47 loop
-		--generate
 			--no_reduction:
 			if row_num(stage)(col) + num_carry <= row_target(stage+1) then
-			--generate
 				row_num(stage+1)(col) := row_num(stage)(col);
 				num_carry := 0;
-			--end generate;
 			
 			--yes_reduction: 
 			else
-				-- row_num(stage)(col) + num_carry > row_target(stage+1) then
-			--generate
 				diff := row_num(stage)(col) + num_carry - row_target(stage+1);	
 				num_FA := diff / 2;
 				num_HA := diff mod 2;
@@ -183,23 +173,13 @@ begin
 			
 				--HA_gen : 
 				for i in 0 to num_HA-1 loop
-				--generate
-					-- HA_inst : HA port map(
-					-- 	a <= dadda_i(stage)(col)(3*num_FA + 2*i),
-					-- 	b <= dadda_i(stage)(col)(3*num_FA + 2*i + 1),
-					-- 	s <= dadda_i(stage+1)(col)(num_carry + num_FA + i),
-					-- 	cout <= dadda_i(stage+1)(col+1)(num_FA+i)
-					-- );
 					dadda_i(stage+1)(num_carry + num_FA + i)(col) <= dadda_i(stage)(3*num_FA + 2*i)(col) XOR dadda_i(stage)(3*num_FA + 2*i + 1)(col);
 					dadda_i(stage+1)(num_FA+i)(col+1) <= dadda_i(stage)(3*num_FA + 2*i)(col) AND dadda_i(stage)(3*num_FA + 2*i + 1)(col);
-				--end generate;
 				end loop;
 
 				--Unprocessed_propagation: 
 				for i in 0 to num_unproc-1 loop
-				--generate
 					dadda_i(stage+1)(num_carry + num_FA + num_HA + i)(col) <= dadda_i(stage)(3*num_FA + 2*num_HA + i)(col);
-				--end generate;
 				end loop;
 
 				row_num(stage+1)(col) := row_num(stage)(col) - 2*num_FA - num_HA + num_carry;
