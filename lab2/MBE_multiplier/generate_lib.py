@@ -40,10 +40,10 @@ def unproc_prop(netlist_str, num_unproc, num_FA, num_HA, num_carry, stage, col):
     if num_unproc != 0:
         netlist_str += f"-- Numero non processati: {num_unproc}\n"
         # next stage signal
-        netlist_str += f"dadda_i({stage+1})({num_unproc + num_FA + num_HA + num_carry - 1} downto {num_FA + num_HA + num_carry})({col}) <= "
+        netlist_str += f"dadda_i({stage+1})({num_FA + num_HA + num_carry} to {num_unproc + num_FA + num_HA + num_carry - 1})({col}) <= "
         
         # last stage signal
-        netlist_str += f"dadda_i({stage})({3*num_FA + 2*num_HA + num_unproc - 1} downto {3*num_FA + 2*num_HA})({col});\n\n"
+        netlist_str += f"dadda_i({stage})({3*num_FA + 2*num_HA} to {3*num_FA + 2*num_HA + num_unproc - 1})({col});\n\n"
 
     return netlist_str
 

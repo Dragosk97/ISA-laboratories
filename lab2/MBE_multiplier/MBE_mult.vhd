@@ -141,52 +141,52 @@ end generate;
 --------------------------------------------------------------------
 
 -- Numero non processati: 2
-dadda_i(1)(1 downto 0)(0) <= dadda_i(0)(1 downto 0)(0);
+dadda_i(1)(0 to 1)(0) <= dadda_i(0)(0 to 1)(0);
 
 -- Numero non processati: 1
-dadda_i(1)(0 downto 0)(1) <= dadda_i(0)(0 downto 0)(1);
+dadda_i(1)(0 to 0)(1) <= dadda_i(0)(0 to 0)(1);
 
 -- Numero non processati: 3
-dadda_i(1)(2 downto 0)(2) <= dadda_i(0)(2 downto 0)(2);
+dadda_i(1)(0 to 2)(2) <= dadda_i(0)(0 to 2)(2);
 
 -- Numero non processati: 2
-dadda_i(1)(1 downto 0)(3) <= dadda_i(0)(1 downto 0)(3);
+dadda_i(1)(0 to 1)(3) <= dadda_i(0)(0 to 1)(3);
 
 -- Numero non processati: 4
-dadda_i(1)(3 downto 0)(4) <= dadda_i(0)(3 downto 0)(4);
+dadda_i(1)(0 to 3)(4) <= dadda_i(0)(0 to 3)(4);
 
 -- Numero non processati: 3
-dadda_i(1)(2 downto 0)(5) <= dadda_i(0)(2 downto 0)(5);
+dadda_i(1)(0 to 2)(5) <= dadda_i(0)(0 to 2)(5);
 
 -- Numero non processati: 5
-dadda_i(1)(4 downto 0)(6) <= dadda_i(0)(4 downto 0)(6);
+dadda_i(1)(0 to 4)(6) <= dadda_i(0)(0 to 4)(6);
 
 -- Numero non processati: 4
-dadda_i(1)(3 downto 0)(7) <= dadda_i(0)(3 downto 0)(7);
+dadda_i(1)(0 to 3)(7) <= dadda_i(0)(0 to 3)(7);
 
 -- Numero non processati: 6
-dadda_i(1)(5 downto 0)(8) <= dadda_i(0)(5 downto 0)(8);
+dadda_i(1)(0 to 5)(8) <= dadda_i(0)(0 to 5)(8);
 
 -- Numero non processati: 5
-dadda_i(1)(4 downto 0)(9) <= dadda_i(0)(4 downto 0)(9);
+dadda_i(1)(0 to 4)(9) <= dadda_i(0)(0 to 4)(9);
 
 -- Numero non processati: 7
-dadda_i(1)(6 downto 0)(10) <= dadda_i(0)(6 downto 0)(10);
+dadda_i(1)(0 to 6)(10) <= dadda_i(0)(0 to 6)(10);
 
 -- Numero non processati: 6
-dadda_i(1)(5 downto 0)(11) <= dadda_i(0)(5 downto 0)(11);
+dadda_i(1)(0 to 5)(11) <= dadda_i(0)(0 to 5)(11);
 
 -- Numero non processati: 8
-dadda_i(1)(7 downto 0)(12) <= dadda_i(0)(7 downto 0)(12);
+dadda_i(1)(0 to 7)(12) <= dadda_i(0)(0 to 7)(12);
 
 -- Numero non processati: 7
-dadda_i(1)(6 downto 0)(13) <= dadda_i(0)(6 downto 0)(13);
+dadda_i(1)(0 to 6)(13) <= dadda_i(0)(0 to 6)(13);
 
 -- Numero non processati: 9
-dadda_i(1)(8 downto 0)(14) <= dadda_i(0)(8 downto 0)(14);
+dadda_i(1)(0 to 8)(14) <= dadda_i(0)(0 to 8)(14);
 
 -- Numero non processati: 8
-dadda_i(1)(7 downto 0)(15) <= dadda_i(0)(7 downto 0)(15);
+dadda_i(1)(0 to 7)(15) <= dadda_i(0)(0 to 7)(15);
 
 
 HA_0_16_0 : HA port map (
@@ -196,7 +196,7 @@ HA_0_16_0 : HA port map (
 	cout => dadda_i(1)(0)(17));
 
 -- Numero non processati: 8
-dadda_i(1)(8 downto 1)(16) <= dadda_i(0)(9 downto 2)(16);
+dadda_i(1)(1 to 8)(16) <= dadda_i(0)(2 to 9)(16);
 
 
 HA_0_17_0 : HA port map (
@@ -206,7 +206,7 @@ HA_0_17_0 : HA port map (
 	cout => dadda_i(1)(0)(18));
 
 -- Numero non processati: 7
-dadda_i(1)(8 downto 2)(17) <= dadda_i(0)(8 downto 2)(17);
+dadda_i(1)(2 to 8)(17) <= dadda_i(0)(2 to 8)(17);
 
 FA_0_18_0 : FA port map (
 	a => dadda_i(0)(0)(18),
@@ -222,7 +222,7 @@ HA_0_18_0 : HA port map (
 	cout => dadda_i(1)(1)(19));
 
 -- Numero non processati: 6
-dadda_i(1)(8 downto 3)(18) <= dadda_i(0)(10 downto 5)(18);
+dadda_i(1)(3 to 8)(18) <= dadda_i(0)(5 to 10)(18);
 
 FA_0_19_0 : FA port map (
 	a => dadda_i(0)(0)(19),
@@ -238,7 +238,7 @@ HA_0_19_0 : HA port map (
 	cout => dadda_i(1)(1)(20));
 
 -- Numero non processati: 5
-dadda_i(1)(8 downto 4)(19) <= dadda_i(0)(9 downto 5)(19);
+dadda_i(1)(4 to 8)(19) <= dadda_i(0)(5 to 9)(19);
 
 FA_0_20_0 : FA port map (
 	a => dadda_i(0)(0)(20),
@@ -260,7 +260,7 @@ HA_0_20_0 : HA port map (
 	cout => dadda_i(1)(2)(21));
 
 -- Numero non processati: 4
-dadda_i(1)(8 downto 5)(20) <= dadda_i(0)(11 downto 8)(20);
+dadda_i(1)(5 to 8)(20) <= dadda_i(0)(8 to 11)(20);
 
 FA_0_21_0 : FA port map (
 	a => dadda_i(0)(0)(21),
@@ -282,7 +282,7 @@ HA_0_21_0 : HA port map (
 	cout => dadda_i(1)(2)(22));
 
 -- Numero non processati: 3
-dadda_i(1)(8 downto 6)(21) <= dadda_i(0)(10 downto 8)(21);
+dadda_i(1)(6 to 8)(21) <= dadda_i(0)(8 to 10)(21);
 
 FA_0_22_0 : FA port map (
 	a => dadda_i(0)(0)(22),
@@ -310,7 +310,7 @@ HA_0_22_0 : HA port map (
 	cout => dadda_i(1)(3)(23));
 
 -- Numero non processati: 2
-dadda_i(1)(8 downto 7)(22) <= dadda_i(0)(12 downto 11)(22);
+dadda_i(1)(7 to 8)(22) <= dadda_i(0)(11 to 12)(22);
 
 FA_0_23_0 : FA port map (
 	a => dadda_i(0)(0)(23),
@@ -338,7 +338,7 @@ HA_0_23_0 : HA port map (
 	cout => dadda_i(1)(3)(24));
 
 -- Numero non processati: 1
-dadda_i(1)(8 downto 8)(23) <= dadda_i(0)(11 downto 11)(23);
+dadda_i(1)(8 to 8)(23) <= dadda_i(0)(11 to 11)(23);
 
 FA_0_24_0 : FA port map (
 	a => dadda_i(0)(0)(24),
@@ -367,7 +367,7 @@ FA_0_24_3 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(1)(8 downto 8)(24) <= dadda_i(0)(12 downto 12)(24);
+dadda_i(1)(8 to 8)(24) <= dadda_i(0)(12 to 12)(24);
 
 FA_0_25_0 : FA port map (
 	a => dadda_i(0)(0)(25),
@@ -396,7 +396,7 @@ FA_0_25_3 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(1)(8 downto 8)(25) <= dadda_i(0)(12 downto 12)(25);
+dadda_i(1)(8 to 8)(25) <= dadda_i(0)(12 to 12)(25);
 
 FA_0_26_0 : FA port map (
 	a => dadda_i(0)(0)(26),
@@ -425,7 +425,7 @@ FA_0_26_3 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(1)(8 downto 8)(26) <= dadda_i(0)(12 downto 12)(26);
+dadda_i(1)(8 to 8)(26) <= dadda_i(0)(12 to 12)(26);
 
 FA_0_27_0 : FA port map (
 	a => dadda_i(0)(0)(27),
@@ -454,7 +454,7 @@ FA_0_27_3 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(1)(8 downto 8)(27) <= dadda_i(0)(12 downto 12)(27);
+dadda_i(1)(8 to 8)(27) <= dadda_i(0)(12 to 12)(27);
 
 FA_0_28_0 : FA port map (
 	a => dadda_i(0)(0)(28),
@@ -482,7 +482,7 @@ HA_0_28_0 : HA port map (
 	cout => dadda_i(1)(3)(29));
 
 -- Numero non processati: 1
-dadda_i(1)(8 downto 8)(28) <= dadda_i(0)(11 downto 11)(28);
+dadda_i(1)(8 to 8)(28) <= dadda_i(0)(11 to 11)(28);
 
 FA_0_29_0 : FA port map (
 	a => dadda_i(0)(0)(29),
@@ -505,7 +505,7 @@ FA_0_29_2 : FA port map (
 
 
 -- Numero non processati: 2
-dadda_i(1)(8 downto 7)(29) <= dadda_i(0)(10 downto 9)(29);
+dadda_i(1)(7 to 8)(29) <= dadda_i(0)(9 to 10)(29);
 
 FA_0_30_0 : FA port map (
 	a => dadda_i(0)(0)(30),
@@ -527,7 +527,7 @@ HA_0_30_0 : HA port map (
 	cout => dadda_i(1)(2)(31));
 
 -- Numero non processati: 3
-dadda_i(1)(8 downto 6)(30) <= dadda_i(0)(10 downto 8)(30);
+dadda_i(1)(6 to 8)(30) <= dadda_i(0)(8 to 10)(30);
 
 FA_0_31_0 : FA port map (
 	a => dadda_i(0)(0)(31),
@@ -544,7 +544,7 @@ FA_0_31_1 : FA port map (
 
 
 -- Numero non processati: 4
-dadda_i(1)(8 downto 5)(31) <= dadda_i(0)(9 downto 6)(31);
+dadda_i(1)(5 to 8)(31) <= dadda_i(0)(6 to 9)(31);
 
 FA_0_32_0 : FA port map (
 	a => dadda_i(0)(0)(32),
@@ -560,7 +560,7 @@ HA_0_32_0 : HA port map (
 	cout => dadda_i(1)(1)(33));
 
 -- Numero non processati: 5
-dadda_i(1)(8 downto 4)(32) <= dadda_i(0)(9 downto 5)(32);
+dadda_i(1)(4 to 8)(32) <= dadda_i(0)(5 to 9)(32);
 
 FA_0_33_0 : FA port map (
 	a => dadda_i(0)(0)(33),
@@ -571,7 +571,7 @@ FA_0_33_0 : FA port map (
 
 
 -- Numero non processati: 6
-dadda_i(1)(8 downto 3)(33) <= dadda_i(0)(8 downto 3)(33);
+dadda_i(1)(3 to 8)(33) <= dadda_i(0)(3 to 8)(33);
 
 
 HA_0_34_0 : HA port map (
@@ -581,76 +581,76 @@ HA_0_34_0 : HA port map (
 	cout => dadda_i(1)(0)(35));
 
 -- Numero non processati: 7
-dadda_i(1)(8 downto 2)(34) <= dadda_i(0)(8 downto 2)(34);
+dadda_i(1)(2 to 8)(34) <= dadda_i(0)(2 to 8)(34);
 
 -- Numero non processati: 6
-dadda_i(1)(5 downto 0)(35) <= dadda_i(0)(5 downto 0)(35);
+dadda_i(1)(0 to 5)(35) <= dadda_i(0)(0 to 5)(35);
 
 -- Numero non processati: 6
-dadda_i(1)(5 downto 0)(36) <= dadda_i(0)(5 downto 0)(36);
+dadda_i(1)(0 to 5)(36) <= dadda_i(0)(0 to 5)(36);
 
 -- Numero non processati: 7
-dadda_i(1)(6 downto 0)(37) <= dadda_i(0)(6 downto 0)(37);
+dadda_i(1)(0 to 6)(37) <= dadda_i(0)(0 to 6)(37);
 
 -- Numero non processati: 7
-dadda_i(1)(6 downto 0)(38) <= dadda_i(0)(6 downto 0)(38);
+dadda_i(1)(0 to 6)(38) <= dadda_i(0)(0 to 6)(38);
 
 -- Numero non processati: 6
-dadda_i(1)(5 downto 0)(39) <= dadda_i(0)(5 downto 0)(39);
+dadda_i(1)(0 to 5)(39) <= dadda_i(0)(0 to 5)(39);
 
 -- Numero non processati: 6
-dadda_i(1)(5 downto 0)(40) <= dadda_i(0)(5 downto 0)(40);
+dadda_i(1)(0 to 5)(40) <= dadda_i(0)(0 to 5)(40);
 
 -- Numero non processati: 5
-dadda_i(1)(4 downto 0)(41) <= dadda_i(0)(4 downto 0)(41);
+dadda_i(1)(0 to 4)(41) <= dadda_i(0)(0 to 4)(41);
 
 -- Numero non processati: 5
-dadda_i(1)(4 downto 0)(42) <= dadda_i(0)(4 downto 0)(42);
+dadda_i(1)(0 to 4)(42) <= dadda_i(0)(0 to 4)(42);
 
 -- Numero non processati: 4
-dadda_i(1)(3 downto 0)(43) <= dadda_i(0)(3 downto 0)(43);
+dadda_i(1)(0 to 3)(43) <= dadda_i(0)(0 to 3)(43);
 
 -- Numero non processati: 4
-dadda_i(1)(3 downto 0)(44) <= dadda_i(0)(3 downto 0)(44);
+dadda_i(1)(0 to 3)(44) <= dadda_i(0)(0 to 3)(44);
 
 -- Numero non processati: 3
-dadda_i(1)(2 downto 0)(45) <= dadda_i(0)(2 downto 0)(45);
+dadda_i(1)(0 to 2)(45) <= dadda_i(0)(0 to 2)(45);
 
 -- Numero non processati: 3
-dadda_i(1)(2 downto 0)(46) <= dadda_i(0)(2 downto 0)(46);
+dadda_i(1)(0 to 2)(46) <= dadda_i(0)(0 to 2)(46);
 
 -- Numero non processati: 2
-dadda_i(1)(1 downto 0)(47) <= dadda_i(0)(1 downto 0)(47);
+dadda_i(1)(0 to 1)(47) <= dadda_i(0)(0 to 1)(47);
 
 -- Numero non processati: 2
-dadda_i(2)(1 downto 0)(0) <= dadda_i(1)(1 downto 0)(0);
+dadda_i(2)(0 to 1)(0) <= dadda_i(1)(0 to 1)(0);
 
 -- Numero non processati: 1
-dadda_i(2)(0 downto 0)(1) <= dadda_i(1)(0 downto 0)(1);
+dadda_i(2)(0 to 0)(1) <= dadda_i(1)(0 to 0)(1);
 
 -- Numero non processati: 3
-dadda_i(2)(2 downto 0)(2) <= dadda_i(1)(2 downto 0)(2);
+dadda_i(2)(0 to 2)(2) <= dadda_i(1)(0 to 2)(2);
 
 -- Numero non processati: 2
-dadda_i(2)(1 downto 0)(3) <= dadda_i(1)(1 downto 0)(3);
+dadda_i(2)(0 to 1)(3) <= dadda_i(1)(0 to 1)(3);
 
 -- Numero non processati: 4
-dadda_i(2)(3 downto 0)(4) <= dadda_i(1)(3 downto 0)(4);
+dadda_i(2)(0 to 3)(4) <= dadda_i(1)(0 to 3)(4);
 
 -- Numero non processati: 3
-dadda_i(2)(2 downto 0)(5) <= dadda_i(1)(2 downto 0)(5);
+dadda_i(2)(0 to 2)(5) <= dadda_i(1)(0 to 2)(5);
 
 -- Numero non processati: 5
-dadda_i(2)(4 downto 0)(6) <= dadda_i(1)(4 downto 0)(6);
+dadda_i(2)(0 to 4)(6) <= dadda_i(1)(0 to 4)(6);
 
 -- Numero non processati: 4
-dadda_i(2)(3 downto 0)(7) <= dadda_i(1)(3 downto 0)(7);
+dadda_i(2)(0 to 3)(7) <= dadda_i(1)(0 to 3)(7);
 
 -- Numero non processati: 6
-dadda_i(2)(5 downto 0)(8) <= dadda_i(1)(5 downto 0)(8);
+dadda_i(2)(0 to 5)(8) <= dadda_i(1)(0 to 5)(8);
 
 -- Numero non processati: 5
-dadda_i(2)(4 downto 0)(9) <= dadda_i(1)(4 downto 0)(9);
+dadda_i(2)(0 to 4)(9) <= dadda_i(1)(0 to 4)(9);
 
 
 HA_1_10_0 : HA port map (
@@ -660,7 +660,7 @@ HA_1_10_0 : HA port map (
 	cout => dadda_i(2)(0)(11));
 
 -- Numero non processati: 5
-dadda_i(2)(5 downto 1)(10) <= dadda_i(1)(6 downto 2)(10);
+dadda_i(2)(1 to 5)(10) <= dadda_i(1)(2 to 6)(10);
 
 
 HA_1_11_0 : HA port map (
@@ -670,7 +670,7 @@ HA_1_11_0 : HA port map (
 	cout => dadda_i(2)(0)(12));
 
 -- Numero non processati: 4
-dadda_i(2)(5 downto 2)(11) <= dadda_i(1)(5 downto 2)(11);
+dadda_i(2)(2 to 5)(11) <= dadda_i(1)(2 to 5)(11);
 
 FA_1_12_0 : FA port map (
 	a => dadda_i(1)(0)(12),
@@ -686,7 +686,7 @@ HA_1_12_0 : HA port map (
 	cout => dadda_i(2)(1)(13));
 
 -- Numero non processati: 3
-dadda_i(2)(5 downto 3)(12) <= dadda_i(1)(7 downto 5)(12);
+dadda_i(2)(3 to 5)(12) <= dadda_i(1)(5 to 7)(12);
 
 FA_1_13_0 : FA port map (
 	a => dadda_i(1)(0)(13),
@@ -702,7 +702,7 @@ HA_1_13_0 : HA port map (
 	cout => dadda_i(2)(1)(14));
 
 -- Numero non processati: 2
-dadda_i(2)(5 downto 4)(13) <= dadda_i(1)(6 downto 5)(13);
+dadda_i(2)(4 to 5)(13) <= dadda_i(1)(5 to 6)(13);
 
 FA_1_14_0 : FA port map (
 	a => dadda_i(1)(0)(14),
@@ -724,7 +724,7 @@ HA_1_14_0 : HA port map (
 	cout => dadda_i(2)(2)(15));
 
 -- Numero non processati: 1
-dadda_i(2)(5 downto 5)(14) <= dadda_i(1)(8 downto 8)(14);
+dadda_i(2)(5 to 5)(14) <= dadda_i(1)(8 to 8)(14);
 
 FA_1_15_0 : FA port map (
 	a => dadda_i(1)(0)(15),
@@ -1139,7 +1139,7 @@ HA_1_35_0 : HA port map (
 	cout => dadda_i(2)(1)(36));
 
 -- Numero non processati: 1
-dadda_i(2)(5 downto 5)(35) <= dadda_i(1)(5 downto 5)(35);
+dadda_i(2)(5 to 5)(35) <= dadda_i(1)(5 to 5)(35);
 
 FA_1_36_0 : FA port map (
 	a => dadda_i(1)(0)(36),
@@ -1150,7 +1150,7 @@ FA_1_36_0 : FA port map (
 
 
 -- Numero non processati: 3
-dadda_i(2)(5 downto 3)(36) <= dadda_i(1)(5 downto 3)(36);
+dadda_i(2)(3 to 5)(36) <= dadda_i(1)(3 to 5)(36);
 
 FA_1_37_0 : FA port map (
 	a => dadda_i(1)(0)(37),
@@ -1161,7 +1161,7 @@ FA_1_37_0 : FA port map (
 
 
 -- Numero non processati: 4
-dadda_i(2)(5 downto 2)(37) <= dadda_i(1)(6 downto 3)(37);
+dadda_i(2)(2 to 5)(37) <= dadda_i(1)(3 to 6)(37);
 
 FA_1_38_0 : FA port map (
 	a => dadda_i(1)(0)(38),
@@ -1172,7 +1172,7 @@ FA_1_38_0 : FA port map (
 
 
 -- Numero non processati: 4
-dadda_i(2)(5 downto 2)(38) <= dadda_i(1)(6 downto 3)(38);
+dadda_i(2)(2 to 5)(38) <= dadda_i(1)(3 to 6)(38);
 
 
 HA_1_39_0 : HA port map (
@@ -1182,7 +1182,7 @@ HA_1_39_0 : HA port map (
 	cout => dadda_i(2)(0)(40));
 
 -- Numero non processati: 4
-dadda_i(2)(5 downto 2)(39) <= dadda_i(1)(5 downto 2)(39);
+dadda_i(2)(2 to 5)(39) <= dadda_i(1)(2 to 5)(39);
 
 
 HA_1_40_0 : HA port map (
@@ -1192,46 +1192,46 @@ HA_1_40_0 : HA port map (
 	cout => dadda_i(2)(0)(41));
 
 -- Numero non processati: 4
-dadda_i(2)(5 downto 2)(40) <= dadda_i(1)(5 downto 2)(40);
+dadda_i(2)(2 to 5)(40) <= dadda_i(1)(2 to 5)(40);
 
 -- Numero non processati: 5
-dadda_i(2)(4 downto 0)(41) <= dadda_i(1)(4 downto 0)(41);
+dadda_i(2)(0 to 4)(41) <= dadda_i(1)(0 to 4)(41);
 
 -- Numero non processati: 5
-dadda_i(2)(4 downto 0)(42) <= dadda_i(1)(4 downto 0)(42);
+dadda_i(2)(0 to 4)(42) <= dadda_i(1)(0 to 4)(42);
 
 -- Numero non processati: 4
-dadda_i(2)(3 downto 0)(43) <= dadda_i(1)(3 downto 0)(43);
+dadda_i(2)(0 to 3)(43) <= dadda_i(1)(0 to 3)(43);
 
 -- Numero non processati: 4
-dadda_i(2)(3 downto 0)(44) <= dadda_i(1)(3 downto 0)(44);
+dadda_i(2)(0 to 3)(44) <= dadda_i(1)(0 to 3)(44);
 
 -- Numero non processati: 3
-dadda_i(2)(2 downto 0)(45) <= dadda_i(1)(2 downto 0)(45);
+dadda_i(2)(0 to 2)(45) <= dadda_i(1)(0 to 2)(45);
 
 -- Numero non processati: 3
-dadda_i(2)(2 downto 0)(46) <= dadda_i(1)(2 downto 0)(46);
+dadda_i(2)(0 to 2)(46) <= dadda_i(1)(0 to 2)(46);
 
 -- Numero non processati: 2
-dadda_i(2)(1 downto 0)(47) <= dadda_i(1)(1 downto 0)(47);
+dadda_i(2)(0 to 1)(47) <= dadda_i(1)(0 to 1)(47);
 
 -- Numero non processati: 2
-dadda_i(3)(1 downto 0)(0) <= dadda_i(2)(1 downto 0)(0);
+dadda_i(3)(0 to 1)(0) <= dadda_i(2)(0 to 1)(0);
 
 -- Numero non processati: 1
-dadda_i(3)(0 downto 0)(1) <= dadda_i(2)(0 downto 0)(1);
+dadda_i(3)(0 to 0)(1) <= dadda_i(2)(0 to 0)(1);
 
 -- Numero non processati: 3
-dadda_i(3)(2 downto 0)(2) <= dadda_i(2)(2 downto 0)(2);
+dadda_i(3)(0 to 2)(2) <= dadda_i(2)(0 to 2)(2);
 
 -- Numero non processati: 2
-dadda_i(3)(1 downto 0)(3) <= dadda_i(2)(1 downto 0)(3);
+dadda_i(3)(0 to 1)(3) <= dadda_i(2)(0 to 1)(3);
 
 -- Numero non processati: 4
-dadda_i(3)(3 downto 0)(4) <= dadda_i(2)(3 downto 0)(4);
+dadda_i(3)(0 to 3)(4) <= dadda_i(2)(0 to 3)(4);
 
 -- Numero non processati: 3
-dadda_i(3)(2 downto 0)(5) <= dadda_i(2)(2 downto 0)(5);
+dadda_i(3)(0 to 2)(5) <= dadda_i(2)(0 to 2)(5);
 
 
 HA_2_6_0 : HA port map (
@@ -1241,7 +1241,7 @@ HA_2_6_0 : HA port map (
 	cout => dadda_i(3)(0)(7));
 
 -- Numero non processati: 3
-dadda_i(3)(3 downto 1)(6) <= dadda_i(2)(4 downto 2)(6);
+dadda_i(3)(1 to 3)(6) <= dadda_i(2)(2 to 4)(6);
 
 
 HA_2_7_0 : HA port map (
@@ -1251,7 +1251,7 @@ HA_2_7_0 : HA port map (
 	cout => dadda_i(3)(0)(8));
 
 -- Numero non processati: 2
-dadda_i(3)(3 downto 2)(7) <= dadda_i(2)(3 downto 2)(7);
+dadda_i(3)(2 to 3)(7) <= dadda_i(2)(2 to 3)(7);
 
 FA_2_8_0 : FA port map (
 	a => dadda_i(2)(0)(8),
@@ -1267,7 +1267,7 @@ HA_2_8_0 : HA port map (
 	cout => dadda_i(3)(1)(9));
 
 -- Numero non processati: 1
-dadda_i(3)(3 downto 3)(8) <= dadda_i(2)(5 downto 5)(8);
+dadda_i(3)(3 to 3)(8) <= dadda_i(2)(5 to 5)(8);
 
 FA_2_9_0 : FA port map (
 	a => dadda_i(2)(0)(9),
@@ -1751,7 +1751,7 @@ FA_2_43_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(3)(3 downto 3)(43) <= dadda_i(2)(3 downto 3)(43);
+dadda_i(3)(3 to 3)(43) <= dadda_i(2)(3 to 3)(43);
 
 
 HA_2_44_0 : HA port map (
@@ -1761,28 +1761,28 @@ HA_2_44_0 : HA port map (
 	cout => dadda_i(3)(0)(45));
 
 -- Numero non processati: 2
-dadda_i(3)(3 downto 2)(44) <= dadda_i(2)(3 downto 2)(44);
+dadda_i(3)(2 to 3)(44) <= dadda_i(2)(2 to 3)(44);
 
 -- Numero non processati: 3
-dadda_i(3)(2 downto 0)(45) <= dadda_i(2)(2 downto 0)(45);
+dadda_i(3)(0 to 2)(45) <= dadda_i(2)(0 to 2)(45);
 
 -- Numero non processati: 3
-dadda_i(3)(2 downto 0)(46) <= dadda_i(2)(2 downto 0)(46);
+dadda_i(3)(0 to 2)(46) <= dadda_i(2)(0 to 2)(46);
 
 -- Numero non processati: 2
-dadda_i(3)(1 downto 0)(47) <= dadda_i(2)(1 downto 0)(47);
+dadda_i(3)(0 to 1)(47) <= dadda_i(2)(0 to 1)(47);
 
 -- Numero non processati: 2
-dadda_i(4)(1 downto 0)(0) <= dadda_i(3)(1 downto 0)(0);
+dadda_i(4)(0 to 1)(0) <= dadda_i(3)(0 to 1)(0);
 
 -- Numero non processati: 1
-dadda_i(4)(0 downto 0)(1) <= dadda_i(3)(0 downto 0)(1);
+dadda_i(4)(0 to 0)(1) <= dadda_i(3)(0 to 0)(1);
 
 -- Numero non processati: 3
-dadda_i(4)(2 downto 0)(2) <= dadda_i(3)(2 downto 0)(2);
+dadda_i(4)(0 to 2)(2) <= dadda_i(3)(0 to 2)(2);
 
 -- Numero non processati: 2
-dadda_i(4)(1 downto 0)(3) <= dadda_i(3)(1 downto 0)(3);
+dadda_i(4)(0 to 1)(3) <= dadda_i(3)(0 to 1)(3);
 
 
 HA_3_4_0 : HA port map (
@@ -1792,7 +1792,7 @@ HA_3_4_0 : HA port map (
 	cout => dadda_i(4)(0)(5));
 
 -- Numero non processati: 2
-dadda_i(4)(2 downto 1)(4) <= dadda_i(3)(3 downto 2)(4);
+dadda_i(4)(1 to 2)(4) <= dadda_i(3)(2 to 3)(4);
 
 
 HA_3_5_0 : HA port map (
@@ -1802,7 +1802,7 @@ HA_3_5_0 : HA port map (
 	cout => dadda_i(4)(0)(6));
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(5) <= dadda_i(3)(2 downto 2)(5);
+dadda_i(4)(2 to 2)(5) <= dadda_i(3)(2 to 2)(5);
 
 FA_3_6_0 : FA port map (
 	a => dadda_i(3)(0)(6),
@@ -1813,7 +1813,7 @@ FA_3_6_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(6) <= dadda_i(3)(3 downto 3)(6);
+dadda_i(4)(2 to 2)(6) <= dadda_i(3)(3 to 3)(6);
 
 FA_3_7_0 : FA port map (
 	a => dadda_i(3)(0)(7),
@@ -1824,7 +1824,7 @@ FA_3_7_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(7) <= dadda_i(3)(3 downto 3)(7);
+dadda_i(4)(2 to 2)(7) <= dadda_i(3)(3 to 3)(7);
 
 FA_3_8_0 : FA port map (
 	a => dadda_i(3)(0)(8),
@@ -1835,7 +1835,7 @@ FA_3_8_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(8) <= dadda_i(3)(3 downto 3)(8);
+dadda_i(4)(2 to 2)(8) <= dadda_i(3)(3 to 3)(8);
 
 FA_3_9_0 : FA port map (
 	a => dadda_i(3)(0)(9),
@@ -1846,7 +1846,7 @@ FA_3_9_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(9) <= dadda_i(3)(3 downto 3)(9);
+dadda_i(4)(2 to 2)(9) <= dadda_i(3)(3 to 3)(9);
 
 FA_3_10_0 : FA port map (
 	a => dadda_i(3)(0)(10),
@@ -1857,7 +1857,7 @@ FA_3_10_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(10) <= dadda_i(3)(3 downto 3)(10);
+dadda_i(4)(2 to 2)(10) <= dadda_i(3)(3 to 3)(10);
 
 FA_3_11_0 : FA port map (
 	a => dadda_i(3)(0)(11),
@@ -1868,7 +1868,7 @@ FA_3_11_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(11) <= dadda_i(3)(3 downto 3)(11);
+dadda_i(4)(2 to 2)(11) <= dadda_i(3)(3 to 3)(11);
 
 FA_3_12_0 : FA port map (
 	a => dadda_i(3)(0)(12),
@@ -1879,7 +1879,7 @@ FA_3_12_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(12) <= dadda_i(3)(3 downto 3)(12);
+dadda_i(4)(2 to 2)(12) <= dadda_i(3)(3 to 3)(12);
 
 FA_3_13_0 : FA port map (
 	a => dadda_i(3)(0)(13),
@@ -1890,7 +1890,7 @@ FA_3_13_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(13) <= dadda_i(3)(3 downto 3)(13);
+dadda_i(4)(2 to 2)(13) <= dadda_i(3)(3 to 3)(13);
 
 FA_3_14_0 : FA port map (
 	a => dadda_i(3)(0)(14),
@@ -1901,7 +1901,7 @@ FA_3_14_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(14) <= dadda_i(3)(3 downto 3)(14);
+dadda_i(4)(2 to 2)(14) <= dadda_i(3)(3 to 3)(14);
 
 FA_3_15_0 : FA port map (
 	a => dadda_i(3)(0)(15),
@@ -1912,7 +1912,7 @@ FA_3_15_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(15) <= dadda_i(3)(3 downto 3)(15);
+dadda_i(4)(2 to 2)(15) <= dadda_i(3)(3 to 3)(15);
 
 FA_3_16_0 : FA port map (
 	a => dadda_i(3)(0)(16),
@@ -1923,7 +1923,7 @@ FA_3_16_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(16) <= dadda_i(3)(3 downto 3)(16);
+dadda_i(4)(2 to 2)(16) <= dadda_i(3)(3 to 3)(16);
 
 FA_3_17_0 : FA port map (
 	a => dadda_i(3)(0)(17),
@@ -1934,7 +1934,7 @@ FA_3_17_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(17) <= dadda_i(3)(3 downto 3)(17);
+dadda_i(4)(2 to 2)(17) <= dadda_i(3)(3 to 3)(17);
 
 FA_3_18_0 : FA port map (
 	a => dadda_i(3)(0)(18),
@@ -1945,7 +1945,7 @@ FA_3_18_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(18) <= dadda_i(3)(3 downto 3)(18);
+dadda_i(4)(2 to 2)(18) <= dadda_i(3)(3 to 3)(18);
 
 FA_3_19_0 : FA port map (
 	a => dadda_i(3)(0)(19),
@@ -1956,7 +1956,7 @@ FA_3_19_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(19) <= dadda_i(3)(3 downto 3)(19);
+dadda_i(4)(2 to 2)(19) <= dadda_i(3)(3 to 3)(19);
 
 FA_3_20_0 : FA port map (
 	a => dadda_i(3)(0)(20),
@@ -1967,7 +1967,7 @@ FA_3_20_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(20) <= dadda_i(3)(3 downto 3)(20);
+dadda_i(4)(2 to 2)(20) <= dadda_i(3)(3 to 3)(20);
 
 FA_3_21_0 : FA port map (
 	a => dadda_i(3)(0)(21),
@@ -1978,7 +1978,7 @@ FA_3_21_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(21) <= dadda_i(3)(3 downto 3)(21);
+dadda_i(4)(2 to 2)(21) <= dadda_i(3)(3 to 3)(21);
 
 FA_3_22_0 : FA port map (
 	a => dadda_i(3)(0)(22),
@@ -1989,7 +1989,7 @@ FA_3_22_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(22) <= dadda_i(3)(3 downto 3)(22);
+dadda_i(4)(2 to 2)(22) <= dadda_i(3)(3 to 3)(22);
 
 FA_3_23_0 : FA port map (
 	a => dadda_i(3)(0)(23),
@@ -2000,7 +2000,7 @@ FA_3_23_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(23) <= dadda_i(3)(3 downto 3)(23);
+dadda_i(4)(2 to 2)(23) <= dadda_i(3)(3 to 3)(23);
 
 FA_3_24_0 : FA port map (
 	a => dadda_i(3)(0)(24),
@@ -2011,7 +2011,7 @@ FA_3_24_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(24) <= dadda_i(3)(3 downto 3)(24);
+dadda_i(4)(2 to 2)(24) <= dadda_i(3)(3 to 3)(24);
 
 FA_3_25_0 : FA port map (
 	a => dadda_i(3)(0)(25),
@@ -2022,7 +2022,7 @@ FA_3_25_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(25) <= dadda_i(3)(3 downto 3)(25);
+dadda_i(4)(2 to 2)(25) <= dadda_i(3)(3 to 3)(25);
 
 FA_3_26_0 : FA port map (
 	a => dadda_i(3)(0)(26),
@@ -2033,7 +2033,7 @@ FA_3_26_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(26) <= dadda_i(3)(3 downto 3)(26);
+dadda_i(4)(2 to 2)(26) <= dadda_i(3)(3 to 3)(26);
 
 FA_3_27_0 : FA port map (
 	a => dadda_i(3)(0)(27),
@@ -2044,7 +2044,7 @@ FA_3_27_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(27) <= dadda_i(3)(3 downto 3)(27);
+dadda_i(4)(2 to 2)(27) <= dadda_i(3)(3 to 3)(27);
 
 FA_3_28_0 : FA port map (
 	a => dadda_i(3)(0)(28),
@@ -2055,7 +2055,7 @@ FA_3_28_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(28) <= dadda_i(3)(3 downto 3)(28);
+dadda_i(4)(2 to 2)(28) <= dadda_i(3)(3 to 3)(28);
 
 FA_3_29_0 : FA port map (
 	a => dadda_i(3)(0)(29),
@@ -2066,7 +2066,7 @@ FA_3_29_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(29) <= dadda_i(3)(3 downto 3)(29);
+dadda_i(4)(2 to 2)(29) <= dadda_i(3)(3 to 3)(29);
 
 FA_3_30_0 : FA port map (
 	a => dadda_i(3)(0)(30),
@@ -2077,7 +2077,7 @@ FA_3_30_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(30) <= dadda_i(3)(3 downto 3)(30);
+dadda_i(4)(2 to 2)(30) <= dadda_i(3)(3 to 3)(30);
 
 FA_3_31_0 : FA port map (
 	a => dadda_i(3)(0)(31),
@@ -2088,7 +2088,7 @@ FA_3_31_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(31) <= dadda_i(3)(3 downto 3)(31);
+dadda_i(4)(2 to 2)(31) <= dadda_i(3)(3 to 3)(31);
 
 FA_3_32_0 : FA port map (
 	a => dadda_i(3)(0)(32),
@@ -2099,7 +2099,7 @@ FA_3_32_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(32) <= dadda_i(3)(3 downto 3)(32);
+dadda_i(4)(2 to 2)(32) <= dadda_i(3)(3 to 3)(32);
 
 FA_3_33_0 : FA port map (
 	a => dadda_i(3)(0)(33),
@@ -2110,7 +2110,7 @@ FA_3_33_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(33) <= dadda_i(3)(3 downto 3)(33);
+dadda_i(4)(2 to 2)(33) <= dadda_i(3)(3 to 3)(33);
 
 FA_3_34_0 : FA port map (
 	a => dadda_i(3)(0)(34),
@@ -2121,7 +2121,7 @@ FA_3_34_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(34) <= dadda_i(3)(3 downto 3)(34);
+dadda_i(4)(2 to 2)(34) <= dadda_i(3)(3 to 3)(34);
 
 FA_3_35_0 : FA port map (
 	a => dadda_i(3)(0)(35),
@@ -2132,7 +2132,7 @@ FA_3_35_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(35) <= dadda_i(3)(3 downto 3)(35);
+dadda_i(4)(2 to 2)(35) <= dadda_i(3)(3 to 3)(35);
 
 FA_3_36_0 : FA port map (
 	a => dadda_i(3)(0)(36),
@@ -2143,7 +2143,7 @@ FA_3_36_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(36) <= dadda_i(3)(3 downto 3)(36);
+dadda_i(4)(2 to 2)(36) <= dadda_i(3)(3 to 3)(36);
 
 FA_3_37_0 : FA port map (
 	a => dadda_i(3)(0)(37),
@@ -2154,7 +2154,7 @@ FA_3_37_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(37) <= dadda_i(3)(3 downto 3)(37);
+dadda_i(4)(2 to 2)(37) <= dadda_i(3)(3 to 3)(37);
 
 FA_3_38_0 : FA port map (
 	a => dadda_i(3)(0)(38),
@@ -2165,7 +2165,7 @@ FA_3_38_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(38) <= dadda_i(3)(3 downto 3)(38);
+dadda_i(4)(2 to 2)(38) <= dadda_i(3)(3 to 3)(38);
 
 FA_3_39_0 : FA port map (
 	a => dadda_i(3)(0)(39),
@@ -2176,7 +2176,7 @@ FA_3_39_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(39) <= dadda_i(3)(3 downto 3)(39);
+dadda_i(4)(2 to 2)(39) <= dadda_i(3)(3 to 3)(39);
 
 FA_3_40_0 : FA port map (
 	a => dadda_i(3)(0)(40),
@@ -2187,7 +2187,7 @@ FA_3_40_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(40) <= dadda_i(3)(3 downto 3)(40);
+dadda_i(4)(2 to 2)(40) <= dadda_i(3)(3 to 3)(40);
 
 FA_3_41_0 : FA port map (
 	a => dadda_i(3)(0)(41),
@@ -2198,7 +2198,7 @@ FA_3_41_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(41) <= dadda_i(3)(3 downto 3)(41);
+dadda_i(4)(2 to 2)(41) <= dadda_i(3)(3 to 3)(41);
 
 FA_3_42_0 : FA port map (
 	a => dadda_i(3)(0)(42),
@@ -2209,7 +2209,7 @@ FA_3_42_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(42) <= dadda_i(3)(3 downto 3)(42);
+dadda_i(4)(2 to 2)(42) <= dadda_i(3)(3 to 3)(42);
 
 FA_3_43_0 : FA port map (
 	a => dadda_i(3)(0)(43),
@@ -2220,7 +2220,7 @@ FA_3_43_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(43) <= dadda_i(3)(3 downto 3)(43);
+dadda_i(4)(2 to 2)(43) <= dadda_i(3)(3 to 3)(43);
 
 FA_3_44_0 : FA port map (
 	a => dadda_i(3)(0)(44),
@@ -2231,7 +2231,7 @@ FA_3_44_0 : FA port map (
 
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(44) <= dadda_i(3)(3 downto 3)(44);
+dadda_i(4)(2 to 2)(44) <= dadda_i(3)(3 to 3)(44);
 
 
 HA_3_45_0 : HA port map (
@@ -2241,7 +2241,7 @@ HA_3_45_0 : HA port map (
 	cout => dadda_i(4)(0)(46));
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(45) <= dadda_i(3)(2 downto 2)(45);
+dadda_i(4)(2 to 2)(45) <= dadda_i(3)(2 to 2)(45);
 
 
 HA_3_46_0 : HA port map (
@@ -2251,16 +2251,16 @@ HA_3_46_0 : HA port map (
 	cout => dadda_i(4)(0)(47));
 
 -- Numero non processati: 1
-dadda_i(4)(2 downto 2)(46) <= dadda_i(3)(2 downto 2)(46);
+dadda_i(4)(2 to 2)(46) <= dadda_i(3)(2 to 2)(46);
 
 -- Numero non processati: 2
-dadda_i(4)(1 downto 0)(47) <= dadda_i(3)(1 downto 0)(47);
+dadda_i(4)(0 to 1)(47) <= dadda_i(3)(0 to 1)(47);
 
 -- Numero non processati: 2
-dadda_i(5)(1 downto 0)(0) <= dadda_i(4)(1 downto 0)(0);
+dadda_i(5)(0 to 1)(0) <= dadda_i(4)(0 to 1)(0);
 
 -- Numero non processati: 1
-dadda_i(5)(0 downto 0)(1) <= dadda_i(4)(0 downto 0)(1);
+dadda_i(5)(0 to 0)(1) <= dadda_i(4)(0 to 0)(1);
 
 
 HA_4_2_0 : HA port map (
@@ -2270,7 +2270,7 @@ HA_4_2_0 : HA port map (
 	cout => dadda_i(5)(0)(3));
 
 -- Numero non processati: 1
-dadda_i(5)(1 downto 1)(2) <= dadda_i(4)(2 downto 2)(2);
+dadda_i(5)(1 to 1)(2) <= dadda_i(4)(2 to 2)(2);
 
 
 HA_4_3_0 : HA port map (
