@@ -1,6 +1,6 @@
 //`timescale 1ns
 
-module tb_fir ();
+module tb_mbe_mult ();
 
    wire CLK_i;
    wire RST_n_i;
@@ -19,9 +19,9 @@ module tb_fir ();
 				.b(b_i),
 		 	 	.END_SIM(END_SIM_i));
 
-   MBE_mult UUT(.a(a_i)
-				.b(b_i)
-				.p(p_i)); 		
+   MBE_mult UUT(.a(a_i),
+			.b(b_i),
+			.p(p_i)); 		
 
    data_sink DS(.CLK(CLK_i),
 		.RST_n(RST_n_i),
