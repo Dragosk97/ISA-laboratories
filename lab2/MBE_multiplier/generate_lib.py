@@ -37,14 +37,16 @@ def HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col):
 
 def unproc_prop(netlist_str, num_unproc, num_FA, num_HA, num_carry, stage, col):
 
-    if num_unproc != 0:
-        netlist_str += f"-- Numero non processati: {num_unproc}\n"
+    netlist_str += f"-- Numero non processati: {num_unproc}\n"
+
+    for i in range(num_unproc):
         # next stage signal
-        netlist_str += f"dadda_i({stage+1})({num_FA + num_HA + num_carry} to {num_unproc + num_FA + num_HA + num_carry - 1})({col}) <= "
+        netlist_str += f"dadda_i({stage+1})({i + num_FA + num_HA + num_carry})({col}) <= "
         
         # last stage signal
-        netlist_str += f"dadda_i({stage})({3*num_FA + 2*num_HA} to {3*num_FA + 2*num_HA + num_unproc - 1})({col});\n\n"
-
+        netlist_str += f"dadda_i({stage})({3*num_FA + 2*num_HA + i})({col});\n"
+    
+    netlist_str += "\n"
     return netlist_str
 
 def vhdl_composer(netlist_str, filename):
