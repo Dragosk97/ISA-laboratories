@@ -133,7 +133,7 @@ generate
 	dadda_i(0)(1)(47) <= in_dadda(12)(23);
 	end generate;
 	lastrow_midcol_lift: if j < 11 generate
-	dadda_i(0)(12-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(12)(23+2*(-11+j) downto 22+2*(-11+j) );
+	dadda_i(0)(12-j)(27 + 2*(j-1) + 1 downto 27 + 2*(j-1) ) <= in_dadda(12)(24+2*(-11+j) downto 23+2*(-11+j));
 	end generate;
 
 end generate;
