@@ -1,4 +1,4 @@
-from generate_lib import FA_gen, HA_gen, unproc_prop
+from generate_lib import FA_gen, HA_gen, unproc_prop, vhdl_composer
 
 netlist_str = ""
 
@@ -33,4 +33,5 @@ for stage in range(5):
             num_carry = num_FA + num_HA
     row_num.append(next_stage)
 
-print(netlist_str)
+
+vhdl_composer(netlist_str, "MBE_mult.vhd")

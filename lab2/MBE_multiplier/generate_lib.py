@@ -1,3 +1,5 @@
+from jinja2 import Environment, FileSystemLoader
+
 def FA_gen(netlist_str, num_FA, num_carry, stage, col):
     for i in range(num_FA):
         netlist_str += f"FA_{stage}_{col}_{i} : FA port map (\n"
@@ -44,3 +46,13 @@ def unproc_prop(netlist_str, num_unproc, num_FA, num_HA, num_carry, stage, col):
         netlist_str += f"dadda_i({stage})({3*num_FA + 2*num_HA + num_unproc - 1} downto {3*num_FA + 2*num_HA})({col});\n\n"
 
     return netlist_str
+
+def vhdl_composer(netlist_str, filename):
+    file_loader = FileSystemLoader('./')
+    env = Environment(loader=file_loader)
+    template = env.get_template('MBE_mult_template.vhd')
+
+    output = template.render(netlist_str=netlist_str)
+
+    vhdl_file = open(filename, 'w')
+    vhdl_file.write(output)
