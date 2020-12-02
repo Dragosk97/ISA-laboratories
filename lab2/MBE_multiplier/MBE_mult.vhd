@@ -1370,15 +1370,16 @@ FA_1_35_0 : FA port map (
 	cin => dadda_i(1)(2)(35),
 	s => dadda_i(2)(3)(35),
 	cout => dadda_i(2)(0)(36));
-
-HA_1_35_0 : HA port map (
+FA_1_35_1 : FA port map (
 	a => dadda_i(1)(3)(35),
 	b => dadda_i(1)(4)(35),
+	cin => dadda_i(1)(5)(35),
 	s => dadda_i(2)(4)(35),
 	cout => dadda_i(2)(1)(36));
 
+
 -- Numero non processati: 1
-dadda_i(2)(5)(35) <= dadda_i(1)(5)(35);
+dadda_i(2)(5)(35) <= dadda_i(1)(6)(35);
 
 FA_1_36_0 : FA port map (
 	a => dadda_i(1)(0)(36),
@@ -2070,12 +2071,13 @@ FA_2_41_0 : FA port map (
 	cin => dadda_i(2)(2)(41),
 	s => dadda_i(3)(2)(41),
 	cout => dadda_i(3)(0)(42));
-
-HA_2_41_0 : HA port map (
+FA_2_41_1 : FA port map (
 	a => dadda_i(2)(3)(41),
 	b => dadda_i(2)(4)(41),
+	cin => dadda_i(2)(5)(41),
 	s => dadda_i(3)(3)(41),
 	cout => dadda_i(3)(1)(42));
+
 
 -- Numero non processati: 0
 
@@ -2596,15 +2598,16 @@ FA_3_44_0 : FA port map (
 -- Numero non processati: 1
 dadda_i(4)(2)(44) <= dadda_i(3)(3)(44);
 
-
-HA_3_45_0 : HA port map (
+FA_3_45_0 : FA port map (
 	a => dadda_i(3)(0)(45),
 	b => dadda_i(3)(1)(45),
+	cin => dadda_i(3)(2)(45),
 	s => dadda_i(4)(1)(45),
 	cout => dadda_i(4)(0)(46));
 
+
 -- Numero non processati: 1
-dadda_i(4)(2)(45) <= dadda_i(3)(2)(45);
+dadda_i(4)(2)(45) <= dadda_i(3)(3)(45);
 
 
 HA_3_46_0 : HA port map (
@@ -3076,86 +3079,17 @@ FA_4_46_0 : FA port map (
 
 -- Numero non processati: 0
 
-
-HA_4_47_0 : HA port map (
+FA_4_47_0 : FA port map (
 	a => dadda_i(4)(0)(47),
 	b => dadda_i(4)(1)(47),
+	cin => dadda_i(4)(2)(47),
 	s => dadda_i(5)(1)(47),
 	cout => dadda_i(5)(0)(48));
+
 
 -- Numero non processati: 0
 
 
-
--- process(dadda_i)
-
--- constant row_num : array_stage_int := ((2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2),
--- (2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,8,7,7,6,6,5,5,4,4,3,3,2),
--- (2,1,3,2,4,3,5,4,6,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,4,4,3,3,2),
--- (2,1,3,2,4,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,2),
--- (2,1,3,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3),
--- (2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2));
--- variable diff : integer;
--- variable num_HA, num_FA, num_unproc : integer;
--- variable num_carry : integer := 0;
--- constant row_target : array_target := (13, 9, 6, 4, 3, 2);
-
--- begin
-
--- 	diff := 0;
--- 	num_HA := 0;
--- 	num_FA := 0;
--- 	num_unproc := 0;
-
--- 	--Dadda_alg: 
--- 	for stage in 0 to 4 loop
-
--- 		--column_elab:
--- 		for col in 0 to 47 loop
--- 			--no_reduction:
--- 			if row_num(stage)(col) + num_carry <= row_target(stage+1) then
--- 				--dadda_i(stage+1)(num_carry to row_num(stage)(col) + num_carry - 1)(col) <= dadda_i(stage)(0 to row_num(stage)(col) - 1)(col);
--- 				for i in 0 to row_num(stage)(col) - 1 loop
--- 					dadda_i(stage+1)(i+num_carry)(col) <= dadda_i(stage)(i)(col);
--- 				end loop;
--- 				num_carry := 0;
-
--- 			--yes_reduction: 
--- 			else
--- 				diff := row_num(stage)(col) + num_carry - row_target(stage+1);	
--- 				num_FA := diff / 2;
--- 				num_HA := diff mod 2;
--- 				num_unproc := row_num(stage)(col) - 3*num_FA - 2*num_HA;
-			
--- 				--FA_gen : 
--- 				for i in 0 to num_FA-1 loop
-					
--- 				--sum_FA
--- 					dadda_i(stage+1)(i+num_carry)(col) <= dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col) XOR dadda_i(stage)(3*i+2)(col);
--- 				--cout_FA
--- 					dadda_i(stage+1)(i)(col+1) <= ((dadda_i(stage)(3*i)(col) XOR dadda_i(stage)(3*i+1)(col)) AND dadda_i(stage)(3*i+2)(col)) OR (dadda_i(stage)(3*i)(col) AND dadda_i(stage)(3*i+1)(col));
--- 				end loop;
-			
--- 				--HA_gen : 
--- 				for i in 0 to num_HA-1 loop
--- 					dadda_i(stage+1)(num_carry + num_FA + i)(col) <= dadda_i(stage)(3*num_FA + 2*i)(col) XOR dadda_i(stage)(3*num_FA + 2*i + 1)(col);
--- 					dadda_i(stage+1)(num_FA+i)(col+1) <= dadda_i(stage)(3*num_FA + 2*i)(col) AND dadda_i(stage)(3*num_FA + 2*i + 1)(col);
--- 				end loop;
-
--- 				--Unprocessed_propagation: 
--- 				for i in 0 to num_unproc-1 loop
--- 					dadda_i(stage+1)(num_carry + num_FA + num_HA + i)(col) <= dadda_i(stage)(3*num_FA + 2*num_HA + i)(col);
--- 				end loop;
-
--- 				num_carry := num_FA + num_HA;
-
--- 			end if;
--- 		end loop;
--- 		num_carry := 0;
-
--- 	end loop;
-
--- end process;
 
 last_HA : HA port map(
 	dadda_i(5)(0)(0),
@@ -3164,6 +3098,6 @@ last_HA : HA port map(
 	dadda_i(5)(1)(1)
 );
 
-p(47 downto 1) <= std_logic_vector(unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(0)(47 downto 1)));
+p(47 downto 1) <= std_logic_vector(unsigned(dadda_i(5)(0)(47 downto 1)) + unsigned(dadda_i(5)(1)(47 downto 1)));
  
 end behavioural; 

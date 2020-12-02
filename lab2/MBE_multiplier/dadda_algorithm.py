@@ -16,7 +16,7 @@ for stage in range(5):
         
         diff = row_num[stage][col] + num_carry - row_target[stage+1]
         if diff <= 0:
-            next_stage.append(row_num[stage][col])
+            next_stage.append(row_num[stage][col] + num_carry)
             netlist_str = unproc_prop(netlist_str, row_num[stage][col], 0, 0, num_carry, stage, col)
             num_carry = 0
 
