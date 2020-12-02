@@ -697,12 +697,12 @@ dadda_i(1)(7)(34) <= dadda_i(0)(7)(34);
 dadda_i(1)(8)(34) <= dadda_i(0)(8)(34);
 
 -- Numero non processati: 6
-dadda_i(1)(0)(35) <= dadda_i(0)(0)(35);
-dadda_i(1)(1)(35) <= dadda_i(0)(1)(35);
-dadda_i(1)(2)(35) <= dadda_i(0)(2)(35);
-dadda_i(1)(3)(35) <= dadda_i(0)(3)(35);
-dadda_i(1)(4)(35) <= dadda_i(0)(4)(35);
-dadda_i(1)(5)(35) <= dadda_i(0)(5)(35);
+dadda_i(1)(1)(35) <= dadda_i(0)(0)(35);
+dadda_i(1)(2)(35) <= dadda_i(0)(1)(35);
+dadda_i(1)(3)(35) <= dadda_i(0)(2)(35);
+dadda_i(1)(4)(35) <= dadda_i(0)(3)(35);
+dadda_i(1)(5)(35) <= dadda_i(0)(4)(35);
+dadda_i(1)(6)(35) <= dadda_i(0)(5)(35);
 
 -- Numero non processati: 6
 dadda_i(1)(0)(36) <= dadda_i(0)(0)(36);
@@ -1448,11 +1448,11 @@ dadda_i(2)(4)(40) <= dadda_i(1)(4)(40);
 dadda_i(2)(5)(40) <= dadda_i(1)(5)(40);
 
 -- Numero non processati: 5
-dadda_i(2)(0)(41) <= dadda_i(1)(0)(41);
-dadda_i(2)(1)(41) <= dadda_i(1)(1)(41);
-dadda_i(2)(2)(41) <= dadda_i(1)(2)(41);
-dadda_i(2)(3)(41) <= dadda_i(1)(3)(41);
-dadda_i(2)(4)(41) <= dadda_i(1)(4)(41);
+dadda_i(2)(1)(41) <= dadda_i(1)(0)(41);
+dadda_i(2)(2)(41) <= dadda_i(1)(1)(41);
+dadda_i(2)(3)(41) <= dadda_i(1)(2)(41);
+dadda_i(2)(4)(41) <= dadda_i(1)(3)(41);
+dadda_i(2)(5)(41) <= dadda_i(1)(4)(41);
 
 -- Numero non processati: 5
 dadda_i(2)(0)(42) <= dadda_i(1)(0)(42);
@@ -2117,9 +2117,9 @@ dadda_i(3)(2)(44) <= dadda_i(2)(2)(44);
 dadda_i(3)(3)(44) <= dadda_i(2)(3)(44);
 
 -- Numero non processati: 3
-dadda_i(3)(0)(45) <= dadda_i(2)(0)(45);
-dadda_i(3)(1)(45) <= dadda_i(2)(1)(45);
-dadda_i(3)(2)(45) <= dadda_i(2)(2)(45);
+dadda_i(3)(1)(45) <= dadda_i(2)(0)(45);
+dadda_i(3)(2)(45) <= dadda_i(2)(1)(45);
+dadda_i(3)(3)(45) <= dadda_i(2)(2)(45);
 
 -- Numero non processati: 3
 dadda_i(3)(0)(46) <= dadda_i(2)(0)(46);
@@ -2617,8 +2617,8 @@ HA_3_46_0 : HA port map (
 dadda_i(4)(2)(46) <= dadda_i(3)(2)(46);
 
 -- Numero non processati: 2
-dadda_i(4)(0)(47) <= dadda_i(3)(0)(47);
-dadda_i(4)(1)(47) <= dadda_i(3)(1)(47);
+dadda_i(4)(1)(47) <= dadda_i(3)(0)(47);
+dadda_i(4)(2)(47) <= dadda_i(3)(1)(47);
 
 -- Numero non processati: 2
 dadda_i(5)(0)(0) <= dadda_i(4)(0)(0);
