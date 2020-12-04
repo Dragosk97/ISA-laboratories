@@ -2,7 +2,7 @@ from generate_lib import FA_gen, HA_gen, unproc_prop, vhdl_composer
 
 netlist_str = ""
 
-row_num = [[2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,6,6,7,7,6,6,5,5,4,4,3,3,2]]
+row_num = [[2,1,3,2,4,3,5,4,6,5,7,6,8,7,9,8,10,9,11,10,12,11,13,12,13,13,13,13,12,11,11,10,10,9,9,8,8,7,7,6,6,5,5,4,4,3,3,2]]
 
 row_target = [13, 9, 6, 4, 3, 2]
 
@@ -23,7 +23,7 @@ for stage in range(5):
         else:
             num_FA = diff // 2
             num_HA = diff % 2
-            num_unproc = row_num[stage][col] + num_carry - 3*num_FA - 2*num_HA
+            num_unproc = row_num[stage][col] - 3*num_FA - 2*num_HA
 
             netlist_str = FA_gen(netlist_str, num_FA, num_carry, stage, col)
             netlist_str = HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col)
