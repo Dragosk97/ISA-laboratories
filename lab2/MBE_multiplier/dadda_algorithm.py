@@ -23,7 +23,7 @@ for stage in range(5):
         else:
             num_FA = diff // 2
             num_HA = diff % 2
-            num_unproc = row_num[stage][col] - 3*num_FA - 2*num_HA
+            num_unproc = row_num[stage][col] + num_carry - 3*num_FA - 2*num_HA
 
             netlist_str = FA_gen(netlist_str, num_FA, num_carry, stage, col)
             netlist_str = HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col)
