@@ -1,0 +1,216 @@
+m255
+13
+cModel Technology
+d/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/sim
+T_opt
+VgLCg3ObO3]kb56zGo9ZEQ3
+06 11 4 ./work tb_mbe_mult fast 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+Eclk_gen
+w1606901281
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/clk_gen.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/clk_gen.vhd
+l0
+L6
+V:`>4Sheo17g6:V9zVj@6z1
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abeh
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work clk_gen :`>4Sheo17g6:V9zVj@6z1
+l19
+L13
+VKNz>[LWJF7S]aMb@NOiV62
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 ieee std_logic_arith
+o-work work
+tExplicit 1
+Edata_maker
+w1606901281
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/data_maker_new.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/data_maker_new.vhd
+l0
+L10
+VfUbo:7Ua?GY9=g[^1Sg@U0
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abeh
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_maker fUbo:7Ua?GY9=g[^1Sg@U0
+l26
+L19
+VAHdEnnDCVDk^mlbmgGBK63
+OE;C;6.2g;35
+32
+M5 ieee std_logic_1164
+M4 ieee std_logic_arith
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_textio
+M1 std textio
+o-work work
+tExplicit 1
+Edata_sink
+w1606901281
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/data_sink.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/data_sink.vhd
+l0
+L10
+V35_chnb>:D_IEL2a7WA9<3
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abeh
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_sink 35_chnb>:D_IEL2a7WA9<3
+l19
+L17
+V[igl015bf``74C5AS<hE21
+OE;C;6.2g;35
+32
+M5 ieee std_logic_1164
+M4 ieee std_logic_arith
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_textio
+M1 std textio
+o-work work
+tExplicit 1
+Efa
+w1606663209
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/FA.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/FA.vhd
+l0
+L4
+VF>[MeSzggBf7<JPoDDzck2
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Astruct
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fa F>[MeSzggBf7<JPoDDzck2
+l10
+L9
+VC;oV[LeJz8mAZE4lg=P0`3
+OE;C;6.2g;35
+32
+M1 ieee std_logic_1164
+o-work work
+tExplicit 1
+Eha
+w1606901281
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/HA.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/HA.vhd
+l0
+L4
+VQ8m;FHmB?KVOOE;==T94O0
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Astruct
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work ha Q8m;FHmB?KVOOE;==T94O0
+l10
+L9
+V;TNKkWKED`cfzgSkR6djf3
+OE;C;6.2g;35
+32
+M1 ieee std_logic_1164
+o-work work
+tExplicit 1
+Embe_mult
+w1607075271
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
+l0
+L5
+VIjP1NYO6Ohzj?]17bBRWa2
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abehavioural
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work mbe_mult IjP1NYO6Ohzj?]17bBRWa2
+l54
+L13
+V0_B;n17EBOU]`b7k^0_zW3
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work
+tExplicit 1
+Embe_n
+w1606901281
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE.vhd
+l0
+L5
+VSG_lYOcNgea=;IW=l^@ln1
+OE;C;6.2g;35
+32
+o-work work
+tExplicit 1
+Abehavioural
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work mbe_n SG_lYOcNgea=;IW=l^@ln1
+l20
+L16
+V1bUTB:n=91lloa:NbM@J01
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-work work
+tExplicit 1
+vtb_mbe_mult
+I61;5:gQg<QfaUNL0i:MaB1
+V5T88KV6nLMFOE2ikWWl<W1
+w1606901398
+8/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/tb_mbe_mult.v
+F/home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/tb/tb_mbe_mult.v
+L0 3
+V5T88KV6nLMFOE2ikWWl<W1
+OE;L;6.2g;35
+r1
+31
+o-work work

@@ -1,7 +1,3 @@
-Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
-Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
-  Loading link library 'NangateOpenCellLibrary'
-  Loading link library 'gtech'
 Running PRESTO HDLC
 
 Inferred memory devices in process
@@ -14,6 +10,10 @@ Inferred memory devices in process
 |     FP_B_q_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
 Elaborated 1 design.
 Current design is now 'FPmul'.
 Information: Building the design 'FPmul_stage1'. (HDL-193)
@@ -37,32 +37,8 @@ Presto compilation completed successfully.
 Information: Building the design 'FPmul_stage2'. (HDL-193)
 
 Inferred memory devices in process
-	in routine FPmul_stage2 line 96 in file
-		'../multiplier/fpmul_stage2_struct_optreg.vhd'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   EXP_in_pipe_reg   | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|   SIG_in_pipe_reg   | Flip-flop |  28   |  Y  | N  | N  | N  | N  | N  | N  |
-|  EXP_pos_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|  EXP_neg_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine FPmul_stage2 line 108 in file
-		'../multiplier/fpmul_stage2_struct_optreg.vhd'.
-====================================================================================
-|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-====================================================================================
-|  isINF_stage2_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|  isNaN_stage2_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-| isZ_tab_stage2_pipe_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-| SIGN_out_stage2_pipe_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-====================================================================================
-
-Inferred memory devices in process
-	in routine FPmul_stage2 line 121 in file
-		'../multiplier/fpmul_stage2_struct_optreg.vhd'.
+	in routine FPmul_stage2 line 94 in file
+		'../multiplier/fpmul_stage2_struct_mbe.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -73,8 +49,8 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine FPmul_stage2 line 131 in file
-		'../multiplier/fpmul_stage2_struct_optreg.vhd'.
+	in routine FPmul_stage2 line 106 in file
+		'../multiplier/fpmul_stage2_struct_mbe.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -123,6 +99,8 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'UnpackFP'. (HDL-193)
 Presto compilation completed successfully.
+Information: Building the design 'MBE_mult'. (HDL-193)
+Presto compilation completed successfully.
 Information: Building the design 'FPnormalize' instantiated from design 'FPmul_stage3' with
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
@@ -130,5 +108,12 @@ Information: Building the design 'FPround' instantiated from design 'FPmul_stage
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'PackFP'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'MBE_n' instantiated from design 'MBE_mult' with
+	the parameters "nbit=24". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'HA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FA'. (HDL-193)
 Presto compilation completed successfully.
 1
