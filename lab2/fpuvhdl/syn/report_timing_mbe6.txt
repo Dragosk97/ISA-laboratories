@@ -1,0 +1,103 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Sat Dec  5 16:33:22 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I1/B_SIG_reg[5]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: I2/SIG_in_reg[27]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I1/B_SIG_reg[5]/CK (SDFF_X2)                            0.00       0.00 r
+  I1/B_SIG_reg[5]/Q (SDFF_X2)                             0.09       0.09 f
+  U2440/ZN (XNOR2_X1)                                     0.06       0.15 r
+  U2380/ZN (NAND2_X1)                                     0.03       0.19 f
+  U4233/ZN (OAI22_X1)                                     0.05       0.23 r
+  U2659/ZN (XNOR2_X1)                                     0.07       0.30 r
+  U3154/ZN (XNOR2_X1)                                     0.07       0.37 r
+  U2351/Z (XOR2_X1)                                       0.07       0.44 r
+  U4286/ZN (NAND3_X1)                                     0.04       0.48 f
+  U4287/ZN (OAI21_X1)                                     0.04       0.52 r
+  U2651/ZN (XNOR2_X1)                                     0.07       0.59 r
+  U2650/ZN (XNOR2_X1)                                     0.06       0.65 r
+  U2661/ZN (XNOR2_X1)                                     0.07       0.72 r
+  U2660/ZN (XNOR2_X1)                                     0.06       0.78 r
+  U2608/ZN (XNOR2_X1)                                     0.06       0.84 r
+  U2847/ZN (XNOR2_X1)                                     0.04       0.88 f
+  I2/mbe/add_3124/B[18] (FPmul_DW01_add_4)                0.00       0.88 f
+  I2/mbe/add_3124/U266/ZN (NOR2_X1)                       0.04       0.92 r
+  I2/mbe/add_3124/U470/ZN (OAI21_X1)                      0.03       0.95 f
+  I2/mbe/add_3124/U446/ZN (AOI21_X1)                      0.05       1.01 r
+  I2/mbe/add_3124/U447/ZN (OAI21_X1)                      0.03       1.04 f
+  I2/mbe/add_3124/U295/ZN (AOI21_X1)                      0.04       1.08 r
+  I2/mbe/add_3124/U478/ZN (OAI21_X1)                      0.03       1.11 f
+  I2/mbe/add_3124/U283/ZN (AOI21_X1)                      0.04       1.16 r
+  I2/mbe/add_3124/U477/ZN (OAI21_X1)                      0.03       1.19 f
+  I2/mbe/add_3124/U287/ZN (AOI21_X1)                      0.04       1.23 r
+  I2/mbe/add_3124/U464/ZN (OAI21_X1)                      0.03       1.26 f
+  I2/mbe/add_3124/U285/ZN (AOI21_X1)                      0.04       1.30 r
+  I2/mbe/add_3124/U450/ZN (OAI21_X1)                      0.03       1.34 f
+  I2/mbe/add_3124/U291/ZN (AOI21_X1)                      0.04       1.38 r
+  I2/mbe/add_3124/U476/ZN (OAI21_X1)                      0.03       1.41 f
+  I2/mbe/add_3124/U289/ZN (AOI21_X1)                      0.04       1.45 r
+  I2/mbe/add_3124/U475/ZN (OAI21_X1)                      0.03       1.48 f
+  I2/mbe/add_3124/U294/ZN (AOI21_X1)                      0.04       1.53 r
+  I2/mbe/add_3124/U463/ZN (OAI21_X1)                      0.03       1.56 f
+  I2/mbe/add_3124/U303/ZN (AOI21_X1)                      0.04       1.60 r
+  I2/mbe/add_3124/U459/ZN (OAI21_X1)                      0.03       1.63 f
+  I2/mbe/add_3124/U296/ZN (AOI21_X1)                      0.04       1.67 r
+  I2/mbe/add_3124/U454/ZN (OAI21_X1)                      0.04       1.71 f
+  I2/mbe/add_3124/U272/ZN (NAND2_X1)                      0.04       1.75 r
+  I2/mbe/add_3124/U275/ZN (NAND3_X1)                      0.04       1.79 f
+  I2/mbe/add_3124/U417/ZN (NAND2_X1)                      0.03       1.82 r
+  I2/mbe/add_3124/U243/ZN (NAND3_X1)                      0.04       1.86 f
+  I2/mbe/add_3124/U424/ZN (NAND2_X1)                      0.04       1.90 r
+  I2/mbe/add_3124/U280/ZN (NAND3_X1)                      0.04       1.94 f
+  I2/mbe/add_3124/U429/ZN (NAND2_X1)                      0.04       1.97 r
+  I2/mbe/add_3124/U245/ZN (NAND3_X1)                      0.04       2.01 f
+  I2/mbe/add_3124/U238/ZN (NAND2_X1)                      0.04       2.05 r
+  I2/mbe/add_3124/U432/ZN (NAND3_X1)                      0.03       2.08 f
+  I2/mbe/add_3124/U441/ZN (NAND2_X1)                      0.03       2.12 r
+  I2/mbe/add_3124/U242/ZN (NAND3_X1)                      0.04       2.15 f
+  I2/mbe/add_3124/U262/ZN (NAND2_X1)                      0.03       2.18 r
+  I2/mbe/add_3124/U265/ZN (NAND3_X1)                      0.03       2.22 f
+  I2/mbe/add_3124/U3/CO (FA_X1)                           0.09       2.31 f
+  I2/mbe/add_3124/U381/ZN (XNOR2_X1)                      0.05       2.36 f
+  I2/mbe/add_3124/SUM[46] (FPmul_DW01_add_4)              0.00       2.36 f
+  I2/SIG_in_reg[27]/D (DFF_X1)                            0.01       2.37 f
+  data arrival time                                                  2.37
+
+  clock MY_CLK (rise edge)                                2.40       2.40
+  clock network delay (ideal)                             0.00       2.40
+  clock uncertainty                                      -0.07       2.33
+  I2/SIG_in_reg[27]/CK (DFF_X1)                           0.00       2.33 r
+  library setup time                                     -0.04       2.29
+  data required time                                                 2.29
+  --------------------------------------------------------------------------
+  data required time                                                 2.29
+  data arrival time                                                 -2.37
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1

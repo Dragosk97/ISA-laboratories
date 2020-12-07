@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Fri Dec  4 12:01:35 2020
+#@ # Date:   Mon Dec  7 11:37:31 2020
 #@ # Run by: isa17@localhost.localdomain
 #@ 
 
@@ -6638,7 +6638,6 @@ source /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/.synopsys_dc.setup
 
-source script_mbe_syn.scr
 source mbe_syn.scr
 #@ # -- Starting source mbe_syn.scr
 
@@ -6659,7 +6658,7 @@ source mbe_syn.scr
 #@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
 #@ uniquify
 #@ link
-#@ create_clock -name MY_CLK -period 0 clk
+#@ create_clock -name MY_CLK -period 2.78 clk
 #@ set_dont_touch_network MY_CLK
 #@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 #@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
@@ -6668,102 +6667,10 @@ source mbe_syn.scr
 #@ set_load $OLOAD [all_outputs]
 #@ ungroup -all -flatten
 #@ compile
-#@ report_timing > report_timing_mbe0.txt
+#@ report_timing > report_timing_mbe_fmax.txt
+#@ report_area > report_area_mbe.txt
 #@ # -- End source mbe_syn.scr
 
-source mbe_syn.scr
-#@ # -- Starting source mbe_syn.scr
-
-#@ analyze -f vhdl -lib WORK ../common/fpnormalize_fpnormalize.vhd
-#@ analyze -f vhdl -lib WORK ../common/packfp_packfp.vhd
-#@ analyze -f vhdl -lib WORK ../common/fpround_fpround.vhd
-#@ analyze -f vhdl -lib WORK ../common/unpackfp_unpackfp.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_pipeline.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage1_struct.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage2_struct_mbe.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage3_struct.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage4_struct.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/HA.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/FA.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/MBE.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/MBE_mult.vhd
-#@ set power_preserve_rtl_hier_names true
-#@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
-#@ uniquify
-#@ link
-#@ create_clock -name MY_CLK -period 1.43 clk
-#@ set_dont_touch_network MY_CLK
-#@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
-#@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
-#@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
-#@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
-#@ set_load $OLOAD [all_outputs]
-#@ ungroup -all -flatten
-#@ compile
-#@ report_timing > report_timing_mbe1.txt
-#@ # -- End source mbe_syn.scr
-
-source mbe_syn.scr
-#@ # -- Starting source mbe_syn.scr
-
-#@ analyze -f vhdl -lib WORK ../common/fpnormalize_fpnormalize.vhd
-#@ analyze -f vhdl -lib WORK ../common/packfp_packfp.vhd
-#@ analyze -f vhdl -lib WORK ../common/fpround_fpround.vhd
-#@ analyze -f vhdl -lib WORK ../common/unpackfp_unpackfp.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_pipeline.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage1_struct.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage2_struct_mbe.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage3_struct.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage4_struct.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/HA.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/FA.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/MBE.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/MBE_mult.vhd
-#@ set power_preserve_rtl_hier_names true
-#@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
-#@ uniquify
-#@ link
-#@ create_clock -name MY_CLK -period 1.61 clk
-#@ set_dont_touch_network MY_CLK
-#@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
-#@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
-#@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
-#@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
-#@ set_load $OLOAD [all_outputs]
-#@ ungroup -all -flatten
-#@ compile
-#@ report_timing > report_timing_mbe2.txt
-#@ # -- End source mbe_syn.scr
-
-source mbe_syn.scr
-#@ # -- Starting source mbe_syn.scr
-
-#@ analyze -f vhdl -lib WORK ../common/fpnormalize_fpnormalize.vhd
-#@ analyze -f vhdl -lib WORK ../common/packfp_packfp.vhd
-#@ analyze -f vhdl -lib WORK ../common/fpround_fpround.vhd
-#@ analyze -f vhdl -lib WORK ../common/unpackfp_unpackfp.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_pipeline.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage1_struct.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage2_struct_mbe.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage3_struct.vhd
-#@ analyze -f vhdl -lib WORK ../multiplier/fpmul_stage4_struct.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/HA.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/FA.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/MBE.vhd
-#@ analyze -f vhdl -lib WORK ../../MBE_multiplier/MBE_mult.vhd
-#@ set power_preserve_rtl_hier_names true
-#@ elaborate FPmul -arch pipeline -lib WORK > ./elaborate.txt
-#@ uniquify
-#@ link
-#@ create_clock -name MY_CLK -period 1.84 clk
-#@ set_dont_touch_network MY_CLK
-#@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
-#@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
-#@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
-#@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
-#@ set_load $OLOAD [all_outputs]
-#@ ungroup -all -flatten
-#@ compile
-#@ report_timing > report_timing_mbe3.txt
-#@ # -- End source mbe_syn.scr
-
+report_area
+report_area
+report_area

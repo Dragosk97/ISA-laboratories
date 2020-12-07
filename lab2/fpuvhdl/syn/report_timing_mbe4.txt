@@ -1,0 +1,97 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FPmul
+Version: O-2018.06-SP4
+Date   : Sat Dec  5 15:52:53 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I1/B_SIG_reg[4]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: I2/SIG_in_reg[27]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I1/B_SIG_reg[4]/CK (DFF_X1)                             0.00       0.00 r
+  I1/B_SIG_reg[4]/QN (DFF_X1)                             0.07       0.07 r
+  U3406/Z (XOR2_X1)                                       0.07       0.14 r
+  U2555/ZN (AND2_X1)                                      0.05       0.20 r
+  U3339/ZN (INV_X1)                                       0.03       0.22 f
+  U4504/ZN (OAI22_X1)                                     0.05       0.27 r
+  U2387/ZN (XNOR2_X1)                                     0.07       0.34 r
+  U3421/ZN (XNOR2_X1)                                     0.06       0.40 r
+  U3062/ZN (XNOR2_X1)                                     0.06       0.47 r
+  U4558/ZN (OAI21_X1)                                     0.04       0.51 f
+  U4559/ZN (INV_X1)                                       0.03       0.54 r
+  U3392/ZN (OAI21_X1)                                     0.03       0.57 f
+  U2607/ZN (XNOR2_X1)                                     0.06       0.63 f
+  U2606/ZN (XNOR2_X1)                                     0.06       0.69 f
+  U2609/ZN (XNOR2_X1)                                     0.06       0.75 f
+  U2608/ZN (XNOR2_X1)                                     0.06       0.82 f
+  U2647/ZN (XNOR2_X1)                                     0.06       0.88 f
+  U2839/ZN (XNOR2_X1)                                     0.06       0.94 f
+  I2/mbe/add_3124/B[18] (FPmul_DW01_add_4)                0.00       0.94 f
+  I2/mbe/add_3124/U471/ZN (AND2_X1)                       0.04       0.98 f
+  I2/mbe/add_3124/U475/ZN (AOI21_X1)                      0.04       1.02 r
+  I2/mbe/add_3124/U526/ZN (OAI21_X1)                      0.03       1.05 f
+  I2/mbe/add_3124/U547/ZN (AOI21_X1)                      0.04       1.09 r
+  I2/mbe/add_3124/U523/ZN (OAI21_X1)                      0.04       1.13 f
+  I2/mbe/add_3124/U357/ZN (AOI21_X1)                      0.04       1.17 r
+  I2/mbe/add_3124/U546/ZN (OAI21_X1)                      0.03       1.20 f
+  I2/mbe/add_3124/U367/ZN (AOI21_X1)                      0.05       1.25 r
+  I2/mbe/add_3124/U559/ZN (OAI21_X1)                      0.04       1.28 f
+  I2/mbe/add_3124/U550/ZN (AOI21_X1)                      0.04       1.33 r
+  I2/mbe/add_3124/U558/ZN (OAI21_X1)                      0.03       1.36 f
+  I2/mbe/add_3124/U531/ZN (AOI21_X1)                      0.05       1.41 r
+  I2/mbe/add_3124/U534/ZN (OAI21_X1)                      0.04       1.44 f
+  I2/mbe/add_3124/U466/ZN (AOI21_X1)                      0.05       1.49 r
+  I2/mbe/add_3124/U548/ZN (OAI21_X1)                      0.04       1.53 f
+  I2/mbe/add_3124/U545/ZN (AOI21_X1)                      0.04       1.57 r
+  I2/mbe/add_3124/U544/ZN (OAI21_X1)                      0.03       1.60 f
+  I2/mbe/add_3124/U557/ZN (AOI21_X1)                      0.05       1.64 r
+  I2/mbe/add_3124/U556/ZN (OAI21_X1)                      0.04       1.68 f
+  I2/mbe/add_3124/U299/ZN (NAND2_X1)                      0.04       1.72 r
+  I2/mbe/add_3124/U266/ZN (NAND3_X1)                      0.04       1.76 f
+  I2/mbe/add_3124/U325/ZN (NAND2_X1)                      0.04       1.80 r
+  I2/mbe/add_3124/U326/ZN (NAND3_X1)                      0.04       1.84 f
+  I2/mbe/add_3124/U330/ZN (NAND2_X1)                      0.03       1.87 r
+  I2/mbe/add_3124/U332/ZN (NAND3_X1)                      0.04       1.91 f
+  I2/mbe/add_3124/U348/ZN (NAND2_X1)                      0.04       1.95 r
+  I2/mbe/add_3124/U350/ZN (NAND3_X1)                      0.04       1.98 f
+  I2/mbe/add_3124/U352/ZN (NAND2_X1)                      0.03       2.01 r
+  I2/mbe/add_3124/U354/ZN (NAND3_X1)                      0.03       2.05 f
+  I2/mbe/add_3124/U501/ZN (XNOR2_X1)                      0.05       2.10 f
+  I2/mbe/add_3124/SUM[46] (FPmul_DW01_add_4)              0.00       2.10 f
+  I2/SIG_in_reg[27]/D (DFF_X2)                            0.01       2.11 f
+  data arrival time                                                  2.11
+
+  clock MY_CLK (rise edge)                                2.02       2.02
+  clock network delay (ideal)                             0.00       2.02
+  clock uncertainty                                      -0.07       1.95
+  I2/SIG_in_reg[27]/CK (DFF_X2)                           0.00       1.95 r
+  library setup time                                     -0.04       1.91
+  data required time                                                 1.91
+  --------------------------------------------------------------------------
+  data required time                                                 1.91
+  data arrival time                                                 -2.11
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.20
+
+
+1

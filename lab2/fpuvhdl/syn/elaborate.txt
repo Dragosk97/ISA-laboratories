@@ -1,3 +1,7 @@
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
 Running PRESTO HDLC
 
 Inferred memory devices in process
@@ -10,10 +14,6 @@ Inferred memory devices in process
 |     FP_B_q_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/syn/FPmul.db'. (DDB-24)
 Elaborated 1 design.
 Current design is now 'FPmul'.
 Information: Building the design 'FPmul_stage1'. (HDL-193)
