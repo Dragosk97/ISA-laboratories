@@ -37,7 +37,7 @@ def HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col):
 
 def unproc_prop(netlist_str, num_unproc, num_FA, num_HA, num_carry, stage, col):
 
-    netlist_str += f"-- Numero non processati: {num_unproc}\n"
+    netlist_str += f"-- Number of unprocessed bits: {num_unproc}\n"
 
     for i in range(num_unproc):
         # next stage signal
