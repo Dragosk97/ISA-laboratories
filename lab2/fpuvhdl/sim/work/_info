@@ -27,14 +27,14 @@ DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work clk_gen ^V3n>E001T^^[dEzPL=M:3
-l19
-L13
-VJ_BdZJ>Q``3nf_]aSO8YF0
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee std_logic_arith
 M1 ieee std_logic_unsigned
+l19
+L13
+VJ_BdZJ>Q``3nf_]aSO8YF0
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Edata_maker
@@ -60,16 +60,16 @@ DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work data_maker eNW_M90^S5Uhh6=HTBaTz2
-l18
-L16
-VFaena_6:nB3[?Zb?K<O?02
-OE;C;6.2g;35
 32
 M5 ieee std_logic_1164
 M4 ieee std_logic_arith
 M3 ieee std_logic_unsigned
 M2 ieee std_logic_textio
 M1 std textio
+l18
+L16
+VFaena_6:nB3[?Zb?K<O?02
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Edata_sink
@@ -95,16 +95,16 @@ DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work data_sink AM`W4zMEohg=znzV6cMPf1
-l19
-L17
-VZP0A^a[kao`mnmg<1_<?Z0
-OE;C;6.2g;35
 32
 M5 ieee std_logic_1164
 M4 ieee std_logic_arith
 M3 ieee std_logic_unsigned
 M2 ieee std_logic_textio
 M1 std textio
+l19
+L17
+VZP0A^a[kao`mnmg<1_<?Z0
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Efa
@@ -122,12 +122,12 @@ tExplicit 1
 Astruct
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work fa F>[MeSzggBf7<JPoDDzck2
+32
+M1 ieee std_logic_1164
 l10
 L9
 VC;oV[LeJz8mAZE4lg=P0`3
 OE;C;6.2g;35
-32
-M1 ieee std_logic_1164
 o-work work
 tExplicit 1
 Efpmul
@@ -151,13 +151,13 @@ DE work fpmul_stage1 zaU7S:07LL<1B@Qm[ML^U2
 DE work fpmul MTNARGigef09?4bdLdKEj2
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+M2 ieee std_logic_1164
+M1 ieee std_logic_arith
 l158
 L45
 VQ8^fMF]b=5<KjTk[Fa^M70
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 ieee std_logic_arith
 o-work work
 tExplicit 1
 Efpmul_stage1
@@ -178,21 +178,21 @@ DE work unpackfp UD4QzDMVAZMzcP]Lb;DC_0
 DE work fpmul_stage1 zaU7S:07LL<1B@Qm[ML^U2
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+M2 ieee std_logic_1164
+M1 ieee std_logic_arith
 l99
 L53
 VlOjBZ6h]iIGQg?4SXkN5I1
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 ieee std_logic_arith
 o-work work
 tExplicit 1
 Efpmul_stage2
-w1607077920
+w1607609400
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd
+8/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_mbe_opt.vhd
+F/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_mbe_opt.vhd
 l0
 L16
 VXnDgZj[EI0K611[[;lKBU3
@@ -204,13 +204,13 @@ Astruct
 DE work fpmul_stage2 XnDgZj[EI0K611[[;lKBU3
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-l81
-L59
-VRHf0]16Yag6diL4?T`HG32
-OE;C;6.2g;35
 32
 M2 ieee std_logic_1164
 M1 ieee std_logic_arith
+l89
+L59
+VGbQAmOK2KVmP9lRLM;1F=2
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Efpmul_stage3
@@ -233,14 +233,14 @@ DE work fpnormalize m?8C<n[ikYJm2_A=12[fI1
 DE work fpmul_stage3 Q3o@L>cmoeJeoT?6@jEN^1
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-l100
-L58
-V[8WIg1A@Tb4@>?bDoA@Zo0
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee std_logic_arith
 M1 ieee std_logic_unsigned
+l100
+L58
+V[8WIg1A@Tb4@>?bDoA@Zo0
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Efpmul_stage4
@@ -263,14 +263,14 @@ DE work fpnormalize m?8C<n[ikYJm2_A=12[fI1
 DE work fpmul_stage4 N1GY_8IF3EoF4kH5SbF;o0
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-l96
-L51
-VNhNgWE:TNOJ4Eza01bIUE2
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee std_logic_arith
 M1 ieee std_logic_unsigned
+l96
+L51
+VNhNgWE:TNOJ4Eza01bIUE2
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Efpnormalize
@@ -292,14 +292,14 @@ DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work fpnormalize m?8C<n[ikYJm2_A=12[fI1
-l35
-L34
-VMUJU^9`I5lLTSMb?OA3N23
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee std_logic_arith
 M1 ieee std_logic_unsigned
+l35
+L34
+VMUJU^9`I5lLTSMb?OA3N23
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Efpround
@@ -321,14 +321,14 @@ DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work fpround 1b_2E@OFSlTlh?nojmF=[1
-l35
-L34
-V_Haao=oHGMcb5[nI_cA;Z1
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee std_logic_arith
 M1 ieee std_logic_unsigned
+l35
+L34
+V_Haao=oHGMcb5[nI_cA;Z1
+OE;C;6.2g;35
 o-work work
 tExplicit 1
 Eha
@@ -346,12 +346,12 @@ tExplicit 1
 Astruct
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work ha Q8m;FHmB?KVOOE;==T94O0
+32
+M1 ieee std_logic_1164
 l10
 L9
 V;TNKkWKED`cfzgSkR6djf3
 OE;C;6.2g;35
-32
-M1 ieee std_logic_1164
 o-work work
 tExplicit 1
 Embe_mult
@@ -371,13 +371,13 @@ Abehavioural
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work mbe_mult IjP1NYO6Ohzj?]17bBRWa2
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 l54
 L13
 V0_B;n17EBOU]`b7k^0_zW3
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 o-work work
 tExplicit 1
 Embe_n
@@ -397,13 +397,13 @@ Abehavioural
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work mbe_n SG_lYOcNgea=;IW=l^@ln1
+32
+M2 ieee std_logic_1164
+M1 ieee numeric_std
 l20
 L16
 V1bUTB:n=91lloa:NbM@J01
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
 o-work work
 tExplicit 1
 Epackfp
@@ -423,26 +423,25 @@ Apackfp
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work packfp QOKhnVU5Xh6KfNCo>NM9T0
+32
+M2 ieee std_logic_1164
+M1 ieee std_logic_arith
 l34
 L33
 VLcDKT2[P<lmKGG:40a]JW2
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 ieee std_logic_arith
 o-work work
 tExplicit 1
 vtb_m
-I_Boh`fIX[Z2b^UECH0Rgz0
 V?BNI9GT?GclfhRAlBIo8i1
+r1
+31
+I_Boh`fIX[Z2b^UECH0Rgz0
 w1605001170
 8/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/tb_m.v
 F/home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/tb_m.v
 L0 3
-V?BNI9GT?GclfhRAlBIo8i1
 OE;L;6.2g;35
-r1
-31
 o-work work
 Eunpackfp
 w1604999557
@@ -461,12 +460,12 @@ Aunpackfp
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work unpackfp UD4QzDMVAZMzcP]Lb;DC_0
+32
+M2 ieee std_logic_1164
+M1 ieee std_logic_arith
 l37
 L33
 VG]O>dzDI[IW`kWHaXBna82
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 ieee std_logic_arith
 o-work work
 tExplicit 1

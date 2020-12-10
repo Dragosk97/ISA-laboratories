@@ -8,74 +8,6 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage2
-# -- Compiling architecture struct of fpmul_stage2
-vlog -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/tb_m.v
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module tb_m
-# 
-# Top level modules:
-# 	tb_m
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/data_sink.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/data_maker.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Compiling entity data_maker
-# -- Compiling architecture beh of data_maker
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/clk_gen.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-vsim work.tb_m
-# vsim work.tb_m 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/tb_m.v(19): Module 'FPmul' is not defined.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/data_sink.vhd(17): Vopt Compiler exiting
-# Error loading design
-restart
-# No Design!
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage2
-# -- Compiling architecture struct of fpmul_stage2
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage1
-# -- Compiling architecture struct of fpmul_stage1
-# ** Error: (vcom-11) Could not find ./work.unpackfp.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd(95): (vcom-1195) Cannot find expanded name: 'work.unpackfp'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd(95): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd(95): Configuration specification requires an entity aspect.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd(201): VHDL Compiler exiting
 vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
@@ -85,15 +17,23 @@ vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fp
 # -- Compiling architecture pipeline of fpmul
 # -- Loading entity fpmul_stage1
 # -- Loading entity fpmul_stage2
-# ** Error: (vcom-11) Could not find ./work.fpmul_stage3.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(153): (vcom-1195) Cannot find expanded name: 'work.fpmul_stage3'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(153): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(153): Configuration specification requires an entity aspect.
-# ** Error: (vcom-11) Could not find ./work.fpmul_stage4.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(154): (vcom-1195) Cannot find expanded name: 'work.fpmul_stage4'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(154): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(154): Configuration specification requires an entity aspect.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd(238): VHDL Compiler exiting
+# -- Loading entity fpmul_stage3
+# -- Loading entity fpmul_stage4
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_stage1
+# -- Compiling architecture struct of fpmul_stage1
+# -- Loading entity unpackfp
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_mbe_opt.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_stage2
+# -- Compiling architecture struct of fpmul_stage2
 vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
@@ -101,15 +41,9 @@ vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fp
 # -- Loading package std_logic_arith
 # -- Compiling entity fpmul_stage3
 # -- Compiling architecture struct of fpmul_stage3
-# ** Error: (vcom-11) Could not find ./work.fpnormalize.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(95): (vcom-1195) Cannot find expanded name: 'work.fpnormalize'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(95): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(95): Configuration specification requires an entity aspect.
-# ** Error: (vcom-11) Could not find ./work.fpround.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(96): (vcom-1195) Cannot find expanded name: 'work.fpround'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(96): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(96): Configuration specification requires an entity aspect.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd(149): VHDL Compiler exiting
+# -- Loading package std_logic_unsigned
+# -- Loading entity fpnormalize
+# -- Loading entity fpround
 vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
@@ -117,17 +51,9 @@ vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fp
 # -- Loading package std_logic_arith
 # -- Compiling entity fpmul_stage4
 # -- Compiling architecture struct of fpmul_stage4
-# ** Error: (vcom-11) Could not find ./work.fpnormalize.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(91): (vcom-1195) Cannot find expanded name: 'work.fpnormalize'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(91): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(91): Configuration specification requires an entity aspect.
-# ** Error: (vcom-11) Could not find ./work.packfp.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(92): (vcom-1195) Cannot find expanded name: 'work.packfp'.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(92): (vcom-1105) 'work' is not an entity.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(92): Configuration specification requires an entity aspect.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd(161): VHDL Compiler exiting
-restart
-# No Design!
+# -- Loading package std_logic_unsigned
+# -- Loading entity fpnormalize
+# -- Loading entity packfp
 vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/common/fpnormalize_fpnormalize.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
@@ -158,52 +84,6 @@ vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fp
 # -- Loading package std_logic_arith
 # -- Compiling entity unpackfp
 # -- Compiling architecture unpackfp of unpackfp
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_pipeline.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul
-# -- Compiling architecture pipeline of fpmul
-# -- Loading entity fpmul_stage1
-# -- Loading entity fpmul_stage2
-# -- Loading entity fpmul_stage3
-# -- Loading entity fpmul_stage4
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage1_struct.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage1
-# -- Compiling architecture struct of fpmul_stage1
-# -- Loading entity unpackfp
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage2
-# -- Compiling architecture struct of fpmul_stage2
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage3_struct.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage3
-# -- Compiling architecture struct of fpmul_stage3
-# -- Loading package std_logic_unsigned
-# -- Loading entity fpnormalize
-# -- Loading entity fpround
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/multiplier/fpmul_stage4_struct.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity fpmul_stage4
-# -- Compiling architecture struct of fpmul_stage4
-# -- Loading package std_logic_unsigned
-# -- Loading entity fpnormalize
-# -- Loading entity packfp
 vlog -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fpuvhdl/tb/tb_m.v
 # Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
 # -- Compiling module tb_m
@@ -238,67 +118,82 @@ vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/fp
 # -- Loading package std_logic_textio
 # -- Compiling entity data_sink
 # -- Compiling architecture beh of data_sink
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity mbe_mult
-# -- Compiling architecture behavioural of mbe_mult
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity mbe_mult
-# -- Compiling architecture behavioural of mbe_mult
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE.vhd
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE/MBE.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity mbe_n
 # -- Compiling architecture behavioural of mbe_n
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/HA.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity ha
-# -- Compiling architecture struct of ha
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/FA.vhd
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/FA.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Compiling entity fa
 # -- Compiling architecture struct of fa
-vsim work.tb_m
-# vsim work.tb_m 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading work.tb_m(fast)
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/HA.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity ha
+# -- Compiling architecture struct of ha
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity mbe_n
+# -- Compiling architecture behavioural of mbe_n
+vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab2/MBE_multiplier/MBE_mult.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity mbe_mult
+# -- Compiling architecture behavioural of mbe_mult
+vsim -novopt work.tb_m
+# vsim -novopt work.tb_m 
+# Refreshing ./work.tb_m
+# Loading work.tb_m
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
 # Loading work.clk_gen(beh)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Refreshing ./work.data_maker(beh)
 # Loading work.data_maker(beh)
-# Loading work.fpmul(pipeline)#1
+# Refreshing ./work.fpmul(pipeline)
+# Loading work.fpmul(pipeline)
+# Refreshing ./work.fpmul_stage1(struct)
 # Loading work.fpmul_stage1(struct)
+# Refreshing ./work.unpackfp(unpackfp)
 # Loading work.unpackfp(unpackfp)
-# Loading work.fpmul_stage2(struct)#1
+# Refreshing ./work.fpmul_stage2(struct)
+# Loading work.fpmul_stage2(struct)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.mbe_mult(behavioural)#1
-# Loading work.mbe_n(behavioural)#1
+# Refreshing ./work.mbe_mult(behavioural)
+# Loading work.mbe_mult(behavioural)
+# Refreshing ./work.mbe_n(behavioural)
+# Loading work.mbe_n(behavioural)
+# Refreshing ./work.ha(struct)
 # Loading work.ha(struct)
+# Refreshing ./work.fa(struct)
 # Loading work.fa(struct)
-# Loading work.fpmul_stage3(struct)#1
-# Loading work.fpnormalize(fpnormalize)#1
-# Loading work.fpround(fpround)#1
+# Refreshing ./work.fpmul_stage3(struct)
+# Loading work.fpmul_stage3(struct)
+# Refreshing ./work.fpnormalize(fpnormalize)
+# Loading work.fpnormalize(fpnormalize)
+# Refreshing ./work.fpround(fpround)
+# Loading work.fpround(fpround)
+# Refreshing ./work.fpmul_stage4(struct)
 # Loading work.fpmul_stage4(struct)
+# Refreshing ./work.packfp(packfp)
 # Loading work.packfp(packfp)
+# Refreshing ./work.data_sink(beh)
 # Loading work.data_sink(beh)
-add wave *
 run 200 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /tb_m/UUT/i3/i11
@@ -323,10 +218,6 @@ run 200 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 1  Instance: /tb_m/UUT/i2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 4 ns  Iteration: 4  Instance: /tb_m/UUT/i3/i11
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 4 ns  Iteration: 4  Instance: /tb_m/UUT/i3/i11
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 12 ns  Iteration: 3  Instance: /tb_m/UUT/i2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 12 ns  Iteration: 3  Instance: /tb_m/UUT/i2
@@ -334,3 +225,7 @@ run 200 ns
 #    Time: 12 ns  Iteration: 3  Instance: /tb_m/UUT/i2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 12 ns  Iteration: 3  Instance: /tb_m/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 12 ns  Iteration: 4  Instance: /tb_m/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 12 ns  Iteration: 4  Instance: /tb_m/UUT/i3/i11

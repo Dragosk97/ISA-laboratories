@@ -37,8 +37,32 @@ Presto compilation completed successfully.
 Information: Building the design 'FPmul_stage2'. (HDL-193)
 
 Inferred memory devices in process
-	in routine FPmul_stage2 line 94 in file
-		'../multiplier/fpmul_stage2_struct_mbe.vhd'.
+	in routine FPmul_stage2 line 102 in file
+		'../multiplier/fpmul_stage2_mbe_opt.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   EXP_in_pipe_reg   | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|   SIG_in_pipe_reg   | Flip-flop |  28   |  Y  | N  | N  | N  | N  | N  | N  |
+|  EXP_pos_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  EXP_neg_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine FPmul_stage2 line 114 in file
+		'../multiplier/fpmul_stage2_mbe_opt.vhd'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|  isINF_stage2_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  isNaN_stage2_pipe_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| isZ_tab_stage2_pipe_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| SIGN_out_stage2_pipe_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine FPmul_stage2 line 127 in file
+		'../multiplier/fpmul_stage2_mbe_opt.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -49,8 +73,8 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine FPmul_stage2 line 106 in file
-		'../multiplier/fpmul_stage2_struct_mbe.vhd'.
+	in routine FPmul_stage2 line 137 in file
+		'../multiplier/fpmul_stage2_mbe_opt.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
