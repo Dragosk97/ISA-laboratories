@@ -17,7 +17,7 @@ architecture behavioural of MBE_mult is
 	-- extended in order to have the correct sign extension. The result of this
 	-- operation is collected into the array of std_logic_vector "in_dadda". In
 	-- particular, each element of this array could have a different number of
-	-- bits occupied accordingly to the row it is referring to.
+	-- bits occupied accordingly to the partial product it is referring to.
 	
 	-- The internal signals of the Dadda tree are grouped in such a way that a
 	-- single instance is exploited with the name dadda_i(x)(y)(z), where:

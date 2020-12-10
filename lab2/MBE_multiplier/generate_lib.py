@@ -7,21 +7,11 @@ from jinja2 import Environment, FileSystemLoader
 # file "MBE_mult_template.vhd" to generate the final VHDL file by inserting the
 # string "netlist_str".
 
-# In order to correctly map the input and output bits in the full adder and half
-# adder instances and unprocessed bits propagation, the following policy is adopted:
-# 1. the elaboration order is full adders, then half adders and lastly unprocessed
-#   bits propagation;
-# 2. full adders collocates the output carry-bits with the lowest index, from 0 to
-#   num_FA-1; sum bits are collocated with lowest index taking into account that
-#   the previous column has already instatiated num_carry bits in the current weight
-# 3. half adders collocates carry-bits after the first num_FA bits collocated in the
-#   previos step; similarly, sum bits are collocated after num_carry + num_FA bits.#
-
 # In order to correctly map the bits between the two consecutive stages, the following
 # policy is adopted: the full adders are instantiated mapping the bits with the lowest
-# index possible, taking into account only the precedent weigth carry-out bits; then
-# the half adders' instances take into account both the carry-out bits and the full
-# adders; lastly the unprocessed bits are propagated with the same methodology.
+# index possible, taking into account only the carry-out bits of the precedent weight;
+# then the half adders' instances take into account both the carry-out bits and the
+# full adders; lastly the unprocessed bits are propagated with the same methodology.
 
 def FA_gen(netlist_str, num_FA, num_carry, stage, col):
     
