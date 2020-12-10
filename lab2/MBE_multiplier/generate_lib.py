@@ -17,9 +17,15 @@ from jinja2 import Environment, FileSystemLoader
 # 3. half adders collocates carry-bits after the first num_FA bits collocated in the
 #   previos step; similarly, sum bits are collocated after num_carry + num_FA bits.#
 
+# In order to correctly map the bits between the two consecutive stages, the following
+# policy is adopted: the full adders are instantiated mapping the bits with the lowest
+# index possible, taking into account only the precedent weigth carry-out bits; then
+# the half adders' instances take into account both the carry-out bits and the full
+# adders; lastly the unprocessed bits are propagated with the same methodology.
+
 def FA_gen(netlist_str, num_FA, num_carry, stage, col):
     
-    # This function overwrites the input string "netlistr_str" concatenating num_FA
+    # This function returns the input string "netlistr_str" concatenating num_FA
     # full adder instances.
 
     for i in range(num_FA):
@@ -41,7 +47,7 @@ def FA_gen(netlist_str, num_FA, num_carry, stage, col):
 
 def HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col):
 
-    # This function overwrites the input string "netlistr_str" concatenating num_HA
+    # This function returns the input string "netlistr_str" concatenating num_HA
     # half adder instances after num_FA full adders.
 
     for i in range(num_HA):
@@ -62,7 +68,7 @@ def HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col):
 
 def unproc_prop(netlist_str, num_unproc, num_FA, num_HA, num_carry, stage, col):
 
-    # This function overwrites the input string "netlistr_str" concatenating the
+    # This function returns the input string "netlistr_str" concatenating the
     # assignment of the unprocessed bit signals to the following stage, taking
     # into account the previously instantiated full adders and half adders.
 

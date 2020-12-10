@@ -11,9 +11,12 @@
 #     y: weight of the bits
 # The list "row_target" represents the number of rows expected per stage according 
 # to the Dadda algorithm. Through these two data structures it is possible to
-# compute the needed number of full adders and half adders. It is worth noticing
-# that also the information about the carry of the precedent weight are taken into
-# account. 
+# compute the needed number of full adders and half adders.
+
+# This script passes the last stage stored in "row_target", verifying column by
+# column whether the reduction is necessary and computing the needed adders. It is
+# worth noticing that also the information about the carry of the precedent weight
+# are taken into account. 
 
 # Lastly, the netlist string is used to generate the final VHDL file "MBE_mult.vhd"
 # exploiting the Python library jinja2 and the template file "MBE_mult_template.vhd"
