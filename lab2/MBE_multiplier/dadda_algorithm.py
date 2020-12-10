@@ -15,6 +15,8 @@
 # that also the information about the carry of the precedent weight are taken into
 # account. 
 
+# Lastly, the netlist string is used to generate the final VHDL file "MBE_mult.vhd"
+# exploiting the Python library jinja2 and the template file "MBE_mult_template.vhd"
 
 from generate_lib import FA_gen, HA_gen, unproc_prop, vhdl_composer
 
