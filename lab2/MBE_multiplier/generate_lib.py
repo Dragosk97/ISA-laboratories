@@ -58,7 +58,7 @@ def HA_gen(netlist_str, num_HA, num_FA, num_carry, stage, col):
 
 def unproc_prop(netlist_str, num_unproc, num_FA, num_HA, num_carry, stage, col):
 
-    # This function returns the input string "netlistr_str" concatenating the
+    # This function returns the input string "netlist_str" concatenating the
     # assignment of the unprocessed bit signals to the following stage, taking
     # into account the previously instantiated full adders and half adders.
 
