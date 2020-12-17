@@ -13,7 +13,7 @@
 # to the Dadda algorithm. Through these two data structures it is possible to
 # compute the needed number of full adders and half adders.
 
-# This script passes the last stage stored in "row_target", verifying column by
+# This script passes the last stage stored in "row_num", verifying column by
 # column whether the reduction is necessary and computing the needed adders. It is
 # worth noticing that also the information about the carry of the precedent weight
 # are taken into account. 
