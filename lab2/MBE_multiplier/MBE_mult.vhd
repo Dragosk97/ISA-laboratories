@@ -3150,7 +3150,7 @@ FA_4_47_0 : FA port map (
 
 	-- This half adder is needed in order to reduce the final adder parallelism.
 	-- It does not introduce any additional delay as it operates in parallel to the
-	-- last Dadda reduction stage.
+	-- Dadda tree reduction.
 	last_HA : HA port map(
 		dadda_i(5)(0)(0),
 		dadda_i(5)(1)(0),
