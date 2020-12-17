@@ -12,7 +12,7 @@ Students:
 The directories are organized as:
 - **./MBE**
     contains:
-    - the *.vhd* files of the MBE unit
+    - the *.vhd* file of the MBE unit
     - the *.vhd* files and a top-level verilog for the test-bench
 
 - **./MBE_multiplier**
