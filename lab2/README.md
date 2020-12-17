@@ -39,7 +39,7 @@ The directories are organized as:
         - files containing input samples and outputs. Python script to check the results
     - **./syn**
         - *.scr* scripts for Synopsys
-        - *report_area_xxx.txt* files containing the area reports of all the version of the fp multiplier
-        - *report_timing_xxx.txt* files containing the timing reports of all the version of the fp multiplier
+        - *report_area_<>.txt* files containing the area reports of all the versions of the fp multiplier
+        - *report_timing_<>.txt* files containing the timing reports of all the versions of the fp multiplier
     - **./tb**
         - files used for the testbench of the floating point multiplier
