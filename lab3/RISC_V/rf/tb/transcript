@@ -1,0 +1,127 @@
+pwd
+# C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/tb
+ls
+# ambiguous command name "ls": lsearch lset lshift lsort lsublist
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(37): No feasible entries for subprogram "to_integer".
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(44): Cannot resolve indexed name as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(44): Signal "write_data" is type ieee.numeric_std.signed; expecting type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(45): Cannot resolve indexed name as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(45): Signal "write_data" is type ieee.numeric_std.signed; expecting type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(47): VHDL Compiler exiting
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(44): Cannot resolve indexed name as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(44): Signal "write_data" is type ieee.numeric_std.signed; expecting type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(45): Cannot resolve indexed name as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(45): Signal "write_data" is type ieee.numeric_std.signed; expecting type ieee.std_logic_1164.std_logic_vector.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd(47): VHDL Compiler exiting
+# c:/altera/11.0sp1/modelsim_ase/win32aloem/vcom failed.
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+vsim work.register_file
+# vsim work.register_file 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.register_file(behavioral)
+add wave *
+force -freeze sim:/register_file/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/register_file/rst 1 0
+run
+# Can't move the Now cursor.
+force -freeze sim:/register_file/regwrite 0 0
+force -freeze sim:/register_file/write_reg 00000 0
+force -freeze sim:/register_file/read_reg2 00001 0
+force -freeze sim:/register_file/read_reg1 00010 0
+force -freeze sim:/register_file/write_data 10000000000000000000000000000000 0
+# Value length (32) does not equal array index length (64).
+# 
+# ** Error: (vsim-4011) Invalid force value: 10000000000000000000000000000000 0.
+# 
+run
+force -freeze sim:/register_file/write_data 00000000000000000000000000000001 0
+# Value length (32) does not equal array index length (64).
+# 
+# ** Error: (vsim-4011) Invalid force value: 00000000000000000000000000000001 0.
+# 
+run
+force -freeze sim:/register_file/write_data 0000000000000000000000000000001 0
+# Value length (31) does not equal array index length (64).
+# 
+# ** Error: (vsim-4011) Invalid force value: 0000000000000000000000000000001 0.
+# 
+run
+force -freeze sim:/register_file/write_data 0000000000000000000000000000000000000000000000000000000000000001 0
+run
+force -freeze sim:/register_file/regwrite 1 0
+run
+force -freeze sim:/register_file/regwrite 0 0
+run
+force -freeze sim:/register_file/rst 0 0
+run
+force -freeze sim:/register_file/regwrite 1 0
+run
+force -freeze sim:/register_file/regwrite 0 0
+force -freeze sim:/register_file/write_reg 00001 0
+run
+force -freeze sim:/register_file/regwrite 1 0
+force -freeze sim:/register_file/write_reg 00010 0
+force -freeze sim:/register_file/write_data 1000000000000000000000000000000000000000000000000000000000000001 0
+run
+quit -sim
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/rf/Register_file.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+vsim work.register_file
+# vsim work.register_file 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.register_file(behavioral)
+add wave *
+force -freeze sim:/register_file/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/register_file/rst 1 0
+force -freeze sim:/register_file/regwrite 0 0
+force -freeze sim:/register_file/read_reg1 00001 0
+force -freeze sim:/register_file/read_reg2 00010 0
+force -freeze sim:/register_file/write_reg 00000 0
+force -freeze sim:/register_file/write_data 0000000000000000000000000000000000000000000000000000000000000000 0
+run
+force -freeze sim:/register_file/rst 0 0
+force -freeze sim:/register_file/regwrite 1 0
+force -freeze sim:/register_file/write_data 1000000000000000000000000000000000000000000000000000000000000000 0
+run
+force -freeze sim:/register_file/write_reg 00001 0
+force -freeze sim:/register_file/write_data 1100000000000000000000000000000000000000000000000000000000000000 0
+run
+force -freeze sim:/register_file/regwrite 0 0
+run
+force -freeze sim:/register_file/write_data 1000000000000000000000000000000000000000000000000000000000000000 0
+run
+force -freeze sim:/register_file/read_reg2 00001 0
+run

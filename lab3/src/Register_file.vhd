@@ -34,14 +34,14 @@ begin
 				
 			else
 				if (RegWrite = '1') then
-					registers(to_integer(write_reg)) <= write_data;
+					registers(to_integer(unsigned(write_reg))) <= write_data;
 				end if;
 			end if;
 		end if;
 	end process;
 
 	--trasparency
-	read_data1 <= registers(to_integer(read_reg1)) when (read_reg1 /= write_reg) else write_data;
-	read_data2 <= registers(to_integer(read_reg2)) when (read_reg2 /= write_reg) else write_data;
+	read_data1 <= registers(to_integer(unsigned(read_reg1))) when (read_reg1 /= write_reg) else write_data;
+	read_data2 <= registers(to_integer(unsigned(read_reg2))) when (read_reg2 /= write_reg) else write_data;
 	
 end behavioral;
