@@ -21,7 +21,7 @@ type ram_array is ARRAY(start_index to stop_index) of signed (31 downto 0);
 signal mem: ram_array;
 BEGIN
 	PROCESS (clock, rst)
-	file fp_in : text open READ_MODE is "../tb/data_bin.txt";
+	file fp_in : text open READ_MODE is "../../tb/data_bin.txt";
 	variable line_in : line;
 	variable x : bit_vector(31 downto 0);
 	BEGIN
@@ -30,9 +30,9 @@ BEGIN
 				if not endfile(fp_in) then
 					readline(fp_in, line_in);
 					read(line_in, x);
-					ram_array(i) <= signed(to_stdlogicvector(x));
+					mem(i) <= signed(to_stdlogicvector(x));
 				else
-					ram_array(i) <= x"00000000";
+					mem(i) <= x"00000000";
 				end if;
 			end loop;
 
