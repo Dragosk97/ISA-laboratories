@@ -9,8 +9,8 @@ end entity instruction_memory;
 
 architecture structural of instruction_memory is
 	
-	constant start_index := 1048576;
-	constant stop_index := 1048597;
+	constant start_index :integer := 1048576;
+	constant stop_index :integer := 1048597;
 	
 	type mem is array ( start_index to stop_index) of signed(31 downto 0);
 	constant rom_content : mem := (
