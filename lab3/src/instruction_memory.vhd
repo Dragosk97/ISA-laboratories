@@ -2,52 +2,42 @@ Library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.NUMERIC_STD.ALL;
 
-entity uROM is
-  port ( address : in std_logic_vector(3 downto 0);
-         data : out std_logic_vector(37 downto 0) );
-end entity uROM;
+entity instruction_memory is
+  port ( address : in std_logic_vector(31 downto 0);
+         data : out signed(31 downto 0) );
+end entity instruction_memory;
 
-architecture structural of uROM is
+architecture structural of instruction_memory is
 	
-	--Creo la tabella ed inserisco i bit di controllo
-	--corrispondenti ad ogni stato:
-	type mem is array (0 to 12) of std_logic_vector(37 downto 0);
-	constant my_rom : mem := (
-    "10000000000000000001010011100101100000",
-    "00000000000111000001010101100001000010",
-    "00010000000111011100101010001000000000",
-    "00010000000000000001010101100000000000",
-    "00010100000000000001010101001000000000",
-    "00010101000000000001010010100000000000",
-    "00001100010000000001010001000100001001",
-    "00000101111000000001010001000011000000",
-    "00000011001010000010101001011100001100",
-    "00000000010010000001100001011000000100",
-    "00000000001010000101010001000011010100",
-    "01100000000010000100101010001011000100",
-    "11000000000000000001100101100001000000"
+	constant start_index := 1048576;
+	constant stop_index := 1048597;
+	
+	type mem is array ( start_index to stop_index) of signed(31 downto 0);
+	constant rom_content : mem := (
+		"00000000011100000000100000010011",
+		"00001111110000010000001000010111",
+		"11111111110000100000001000010011",
+		"00001111110000010000001010010111",
+		"00000001000000101000001010010011",
+		"01000000000000000000011010110111",
+		"11111111111101101000011010010011",
+		"00000010000010000000100001100011",
+		"00000000000000100010010000000011",
+		"01000001111101000101010010010011",
+		"00000000100101000100010100110011",
+		"00000000000101001111010010010011",
+		"00000000100101010000010100110011",
+		"00000000010000100000001000010011",
+		"11111111111110000000100000010011",
+		"00000000110101010010010110110011",
+		"11111100000001011000111011100011",
+		"00000000000001010000011010110011",
+		"11111101010111111111000011101111",
+		"00000000110100101010000000100011",
+		"00000000000000000000000011101111",
+		"00000000000000000000000000010011"
 	);
 	begin
-		rom_execution: process (address)
-		begin
-			--In base al valore dell'ingresso viene
-			--prelevata una diversa riga della rom:
-			case address is
-			   when "0000" => data <= my_rom(0);
-			   when "0001" => data <= my_rom(1);
-			   when "0010" => data <= my_rom(2);
-			   when "0011" => data <= my_rom(3);
-			   when "0100" => data <= my_rom(4);
-			   when "0101" => data <= my_rom(5);
-			   when "0110" => data <= my_rom(6);
-			   when "0111" => data <= my_rom(7);
-			   when "1000" => data <= my_rom(8);
-			   when "1001" => data <= my_rom(9);
-			   when "1010" => data <= my_rom(10);
-			   when "1011" => data <= my_rom(11);
-			   when "1100" => data <= my_rom(12);
-			   when others => data <= my_rom(0);
-			   end case;
-  end process;
-  
+	
+		data <= rom_content(to_integer(unsigned(address(31 downto 2))));
 end structural;
