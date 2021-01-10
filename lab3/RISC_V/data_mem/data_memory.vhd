@@ -14,8 +14,8 @@ PORT (address: IN std_logic_vector(31 downto 0);
 END data_memory;
 
 ARCHITECTURE Behavior OF data_memory IS
-constant start_index := 67125248;
-constant stop_index := 67125368;
+constant start_index : integer := 67125248;
+constant stop_index : integer:= 67125368;
 
 type ram_array is ARRAY(start_index to stop_index) of signed (31 downto 0);
 signal mem: ram_array;
