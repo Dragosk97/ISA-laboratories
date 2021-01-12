@@ -20,10 +20,11 @@ begin
                 case funct3 is
                     when "000" => alu_ctrl <= "0010";
                     when "111" => alu_ctrl <= "0000";
-                    when "110" => alu_ctrl <= "0001";
+                    when "100" => alu_ctrl <= "0011";
                     when others => alu_ctrl <= "0010";
                 end case;
             when others => alu_ctrl <= "0010";
         end case;
+    end process;
 
 end behav ; -- behav
