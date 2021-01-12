@@ -11,7 +11,7 @@ end alu;
 
 architecture behavioural of alu is
 begin
-    alu_process : process(alu_ctr_input)
+    alu_process : process(alu_ctr_input, data_inA, data_inB)
     begin
         case alu_ctr_input is
             when "0010" => result <= data_inA + data_inB;
