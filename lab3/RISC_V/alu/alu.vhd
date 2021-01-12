@@ -11,11 +11,13 @@ end entity alu;
 
 architecture behavioural of alu is
 begin
-    case alu_ctr_input is
-        when "0010" => result <= data_inA + data_inB;
-        when "0000" => result <= data_inA AND data_inB;
-        when "0001" => result <= data_inA OR data_inB;
-        when others => result <= data_inA + data_inB;
-    end case;
-
+    alu_process : process(alu_ctr_input)
+    begin
+        case alu_ctr_input is
+            when "0010" => result <= data_inA + data_inB;
+            when "0000" => result <= data_inA AND data_inB;
+            when "0011" => result <= data_inA XOR data_inB;
+            when others => result <= data_inA + data_inB;
+        end case;
+    end process;
 end behavioural;
