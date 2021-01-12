@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity instruction_memory is
   port ( address : in std_logic_vector(31 downto 0);
-         data : out signed(31 downto 0) );
+         data : out std_logic_vector(31 downto 0) );
 end entity instruction_memory;
 
 architecture structural of instruction_memory is
@@ -12,7 +12,7 @@ architecture structural of instruction_memory is
 	constant start_index :integer := 1048576;
 	constant stop_index :integer := 1048597;
 	
-	type mem is array ( start_index to stop_index) of signed(31 downto 0);
+	type mem is array ( start_index to stop_index) of std_logic_vector(31 downto 0);
 	constant rom_content : mem := (
 		"00000000011100000000100000010011",
 		"00001111110000010000001000010111",
