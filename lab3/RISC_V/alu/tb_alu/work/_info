@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab3\RISC_V\alu\tb_alu
+Ealu
+Z1 w1610451127
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab3\RISC_V\alu\tb_alu
+Z5 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/alu.vhd
+Z6 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/alu.vhd
+l0
+L5
+VDz2agK5][RBFTgiA[;ngC1
+Z7 OV;C;6.6d;45
+32
+Z8 o-work work -O0
+Z9 tExplicit 1
+!s100 1kf4P1a3VCi9I9lb7]TI_3
+Abehavioural
+R2
+R3
+DEx4 work 3 alu 0 22 Dz2agK5][RBFTgiA[;ngC1
+l13
+L12
+VOWkGQYj?1S``m>cTmKNlG1
+R7
+32
+Z10 Mx2 4 ieee 14 std_logic_1164
+Z11 Mx1 4 ieee 11 numeric_std
+R8
+R9
+!s100 SB^`GIAT?l@X?>6d[87EV0
+Ealu_control
+Z12 w1610451668
+R3
+R4
+Z13 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/alu_control.vhd
+Z14 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/alu_control.vhd
+l0
+L4
+Ve2[1OU;z<L[C>D0i4EK4f2
+!s100 Uloko743Q`[kT[_YBS4Ra0
+R7
+32
+R8
+R9
+Abehav
+R3
+DEx4 work 11 alu_control 0 22 e2[1OU;z<L[C>D0i4EK4f2
+l14
+L12
+VUJQ8kfPDEAOG;H[YJ=8[B1
+!s100 :VNBOO97:SgIl:oCG=`Hf1
+R7
+32
+Z15 Mx1 4 ieee 14 std_logic_1164
+R8
+R9
+Etb_alu
+Z16 w1610451546
+R2
+R3
+R4
+Z17 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/tb_alu/tb_alu.vhd
+Z18 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/tb_alu/tb_alu.vhd
+l0
+L5
+Vel@9XaSODM2jTPVQkz^Vc1
+R7
+32
+R8
+R9
+!s100 9;nlXRhdVT6RlG`Tl<o?]2
+Abeh
+R2
+R3
+DEx4 work 6 tb_alu 0 22 el@9XaSODM2jTPVQkz^Vc1
+l31
+L8
+V6[`[=NSfmnEYNfnhNG2[l2
+R7
+32
+R10
+R11
+R8
+R9
+!s100 z_HmU27e@S6g3^baKBX4i2

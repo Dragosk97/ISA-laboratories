@@ -12,15 +12,15 @@ end alu_control;
 architecture behav of alu_control is
 
 begin
-    decode_process : process(aluop, funct3)
+    alu_ctrl_gen : process(aluop, funct3)
     begin
-        case alu_op is
-            when "00" => alu_ctrl <= "0010";
+        case aluop is
+            when "00" => alu_ctrl <= "0010"; -- LOAD (add)
             when "10" =>
                 case funct3 is
-                    when "000" => alu_ctrl <= "0010";
-                    when "111" => alu_ctrl <= "0000";
-                    when "100" => alu_ctrl <= "0011";
+                    when "000" => alu_ctrl <= "0010"; -- ADD
+                    when "111" => alu_ctrl <= "0000"; -- ANDI
+                    when "100" => alu_ctrl <= "0011"; -- XOR
                     when others => alu_ctrl <= "0010";
                 end case;
             when others => alu_ctrl <= "0010";

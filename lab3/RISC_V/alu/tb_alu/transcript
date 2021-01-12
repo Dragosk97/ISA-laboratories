@@ -1,0 +1,44 @@
+pwd
+# C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/tb_alu
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/tb_alu/tb_alu.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity tb_alu
+# -- Compiling architecture beh of tb_alu
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/alu.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity alu
+# -- Compiling architecture behavioural of alu
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu/alu_control.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_control
+# -- Compiling architecture behav of alu_control
+vsim work.tb_alu
+# vsim work.tb_alu 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_alu(beh)
+# Loading work.alu(behavioural)
+# Loading work.alu_control(behav)
+add wave *
+run
+run
+run
+run
+run
+force -freeze sim:/tb_alu/funct3 000 0
+force -freeze sim:/tb_alu/data_a 00000000000000000000000000000011 0
+force -freeze sim:/tb_alu/data_b 00000000000000000000000000000010 0
+run
