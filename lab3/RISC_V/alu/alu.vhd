@@ -7,7 +7,7 @@ port( data_inA : in signed (31 downto 0);
       data_inB : in signed (31 downto 0);
       alu_ctr_input : in std_logic_vector(3 downto 0);
       result : out signed (31 downto 0));
-end entity alu;
+end alu;
 
 architecture behavioural of alu is
 begin
