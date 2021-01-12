@@ -10,7 +10,7 @@ port(
 end entity;
 
 architecture behavioural of Immediate_Generator is
-    signal imm: signed(31 downto 0);
+    signal imm: std_logic_vector(31 downto 0);
 
     begin
         immediate_generation: process(instr_input)
@@ -24,23 +24,23 @@ architecture behavioural of Immediate_Generator is
                                     imm(4 downto 0) <= instr_input(24 downto 20);
                                   else --ADDI and ANDI
                                     imm(11 downto 0) <= instr_input(31 downto 20);
-                                    imm(31 downto 12) <= (31 downto 12 => imm(11)); --sign extension
+                                    imm(31 downto 12) <= (31 downto 12 => instr_input(31)); --sign extension
                                   end if;
                 --Instruction LW
                 when "0000011" => imm(11 downto 0) <= instr_input(31 downto 20); 
-                                  imm(31 downto 12) <= (31 downto 12 => imm(11)); --sign extension
+                                  imm(31 downto 12) <= (31 downto 12 => instr_input(31)); --sign extension
             --S-type
                 --Instruction SW
                 when "0100011" => imm(11 downto 5) <= instr_input(31 downto 25);
                                   imm(4 downto 0) <= instr_input(11 downto 7);
-                                  imm(31 downto 12) <= (31 downto 12 => imm(11)); --sign extension
+                                  imm(31 downto 12) <= (31 downto 12 => instr_input(31)); --sign extension
             --B-type
                 --Instruction BEQ
                 when"1100011" => imm(12) <= instr_input(31);
                                  imm(11) <= instr_input(7);
                                  imm(10 downto 5) <= instr_input(30 downto 25);
                                  imm(4 downto 1) <= instr_input(11 downto 8);
-                                 imm(31 downto 13) <= (31 downto 13 => imm(12)); --sign extension
+                                 imm(31 downto 13) <= (31 downto 13 => instr_input(31); --sign extension
             --U-type
                 --Instruction AUIPC
                 when "0010111" => imm(31 downto 12) <= instr_input(31 downto 12);
@@ -53,8 +53,9 @@ architecture behavioural of Immediate_Generator is
                                   imm(11) <= instr_input(20);
                                   imm(19 downto 12) <= instr_input(19 downto 12);
                                   imm(10 downto 1) <= instr_input(30 downto 21);
-                                  imm(31 downto 13) <= (31 downto 13 => imm(12)); --sign extension
+                                  imm(31 downto 13) <= (31 downto 13 => instr_input(31); --sign extension
                 when others => 
             end case;
         end process;
+        immediate_out <= signed(imm);
         end behavioural;
