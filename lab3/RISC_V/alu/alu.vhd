@@ -7,11 +7,11 @@ port( data_inA : in signed (31 downto 0);
       data_inB : in signed (31 downto 0);
       alu_ctr_input : in std_logic_vector(3 downto 0);
       result : out signed (31 downto 0));
-end entity alu;
+end alu;
 
 architecture behavioural of alu is
 begin
-    alu_process : process(alu_ctr_input)
+    alu_process : process(alu_ctr_input, data_inA, data_inB)
     begin
         case alu_ctr_input is
             when "0010" => result <= data_inA + data_inB;

@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity instruction_memory is
   port ( address : in std_logic_vector(31 downto 0);
          data : out std_logic_vector(31 downto 0) );
-end entity instruction_memory;
+end instruction_memory;
 
 architecture structural of instruction_memory is
 	
