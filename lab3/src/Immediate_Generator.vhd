@@ -38,7 +38,7 @@ architecture behavioural of Immediate_Generator is
                 --Instruction BEQ
                 when"1100011" => imm(12) <= instr_input(31);
                                  imm(11) <= instr_input(7);
-                                 imm(10 downto 5) <= instr_input(30 dwonto 25);
+                                 imm(10 downto 5) <= instr_input(30 downto 25);
                                  imm(4 downto 1) <= instr_input(11 downto 8);
                                  imm(31 downto 13) <= (31 downto 13 => imm(12)); --sign extension
             --U-type
@@ -51,7 +51,7 @@ architecture behavioural of Immediate_Generator is
                 --Instruction JAL
                 when "1101111" => imm(20) <= instr_input(31);
                                   imm(11) <= instr_input(20);
-                                  imm(19 downto 12) <= instr_input(19 dwonto 12);
+                                  imm(19 downto 12) <= instr_input(19 downto 12);
                                   imm(10 downto 1) <= instr_input(30 downto 21);
                                   imm(31 downto 13) <= (31 downto 13 => imm(12)); --sign extension
                 when others => 
