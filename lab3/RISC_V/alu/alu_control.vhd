@@ -15,11 +15,16 @@ begin
     alu_ctrl_gen : process(aluop, funct3)
     begin
         case aluop is
-            when "00" => alu_ctrl <= "0010"; -- LOAD (add)
-            when "10" =>
+            when "00" =>                              -- I-Type
+                case funct3 is
+                    when "010" => alu_ctrl <= "0010"; -- LOAD (add)
+                    when "111" => alu_ctrl <= "0000"; -- ANDI
+                    when "101" => alu_ctrl <= "0001"; -- Shift
+                    when "000" => alu_ctrl <= "0010"; -- ADDI
+                end case;
+            when "10" =>                              -- R-Type
                 case funct3 is
                     when "000" => alu_ctrl <= "0010"; -- ADD
-                    when "111" => alu_ctrl <= "0000"; -- ANDI
                     when "100" => alu_ctrl <= "0011"; -- XOR
                     when others => alu_ctrl <= "0010";
                 end case;
