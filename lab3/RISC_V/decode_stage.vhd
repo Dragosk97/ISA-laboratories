@@ -98,7 +98,7 @@ begin
     funct3 <= instruction_ifid(14 downto 12);
     data1_address <= instruction_ifid(19 downto 15);
     data2_address <= instruction_ifid(24 downto 20);
-    funct7 <= isntruction_ifid(31 downto 25);
+    funct7 <= instruction_ifid(31 downto 25);
 
     -- ID/EX registers
     IDEX_regs: process(clk, clear_idex)
