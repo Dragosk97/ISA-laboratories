@@ -35,6 +35,7 @@ entity decode_stage is
         aluop_idex : out std_logic_vector(1 downto 0);
         funct3_idex : out std_logic_vector(2 downto 0);
         RegWrite_idex : out std_logic;
+        MemRead_idex : out std_logic;
         MemLoad_idex: out std_logic
     );
 end decode_stage;
