@@ -17,6 +17,7 @@ begin
             when "0010" => result <= data_inA + data_inB;
             when "0000" => result <= data_inA AND data_inB;
             when "0011" => result <= data_inA XOR data_inB;
+            when "0001" => result <= shift_right(data_inA, to_integer(data_inB)); --right_shift
             when others => result <= data_inA + data_inB;
         end case;
     end process;
