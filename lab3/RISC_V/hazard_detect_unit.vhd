@@ -11,6 +11,8 @@ entity hazard_detect_unit is
         is_ex_load : in std_logic;
         is_mem_load : in std_logic;
         is_ex_rd_valid : in std_logic;
+        is_rs1_valid : in std_logic;
+        is_rs2_valid : in std_logic;
         insert_nop : out std_logic
     );
 end hazard_detect_unit;
