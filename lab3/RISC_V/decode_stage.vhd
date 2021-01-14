@@ -14,14 +14,16 @@ entity decode_stage is
         result_memwb : in signed(31 downto 0);
 
         -- output
+        target_address : out std_logic_vector(31 downto 0);
+        -- IDEX
         rd_address_idex : out std_logic_vector(4 downto 0);
         data1_address_idex : out std_logic_vector(4 downto 0);
         data2_address_idex : out std_logic_vector(4 downto 0);
+        data1_idex : out signed(31 downto 0);
+        data2_idex : out signed(31 downto 0);
         pc_idex : out std_logic_vector(31 downto 0);
-        target_address : out std_logic_vector(31 downto 0);
         aluop_idex : out std_logic_vector(1 downto 0);
         funct3_idex : out std_logic_vector(2 downto 0);
-
     );
 end decode_stage;
 
@@ -80,9 +82,10 @@ end component;
     signal funct3 : std_logic_vector(2 downto 0);
     signal funct7 : std_logic_vector(6 downto 0);
     signal rd_address : std_logic_vector(4 downto 0);
-    signal RegWrite, rf_rst : std_logic;
     signal data1_address, data2_address : std_logic_vector(31 downto 0);
     signal data1, data2, data1_fwd, data2_fwd : signed(31 downto 0);
+    signal RegWrite, rf_rst : std_logic;
+    signal clear_idex : std_logic;
     signal immediate : signed(31 downto 0);
     signal mux_fwd_1_sel, mux_fwd_1_sel : std_logic;
     signal branch_decision : std_logic;
@@ -100,17 +103,26 @@ begin
     -- ID/EX registers
     IDEX_regs: process(clk, clear_idex)
     begin
-        if clear_idex = '1' then
-            funct3_idex <= "000";
-            rd_address_idex <= "00000";
-            data1_address_idex <= "00000";
-            data2_address_idex <= "00000";
-
-        elsif clk'event and clk='1' then
-            funct3_idex <= funct3;
-            rd_address_idex <= rd_address;
-            data1_address_idex <= data1_address;
-            data2_address_idex <= data2_address;
+        if clk'event and clk='1' then
+            if clear_idex = '1' then
+                funct3_idex <= "000";
+                rd_address_idex <= "00000";
+                data1_address_idex <= "00000";
+                data2_address_idex <= "00000";
+                data1_idex <= x"00000";
+                data2_idex <= x"00000";
+                pc_idex <= x"00000";
+                immediate_idex <= x"00000";
+            else
+                funct3_idex <= funct3;
+                rd_address_idex <= rd_address;
+                data1_address_idex <= data1_address;
+                data2_address_idex <= data2_address;
+                data1_idex <= data1_fwd;
+                data2_idex <= data2_fwd;
+                pc_idex <= pc_ifid;
+                immediate_idex <= immediate;
+            end if;
         end if;
     end process;
 
@@ -118,8 +130,8 @@ begin
     reg_file : Register_File port map (
         write_data => rd_data_memwb,
         RegWrite => RegWrite,
-        read_reg1 => data1,
-        read_reg2 => data2,
+        read_reg1 => data1_address,
+        read_reg2 => data2_address,
         write_reg => rd_address_memwb,
         clk => clk,
         rst => rf_rst,
@@ -144,7 +156,6 @@ begin
         sel => mux_fwd_1_sel,
         m_out => data1_fwd
     );
-
     mux_fwd_2 : mux3to1 generic map (32) port map(
         a => data2,
         b => result_memwb,
@@ -153,6 +164,7 @@ begin
         m_out => data2_fwd
     );
 
+    -- Branch equality unit
     branch_equal_unit : comparator generic map (32) port map (
         x => data1_fwd,
         y => data2_fwd,
