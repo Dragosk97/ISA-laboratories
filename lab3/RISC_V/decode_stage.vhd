@@ -178,8 +178,8 @@ begin
                 data2_idex <= data2_fwd;
                 pc_idex <= pc_ifid;
                 immediate_idex <= immediate;
-                RegWrite_idex <= RegWrite;
-                MemLoad_idex <= MemLoad;
+                RegWrite_idex_buff <= RegWrite;
+                MemLoad_idex_buff <= MemLoad;
             end if;
         end if;
     end process;
