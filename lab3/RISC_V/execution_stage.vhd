@@ -23,12 +23,12 @@ ENTITY execution_stage IS
           --input EX/MEM
           rd_address_exmem: IN std_logic_vector(4 downto 0);
           result_exmem: IN signed(31 downto 0);
-          exmem_fwd_en:IN std_logic;
+          exmem_fwd_en: IN std_logic;
 
           --input MEM/WB
           rd_address_memwb: IN std_logic_vector(4 downto 0);
           result_memwb: IN signed(31 downto 0);
-          memwb_fwd_en:IN std_logic;
+          memwb_fwd_en: IN std_logic;
 
           --output
           ex_result_out : OUT signed (31 downto 0);
@@ -75,8 +75,8 @@ port( rs1_address_idex: IN std_logic_vector(4 downto 0);
       rs2_address_idex: IN std_logic_vector(4 downto 0);
       rd_address_exmem: IN std_logic_vector(4 downto 0);
       rd_address_memwb: IN std_logic_vector(4 downto 0);
-      exmem_fwd_en:IN std_logic;
-      memwb_fwd_en:IN std_logic;
+      exmem_fwd_en: IN std_logic;
+      memwb_fwd_en: IN std_logic;
       mux1_fwd, mux2_fwd: OUT std_logic_vector(1 downto 0));
 end component;
 
