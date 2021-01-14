@@ -5,8 +5,7 @@ entity alu_control is
     port (
         aluop   : in std_logic_vector(1 downto 0);
         funct3  : in std_logic_vector(2 downto 0);
-        alu_ctrl: out std_logic_vector(3 downto 0)
-    );
+        alu_ctrl: out std_logic_vector(3 downto 0));
 end alu_control;
 
 architecture behav of alu_control is
