@@ -8,31 +8,39 @@ ENTITY memory_stage IS
           data_exmem: IN signed(31 downto 0);
           data_in_mem: IN signed(31 downto 0);
           
-          --address_exmem: IN signed(31 downto 0);
           rd_address_exmem: IN std_logic_vector(4 downto 0);
           exmem_fwd_en: IN std_logic;
           wb_mux_sel: IN std_logic;
 
-          --output
-          exmem_fwd_en_out: OUT std_logic;
-          data_memwb: OUT signed(31 downto 0);
-          rd_address_memwb_out: OUT std_logic_vector(4 downto 0);
+          --output to WB
+          data1_memwb: OUT signed(31 downto 0);
+          data1_memwb: OUT signed(31 downto 0);
+          rd_address_memwb: OUT std_logic_vector(4 downto 0);
           wb_mux_sel_out: OUT std_logic
+
+          --output to EXECUTE
+          data_mux_out: OUT igned(31 downto 0);
+          rd_address_out: OUT std_logic_vector(4 downto 0);
+          wb_fwd_en: OUT std_logic
     );
 END memory_stage;
 
 ARCHITECTURE structural OF memory_stage IS
 
-SIGNAL
-
 begin
+
+data_mux_out <= data_exmem;
+rd_address_out <= rd_address_exmem;
+wb_fwd_en <= wb_mux_sel;
 
 --MEM/WB register              
 PROCESS(clk)
 BEGIN
     IF RISING_EDGE(clk) THEN
-        data_memwb <= data_in_mem;
-        
+        data1_memwb <= data_in_mem;
+        data2_memwb <= data_exmem;
+        rd_address_memwb <= rd_address_exmem;
+        wb_mux_sel_out <= wb_mux_sel;
     END IF;
 END PROCESS;
 
