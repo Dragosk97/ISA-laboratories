@@ -5,25 +5,28 @@ use ieee.numeric_std.all;
 entity decode_stage is
     port (
         -- input
+        clk : in std_logic;
+        -- IF/ID
         instruction_ifid : in std_logic_vector(31 downto 0);
         pc_ifid : in std_logic_vector(31 downto 0);
+        -- EX/MEM
+        result_exmem : in signed(31 downto 0);
+        -- MEM/WB
         rd_address_memwb : in std_logic_vector(4 downto 0);
         rd_data_memwb : in signed(31 downto 0);
-        clk : in std_logic;
-        result_exmem : in signed(31 downto 0);
         result_memwb : in signed(31 downto 0);
 
         -- output
         target_address : out std_logic_vector(31 downto 0);
         -- IDEX
         rd_address_idex : out std_logic_vector(4 downto 0);
-        data1_address_idex : out std_logic_vector(4 downto 0);
-        data2_address_idex : out std_logic_vector(4 downto 0);
+        rs1_address_idex : out std_logic_vector(4 downto 0);
+        rs2_address_idex : out std_logic_vector(4 downto 0);
         data1_idex : out signed(31 downto 0);
         data2_idex : out signed(31 downto 0);
         pc_idex : out std_logic_vector(31 downto 0);
         aluop_idex : out std_logic_vector(1 downto 0);
-        funct3_idex : out std_logic_vector(2 downto 0);
+        funct3_idex : out std_logic_vector(2 downto 0)
     );
 end decode_stage;
 
@@ -82,7 +85,7 @@ end component;
     signal funct3 : std_logic_vector(2 downto 0);
     signal funct7 : std_logic_vector(6 downto 0);
     signal rd_address : std_logic_vector(4 downto 0);
-    signal data1_address, data2_address : std_logic_vector(31 downto 0);
+    signal rs1_address, rs2_address : std_logic_vector(31 downto 0);
     signal data1, data2, data1_fwd, data2_fwd : signed(31 downto 0);
     signal RegWrite, rf_rst : std_logic;
     signal clear_idex : std_logic;
@@ -96,8 +99,8 @@ begin
     opcode <= instruction_ifid(6 downto 0);
     rd_address <= instruction_ifid(11 downto 7);
     funct3 <= instruction_ifid(14 downto 12);
-    data1_address <= instruction_ifid(19 downto 15);
-    data2_address <= instruction_ifid(24 downto 20);
+    rs1_address <= instruction_ifid(19 downto 15);
+    rs2_address <= instruction_ifid(24 downto 20);
     funct7 <= instruction_ifid(31 downto 25);
 
     -- ID/EX registers
@@ -107,8 +110,8 @@ begin
             if clear_idex = '1' then
                 funct3_idex <= "000";
                 rd_address_idex <= "00000";
-                data1_address_idex <= "00000";
-                data2_address_idex <= "00000";
+                rs1_address_idex <= "00000";
+                rs2_address_idex <= "00000";
                 data1_idex <= x"00000";
                 data2_idex <= x"00000";
                 pc_idex <= x"00000";
@@ -116,8 +119,8 @@ begin
             else
                 funct3_idex <= funct3;
                 rd_address_idex <= rd_address;
-                data1_address_idex <= data1_address;
-                data2_address_idex <= data2_address;
+                rs1_address_idex <= rs1_address;
+                rs2_address_idex <= rs2_address;
                 data1_idex <= data1_fwd;
                 data2_idex <= data2_fwd;
                 pc_idex <= pc_ifid;
@@ -130,8 +133,8 @@ begin
     reg_file : Register_File port map (
         write_data => rd_data_memwb,
         RegWrite => RegWrite,
-        read_reg1 => data1_address,
-        read_reg2 => data2_address,
+        read_reg1 => rs1_address,
+        read_reg2 => rs2_address,
         write_reg => rd_address_memwb,
         clk => clk,
         rst => rf_rst,
