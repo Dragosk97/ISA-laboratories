@@ -6,7 +6,7 @@ entity GenericReg is
 generic(regwidth : integer);
 port(d : in signed (regwidth -1 downto 0);
 	  clk : in std_logic;
-	  rst_n: in std_logic;
+	  rst: in std_logic;
 	  en : in std_logic;
 	  q : out signed (regwidth -1 downto 0));
 end entity;
@@ -17,7 +17,7 @@ BEGIN
 	PROCESS (clk)
 		BEGIN
 		IF Clk'EVENT AND Clk = '1' THEN
-			IF rst_n = '0' THEN
+			IF rst = '1' THEN
 				q <= (others => '0');
 			ELSIF en = '1' THEN
 				q <= d;
