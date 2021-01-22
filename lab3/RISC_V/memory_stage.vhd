@@ -22,8 +22,8 @@ ENTITY memory_stage IS
           address_mem_out: OUT std_logic_vector(31 downto 0);
           
           --output to WB
-          data_memwb: OUT signed(31 downto 0);
-          result_memwb: OUT signed(31 downto 0);
+          data_memwb: OUT signed(31 downto 0); --out of memory
+          result_memwb: OUT signed(31 downto 0); --out of alu
           rd_address_memwb: OUT std_logic_vector(4 downto 0);
           memwb_mux_sel_out: OUT std_logic;
           RegWrite_memwb: out std_logic);
