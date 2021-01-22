@@ -98,7 +98,7 @@ begin
             end if;
         end if;
     end process;
-    
+
     -- Buffer output
     pc_ifid <= pc_ifid_buffer;
 
@@ -133,7 +133,7 @@ begin
     PT_decision <= PT_out(0);
     prediction_ta <= PT_out(32 downto 1);
     tag <= PT_out(58 downto 33);
-    
+
     -- PT hit or miss
     PT_hit <= '1' when tag = pc(31 downto 6) else '0';
 
