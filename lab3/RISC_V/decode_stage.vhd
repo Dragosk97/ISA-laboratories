@@ -131,7 +131,7 @@ end component;
     -- control signals
     signal RegWrite, rf_rst : std_logic;
     signal MemLoad, MemWrite : std_logic;
-    signal clear_idex : std_logic;
+    signal clear_idex : std_logic; -- for ID/EX flush
     signal mux_fwd_1_sel, mux_fwd_1_sel : std_logic_vector(1 downto 0);
     signal branch_decision : std_logic;
     
@@ -259,5 +259,6 @@ begin
         memwb_fwd_en => RegWrite_memwb,
         mux1_fwd => mux_fwd_1_sel,
         mux2_fwd => mux_fwd_2_sel
-    )
+    );
+
 end struct ; -- struct
