@@ -19,7 +19,7 @@ BEGIN
     BEGIN
         IF clock'event and clock='1' THEN
             if (rst='1') then
-                mem <= (others => (others =>'0'));
+                mem <= (others => (others =>'0')); --array initilize to 0
             ELSIF MemWrite='1' then 
                 mem(to_integer(unsigned(PT_address)) <= PT_data;
             END IF;
