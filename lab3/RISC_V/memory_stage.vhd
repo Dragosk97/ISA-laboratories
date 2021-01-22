@@ -14,8 +14,6 @@ ENTITY memory_stage IS
 
           --use for memory
           data_mem_in: IN signed(31 downto 0); --out_of_memory
-          --MemRead_exmem : in std_logic;
-          --MemLoad_exmem: in std_logic;
           
           --output to data memory
           data_mem_out: OUT signed(31 downto 0);
