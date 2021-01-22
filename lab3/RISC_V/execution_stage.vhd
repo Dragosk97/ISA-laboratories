@@ -143,7 +143,7 @@ pc_next <= pc_signed + 4;
 result_mux: mux3to1 GENERIC MAP (32) 
 PORT MAP( a => alu_result,
           b => immediate_idex,
-          c => pc_signed,
+          c => pc_next,
           sel => mux_result_sel_idex,
           m_out => ex_result);
 
