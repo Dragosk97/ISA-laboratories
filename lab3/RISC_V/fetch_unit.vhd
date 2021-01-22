@@ -8,12 +8,15 @@ entity fetch_unit is
         clk : in std_logic;
         rst : in std_logic;
         start_address : in std_logic_vector(31 downto 0);
+        target_address : in std_logic_vector(31 downto 0);
         
+        -- Input for jump
+        jump : in std_logic;
+
         -- Input from Decode stage for Branch correction
         wrong_prediction : in std_logic;
         branch_decision : in std_logic;
-        target_address : in std_logic_vector(31 downto 0);
-
+        
         -- Input from Decode stage for stall as Branch Hazards
         pc_en : in std_logic;
 
@@ -45,34 +48,36 @@ architecture structure of fetch_unit is
     component prediction_table IS
     PORT (  PT_read_address: IN std_logic_vector(3 downto 0);
             PT_write_address: IN std_logic_vector(3 downto 0);
-            PT_data: IN std_logic_vector(32 downto 0);
-            MemWrite, MemRead, clock, rst: IN STD_LOGIC;
-            Qout: OUT std_logic_vector(32 downto 0));
+            PT_data: IN std_logic_vector(58 downto 0);
+            MemWrite, clock, rst: IN STD_LOGIC;
+            Qout: OUT std_logic_vector(58 downto 0));
     END component;
-    
-    PT : prediction_table port map (
-        PT_read_address <= pc(3 downto 0),
-        PT_write_address <= pc_ifid_buffer,
-        PT_data <= target_address,
-        MemWrite <= wrong_prediction,
-        MemRead <= is_branch,
-        clock <= clk,
-        rst <= rst,
-        Qout <= PT_out
-    );
 
-    signal PT_out : std_logic_vector(32 downto 0);
-    signal prediction : std_logic;
+    -- Buffer signals
+    signal pc_ifix_buffer : std_logic_vector(31 downto 0);
+
+    -- Prediction Table signals
+    signal PT_in, PT_out : std_logic_vector(58 downto 0);
+    signal PT_decision : std_logic;
+    signal tag : std_logic_vector(58 downto 0);
+    signal PT_hit : std_logic;
     signal prediction_ta : std_logic_vector(31 downto 0);
+    signal prediction : std_logic;
 
     -- Program Counter's signals
     signal pc_in, pc : std_logic_vector(31 downto 0);
     signal pc_rst : std_logic_vector(31 downto 0);
-        
     signal pc_4 : std_logic_vector(31 downto 0);
+
+    -- Sequential PC restore regs signals
+    signal prev_pc_4 : std_logic_vector(31 downto 0);
     -- signal fixed to '1'
     signal one : std_logic;
+
+
 begin
+
+    one <= '1';
 
     IFID_regs : process(clk, ifid_en)
     begin
@@ -94,6 +99,7 @@ begin
         end if;
     end process;
     
+    -- Buffer output
     pc_ifid <= pc_ifid_buffer;
 
     -- Program Counter
@@ -109,6 +115,33 @@ begin
     -- reset signal is not used and instead a mux is switched to the proper input.
     pc_rst <= '0';
 
+    -- Prediction Table
+    PT : prediction_table port map (
+        PT_read_address <= pc(5 downto 2),
+        PT_write_address <= pc_ifid_buffer(5 downto 2),
+        PT_data <= PT_in,
+        MemWrite <= wrong_prediction,
+        clock <= clk,
+        rst <= rst,
+        Qout <= PT_out
+    );
+
+    -- Prediciton table input concatenation
+    PT_in <= pc_ifid_buffer(31 downto 6) & target_address & branch_decision;
+
+    -- Prediction table output dispatch
+    PT_decision <= PT_out(0);
+    prediction_ta <= PT_out(32 downto 1);
+    tag <= PT_out(58 downto 33);
+    
+    -- PT hit or miss
+    PT_hit <= '1' when tag = pc(31 downto 6) else '0';
+
+    -- The final prediction is given by the decision stored in the
+    -- Prediction Table if the tag gave a hit.
+    prediction <= PT_hit and PT_decision;
+
+
     -- Sequential PC restore register
     prev_pc : GenericReg generic map (32) port map (
         d <= pc_4,
@@ -122,7 +155,8 @@ begin
     pc_4 <= std_logic_vector(signed(pc) + 4);
 
     -- PC's next value
-    pc_in <= start_address when rst <= '0'
+    pc_in <= start_address when rst = '0'
+        else target_address when jump = '1'
         else target_address when wrong_prediction = '1' and  branch_decision = '1'
         else prev_pc_4 when wrong_prediction = '1' and  branch_decision = '0'
         else prediction_ta when wrong_prediction = '0' and prediction = '1'
@@ -130,7 +164,5 @@ begin
 
     instruction_address <= pc;
 
-
-    
 
 end structure ; -- structure
