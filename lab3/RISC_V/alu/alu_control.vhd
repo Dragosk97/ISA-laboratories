@@ -25,6 +25,7 @@ begin
                 case funct3 is
                     when "000" => alu_ctrl <= "0010"; -- ADD
                     when "100" => alu_ctrl <= "0011"; -- XOR
+                    when "010" => alu_ctrl <= "0100"; -- SLT, comparison
                     when others => alu_ctrl <= "0010";
                 end case;
             when "11" => alu_ctrl <= "0010";

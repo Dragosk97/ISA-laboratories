@@ -18,6 +18,12 @@ begin
             when "0000" => result <= data_inA AND data_inB;
             when "0011" => result <= data_inA XOR data_inB;
             when "0001" => result <= shift_right(data_inA, to_integer(data_inB)); --right_shift
+            when "0100" => if data_inA < data_inB then
+                                result(0) <= '1';
+                                result(31 downto 1) <= (others => '0');
+                            else
+                                result <= (others => '0')  
+                            end if ;
             when others => result <= data_inA + data_inB;
         end case;
     end process;

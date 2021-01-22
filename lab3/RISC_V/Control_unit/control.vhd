@@ -47,12 +47,12 @@ BEGIN
         mux2_imm_sel_idex <= '0';
         mux_result_sel_idex <= "00";
         aluop_idex <= "00";
-        wb_mux_sel <= '0';
+        wb_mux_sel <= '1';
         MemRead <= '0';
         MemWrite <= '0';
         clear: out std_logic
         case instr_input(6 downto 0) is
-                --Instruction ADD
+                --Instructions ADD XOR SLT
                 when "0110011" => RegWrite <= '1';
                                   is_rs1_valid <= '1';
                                   is_rs2_valid <= '1';
@@ -61,7 +61,7 @@ BEGIN
                                   mux_result_sel_idex <= "00";
                                   aluop_idex <= "10";
                                   wb_mux_sel <= '1'   
-                --Instruction ADDI
+                --Instruction ADDI SRAI ANDI
                 when "0010011" => RegWrite <= '1';
                                   is_rs1_valid <= '1';
                                   is_rs2_valid <= '0';
@@ -69,7 +69,10 @@ BEGIN
                                   mux2_imm_sel_idex <= '1';
                                   mux_result_sel_idex <= "00";
                                   aluop_idex <= "00";
-                                  wb_mux_sel <= '1'
+                                  wb_mux_sel <= '1';
+                                  MemRead <= '0';
+                                  MemWrite <= '0';
+                                        
                 --Instruction AUIPC
                 when "0010111" =>   RegWrite <= '1';
                                     is_rs1_valid <= '0';
@@ -99,54 +102,37 @@ BEGIN
                 --Instruction LW
                 when "0000011" =>   RegWrite <= '1';
                                     is_rs1_valid <= '1';
-                                    is_rs2_valid <= '2';
+                                    is_rs2_valid <= '0';
                                     mux1_PC_sel_idex <= '0';
                                     mux2_imm_sel_idex <= '1';
                                     mux_result_sel_idex <= "00";
                                     aluop_idex <= "11"; 
-                                    wb_mux_sel <= 
-                --Instruction BEQ
-                when "1100011" =>   RegWrite <= '0';
+                                    wb_mux_sel <= "0";
+                                    MemRead <= '1';
+                                    MemWrite <= '0';
+                --Instruction JAL
+                when "0010011" =>   RegWrite <= '1';
+                                    is_rs1_valid <= '0';
+                                    is_rs2_valid <= '0';
+                                    --mux1_PC_sel_idex <= '0';  --The ALU is not used here
+                                    --mux2_imm_sel_idex <= '1';
+                                    mux_result_sel_idex <= "10";
+                                    --aluop_idex <= "00";
+                                    wb_mux_sel <= "1";
+                                    MemRead <= '0';
+                                    MemWrite <= '0'; 
+                --Instruction SW
+                when "0100011" =>   RegWrite <= '0';
                                     is_rs1_valid <= '1';
                                     is_rs2_valid <= '1';
-                                    --mux1_PC_sel_idex <= '0';
-                                    --mux2_imm_sel_idex <= '1';
-                                    --mux_result_sel_idex <= "00";
-                                    --aluop_idex <= "00"; 
-                --Instruction BEQ
-                when "1100011" =>   RegWrite <= '0';
-                                    is_rs1_valid <= '1';
-                                    is_rs2_valid <= '1';
-                                    --mux1_PC_sel_idex <= '0';
-                                    --mux2_imm_sel_idex <= '1';
-                                    --mux_result_sel_idex <= "00";
-                                    --aluop_idex <= "00"; 
-                --Instruction BEQ
-                when "1100011" =>   RegWrite <= '0';
-                                    is_rs1_valid <= '1';
-                                    is_rs2_valid <= '1';
-                                    --mux1_PC_sel_idex <= '0';
-                                    --mux2_imm_sel_idex <= '1';
-                                    --mux_result_sel_idex <= "00";
-                                    --aluop_idex <= "00"; 
-                --Instruction BEQ
-                when "1100011" =>   RegWrite <= '0';
-                                    is_rs1_valid <= '1';
-                                    is_rs2_valid <= '1';
-                                    --mux1_PC_sel_idex <= '0';
-                                    --mux2_imm_sel_idex <= '1';
-                                    --mux_result_sel_idex <= "00";
-                                    --aluop_idex <= "00"; 
-                --Instruction BEQ
-                when "1100011" =>   RegWrite <= '0';
-                                    is_rs1_valid <= '1';
-                                    is_rs2_valid <= '1';
-                                    --mux1_PC_sel_idex <= '0';
-                                    --mux2_imm_sel_idex <= '1';
-                                    --mux_result_sel_idex <= "00";
-                                    --aluop_idex <= "00"; 
-
-
+                                    mux1_PC_sel_idex <= '0';
+                                    mux2_imm_sel_idex <= '1';
+                                    mux_result_sel_idex <= "00";
+                                    aluop_idex <= "11";
+                                    --wb_mux_sel <= "1";
+                                    MemRead <= '0';
+                                    MemWrite <= '1'; 
+            
                 when others => 
             end case;
     
