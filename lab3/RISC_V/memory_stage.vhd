@@ -22,8 +22,8 @@ ENTITY memory_stage IS
           address_mem_out: OUT std_logic_vector(31 downto 0);
           
           --output to WB
-          data1_memwb: OUT signed(31 downto 0);
-          data2_memwb: OUT signed(31 downto 0);
+          data_memwb: OUT signed(31 downto 0);
+          result_memwb: OUT signed(31 downto 0);
           rd_address_memwb: OUT std_logic_vector(4 downto 0);
           memwb_mux_sel_out: OUT std_logic;
           RegWrite_memwb: out std_logic);
@@ -40,8 +40,8 @@ begin
 PROCESS(clk)
 BEGIN
     IF RISING_EDGE(clk) THEN
-        data1_memwb <= data_mem_in;
-        data2_memwb <= result_exmem;
+        data_memwb <= data_mem_in;
+        result_memwb <= result_exmem;
         rd_address_memwb <= rd_address_exmem;
         memwb_mux_sel_out <= wb_mux_sel;
         RegWrite_memwb <= RegWrite_exmem;
