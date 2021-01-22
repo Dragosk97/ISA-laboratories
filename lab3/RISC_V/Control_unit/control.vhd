@@ -13,8 +13,7 @@ PORT (opcode: IN std_logic_vector(6 downto 0); --Last 7 bits of the instruction
       aluop_idex: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
       wb_mux_sel: out std_logic;
       MemRead: out std_logic;
-      MemWrite: out std_logic;
-      clear: out std_logic
+      MemWrite: out std_logic
 );
 END control;
 
@@ -50,7 +49,6 @@ BEGIN
         wb_mux_sel <= '1';
         MemRead <= '0';
         MemWrite <= '0';
-        clear: out std_logic
         case instr_input(6 downto 0) is
                 --Instructions ADD XOR SLT
                 when "0110011" => RegWrite <= '1';
