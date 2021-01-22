@@ -2,13 +2,13 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity datapath is
+entity RISCV is
     port ( 
 
     );
-end datapath;
+end RISCV;
 
-ARCHITECTURE structural of datapath is
+ARCHITECTURE structural of RISCV is
 
     component fetch_unit is
         port (
