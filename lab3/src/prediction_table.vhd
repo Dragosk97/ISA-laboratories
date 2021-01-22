@@ -3,15 +3,15 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 ENTITY prediction_table IS
-PORT (  prediction: IN std_logic_vector(32 downto 0);
-        data: IN signed(32 downto 0);
+PORT (  PT_address: IN std_logic_vector(3 downto 0);
+        PT_data: IN std_logi_vector(32 downto 0);
         MemWrite, MemRead, clock, rst: IN STD_LOGIC;
-        Qout: OUT signed(32 downto 0));
+        Qout: OUT std_logic_vector(32 downto 0));
 END prediction_table;
 
 ARCHITECTURE behavioural of prediction_table is
 
-type ram_array is ARRAY(0 to 32) of STD_LOGIC_VECTOR(32 downto 0);
+type ram_array is ARRAY(0 to 15) of STD_LOGIC_VECTOR(32 downto 0);
 signal mem: ram_array;
 
 BEGIN
@@ -21,12 +21,11 @@ BEGIN
             if (rst='1') then
                 mem <= (others => (others =>'0'));
             ELSIF MemWrite='1' then 
-                mem(to_integer(unsigned(prediction(32 downto 0)))) <= data;
-            END IF;
+                mem(to_integer(unsigned(PT_address)) <= PT_data;
             END IF;
         END IF;
     END PROCESS;
 
-Qout <= mem(to_integer(unsigned(prediction(32 downto 0)))) when (MemRead='1');
+Qout <= mem(to_integer(unsigned(PT_address))) when (MemRead='1') else (others => '0');
 
 END behavioural;
