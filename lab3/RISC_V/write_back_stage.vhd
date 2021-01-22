@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
 
 entity write_back_stage is
     port (
@@ -9,10 +10,10 @@ entity write_back_stage is
     );
 end write_back_stage;
 
-architecture struct of write_back_stage is
+architecture structural of write_back_stage is
 
     signal 
 
 begin
 
-end struct ; -- struct
+end structural ; -- struct
