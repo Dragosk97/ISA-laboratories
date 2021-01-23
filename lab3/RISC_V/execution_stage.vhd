@@ -33,7 +33,7 @@ ENTITY execution_stage IS
           MemLoad_exmem: OUT std_logic;
           RegWrite_exmem: OUT std_logic;
           rd_address_exmem: OUT std_logic_vector(4 downto 0);
-          result_exmem: OUT std_logic_vector(31 downto 0);
+          result_exmem: OUT signed(31 downto 0);
           wb_exmem: OUT std_logic
           );
 END execution_stage;

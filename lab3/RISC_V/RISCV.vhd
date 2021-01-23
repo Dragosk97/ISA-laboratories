@@ -12,6 +12,9 @@ entity RISCV is
         --memory stage
         MemRead => in std_logic;
         MemLoad => in std_logic;
+
+        --output
+        
         );
 end RISCV;
 
@@ -101,11 +104,12 @@ ARCHITECTURE structural of RISCV is
 
     component execution_stage IS
 	PORT (
-          --input ID/EX
           clk:IN std_logic;
+          --input ID/EX
           data1_idex, data2_idex: IN signed(31 downto 0);
           wb_idex: IN std_logic;
-          mem_idex: IN std_logic_vector(1 downto 0);
+          MemRead_idex: IN std_logic;
+          MemLoad_idex: IN std_logic;
           aluop_idex: IN std_logic_vector(1 downto 0);
           funct3_idex: IN std_logic_vector(2 downto 0); 
           rs1_address_idex: IN std_logic_vector(4 downto 0);
@@ -114,26 +118,24 @@ ARCHITECTURE structural of RISCV is
           mux1_pc_sel_idex: IN std_logic;
           mux2_imm_sel_idex: IN std_logic;
           mux_result_sel_idex: IN std_logic_vector(1 downto 0);
-        
           pc_idex: IN std_logic_vector(31 downto 0);
           immediate_idex: IN signed(31 downto 0);
-
-          --input EX/MEM
-          rd_address_exmem: IN std_logic_vector(4 downto 0);
-          result_exmem: IN signed(31 downto 0);
-          exmem_fwd_en: IN std_logic;
-
+          RegWrite_idex : IN std_logic;
+          
           --input MEM/WB
           rd_address_memwb: IN std_logic_vector(4 downto 0);
           result_memwb: IN signed(31 downto 0);
-          memwb_fwd_en: IN std_logic;
-
-          --output
-          ex_result_out : OUT signed (31 downto 0);
-          data2_fwd: OUT signed (31 downto 0);
-          rd_address_out: OUT std_logic_vector(4 downto 0);
-          wb_exmem: OUT std_logic;
-          mem_exmem: OUT std_logic_vector(1 downto 0));
+          RegWrite_memwb: IN std_logic;
+          
+          -- Output EX/MEM
+          data2_fwd_exmem: OUT signed (31 downto 0);
+          MemRead_exmem: OUT std_logic;
+          MemLoad_exmem: OUT std_logic;
+          RegWrite_exmem: OUT std_logic;
+          rd_address_exmem: OUT std_logic_vector(4 downto 0);
+          result_exmem: OUT signed(31 downto 0);
+          wb_exmem: OUT std_logic
+          );
 END component;
 
 component memory_stage IS
@@ -280,26 +282,35 @@ port map (
 execution: execution_stage is 
 port map ( 
     clk => clk,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    
+    --input ID/EX
+    data1_idex=> data1_idex,
+    data2_idex=> data2_idex,
+    wb_idex=> wb_idex,
+    MemRead_idex=> MemRead_idex,
+    MemLoad_idex=> MemLoad_idex,
+    aluop_idex=> aluop_idex,
+    funct3_idex=> funct3_idex,
+    rs1_address_idex=> rs1_address_idex,
+    rs2_address_idex=> rs2_address_idex,
+    rd_address_idex=> rd_address_idex,
+    mux1_pc_sel_idex=> mux1_pc_sel_idex,
+    mux2_imm_sel_idex=> mux2_imm_sel_idex,
+    mux_result_sel_idex=> mux_result_sel_idex,
+    pc_idex=> pc_idex,
+    immediate_idex=> immediate_idex,
+    RegWrite_idex=> RegWrite_idex,
+    --input MEM/WB
+    rd_address_memwb=> rd_address_memwb,
+    result_memwb=> result_memwb,
+    RegWrite_memwb=> RegWrite_memwb,
+    -- Output EX/MEM
+    data2_fwd_exmem=> data2_fwd_exmem,
+    MemRead_exmem=> MemRead_exmem,
+    MemLoad_exmem=> MemLoad_exmem,
+    RegWrite_exmem=> RegWrite_exmem,
+    rd_address_exmem=> rd_address_exmem,
+    result_exmem => result_exmem,
+    wb_exmem => wb_exmem,
 );
 
 memory: memory_stage is 
