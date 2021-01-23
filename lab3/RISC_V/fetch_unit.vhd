@@ -9,9 +9,10 @@ entity fetch_unit is
         rst : in std_logic;
         start_address : in std_logic_vector(31 downto 0);
         target_address : in std_logic_vector(31 downto 0);
+        ifid_clear : in std_logic;
         
         -- Input from Decode stage for jump
-        jump : in std_logic;
+        is_jump : in std_logic;
 
         -- Input from Decode stage for Branch correction
         wrong_prediction : in std_logic;
@@ -19,6 +20,7 @@ entity fetch_unit is
         
         -- Input from Decode stage for stall such as Branch Hazards
         pc_en : in std_logic;
+        ifid_en : in std_logic;
 
         -- Input from Instruction Memory
         instruction_in : in std_logic_vector(31 downto 0);
@@ -79,7 +81,7 @@ begin
 
     one <= '1';
 
-    IFID_regs : process(clk, ifid_en)
+    IFID_regs : process(clk, ifid_en, ifid_clear)
     begin
         if clk'event and clk = '1' then
             if ifid_clear = '1' then
@@ -156,7 +158,7 @@ begin
 
     -- PC's next value
     pc_in <= start_address when rst = '0'
-        else target_address when jump = '1'
+        else target_address when is_jump = '1'
         else target_address when wrong_prediction = '1' and  branch_decision = '1'
         else prev_pc_4 when wrong_prediction = '1' and  branch_decision = '0'
         else prediction_ta when wrong_prediction = '0' and prediction = '1'
