@@ -4,11 +4,12 @@ use ieee.numeric_std.all;
 
 entity prediction_validate is
     port (
+        is_branch : in std_logic;
         branch_decision : in std_logic;
         prediction : in std_logic;
-        is_branch : in std_logic;
-
-        wrong_prediction : out std_logic;
+        target_address : in std_logic_vector(31 downto 0);
+        prediction_ta : in std_logic_vector(31 downto 0);
+        wrong_prediction : out std_logic
     );
 end prediction_validate;
 
@@ -22,6 +23,7 @@ architecture behav of prediction_validate is
     -- The prediction is wrong when it is different than the actual decision
     -- produced by the branch instruction.
 begin
-    wrong_prediction <= is_branch and (branch_decision xor prediction);
-
+    
+    wrong_prediction <= '1' when is_branch = '1' and (branch_decision /= prediction or (branch_decision = '1' and prediction_ta /= target_address))
+        else '0';
 end behav ; -- behav
