@@ -10,14 +10,14 @@ entity fetch_unit is
         start_address : in std_logic_vector(31 downto 0);
         target_address : in std_logic_vector(31 downto 0);
         
-        -- Input for jump
+        -- Input from Decode stage for jump
         jump : in std_logic;
 
         -- Input from Decode stage for Branch correction
         wrong_prediction : in std_logic;
         branch_decision : in std_logic;
         
-        -- Input from Decode stage for stall as Branch Hazards
+        -- Input from Decode stage for stall such as Branch Hazards
         pc_en : in std_logic;
 
         -- Input from Instruction Memory
