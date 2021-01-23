@@ -10,6 +10,7 @@ entity decode_stage is
         -- IF/ID
         instruction_ifid : in std_logic_vector(31 downto 0);
         pc_ifid : in std_logic_vector(31 downto 0);
+        prediction_ifid: in std_logic; 
         
         -- EX/MEM
         rd_address_exmem : in std_logic_vector(4 downto 0);
@@ -24,6 +25,10 @@ entity decode_stage is
 
         -- output
         target_address : out std_logic_vector(31 downto 0);
+        branch_decision : out std_logic;
+        is_jump: out std_logic;
+        ifid_clear: out std_logic;
+        wrong_decision: out std_logic; 
         
         -- IDEX
         rd_address_idex : out std_logic_vector(4 downto 0);
@@ -36,11 +41,12 @@ entity decode_stage is
         funct3_idex : out std_logic_vector(2 downto 0);
         RegWrite_idex : out std_logic;
         MemRead_idex : out std_logic;
-        MemLoad_idex: out std_logic
+        MemLoad_idex: out std_logic;
+        wb_mux_sel: out std_logic
     );
 end decode_stage;
 
-architecture struct of decode_stage is
+architecture structural of decode_stage is
 
     component register_file is   
         port
@@ -129,8 +135,19 @@ end component;
                 wb_mux_sel: out std_logic;
                 MemRead: out std_logic;
                 MemWrite: out std_logic;
-                is_jump: out std_logic);
+                is_jump: out std_logic
+                is_branch: out std_logic);
     END component;
+
+    component prediction_validate is
+        port (
+            branch_decision : in std_logic;
+            prediction : in std_logic;
+            is_branch : in std_logic;
+    
+            wrong_prediction : out std_logic;
+        );
+    end component;
 
     -- instruction dispatch signal
     signal opcode : std_logic_vector(6 downto 0);
@@ -147,9 +164,15 @@ end component;
     signal RegWrite, rf_rst : std_logic;
     signal MemLoad, MemWrite : std_logic;
     signal clear_idex : std_logic; -- for ID/EX flush
-    signal mux_fwd_1_sel, mux_fwd_1_sel : std_logic_vector(1 downto 0);
-    signal branch_decision : std_logic;
-    
+    signal mux_fwd_1_sel, mux_fwd_2_sel : std_logic_vector(1 downto 0);
+    signal branch_decision_buff : std_logic;
+    signal is_jump_buff : std_logic;
+    signal wrong_decision_buff : std_logic;
+
+    signal mux1_PC_sel, mux2_imm_sel : std_logic;
+    signal mux_result_sel: std_logic_vector(1 downto 0);
+    signal wb_mux_sel_buff: std_logic;
+  
     -- internal flag signals
     signal is_branch, is_rs1_valid, is_rs2_valid : std_logic;
     signal insert_nop : std_logic;
@@ -183,6 +206,7 @@ begin
                 immediate_idex <= x"00000";
                 RegWrite_idex_buff <= '0';
                 MemLoad_idex_buff <= '0';
+                wb_mux_sel_buff <= '0';
 
             else
                 funct3_idex <= funct3;
@@ -195,6 +219,7 @@ begin
                 immediate_idex <= immediate;
                 RegWrite_idex_buff <= RegWrite;
                 MemLoad_idex_buff <= MemLoad;
+                wb_mux_sel_buff <= wb_mux_sel;
             end if;
         end if;
     end process;
@@ -203,6 +228,7 @@ begin
     MemLoad_idex <= MemLoad_idex_buff;
     RegWrite_idex <= RegWrite_idex_buff;
     rd_address_idex <= rd_address_idex_buff;
+    wb_mux_sel <= wb_mux_sel_buff;
 
     -- Register File instance
     reg_file : Register_File port map (
@@ -246,9 +272,11 @@ begin
     branch_equal_unit : comparator generic map (32) port map(
         x => data1_fwd,
         y => data2_fwd,
-        eq => branch_decision
+        eq => branch_decision_buff
     );
     
+    branch_decision <= branch_decision_buff;
+
     -- Hazard detection unit
     hazard_det_unit : hazard_detect_unit port map(
         rs1_address => rs1_address,
@@ -277,18 +305,32 @@ begin
     );
 
     --Control_unit
-    control_unit: control port map
-                (opcode => instruction_ifid(6 downto 0),
-                RegWrite => : out std_logic; --Write signal for the Register File
-                is_rs1_valid =>: out std_logic; --The actual instruction use the filed as rs1?  
-                is_rs2_valid =>:out std_logic; --The actual instruction use the filed as rs2?
-                mux1_PC_sel_idex =>: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
-                mux2_imm_sel_idex =>: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
-                mux_result_sel_idex =>: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
-                aluop_idex =>: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
-                wb_mux_sel =>: out std_logic;
-                MemRead =>: out std_logic;
-                MemWrite =>: out std_logic;
-                is_jump: out std_logic);
+    control_unit: control port map(
+        opcode => instruction_ifid(6 downto 0),
+        RegWrite => RegWrite,
+        is_rs1_valid => is_rs1_valid,
+        is_rs2_valid => is_rs1_valid,
+        mux1_PC_sel_idex => mux1_PC_sel,
+        mux2_imm_sel_idex => mux2_imm_sel,
+        mux_result_sel_idex => mux_result_sel,
+        aluop_idex => aluop_idex, 
+        wb_mux_sel => wb_mux_sel,
+        MemRead => MemRead_idex,
+        MemWrite => MemLoad_idex,
+        is_jump => is_jump_buff,
+        is_branch => is_branch);
 
-end struct ; -- struct
+is_jump <= is_jump_buff;
+
+wrong_decision <= wrong_decision_buff;
+
+ifid_clear <= is_jump_buff OR wrong_decision_buff;
+
+--prediction_unit
+prediction_unit: prediction_validate port map(
+        branch_decision => branch_decision_buff,
+        prediction => prediction_ifid,
+        is_branch => is_branch,
+        wrong_prediction => wrong_decision_buff);
+
+end structural;
