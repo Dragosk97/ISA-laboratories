@@ -10,7 +10,7 @@ entity decode_stage is
         -- IF/ID
         instruction_ifid : in std_logic_vector(31 downto 0);
         pc_ifid : in std_logic_vector(31 downto 0);
-        prediction_ifid: in std_logic; 
+        prediction_ifid: in std_logic;
         
         -- EX/MEM
         rd_address_exmem : in std_logic_vector(4 downto 0);
@@ -29,6 +29,7 @@ entity decode_stage is
         is_jump: out std_logic;
         ifid_clear: out std_logic;
         wrong_decision: out std_logic; 
+        prediction_ta: out std_logic;
         
         -- IDEX
         rd_address_idex : out std_logic_vector(4 downto 0);
@@ -172,6 +173,8 @@ end component;
     signal mux1_PC_sel, mux2_imm_sel : std_logic;
     signal mux_result_sel: std_logic_vector(1 downto 0);
     signal wb_mux_sel_buff: std_logic;
+
+    signal target_address_buff: std_logic_vector(31 downto 0);
   
     -- internal flag signals
     signal is_branch, is_rs1_valid, is_rs2_valid : std_logic;
@@ -326,11 +329,14 @@ wrong_decision <= wrong_decision_buff;
 
 ifid_clear <= is_jump_buff OR wrong_decision_buff;
 
---prediction_unit
-prediction_unit: prediction_validate port map(
-        branch_decision => branch_decision_buff,
-        prediction => prediction_ifid,
-        is_branch => is_branch,
-        wrong_prediction => wrong_decision_buff);
+    --prediction_unit
+    prediction_unit: prediction_validate port map(
+            branch_decision => branch_decision_buff,
+            prediction => prediction_ifid,
+            is_branch => is_branch,
+            wrong_prediction => wrong_decision_buff);
+
+target_address <= target_address_buff;
+
 
 end structural;

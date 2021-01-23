@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity fetch_unit is
+entity fetch_stage is
     port (
         -- Input
         clk : in std_logic;
@@ -34,9 +34,9 @@ entity fetch_unit is
         prediction_ta_ifid : out std_logic_vector(31 downto 0);
         instruction_ifid : out std_logic_vector(31 downto 0)
     );
-end fetch_unit;
+end fetch_stage;
 
-architecture structure of fetch_unit is
+architecture structure of fetch_stage is
 
     component GenericReg is
         generic(regwidth : integer);
