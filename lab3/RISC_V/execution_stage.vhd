@@ -4,11 +4,12 @@ USE ieee.numeric_std.all;
 
 ENTITY execution_stage IS
 	PORT (
-          --input ID/EX
           clk:IN std_logic;
+          --input ID/EX
           data1_idex, data2_idex: IN signed(31 downto 0);
           wb_idex: IN std_logic;
-          mem_idex: IN std_logic_vector(1 downto 0);
+          MemRead_idex: IN std_logic;
+          MemLoad_idex: IN std_logic;
           aluop_idex: IN std_logic_vector(1 downto 0);
           funct3_idex: IN std_logic_vector(2 downto 0); 
           rs1_address_idex: IN std_logic_vector(4 downto 0);
@@ -17,26 +18,24 @@ ENTITY execution_stage IS
           mux1_pc_sel_idex: IN std_logic;
           mux2_imm_sel_idex: IN std_logic;
           mux_result_sel_idex: IN std_logic_vector(1 downto 0);
-        
           pc_idex: IN std_logic_vector(31 downto 0);
           immediate_idex: IN signed(31 downto 0);
-
-          --input EX/MEM
-          rd_address_exmem: IN std_logic_vector(4 downto 0);
-          result_exmem: IN signed(31 downto 0);
-          exmem_fwd_en: IN std_logic;
-
+          RegWrite_idex : IN std_logic;
+          
           --input MEM/WB
           rd_address_memwb: IN std_logic_vector(4 downto 0);
           result_memwb: IN signed(31 downto 0);
           memwb_fwd_en: IN std_logic;
-
-          --output
-          ex_result_out : OUT signed (31 downto 0);
-          data2_fwd: OUT signed (31 downto 0);
-          rd_address_out: OUT std_logic_vector(4 downto 0);
-          wb_exmem: OUT std_logic;
-          mem_exmem: OUT std_logic_vector(1 downto 0));
+          
+          -- Output EX/MEM
+          data2_fwd_exmem: OUT signed (31 downto 0);
+          MemRead_exmem: OUT std_logic;
+          MemLoad_exmem: OUT std_logic;
+          RegWrite_exmem: OUT std_logic;
+          rd_address_exmem: OUT std_logic_vector(4 downto 0);
+          result_exmem: OUT std_logic_vector(31 downto 0);
+          wb_exmem: OUT std_logic
+          );
 END execution_stage;
 
 ARCHITECTURE structural OF execution_stage IS
@@ -81,6 +80,10 @@ port( rs1_address_idex: IN std_logic_vector(4 downto 0);
       mux1_fwd, mux2_fwd: OUT std_logic_vector(1 downto 0));
 end component;
 
+SIGNAL RegWrite_exmem_buff : std_logic;
+SIGNAL result_exmem_buff : std_logic_vector(31 downto 0);
+SIGNAL rd_address_exmem_buff : std_logic_vector(4 downto 0);
+
 SIGNAL mux1_fwd_sel, mux2_fwd_sel: std_logic_vector(1 downto 0);
 SIGNAL mux1_fwd_out, mux2_fwd_out: signed(31 downto 0);
 
@@ -99,14 +102,14 @@ BEGIN
 mux1_alu_fwd: mux3to1 GENERIC MAP (32) 
 PORT MAP( a => data1_idex,
           b => result_memwb,
-          c => result_exmem,
+          c => result_exmem_buff,
           sel => mux1_fwd_sel,
           m_out => mux1_fwd_out);
 
 mux2_alu_fwd: mux3to1 GENERIC MAP (32) 
 PORT MAP( a => data2_idex,
           b => result_memwb,
-          c => result_exmem,
+          c => result_exmem_buff,
           sel => mux2_fwd_sel,
           m_out => mux2_fwd_out);
 
@@ -152,22 +155,30 @@ PORT MAP( a => alu_result,
 forwarding: forwarding_unit
     PORT MAP( rs1_address_idex => rs1_address_idex,
               rs2_address_idex => rs2_address_idex,
-              rd_address_exmem => rd_address_exmem,
+              rd_address_exmem => rd_address_exmem_buff,
               rd_address_memwb => rd_address_memwb,
-              exmem_fwd_en => exmem_fwd_en,
+              exmem_fwd_en => RegWrite_exmem_buff,
               memwb_fwd_en => memwb_fwd_en,
               mux1_fwd => mux1_fwd_sel,
               mux2_fwd => mux2_fwd_sel);
 
---EX/MEM register              
+--EX/MEM register
 PROCESS(clk)
 BEGIN
     IF RISING_EDGE(clk) THEN
-        ex_result_out <= ex_result;
-        data2_fwd <= mux2_fwd_out;
-        rd_address_out <= rd_address_idex;
+        data2_fwd_exmem <= mux2_fwd_out;
         wb_exmem <= wb_idex;
         mem_exmem <= mem_idex;
+        MemRead_exmem <= MemRead_idex;
+        MemLoad_exmem <= MemLoad_idex;
+        rd_address_exmem_buff <= rd_address_idex;
+        result_exmem_buff <= ex_result;
+        RegWrite_exmem_buff <= RegWrite_idex;
     END IF;
 END PROCESS;
+
+-- Buffer output
+    result_exmem <= result_exmem_buff;
+    rd_address_exmem <= rd_address_exmem_buff;
+    RegWrite_exmem <= RegWrite_exmem_buff;
 END structural;
