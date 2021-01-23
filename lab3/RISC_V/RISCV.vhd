@@ -14,7 +14,7 @@ entity RISCV is
         MemLoad => in std_logic;
 
         --output
-        
+
         );
 end RISCV;
 
@@ -107,7 +107,7 @@ ARCHITECTURE structural of RISCV is
           clk:IN std_logic;
           --input ID/EX
           data1_idex, data2_idex: IN signed(31 downto 0);
-          wb_idex: IN std_logic;
+          wb_mux_sel_idex: IN std_logic;
           MemRead_idex: IN std_logic;
           MemLoad_idex: IN std_logic;
           aluop_idex: IN std_logic_vector(1 downto 0);
@@ -198,7 +198,7 @@ SIGNAL RegWrite_exmem : std_logic;
 SIGNAL rd_address_memwb : std_logic_vector(4 downto 0);
 SIGNAL result_memwb : signed(31 downto 0);
 SIGNAL RegWrite_memwb : std_logic;
--- IDEX
+-- ID/EX
 SIGNAL rd_address_idex : std_logic_vector(4 downto 0);
 SIGNAL rs1_address_idex : std_logic_vector(4 downto 0);
 SIGNAL rs2_address_idex : std_logic_vector(4 downto 0);
@@ -216,6 +216,14 @@ SIGNAL mu1_PC_sel_idex: std_logic;
 SIGNAL mux2_imm_sel_idex: std_logic;
 
 --SIGNAL execution
+--ID/EX
+SIGNAL mux_result_sel_idex : std_logic_vector(1 downto 0);
+--EX/MEM
+SIGNAL data2_fwd_exmem: signed(31 downto 0);
+SIGNAL MemRead_exmem: std_logic;
+SIGNAL wb_exmem: std_logic;
+
+--SIGNAL memory
 
 begin
 
@@ -285,7 +293,7 @@ port map (
     --input ID/EX
     data1_idex=> data1_idex,
     data2_idex=> data2_idex,
-    wb_idex=> wb_idex,
+    wb_mux_sel_idex=> wb_mux_sel_idex,
     MemRead_idex=> MemRead_idex,
     MemLoad_idex=> MemLoad_idex,
     aluop_idex=> aluop_idex,

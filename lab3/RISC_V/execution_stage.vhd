@@ -7,7 +7,7 @@ ENTITY execution_stage IS
           clk:IN std_logic;
           --input ID/EX
           data1_idex, data2_idex: IN signed(31 downto 0);
-          wb_idex: IN std_logic;
+          wb_mux_sel_idex: IN std_logic;
           MemRead_idex: IN std_logic;
           MemLoad_idex: IN std_logic;
           aluop_idex: IN std_logic_vector(1 downto 0);
@@ -25,7 +25,7 @@ ENTITY execution_stage IS
           --input MEM/WB
           rd_address_memwb: IN std_logic_vector(4 downto 0);
           result_memwb: IN signed(31 downto 0);
-          memwb_fwd_en: IN std_logic;
+          RegWrite_memwb: IN std_logic;
           
           -- Output EX/MEM
           data2_fwd_exmem: OUT signed (31 downto 0);
@@ -158,7 +158,7 @@ forwarding: forwarding_unit
               rd_address_exmem => rd_address_exmem_buff,
               rd_address_memwb => rd_address_memwb,
               exmem_fwd_en => RegWrite_exmem_buff,
-              memwb_fwd_en => memwb_fwd_en,
+              memwb_fwd_en => RegWrite_memwb,
               mux1_fwd => mux1_fwd_sel,
               mux2_fwd => mux2_fwd_sel);
 
@@ -167,7 +167,7 @@ PROCESS(clk)
 BEGIN
     IF RISING_EDGE(clk) THEN
         data2_fwd_exmem <= mux2_fwd_out;
-        wb_exmem <= wb_idex;
+        wb_exmem <= wb_mux_sel_idex;
         MemRead_exmem <= MemRead_idex;
         MemLoad_exmem <= MemLoad_idex;
         rd_address_exmem_buff <= rd_address_idex;
