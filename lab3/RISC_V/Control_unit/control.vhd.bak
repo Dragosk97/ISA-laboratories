@@ -14,8 +14,7 @@ PORT (opcode: IN std_logic_vector(6 downto 0); --Last 7 bits of the instruction
       wb_mux_sel: out std_logic;
       MemRead: out std_logic;
       MemWrite: out std_logic;
-      is_jump: out std_logic;
-      is_branch: out std_logic
+      is_jump: out std_logic
 );
 END control;
 
@@ -52,7 +51,6 @@ BEGIN
         MemRead <= '0';
         MemWrite <= '0';
         is_jump <= '0';
-        is_branch <= '0';
         case opcode(6 downto 0) is
                 --Instructions ADD XOR SLT
                 when "0110011" => RegWrite <= '1';
@@ -101,7 +99,6 @@ BEGIN
                                     --mux2_imm_sel_idex <= '1';
                                     --mux_result_sel_idex <= "00";
                                     --aluop_idex <= "00"; 
-                                    is_branch <= '1';               
                 --Instruction LW
                 when "0000011" =>   RegWrite <= '1';
                                     is_rs1_valid <= '1';
@@ -110,18 +107,18 @@ BEGIN
                                     mux2_imm_sel_idex <= '1';
                                     mux_result_sel_idex <= "00";
                                     aluop_idex <= "11"; 
-                                    wb_mux_sel <= '0';
+                                    wb_mux_sel <= "0";
                                     MemRead <= '1';
                                     MemWrite <= '0';
                 --Instruction JAL
-                when "1101111" =>   RegWrite <= '1';
+                when "0010011" =>   RegWrite <= '1';
                                     is_rs1_valid <= '0';
                                     is_rs2_valid <= '0';
                                     --mux1_PC_sel_idex <= '0';  --The ALU is not used here
                                     --mux2_imm_sel_idex <= '1';
                                     mux_result_sel_idex <= "10";
                                     --aluop_idex <= "00";
-                                    wb_mux_sel <= '1';
+                                    wb_mux_sel <= "1";
                                     MemRead <= '0';
                                     MemWrite <= '0'; 
                                     is_jump <= '1';
