@@ -25,11 +25,11 @@ entity decode_stage is
 
         -- output
         target_address : out std_logic_vector(31 downto 0);
+        prediction_ta : out std_logic_vector(31 downto 0);
         branch_decision : out std_logic;
         is_jump: out std_logic;
         ifid_clear: out std_logic;
         wrong_decision: out std_logic; 
-        prediction_ta: out std_logic;
         
         -- IDEX
         rd_address_idex : out std_logic_vector(4 downto 0);
@@ -142,11 +142,12 @@ end component;
 
     component prediction_validate is
         port (
+            is_branch : in std_logic;
             branch_decision : in std_logic;
             prediction : in std_logic;
-            is_branch : in std_logic;
-    
-            wrong_prediction : out std_logic;
+            target_address : in std_logic_vector(31 downto 0);
+            prediction_ta : in std_logic_vector(31 downto 0);
+            wrong_prediction : out std_logic
         );
     end component;
 
@@ -331,12 +332,13 @@ ifid_clear <= is_jump_buff OR wrong_decision_buff;
 
     --prediction_unit
     prediction_unit: prediction_validate port map(
+            is_branch => is_branch,
             branch_decision => branch_decision_buff,
             prediction => prediction_ifid,
-            is_branch => is_branch,
+            target_address => target_address_buff,
+            prediction_ta => prediction_ta,
             wrong_prediction => wrong_decision_buff);
 
 target_address <= target_address_buff;
-
 
 end structural;
