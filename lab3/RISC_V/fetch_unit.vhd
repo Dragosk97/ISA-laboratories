@@ -40,11 +40,11 @@ architecture structure of fetch_unit is
 
     component GenericReg is
         generic(regwidth : integer);
-        port(d : in signed (regwidth -1 downto 0);
+        port(d : in std_logic_vector (regwidth -1 downto 0);
               clk : in std_logic;
               rst: in std_logic;
               en : in std_logic;
-              q : out signed (regwidth -1 downto 0));
+              q : out std_logic_vector(regwidth -1 downto 0));
     end component;
 
     component prediction_table IS
@@ -61,15 +61,18 @@ architecture structure of fetch_unit is
     -- Prediction Table signals
     signal PT_in, PT_out : std_logic_vector(58 downto 0);
     signal PT_decision : std_logic;
-    signal tag : std_logic_vector(58 downto 0);
+    signal tag : std_logic_vector(25 downto 0);
     signal PT_hit : std_logic;
     signal prediction_ta : std_logic_vector(31 downto 0);
     signal prediction : std_logic;
 
     -- Program Counter's signals
     signal pc_in, pc : std_logic_vector(31 downto 0);
-    signal pc_rst : std_logic_vector(31 downto 0);
+    signal pc_rst : std_logic;
     signal pc_4 : std_logic_vector(31 downto 0);
+
+    -- Buffer signals
+    signal pc_ifid_buffer : std_logic_vector(31 downto 0);
 
     -- Sequential PC restore regs signals
     signal prev_pc_4 : std_logic_vector(31 downto 0);
@@ -86,7 +89,7 @@ begin
         if clk'event and clk = '1' then
             if ifid_clear = '1' then
                 pc_ifid_buffer <= (others => '0');
-                prediction_ifid <= (others => '0');
+                prediction_ifid <= '0';
                 prediction_ta_ifid <= (others => '0');
                 -- NOP as ADDI x0, x0, 0
                 instruction_ifid(31 downto 7) <= (others => '0');
@@ -105,12 +108,12 @@ begin
     pc_ifid <= pc_ifid_buffer;
 
     -- Program Counter
-    pc : GenericReg generic map (32) port map (
-        d <= pc_in,
-        clk <= clk,
-        rst <= pc_rst,
-        en <= pc_en,
-        q <= pc
+    pc_reg : GenericReg generic map (32) port map (
+        d => pc_in,
+        clk => clk,
+        rst => pc_rst,
+        en => pc_en,
+        q => pc
     );
 
     -- Reset the PC means to load the starting address, therefore the register
@@ -119,13 +122,13 @@ begin
 
     -- Prediction Table
     PT : prediction_table port map (
-        PT_read_address <= pc(5 downto 2),
-        PT_write_address <= pc_ifid_buffer(5 downto 2),
-        PT_data <= PT_in,
-        MemWrite <= wrong_prediction,
-        clock <= clk,
-        rst <= rst,
-        Qout <= PT_out
+        PT_read_address => pc(5 downto 2),
+        PT_write_address => pc_ifid_buffer(5 downto 2),
+        PT_data => PT_in,
+        MemWrite => wrong_prediction,
+        clock => clk,
+        rst => rst,
+        Qout => PT_out
     );
 
     -- Prediciton table input concatenation
@@ -146,11 +149,11 @@ begin
 
     -- Sequential PC restore register
     prev_pc : GenericReg generic map (32) port map (
-        d <= pc_4,
-        clk <= clk,
-        rst <= rst,
-        en <= one,
-        q <= prev_pc_4
+        d => pc_4,
+        clk => clk,
+        rst => rst,
+        en => one,
+        q => prev_pc_4
     );
 
     -- Next sequential address

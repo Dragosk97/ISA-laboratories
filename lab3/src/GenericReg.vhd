@@ -4,11 +4,11 @@ USE ieee.numeric_std.all;
 
 entity GenericReg is
 generic(regwidth : integer);
-port(d : in signed (regwidth -1 downto 0);
+port(d : in std_logic_vector (regwidth -1 downto 0);
 	  clk : in std_logic;
 	  rst: in std_logic;
 	  en : in std_logic;
-	  q : out signed (regwidth -1 downto 0));
+	  q : out std_logic_vector(regwidth -1 downto 0));
 end entity;
 
 architecture Behavioral of GenericReg is
