@@ -46,7 +46,9 @@ entity decode_stage is
         MemRead_idex : out std_logic;
         MemLoad_idex: out std_logic;
         wb_mux_sel_idex: out std_logic;
-        immediate_idex: out signed(31 downto 0)
+        immediate_idex: out signed(31 downto 0);
+        mu1_PC_sel_idex: out std_logic;
+        mux2_imm_sel_idex: out std_logic
     );
 end decode_stage;
 
@@ -218,6 +220,8 @@ begin
                 RegWrite_idex_buff <= '0';
                 MemLoad_idex_buff <= '0';
                 wb_mux_sel_idex <= '0';
+                mux1_PC_sel_idex <= '0';
+                mux2_imm_sel_idex <= '0';
 
             else
                 funct3_idex <= funct3;
@@ -231,6 +235,8 @@ begin
                 RegWrite_idex_buff <= RegWrite;
                 MemLoad_idex_buff <= MemLoad;
                 wb_mux_sel_idex <= wb_mux_sel;
+                mux1_PC_sel_idex <= mux1_PC_sel;
+                mux2_imm_sel_idex <= mux2_imm_sel;
             end if;
         end if;
     end process;
@@ -239,7 +245,6 @@ begin
     MemLoad_idex <= MemLoad_idex_buff;
     RegWrite_idex <= RegWrite_idex_buff;
     rd_address_idex <= rd_address_idex_buff;
-    --wb_mux_sel_idex <= wb_mux_sel_buff;
 
     -- Register File instance
     reg_file : Register_File port map (
