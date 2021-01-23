@@ -14,8 +14,7 @@ PORT (opcode: IN std_logic_vector(6 downto 0); --Last 7 bits of the instruction
       wb_mux_sel: out std_logic;
       MemRead: out std_logic;
       MemWrite: out std_logic;
-      is_jump: out std_logic
-);
+      is_jump: out std_logic);
 END control;
 
 ARCHITECTURE Behavior OF control IS

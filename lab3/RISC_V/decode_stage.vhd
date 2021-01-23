@@ -117,6 +117,21 @@ end component;
         );
     end component;
     
+    component control IS
+            PORT (opcode: IN std_logic_vector(6 downto 0); --Last 7 bits of the instruction
+                RegWrite: out std_logic; --Write signal for the Register File
+                is_rs1_valid: out std_logic; --The actual instruction use the filed as rs1?  
+                is_rs2_valid:out std_logic; --The actual instruction use the filed as rs2?
+                mux1_PC_sel_idex: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
+                mux2_imm_sel_idex: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
+                mux_result_sel_idex: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
+                aluop_idex: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
+                wb_mux_sel: out std_logic;
+                MemRead: out std_logic;
+                MemWrite: out std_logic;
+                is_jump: out std_logic);
+    END component;
+
     -- instruction dispatch signal
     signal opcode : std_logic_vector(6 downto 0);
     signal funct3 : std_logic_vector(2 downto 0);
@@ -260,5 +275,20 @@ begin
         mux1_fwd => mux_fwd_1_sel,
         mux2_fwd => mux_fwd_2_sel
     );
+
+    --Control_unit
+    control_unit: control port map
+                (opcode => instruction_ifid(6 downto 0),
+                RegWrite => : out std_logic; --Write signal for the Register File
+                is_rs1_valid =>: out std_logic; --The actual instruction use the filed as rs1?  
+                is_rs2_valid =>:out std_logic; --The actual instruction use the filed as rs2?
+                mux1_PC_sel_idex =>: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
+                mux2_imm_sel_idex =>: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
+                mux_result_sel_idex =>: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
+                aluop_idex =>: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
+                wb_mux_sel =>: out std_logic;
+                MemRead =>: out std_logic;
+                MemWrite =>: out std_logic;
+                is_jump: out std_logic);
 
 end struct ; -- struct
