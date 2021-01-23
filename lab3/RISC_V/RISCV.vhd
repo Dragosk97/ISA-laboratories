@@ -140,14 +140,14 @@ END component;
 
 component memory_stage IS
 	PORT (
-          --input EX/MEM
           clk: IN std_logic;
+          --input EX/MEM
           result_exmem: IN signed(31 downto 0); 
           data_exmem: IN signed(31 downto 0);
           
           rd_address_exmem: IN std_logic_vector(4 downto 0);
           RegWrite_exmem : in std_logic; --useful fwd
-          wb_mux_sel: IN std_logic;
+          wb_mux_sel_exmem: IN std_logic;
 
           --use for memory
           data_mem_in: IN signed(31 downto 0); --out_of_memory
@@ -160,7 +160,7 @@ component memory_stage IS
           data_memwb: OUT signed(31 downto 0); --out of memory
           result_memwb: OUT signed(31 downto 0); --out of alu
           rd_address_memwb: OUT std_logic_vector(4 downto 0);
-          memwb_mux_sel_out: OUT std_logic;
+          memwb_mux_sel_memwb: OUT std_logic;
           RegWrite_memwb: out std_logic);
 END component;
 
@@ -324,13 +324,23 @@ port map (
 memory: memory_stage is 
 port map ( 
     clk => clk,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    
+    --input EX/MEM
+    result_exmem=> result_exmem,
+    data_exmem=> data_exmem,
+    rd_address_exmem=> rd_address_exmem,
+    RegWrite_exmem=> RegWrite_exmem,
+    wb_mux_sel_exmem=> wb_mux_sel_exmem,
+    --use for memory
+    data_mem_in=> data_mem_in,
+    --output to data memory
+    data_mem_out=> data_mem_out,
+    address_mem_out=> address_mem_out,
+    --output to WB
+    data_memwb=> data_memwb,
+    result_memwb=> result_memwb,
+    rd_address_memwb=> rd_address_memwb,
+    memwb_mux_sel_memwb=> memwb_mux_sel_memwb,
+    RegWrite_memwb=> RegWrite_memwb,
 );
 
 writeback: write_back_stage is 
