@@ -9,16 +9,16 @@ entity RISCV is
         rst : in std_logic;
         start_address : in std_logic_vector(31 downto 0);
         
-        --memory stage
+        --data memory
         data_mem_in : in signed(31 downto 0);
         data_mem_out: out signed(31 downto 0);
         address_mem_out: out std_logic_vector(31 downto 0);
-
         MemRead : out std_logic;
         MemLoad : out std_logic;
-        --output
 
-        );
+        --instruction memory
+        instruction_in : in std_logic_vector(31 downto 0);
+        instruction_address : out std_logic_vector(31 downto 0));
 end RISCV;
 
 ARCHITECTURE structural of RISCV is
@@ -184,8 +184,6 @@ SIGNAL is_jump : std_logic;
 SIGNAL wrong_prediction : std_logic;
 SIGNAL branch_decision : std_logic;
 SIGNAL pc_en : std_logic;
-SIGNAL instruction_in : std_logic_vector(31 downto 0);
-SIGNAL instruction_address : std_logic_vector(31 downto 0);
 SIGNAL pc_ifid : std_logic_vector(31 downto 0);
 SIGNAL prediction_ifid : std_logic;
 SIGNAL prediction_ta_ifid : std_logic_vector(31 downto 0);
@@ -232,6 +230,7 @@ SIGNAL wb_mux_sel_exmem: std_logic;
 --MEM/WB
 SIGNAL data_memwb: signed(31 downto 0);
 SIGNAL wb_mux_sel_memwb: std_logic;
+SIGNAL result_memwb : signed(31 downto 0);
 
 begin
 
