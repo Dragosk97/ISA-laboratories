@@ -22,8 +22,8 @@ begin
                                 result(0) <= '1';
                                 result(31 downto 1) <= (others => '0');
                             else
-                                result <= (others => '0')  
-                            end if ;
+                                result <= (others => '0');  
+                            end if;
             when others => result <= data_inA + data_inB;
         end case;
     end process;
