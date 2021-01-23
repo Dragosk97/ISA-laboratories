@@ -24,7 +24,7 @@ ENTITY memory_stage IS
           data_memwb: OUT signed(31 downto 0); --out of memory
           result_memwb: OUT signed(31 downto 0); --out of alu
           rd_address_memwb: OUT std_logic_vector(4 downto 0);
-          memwb_mux_sel_memwb: OUT std_logic;
+          wb_mux_sel_memwb: OUT std_logic;
           RegWrite_memwb: out std_logic);
 END memory_stage;
 
@@ -42,7 +42,7 @@ BEGIN
         data_memwb <= data_mem_in;
         result_memwb <= result_exmem;
         rd_address_memwb <= rd_address_exmem;
-        memwb_mux_sel_memwb <= wb_mux_sel_exmem;
+        wb_mux_sel_memwb <= wb_mux_sel_exmem;
         RegWrite_memwb <= RegWrite_exmem;
     END IF;
 END PROCESS;

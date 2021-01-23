@@ -10,9 +10,12 @@ entity RISCV is
         start_address : in std_logic_vector(31 downto 0);
         
         --memory stage
-        MemRead => in std_logic;
-        MemLoad => in std_logic;
+        data_mem_in : in signed(31 downto 0);
+        data_mem_out: out signed(31 downto 0);
+        address_mem_out: out std_logic_vector(31 downto 0);
 
+        MemRead : out std_logic;
+        MemLoad : out std_logic;
         --output
 
         );
@@ -72,7 +75,7 @@ ARCHITECTURE structural of RISCV is
     
             -- MEM/WB
             rd_address_memwb : in std_logic_vector(4 downto 0);
-            result_memwb : in signed(31 downto 0);
+            rd_data : in signed(31 downto 0);
             RegWrite_memwb : in std_logic;
             
             -- output
@@ -160,17 +163,17 @@ component memory_stage IS
           data_memwb: OUT signed(31 downto 0); --out of memory
           result_memwb: OUT signed(31 downto 0); --out of alu
           rd_address_memwb: OUT std_logic_vector(4 downto 0);
-          memwb_mux_sel_memwb: OUT std_logic;
+          wb_mux_sel_memwb: OUT std_logic;
           RegWrite_memwb: out std_logic);
 END component;
 
 component write_back_stage is
     port (
-        wb_mux_sel : in std_logic;
+        wb_mux_sel_memwb : in std_logic;
         data_memwb : in signed(31 downto 0);
         result_memwb : in signed(31 downto 0);
 
-        mux_out : out signed(31 downto 0));
+        rd_data : out signed(31 downto 0));
 end component;
 
 
@@ -196,7 +199,7 @@ SIGNAL MemLoad_exmem : std_logic;
 SIGNAL RegWrite_exmem : std_logic;
 -- MEM/WB
 SIGNAL rd_address_memwb : std_logic_vector(4 downto 0);
-SIGNAL result_memwb : signed(31 downto 0);
+SIGNAL rd_data : signed(31 downto 0);
 SIGNAL RegWrite_memwb : std_logic;
 -- ID/EX
 SIGNAL rd_address_idex : std_logic_vector(4 downto 0);
@@ -219,13 +222,21 @@ SIGNAL mux2_imm_sel_idex: std_logic;
 --ID/EX
 SIGNAL mux_result_sel_idex : std_logic_vector(1 downto 0);
 --EX/MEM
-SIGNAL data2_fwd_exmem: signed(31 downto 0);
+SIGNAL data2_fwd_exmem: signed(31 downto 0); --data signal to memory when STORE
 SIGNAL MemRead_exmem: std_logic;
 SIGNAL wb_exmem: std_logic;
 
 --SIGNAL memory
+--EX/MEM
+SIGNAL wb_mux_sel_exmem: std_logic;
+--MEM/WB
+SIGNAL data_memwb: signed(31 downto 0);
+SIGNAL wb_mux_sel_memwb: std_logic;
 
 begin
+
+MemRead <= MemRead_exmem;
+MemLoad <= MemLoad_exmem;
 
 fetch: fetch_stage is 
 port map ( 
@@ -260,7 +271,7 @@ port map (
     RegWrite_exmem => RegWrite_exmem,
     -- MEM/WB
     rd_address_memwb => rd_address_memwb,
-    result_memwb => result_memwb,
+    rd_data => rd_data,
     RegWrite_memwb => RegWrite_memwb,
     -- output
     target_address => target_address,
@@ -336,22 +347,18 @@ port map (
     data_mem_out=> data_mem_out,
     address_mem_out=> address_mem_out,
     --output to WB
-    data_memwb=> data_memwb,
+    data_memwb=> data2_fwd_exmem,
     result_memwb=> result_memwb,
     rd_address_memwb=> rd_address_memwb,
-    memwb_mux_sel_memwb=> memwb_mux_sel_memwb,
-    RegWrite_memwb=> RegWrite_memwb,
+    wb_mux_sel_memwb=> wb_mux_sel_memwb,
+    RegWrite_memwb=> RegWrite_memwb
 );
 
 writeback: write_back_stage is 
 port map ( 
-    clk => clk,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    => ,
-    
+    wb_mux_sel_memwb=> wb_mux_sel_memwb,
+    data_memwb=> data_memwb,
+    result_memwb=> result_memwb,
+    rd_data=> rd_data
 );
 end structural;
