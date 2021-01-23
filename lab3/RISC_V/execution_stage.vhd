@@ -81,7 +81,7 @@ port( rs1_address_idex: IN std_logic_vector(4 downto 0);
 end component;
 
 SIGNAL RegWrite_exmem_buff : std_logic;
-SIGNAL result_exmem_buff : std_logic_vector(31 downto 0);
+SIGNAL result_exmem_buff : signed(31 downto 0);
 SIGNAL rd_address_exmem_buff : std_logic_vector(4 downto 0);
 
 SIGNAL mux1_fwd_sel, mux2_fwd_sel: std_logic_vector(1 downto 0);
@@ -168,7 +168,6 @@ BEGIN
     IF RISING_EDGE(clk) THEN
         data2_fwd_exmem <= mux2_fwd_out;
         wb_exmem <= wb_idex;
-        mem_exmem <= mem_idex;
         MemRead_exmem <= MemRead_idex;
         MemLoad_exmem <= MemLoad_idex;
         rd_address_exmem_buff <= rd_address_idex;
