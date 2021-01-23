@@ -11,6 +11,7 @@ entity decode_stage is
         instruction_ifid : in std_logic_vector(31 downto 0);
         pc_ifid : in std_logic_vector(31 downto 0);
         prediction_ifid: in std_logic;
+        prediction_ta_ifid : in std_logic_vector(31 downto 0);
         
         -- EX/MEM
         rd_address_exmem : in std_logic_vector(4 downto 0);
@@ -22,10 +23,10 @@ entity decode_stage is
         rd_address_memwb : in std_logic_vector(4 downto 0);
         result_memwb : in signed(31 downto 0);
         RegWrite_memwb : in std_logic;
+        
 
         -- output
         target_address : out std_logic_vector(31 downto 0);
-        prediction_ta : out std_logic_vector(31 downto 0);
         branch_decision : out std_logic;
         is_jump: out std_logic;
         ifid_clear: out std_logic;
@@ -43,7 +44,8 @@ entity decode_stage is
         RegWrite_idex : out std_logic;
         MemRead_idex : out std_logic;
         MemLoad_idex: out std_logic;
-        wb_mux_sel: out std_logic
+        wb_mux_sel_idex: out std_logic;
+        immediate_idex: out signed(31 downto 0)
     );
 end decode_stage;
 
@@ -136,7 +138,7 @@ end component;
                 wb_mux_sel: out std_logic;
                 MemRead: out std_logic;
                 MemWrite: out std_logic;
-                is_jump: out std_logic
+                is_jump: out std_logic;
                 is_branch: out std_logic);
     END component;
 
@@ -156,7 +158,7 @@ end component;
     signal funct3 : std_logic_vector(2 downto 0);
     signal funct7 : std_logic_vector(6 downto 0);
     signal rd_address : std_logic_vector(4 downto 0);
-    signal rs1_address, rs2_address : std_logic_vector(31 downto 0);
+    signal rs1_address, rs2_address : std_logic_vector(4 downto 0);
     
     -- data signal
     signal data1, data2, data1_fwd, data2_fwd : signed(31 downto 0);
@@ -173,7 +175,7 @@ end component;
 
     signal mux1_PC_sel, mux2_imm_sel : std_logic;
     signal mux_result_sel: std_logic_vector(1 downto 0);
-    signal wb_mux_sel_buff: std_logic;
+    signal wb_mux_sel: std_logic;
 
     signal target_address_buff: std_logic_vector(31 downto 0);
   
@@ -204,13 +206,13 @@ begin
                 rd_address_idex_buff <= "00000";
                 rs1_address_idex <= "00000";
                 rs2_address_idex <= "00000";
-                data1_idex <= x"00000";
-                data2_idex <= x"00000";
-                pc_idex <= x"00000";
-                immediate_idex <= x"00000";
+                data1_idex <= x"00000000";
+                data2_idex <= x"00000000";
+                pc_idex <= x"00000000";
+                immediate_idex <= x"00000000";
                 RegWrite_idex_buff <= '0';
                 MemLoad_idex_buff <= '0';
-                wb_mux_sel_buff <= '0';
+                wb_mux_sel_idex <= '0';
 
             else
                 funct3_idex <= funct3;
@@ -223,7 +225,7 @@ begin
                 immediate_idex <= immediate;
                 RegWrite_idex_buff <= RegWrite;
                 MemLoad_idex_buff <= MemLoad;
-                wb_mux_sel_buff <= wb_mux_sel;
+                wb_mux_sel_idex <= wb_mux_sel;
             end if;
         end if;
     end process;
@@ -232,11 +234,11 @@ begin
     MemLoad_idex <= MemLoad_idex_buff;
     RegWrite_idex <= RegWrite_idex_buff;
     rd_address_idex <= rd_address_idex_buff;
-    wb_mux_sel <= wb_mux_sel_buff;
+    --wb_mux_sel_idex <= wb_mux_sel_buff;
 
     -- Register File instance
     reg_file : Register_File port map (
-        write_data => rd_data_memwb,
+        write_data => result_memwb,
         RegWrite => RegWrite,
         read_reg1 => rs1_address,
         read_reg2 => rs2_address,
@@ -336,7 +338,7 @@ ifid_clear <= is_jump_buff OR wrong_decision_buff;
             branch_decision => branch_decision_buff,
             prediction => prediction_ifid,
             target_address => target_address_buff,
-            prediction_ta => prediction_ta,
+            prediction_ta => prediction_ta_ifid,
             wrong_prediction => wrong_decision_buff);
 
 target_address <= target_address_buff;
