@@ -30,8 +30,9 @@ entity decode_stage is
         branch_decision : out std_logic;
         is_jump: out std_logic;
         ifid_clear: out std_logic;
-        wrong_decision: out std_logic; 
-        
+        wrong_prediction: out std_logic; 
+        pc_en : out std_logic;
+
         -- IDEX
         rd_address_idex : out std_logic_vector(4 downto 0);
         rs1_address_idex : out std_logic_vector(4 downto 0);
@@ -125,6 +126,10 @@ end component;
             insert_nop : out std_logic
         );
     end component;
+
+    -- when a NOP has to be inserted in order to have a stall,
+    -- the instruction in fetch stage must be fetched again  
+    pc_en <= not(insert_nop);
     
     component control IS
             PORT (opcode: IN std_logic_vector(6 downto 0); --Last 7 bits of the instruction
@@ -171,7 +176,7 @@ end component;
     signal mux_fwd_1_sel, mux_fwd_2_sel : std_logic_vector(1 downto 0);
     signal branch_decision_buff : std_logic;
     signal is_jump_buff : std_logic;
-    signal wrong_decision_buff : std_logic;
+    signal wrong_prediction_buff : std_logic;
 
     signal mux1_PC_sel, mux2_imm_sel : std_logic;
     signal mux_result_sel: std_logic_vector(1 downto 0);
@@ -328,9 +333,9 @@ begin
 
 is_jump <= is_jump_buff;
 
-wrong_decision <= wrong_decision_buff;
+wrong_prediction <= wrong_prediction_buff;
 
-ifid_clear <= is_jump_buff OR wrong_decision_buff;
+ifid_clear <= is_jump_buff OR wrong_prediction_buff;
 
     --prediction_unit
     prediction_unit: prediction_validate port map(
@@ -339,7 +344,7 @@ ifid_clear <= is_jump_buff OR wrong_decision_buff;
             prediction => prediction_ifid,
             target_address => target_address_buff,
             prediction_ta => prediction_ta_ifid,
-            wrong_prediction => wrong_decision_buff);
+            wrong_prediction => wrong_prediction_buff);
 
 target_address <= target_address_buff;
 

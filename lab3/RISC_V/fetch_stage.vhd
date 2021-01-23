@@ -20,7 +20,6 @@ entity fetch_stage is
         
         -- Input from Decode stage for stall such as Branch Hazards
         pc_en : in std_logic;
-        ifid_en : in std_logic;
 
         -- Input from Instruction Memory
         instruction_in : in std_logic_vector(31 downto 0);
@@ -84,7 +83,7 @@ begin
 
     one <= '1';
 
-    IFID_regs : process(clk, ifid_en, ifid_clear)
+    IFID_regs : process(clk, ifid_clear)
     begin
         if clk'event and clk = '1' then
             if ifid_clear = '1' then
@@ -94,8 +93,8 @@ begin
                 -- NOP as ADDI x0, x0, 0
                 instruction_ifid(31 downto 7) <= (others => '0');
                 instruction_ifid(6 downto 0) <= "0010011";
-            
-            elsif ifid_en = '1' then
+
+            else
                 pc_ifid_buffer <= pc;
                 prediction_ifid <= prediction;
                 prediction_ta_ifid <= prediction_ta;
