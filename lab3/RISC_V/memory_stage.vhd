@@ -5,6 +5,7 @@ USE ieee.numeric_std.all;
 ENTITY memory_stage IS
 	PORT (
           --input EX/MEM
+          clk: IN std_logic;
           result_exmem: IN signed(31 downto 0); 
           data_exmem: IN signed(31 downto 0);
           
