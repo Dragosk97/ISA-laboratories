@@ -5,6 +5,7 @@ USE ieee.numeric_std.all;
 ENTITY execution_stage IS
 	PORT (
           --input ID/EX
+          clk:IN std_logic;
           data1_idex, data2_idex: IN signed(31 downto 0);
           wb_idex: IN std_logic;
           mem_idex: IN std_logic_vector(1 downto 0);
@@ -15,7 +16,7 @@ ENTITY execution_stage IS
           rd_address_idex: IN std_logic_vector(4 downto 0);
           mux1_pc_sel_idex: IN std_logic;
           mux2_imm_sel_idex: IN std_logic;
-          mux_result_sel_idex: IN std_logic;
+          mux_result_sel_idex: IN std_logic_vector(1 downto 0);
         
           pc_idex: IN std_logic_vector(31 downto 0);
           immediate_idex: IN signed(31 downto 0);
@@ -80,7 +81,7 @@ port( rs1_address_idex: IN std_logic_vector(4 downto 0);
       mux1_fwd, mux2_fwd: OUT std_logic_vector(1 downto 0));
 end component;
 
-SIGNAL mux1_fwd_sel, mux2_fwd_sel: std_logic;
+SIGNAL mux1_fwd_sel, mux2_fwd_sel: std_logic_vector(1 downto 0);
 SIGNAL mux1_fwd_out, mux2_fwd_out: signed(31 downto 0);
 
 SIGNAL alu_inA , alu_inB: signed(31 downto 0);
@@ -115,14 +116,14 @@ pc_signed <= signed(pc_idex);
 mux1_alu_pc: mux2to1 GENERIC MAP (32)
 PORT MAP( a => mux1_fwd_out,
           b => pc_signed,
-          sel => mux1_pc_sel_idex,
+          s => mux1_pc_sel_idex,
           z => alu_inA);
 
 --mux_imm
 mux2_alu_imm: mux2to1 GENERIC MAP (32)
 PORT MAP( a => mux2_fwd_out,
           b => immediate_idex,
-          sel => mux2_imm_sel_idex,
+          s => mux2_imm_sel_idex,
           z => alu_inB);
 
 --ALU
@@ -148,7 +149,7 @@ PORT MAP( a => alu_result,
           m_out => ex_result);
 
 --forwarding_unit
-forwarding: forwarding_unit is
+forwarding: forwarding_unit
     PORT MAP( rs1_address_idex => rs1_address_idex,
               rs2_address_idex => rs2_address_idex,
               rd_address_exmem => rd_address_exmem,
