@@ -20,6 +20,7 @@ begin
                     when "111" => alu_ctrl <= "0000"; -- ANDI
                     when "101" => alu_ctrl <= "0001"; -- Shift
                     when "000" => alu_ctrl <= "0010"; -- ADDI
+                    when others => alu_ctrl <= "0010";
                 end case; 
             when "10" =>                              -- R-Type
                 case funct3 is

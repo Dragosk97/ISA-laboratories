@@ -18,7 +18,7 @@ ARCHITECTURE behavioural of prediction_table is
 --  mem(_)(58 downto 33) : tag
 -- In this implementation, the tag is chosen to be 26 bits
 -- corresponding to the whole PC not used as address
-constant mem_width := 58;
+constant mem_width : integer := 59;
 
 type ram_array is ARRAY(0 to 15) of STD_LOGIC_VECTOR(mem_width-1 downto 0);
 signal mem: ram_array;
@@ -30,7 +30,7 @@ BEGIN
             if (rst='1') then
                 mem <= (others => (others =>'0')); --array initialize to 0
             ELSIF MemWrite='1' then 
-                mem(to_integer(unsigned(PT_write_address)) <= PT_data;
+                mem(to_integer(unsigned(PT_write_address))) <= PT_data;
             END IF;
         END IF;
     END PROCESS;

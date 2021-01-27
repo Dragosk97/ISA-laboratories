@@ -10,7 +10,8 @@ entity fetch_stage is
         start_address : in std_logic_vector(31 downto 0);
         target_address : in std_logic_vector(31 downto 0);
         ifid_clear : in std_logic;
-        
+        ifid_en : in std_logic;
+
         -- Input from Decode stage for jump
         is_jump : in std_logic;
 
@@ -83,9 +84,18 @@ begin
 
     one <= '1';
 
-    IFID_regs : process(clk, ifid_clear)
+    -- IF/ID Registers
+    IFID_regs : process(clk, rst, ifid_clear, ifid_en)
     begin
-        if clk'event and clk = '1' then
+        if rst = '1' then
+            pc_ifid_buffer <= (others => '0');
+            prediction_ifid <= '0';
+            prediction_ta_ifid <= (others => '0');
+            -- NOP as ADDI x0, x0, 0
+            instruction_ifid(31 downto 7) <= (others => '0');
+            instruction_ifid(6 downto 0) <= "0010011";
+
+        elsif clk'event and clk = '1' then
             if ifid_clear = '1' then
                 pc_ifid_buffer <= (others => '0');
                 prediction_ifid <= '0';
@@ -94,7 +104,7 @@ begin
                 instruction_ifid(31 downto 7) <= (others => '0');
                 instruction_ifid(6 downto 0) <= "0010011";
 
-            else
+            elsif ifid_en = '1' then
                 pc_ifid_buffer <= pc;
                 prediction_ifid <= prediction;
                 prediction_ta_ifid <= prediction_ta;
@@ -159,7 +169,7 @@ begin
     pc_4 <= std_logic_vector(signed(pc) + 4);
 
     -- PC's next value
-    pc_in <= start_address when rst = '0'
+    pc_in <= start_address when rst = '1'
         else target_address when is_jump = '1'
         else target_address when wrong_prediction = '1' and  branch_decision = '1'
         else prev_pc_4 when wrong_prediction = '1' and  branch_decision = '0'

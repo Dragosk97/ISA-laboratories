@@ -5,6 +5,8 @@ USE ieee.numeric_std.all;
 ENTITY memory_stage IS
 	PORT (
           clk: IN std_logic;
+          rst : IN std_logic;
+
           --input EX/MEM
           result_exmem: IN signed(31 downto 0); 
           data_exmem: IN signed(31 downto 0);
@@ -38,7 +40,13 @@ begin
 --MEM/WB register              
 PROCESS(clk)
 BEGIN
-    IF RISING_EDGE(clk) THEN
+    IF rst = '1' THEN
+        data_memwb <= x"00000000";
+        result_memwb <= x"00000000";
+        rd_address_memwb <= "00000";
+        wb_mux_sel_memwb <= '0';
+        RegWrite_memwb <= '0';
+    ELSIF RISING_EDGE(clk) THEN
         data_memwb <= data_mem_in;
         result_memwb <= result_exmem;
         rd_address_memwb <= rd_address_exmem;

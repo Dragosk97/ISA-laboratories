@@ -5,6 +5,8 @@ USE ieee.numeric_std.all;
 ENTITY execution_stage IS
 	PORT (
           clk:IN std_logic;
+          rst: IN std_logic;
+          
           --input ID/EX
           data1_idex, data2_idex: IN signed(31 downto 0);
           wb_mux_sel_idex: IN std_logic;
@@ -163,9 +165,17 @@ forwarding: forwarding_unit
               mux2_fwd => mux2_fwd_sel);
 
 --EX/MEM register
-PROCESS(clk)
+PROCESS(clk, rst)
 BEGIN
-    IF RISING_EDGE(clk) THEN
+    IF rst = '1' THEN
+        data2_fwd_exmem <= x"00000000";
+        wb_exmem <= '0';
+        MemRead_exmem <= '0';
+        MemLoad_exmem <= '0';
+        rd_address_exmem_buff <= "00000";
+        result_exmem_buff <= x"00000000";
+        RegWrite_exmem_buff <= '0';
+    ELSIF RISING_EDGE(clk) THEN
         data2_fwd_exmem <= mux2_fwd_out;
         wb_exmem <= wb_mux_sel_idex;
         MemRead_exmem <= MemRead_idex;
