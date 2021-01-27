@@ -270,7 +270,7 @@ port map (
     RegWrite_exmem => RegWrite_exmem,
     -- MEM/WB
     rd_address_memwb => rd_address_memwb,
-    rd_data => rd_data,
+    result_memwb => rd_data,
     RegWrite_memwb => RegWrite_memwb,
     -- output
     target_address => target_address,
@@ -319,7 +319,7 @@ port map (
     RegWrite_idex=> RegWrite_idex,
     --input MEM/WB
     rd_address_memwb=> rd_address_memwb,
-    result_memwb=> result_memwb,
+    result_memwb=> rd_data,
     RegWrite_memwb=> RegWrite_memwb,
     -- Output EX/MEM
     data2_fwd_exmem=> data2_fwd_exmem,
