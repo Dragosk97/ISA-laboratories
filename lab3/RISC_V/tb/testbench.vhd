@@ -59,9 +59,9 @@ begin
         clk => clk,
         rst => rst,
         start_address => start_address,
-        data_mem_in => data_mem_write,
-        data_mem_out => data_mem_read,
-        address_mem_out => address_data_memn
+        data_mem_in => data_mem_read,
+        data_mem_out => data_mem_write,
+        address_mem_out => address_data_mem,
         MemRead => MemRead,
         MemLoad => MemLoad,
         instruction_in => instruction_read,
@@ -71,7 +71,7 @@ begin
     DM : data_memory port map (
         address => address_data_mem,
         data => data_mem_write,
-        MemWrite => MemWrite,
+        MemWrite => MemLoad,
         MemRead => MemRead,
         clock => clk,
         rst => rst,
@@ -83,4 +83,10 @@ begin
         data => instruction_read
     );
 
+    CG : clk_gen port map (
+        CLK => clk,
+        start_address => start_address,
+        RST => rst
+    );
+    
 end struct ; -- struct

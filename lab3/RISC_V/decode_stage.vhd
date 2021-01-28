@@ -283,7 +283,7 @@ begin
     );
         
     -- Target address computation
-    target_address_buff <= std_logic_vector(signed(pc_ifid) + (immediate(30 downto 0) & '0'));
+    target_address_buff <= std_logic_vector(signed(pc_ifid) + (immediate(30 downto 0)));
         
     -- Branch Forwarding
     mux_fwd_1 : mux3to1 generic map (32) port map(

@@ -1,590 +1,675 @@
 m255
+K3
 13
 cModel Technology
-d/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/sim
+Z0 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab3\RISC_V\sim
 Ealu
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu.vhd
+Z1 w1611766089
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 dC:\Users\utente\Documents\Roba da Università\Magistrale\Integrated systems architecture\Labs\git_repo\ISA-laboratories\lab3\RISC_V\sim
+Z5 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu.vhd
+Z6 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu.vhd
 l0
 L5
-Vk9b55nRXWiY8`^mC1GZ5X2
-OE;C;6.2g;35
+VDz2agK5][RBFTgiA[;ngC1
+Z7 OV;C;6.6d;45
 32
-o-work work
-tExplicit 1
+Z8 o-work work -O0
+Z9 tExplicit 1
+!s100 1kf4P1a3VCi9I9lb7]TI_3
 Abehavioural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work alu k9b55nRXWiY8`^mC1GZ5X2
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 3 alu 0 22 Dz2agK5][RBFTgiA[;ngC1
 l13
 L12
-ViD7J9a6L8P4F;CSn2Ki3;3
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+ViTKd=B4jUiPfS9]AUK]iC1
+R7
+32
+Z10 Mx2 4 ieee 14 std_logic_1164
+Z11 Mx1 4 ieee 11 numeric_std
+R8
+R9
+!s100 >h<j44j:zhH5R5][Q@Tii1
 Ealu_control
-w1611856927
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu_control.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu_control.vhd
+Z12 w1611766232
+R3
+R4
+Z13 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu_control.vhd
+Z14 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu_control.vhd
 l0
 L4
-V1oMYW>NJMmHg`k5jV_C`V2
-OE;C;6.2g;35
+Ve2[1OU;z<L[C>D0i4EK4f2
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 O>mbE=BmJkJ9fb`jR_f2`3
 Abehav
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work alu_control 1oMYW>NJMmHg`k5jV_C`V2
-32
-M1 ieee std_logic_1164
+R3
+DEx4 work 11 alu_control 0 22 e2[1OU;z<L[C>D0i4EK4f2
 l13
 L11
-V6HT3lk@Ba7P0PCVOn1;n13
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VfdogQbZGf1lC340AbO2E:2
+R7
+32
+Z15 Mx1 4 ieee 14 std_logic_1164
+R8
+R9
+!s100 9oEN>HM5e<dm;fcXk`7;82
 Eclk_gen
-w1611856927
-DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
-DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd
+Z16 w1611854146
+Z17 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z18 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+R3
+R4
+Z19 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd
+Z20 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd
 l0
 L6
-V4gk_05NC_TCinaLQ=D1S63
-OE;C;6.2g;35
+Vb0>31I<HO`jzB@h0l_^>93
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 ;WE>eN^U:dmBWYbm0ij0@0
 Abeh
-DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
-DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work clk_gen 4gk_05NC_TCinaLQ=D1S63
-32
-M3 ieee std_logic_1164
-M2 ieee std_logic_arith
-M1 ieee std_logic_unsigned
+R17
+R18
+R3
+DEx4 work 7 clk_gen 0 22 b0>31I<HO`jzB@h0l_^>93
 l19
 L13
-V^n2<9i3c31X3X0MOZJ4VQ3
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VkbBf:11WAS]hOUUHejDoa2
+R7
+32
+Z21 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 15 std_logic_arith
+Mx1 4 ieee 18 std_logic_unsigned
+R8
+R9
+!s100 R<O<j3D2VDJkgc?dE55_O0
 Ecomparator
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/comparator.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/comparator.vhd
+R1
+R2
+R3
+R4
+Z22 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/comparator.vhd
+Z23 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/comparator.vhd
 l0
 L5
-V_995>e<OMZg;lb>NadE;z1
-OE;C;6.2g;35
+VIBFIAR]5bBEl9V]Ef2=7m3
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 Tc;[ecWdFSPNMO<cPRjN>1
 Abehav
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work comparator _995>e<OMZg;lb>NadE;z1
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 10 comparator 0 22 IBFIAR]5bBEl9V]Ef2=7m3
 l15
 L14
-VM73>V93ClPQ8AgjaQR>e[3
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VcobIbmfCYZ[>Zkhg5[=9P0
+R7
+32
+R10
+R11
+R8
+R9
+!s100 CkX;ITneJQhQAge7<jcUo1
 Econtrol
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/control.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/control.vhd
+R1
+R2
+R3
+R4
+Z24 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd
+Z25 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd
 l0
 L5
-VQ`2Yd<?MZYfN5iQ3a:C@Z0
-OE;C;6.2g;35
+V;<d<bJ^]E1ToE19I8dO`;2
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 >k__XEbN8OaNl=>ni]A]51
 Abehavior
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work control Q`2Yd<?MZYfN5iQ3a:C@Z0
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 7 control 0 22 ;<d<bJ^]E1ToE19I8dO`;2
 l24
 L22
-Vj`R^hbmFJhnAZ;lAKI`_01
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VG1B8REmm[_7b3[kB2bRK53
+R7
+32
+R10
+R11
+R8
+R9
+!s100 5NYE>5:<:T4C7ea6a^3OH0
 Edata_memory
-w1611861263
-DP std textio K]Z^fghZ6B=BjnK5NomDT3
-DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
+Z26 w1611861885
+Z27 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z28 DPx4 ieee 16 std_logic_textio 0 22 8ONYdGiICLK<GeVc1o<IF0
+R2
+R3
+R4
+Z29 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd
+Z30 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd
 l0
 L9
-V;n2S;AO_mfAi`R@leZcI73
-OE;C;6.2g;35
+VCLI0Vczjbj=08Q^OhHe^l0
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 <ElJTNBSME2ZLXghKKhg62
 Abehavior
-DP std textio K]Z^fghZ6B=BjnK5NomDT3
-DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work data_memory ;n2S;AO_mfAi`R@leZcI73
-32
-M4 ieee std_logic_1164
-M3 ieee numeric_std
-M2 ieee std_logic_textio
-M1 std textio
+R27
+R28
+R2
+R3
+DEx4 work 11 data_memory 0 22 CLI0Vczjbj=08Q^OhHe^l0
 l22
 L16
-Va_6F=7BnS7HP5J`@NIML?1
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+V0iJOPAzMQIoV8h=Z]A:aW1
+R7
+32
+Mx4 4 ieee 14 std_logic_1164
+Mx3 4 ieee 11 numeric_std
+Mx2 4 ieee 16 std_logic_textio
+Z31 Mx1 3 std 6 textio
+R8
+R9
+!s100 IcXcYj[NXN8V@MgOM`nM@3
 Edecode_stage
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
+Z32 w1611868615
+R2
+R3
+R4
+Z33 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
+Z34 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
 l0
 L5
-V_Ced;UX4:8j_TcUCJEI^k3
-OE;C;6.2g;35
+VYi>AOGP]5XXNNbRWdRVKD0
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 zfiB[?G7Jl5>5VX=XeHaK0
 Astructural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work decode_stage _Ced;UX4:8j_TcUCJEI^k3
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 12 decode_stage 0 22 Yi>AOGP]5XXNNbRWdRVKD0
 l196
 L58
-VI>QURD>Q1Z]z>iRZl]M1z2
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+V^X@7:XTm@H?eCX4MFjYE03
+R7
+32
+R10
+R11
+R8
+R9
+!s100 ?z[MPj_^0m^bUV5ek[4V_1
 Eexecution_stage
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
+Z35 w1611769214
+R2
+R3
+R4
+Z36 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
+Z37 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
 l0
 L5
-VS3DTbF=D<7bTA_ag2X[bT3
-OE;C;6.2g;35
+VgM:MN8ZKQd6i[4o3S6kG51
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 M]PCAQb=6_iN8NNmZ^L__3
 Astructural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work execution_stage S3DTbF=D<7bTA_ag2X[bT3
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 15 execution_stage 0 22 gM:MN8ZKQd6i[4o3S6kG51
 l101
 L43
-V7EMYK]CNRGBWiBiK=84a>1
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VigCPPB;ZJz5@jTG8JN=F@1
+R7
+32
+R10
+R11
+R8
+R9
+!s100 W:4HRf58gIgOhZmm0ME2R1
 Efetch_stage
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
+Z38 w1611770025
+R2
+R3
+R4
+Z39 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
+Z40 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
 l0
 L5
-V3`GKacVR>Rh69l[N__YTS0
-OE;C;6.2g;35
+VRXJKf?G`[e^<CFY0b`W?<2
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 nnNWcHN]CAQQ7PC08KHU12
 Astructure
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work fetch_stage 3`GKacVR>Rh69l[N__YTS0
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 11 fetch_stage 0 22 RXJKf?G`[e^<CFY0b`W?<2
 l83
 L39
-ViLlWWRbYmNN[aZVGbHPdb1
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+Vo`@0bRnI:V`ndGfZ^z]M73
+R7
+32
+R10
+R11
+R8
+R9
+!s100 mUXU3Z`=d:KoUKO_1ME3Q1
 Eforwarding_unit
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
+R1
+R2
+R3
+R4
+Z41 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
+Z42 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
 l0
 L5
-VJQN8d`WiXeRa4;I;??W[60
-OE;C;6.2g;35
+VmF4X5XCE3JM7>_8hg@4;]1
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 CG`Q1]lh_GdUa>eD<ce1>0
 Abehavioural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work forwarding_unit JQN8d`WiXeRa4;I;??W[60
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 15 forwarding_unit 0 22 mF4X5XCE3JM7>_8hg@4;]1
 l16
 L15
-VXLR:Y?e5GTA0JQ>cYlQ=e0
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+V8A3IZP=[bhgm;0VCZ1aa>2
+R7
+32
+R10
+R11
+R8
+R9
+!s100 n5LHJ<YhfmANP5?B8gLV_0
 Egenericreg
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
+R1
+R2
+R3
+R4
+Z43 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
+Z44 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
 l0
 L5
-VL6PKX:V1c>b[Pae8BBV;m3
-OE;C;6.2g;35
+VZ_>;C7bCPWIRib_Ya]^=_0
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 iVAnGZfVl9QnY6ZbZbGfY2
 Abehavioral
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work genericreg L6PKX:V1c>b[Pae8BBV;m3
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 10 genericreg 0 22 Z_>;C7bCPWIRib_Ya]^=_0
 l15
 L14
-V5P[Eh@>hkCGhbNjI1j:I?0
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VmXACUBBeiJP>M8DISnDmB3
+R7
+32
+R10
+R11
+R8
+R9
+!s100 2V]h1Am;h^@<c4egl>eod2
 Ehazard_detect_unit
-w1611856927
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
+Z45 w1611869384
+R3
+R4
+Z46 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
+Z47 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
 l0
 L4
-VX5Xid<7?^ob5=cLQai_1Q0
-OE;C;6.2g;35
+VOndHMZeJY7XBE0S[h;P]T1
+!s100 3]1?Mfc2=7ihio16ZfTj]2
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
 Abehav
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work hazard_detect_unit X5Xid<7?^ob5=cLQai_1Q0
-32
-M1 ieee std_logic_1164
+R3
+Z48 DEx4 work 18 hazard_detect_unit 0 22 OndHMZeJY7XBE0S[h;P]T1
 l22
 L20
-VHPolA7n;C9DJHh[nSAmmR0
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VDi18YkZo15g;ECn>H?_5z2
+!s100 kNVfmU7fhf?NPNElFXKHe0
+R7
+32
+R15
+R8
+R9
 Eimmediate_generator
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd
+Z49 w1611867865
+R2
+R3
+R4
+Z50 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd
+Z51 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd
 l0
 L5
-Vf7X0VT7QWedf9Do<o[bSj2
-OE;C;6.2g;35
+VMZDPVm<R@ZCTR1Vdk5LJ52
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 J_n7al^`X3@=@XXFDz0<K2
 Abehavioural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work immediate_generator f7X0VT7QWedf9Do<o[bSj2
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 19 immediate_generator 0 22 MZDPVm<R@ZCTR1Vdk5LJ52
 l15
 L12
-VTW`BNeCUlHYo?X8Amd8gf2
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+V@4=]c@ZajdnHIZIDkHG<42
+!s100 A1fjO^k>K98dS0[e0l=No3
+R7
+32
+R10
+R11
+R8
+R9
 Einstruction_memory
-w1611858369
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
+R26
+R2
+R3
+R4
+Z52 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
+Z53 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
 l0
 L5
-VUP3[YO27PCSGB7YbKdB?^2
-OE;C;6.2g;35
+V]MA7jZM7?bD;8oJfan8_`3
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 gI7XfNHHink6OmQe<3[MS3
 Astructural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work instruction_memory UP3[YO27PCSGB7YbKdB?^2
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 18 instruction_memory 0 22 ]MA7jZM7?bD;8oJfan8_`3
 l40
 L10
-VVMf=5cc>AhfJ1BQ?];59D0
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VIoDS2[^Pd09Q:>HMZ2ocK1
+R7
+32
+R10
+R11
+R8
+R9
+!s100 a=fNFbcHmLKK@aWE@N9970
 Ememory_stage
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/memory_stage.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/memory_stage.vhd
+Z54 w1611769533
+R2
+R3
+R4
+Z55 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/memory_stage.vhd
+Z56 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/memory_stage.vhd
 l0
 L5
-VRSEo;H;E@FWHOIe_z^Eb70
-OE;C;6.2g;35
+V9NZ]`;gT:4bHI[KFk_@GT1
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 @RQzjlW1MHgidkVV@MC5^0
 Astructural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work memory_stage RSEo;H;E@FWHOIe_z^Eb70
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 12 memory_stage 0 22 9NZ]`;gT:4bHI[KFk_@GT1
 l35
 L33
-V3j:37[DVAVDMB?=ObJcjA3
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+Vd4QY3:CE>nS?D6<dKBdRa2
+R7
+32
+R10
+R11
+R8
+R9
+!s100 Aj`I:D?:THSSjZzfgKaaB3
 Emux2to1
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/mux2to1.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/mux2to1.vhd
+R1
+R2
+R3
+R4
+Z57 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/mux2to1.vhd
+Z58 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/mux2to1.vhd
 l0
 L5
-VgU1iOb2EWF5_kHfjCB@W_3
-OE;C;6.2g;35
+V85D>X[anH7cn`m;ZB<ed>1
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 `mJo3`ehb6iT`4GIL]2o01
 Abehavioral
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work mux2to1 gU1iOb2EWF5_kHfjCB@W_3
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 7 mux2to1 0 22 85D>X[anH7cn`m;ZB<ed>1
 l16
 L15
-V?CQ^MHM3<<_MzU_iz8cPW2
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+V7:AFjP5Bh?HA=4n=hL3BM3
+R7
+32
+R10
+R11
+R8
+R9
+!s100 HD50]Mah8ce:eGKQ`Tl:h2
 Emux3to1
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/mux3to1.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/mux3to1.vhd
+R1
+R2
+R3
+R4
+Z59 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/mux3to1.vhd
+Z60 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/mux3to1.vhd
 l0
 L5
-V56DZ=ZJ@UN=3^U]:dMm^41
-OE;C;6.2g;35
+V?<D93i3kM1:F:ccI5EB<n3
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 LCm9cP@foFJaW9gREanXN2
 Alogicfunction
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work mux3to1 56DZ=ZJ@UN=3^U]:dMm^41
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 7 mux3to1 0 22 ?<D93i3kM1:F:ccI5EB<n3
 l13
 L12
-VDmGXXPN8^B=W]P^:hl6<A1
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VzDaEZ2GTEz1JNT3DL3Tof0
+R7
+32
+R10
+R11
+R8
+R9
+!s100 5k4If4ARo`2j?bBz?TjOE0
 Eprediction_table
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/prediction_table.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/prediction_table.vhd
+Z61 w1611766743
+R2
+R3
+R4
+Z62 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_table.vhd
+Z63 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_table.vhd
 l0
 L5
-VoEOnE?ebm2[n7QDnoTmJG0
-OE;C;6.2g;35
+VW[IlF^:5LWmY]:PYWo6WR1
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 5:B7Y[T^kQc0dfa[J[R9D0
 Abehavioural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work prediction_table oEOnE?ebm2[n7QDnoTmJG0
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 16 prediction_table 0 22 W[IlF^:5LWmY]:PYWo6WR1
 l26
 L13
-VecBBNl6T_4@Q=0=7gbgPo2
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VFYhNHOnkH<>1mY`ZlA@PP0
+R7
+32
+R10
+R11
+R8
+R9
+!s100 VGzn58MKgCEWnJeaFJa9V1
 Eprediction_validate
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd
+Z64 w1611414208
+R2
+R3
+R4
+Z65 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd
+Z66 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd
 l0
 L5
-VX^VaST2`co^0:L?UA2>B22
-OE;C;6.2g;35
+Vb`:TZ987;63HH[Bz4`8YX3
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 CnCZM<>SKFXaZb_d8:nOh2
 Abehav
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work prediction_validate X^VaST2`co^0:L?UA2>B22
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 19 prediction_validate 0 22 b`:TZ987;63HH[Bz4`8YX3
 l25
 L16
-VBfUfgX=HI7_nPSJZm2dz=3
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+V:0fRN2A1PWBWg>Fi0hlI?1
+R7
+32
+R10
+R11
+R8
+R9
+!s100 A8E<1kaLOFhESMIi2L^4Z0
 Eregister_file
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Register_file.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Register_file.vhd
+R1
+R2
+R3
+R4
+Z67 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Register_file.vhd
+Z68 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Register_file.vhd
 l0
 L5
-VEPl_mJl_2U<k3`B5VHIz42
-OE;C;6.2g;35
+VM[UZd84lIml3MEm=Tm[=m2
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 ANYWTb2FhOhaFL26^TQPi1
 Abehavioral
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work register_file EPl_mJl_2U<k3`B5VHIz42
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 13 register_file 0 22 M[UZd84lIml3MEm=Tm[=m2
 l25
 L20
-VMegP3`MUkLc[T=WM]OkGX3
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VKBe>m[eSmTL3n3GXJ=Ag>1
+R7
+32
+R10
+R11
+R8
+R9
+!s100 zGC[V`RfX=SY3A^[Tlbbn0
 Eriscv
-w1611860507
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/RISCV.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/RISCV.vhd
+R26
+R2
+R3
+R4
+Z69 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd
+Z70 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd
 l0
 L5
-VWcN3U4]JV2f`z6W8mckMl1
-OE;C;6.2g;35
+VU3c77FGci;fH5@TNSI19I0
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 SD7_:<:3fmmoBPec]9SEi1
 Astructural
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work riscv WcN3U4]JV2f`z6W8mckMl1
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 5 riscv 0 22 U3c77FGci;fH5@TNSI19I0
 l241
 L24
-V4^Jhj_FO<^AfZ1WSNP0f31
-OE;C;6.2g;35
-o-work work
-tExplicit 1
-vtb_riscv
-VDbzXSc;_bjz==iWj]6bAX0
-r1
-31
-IPjzDM]X>L[JMMgGmjiHlX1
-w1611857509
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
-L0 3
-OE;L;6.2g;35
-o-work work
-Ewrite_back_stage
-w1611856927
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
-F/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
+VmoMahQ3UECOUGmSoMX@931
+R7
+32
+R10
+R11
+R8
+R9
+!s100 XK:g`=cFfUiOmeF?5ZZhK0
+Etestbench
+Z71 w1611866078
+R2
+R3
+R4
+Z72 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd
+Z73 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd
 l0
 L5
-VT1n622O7o?[<XNQD3G?]X2
-OE;C;6.2g;35
+V^]2^0JUcDh[WLDc2>]Bc>0
+R7
 32
-o-work work
-tExplicit 1
+R8
+R9
+!s100 P2Ae5Lk?mS<;fEAjI0YIW1
+Astruct
+R2
+R3
+DEx4 work 9 testbench 0 22 ^]2^0JUcDh[WLDc2>]Bc>0
+l56
+L8
+V;k@Ri8^QBFkY?6z3W=SfP2
+R7
+32
+R10
+R11
+R8
+R9
+!s100 BcA4YiH89a90P_d2]C_fc3
+Ewrite_back_stage
+Z74 w1611420975
+R2
+R3
+R4
+Z75 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
+Z76 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
+l0
+L5
+V`3iNLMhcLW_=d<9V]9cbd1
+R7
+32
+R8
+R9
+!s100 NgC`ZTD9DWC]H9M`1<Y4b2
 Abehavioral
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work write_back_stage T1n622O7o?[<XNQD3G?]X2
-32
-M2 ieee std_logic_1164
-M1 ieee numeric_std
+R2
+R3
+DEx4 work 16 write_back_stage 0 22 `3iNLMhcLW_=d<9V]9cbd1
 l16
 L14
-VZoQ7fdI@V9l2LkT8;OaZd0
-OE;C;6.2g;35
-o-work work
-tExplicit 1
+VO`cJLNgj6=`hIThT:VlP;0
+R7
+32
+R10
+R11
+R8
+R9
+!s100 cYzbKH`K5Z]O2S9^M`6UL3

@@ -21,7 +21,7 @@ architecture behav of hazard_detect_unit is
 
 begin
 
-    hazard_detection : process(rs1_address, rs2_address, rd_address_exmem, rd_address_idex)
+    hazard_detection : process(rs1_address, rs2_address, rd_address_exmem, rd_address_idex, is_branch, is_ex_load, is_mem_load, is_ex_rd_valid, is_rs1_valid, is_rs2_valid)
     begin
         insert_nop <= '0';
 

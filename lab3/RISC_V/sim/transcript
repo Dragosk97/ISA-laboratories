@@ -1,165 +1,33 @@
-# //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
-# //
-# //  Copyright 1991-2007 Mentor Graphics Corporation
-# //              All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND 
-# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
-# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
-# //  AND IS SUBJECT TO LICENSE TERMS.
-# //
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vlib work
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity alu
 # -- Compiling architecture behavioural of alu
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu_control.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/alu_control.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Compiling entity alu_control
 # -- Compiling architecture behav of alu_control
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/comparator.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/comparator.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity comparator
 # -- Compiling architecture behav of comparator
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity instruction_memory
-# -- Compiling architecture structural of instruction_memory
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity immediate_generator
-# -- Compiling architecture behavioural of immediate_generator
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity hazard_detect_unit
-# -- Compiling architecture behav of hazard_detect_unit
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity genericreg
-# -- Compiling architecture behavioral of genericreg
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity forwarding_unit
-# -- Compiling architecture behavioural of forwarding_unit
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity forwarding_unit
-# -- Compiling architecture behavioural of forwarding_unit
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity execution_stage
-# -- Compiling architecture structural of execution_stage
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity alu
-# -- Compiling architecture behavioural of alu
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/alu_control.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity alu_control
-# -- Compiling architecture behav of alu_control
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/comparator.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity comparator
-# -- Compiling architecture behav of comparator
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity instruction_memory
-# -- Compiling architecture structural of instruction_memory
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity immediate_generator
-# -- Compiling architecture behavioural of immediate_generator
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity hazard_detect_unit
-# -- Compiling architecture behav of hazard_detect_unit
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity genericreg
-# -- Compiling architecture behavioral of genericreg
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity forwarding_unit
-# -- Compiling architecture behavioural of forwarding_unit
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity forwarding_unit
-# -- Compiling architecture behavioural of forwarding_unit
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity execution_stage
-# -- Compiling architecture structural of execution_stage
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity decode_stage
-# -- Compiling architecture structural of decode_stage
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/control.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity control
 # -- Compiling architecture behavior of control
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
@@ -167,211 +35,180 @@ vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RIS
 # -- Loading package std_logic_textio
 # -- Compiling entity data_memory
 # -- Compiling architecture behavior of data_memory
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity decode_stage
+# -- Compiling architecture structural of decode_stage
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity execution_stage
+# -- Compiling architecture structural of execution_stage
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity fetch_stage
 # -- Compiling architecture structure of fetch_stage
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
-# -- Compiling entity write_back_stage
-# -- Compiling architecture behavioral of write_back_stage
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/RISCV.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling entity forwarding_unit
+# -- Compiling architecture behavioural of forwarding_unit
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
-# -- Compiling entity riscv
-# -- Compiling architecture structural of riscv
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/Register_file.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling entity genericreg
+# -- Compiling architecture behavioral of genericreg
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detect_unit
+# -- Compiling architecture behav of hazard_detect_unit
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
-# -- Compiling entity register_file
-# -- Compiling architecture behavioral of register_file
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling entity immediate_generator
+# -- Compiling architecture behavioural of immediate_generator
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
-# -- Compiling entity prediction_validate
-# -- Compiling architecture behav of prediction_validate
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/prediction_table.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity prediction_table
-# -- Compiling architecture behavioural of prediction_table
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/mux3to1.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity mux3to1
-# -- Compiling architecture logicfunction of mux3to1
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/mux2to1.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity mux2to1
-# -- Compiling architecture behavioral of mux2to1
-vcom -reportprogress 30 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/memory_stage.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling entity instruction_memory
+# -- Compiling architecture structural of instruction_memory
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/memory_stage.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
 # -- Compiling entity memory_stage
 # -- Compiling architecture structural of memory_stage
-vlog -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module tb_riscv
-# 
-# Top level modules:
-# 	tb_riscv
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/mux3to1.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity mux3to1
+# -- Compiling architecture logicfunction of mux3to1
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_table.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity prediction_table
+# -- Compiling architecture behavioural of prediction_table
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity prediction_validate
+# -- Compiling architecture behav of prediction_validate
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Register_file.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity riscv
+# -- Compiling architecture structural of riscv
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity write_back_stage
+# -- Compiling architecture behavioral of write_back_stage
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
 # -- Compiling entity clk_gen
 # -- Compiling architecture beh of clk_gen
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Refreshing ./work.tb_riscv
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.riscv(structural)
-# Loading work.riscv(structural)
-# Refreshing ./work.fetch_stage(structure)
-# Loading work.fetch_stage(structure)
-# Refreshing ./work.genericreg(behavioral)
-# Loading work.genericreg(behavioral)
-# Refreshing ./work.prediction_table(behavioural)
-# Loading work.prediction_table(behavioural)
-# Refreshing ./work.decode_stage(structural)
-# Loading work.decode_stage(structural)
-# Refreshing ./work.register_file(behavioral)
-# Loading work.register_file(behavioral)
-# Refreshing ./work.immediate_generator(behavioural)
-# Loading work.immediate_generator(behavioural)
-# Refreshing ./work.mux3to1(logicfunction)
-# Loading work.mux3to1(logicfunction)
-# Refreshing ./work.comparator(behav)
-# Loading work.comparator(behav)
-# Refreshing ./work.hazard_detect_unit(behav)
-# Loading work.hazard_detect_unit(behav)
-# Refreshing ./work.forwarding_unit(behavioural)
-# Loading work.forwarding_unit(behavioural)
-# Refreshing ./work.control(behavior)
-# Loading work.control(behavior)
-# Refreshing ./work.prediction_validate(behav)
-# Loading work.prediction_validate(behav)
-# Refreshing ./work.execution_stage(structural)
-# Loading work.execution_stage(structural)
-# Refreshing ./work.mux2to1(behavioral)
-# Loading work.mux2to1(behavioral)
-# Refreshing ./work.alu_control(behav)
-# Loading work.alu_control(behav)
-# Refreshing ./work.alu(behavioural)
-# Loading work.alu(behavioural)
-# Refreshing ./work.memory_stage(structural)
-# Loading work.memory_stage(structural)
-# Refreshing ./work.write_back_stage(behavioral)
-# Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Refreshing ./work.data_memory(behavior)
-# Loading work.data_memory(behavior)
-# ** Fatal: (vsim-3363) /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v(38): The array length (1) of VHDL port 'cs' does not match the width (32) of its Verilog connection (6th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/DM File: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd Line: 12
-# FATAL ERROR while loading design
-# Error loading design
-vlog -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module tb_riscv
-# 
-# Top level modules:
-# 	tb_riscv
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Refreshing ./work.tb_riscv
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.riscv(structural)
-# Loading work.fetch_stage(structure)
-# Loading work.genericreg(behavioral)
-# Loading work.prediction_table(behavioural)
-# Loading work.decode_stage(structural)
-# Loading work.register_file(behavioral)
-# Loading work.immediate_generator(behavioural)
-# Loading work.mux3to1(logicfunction)
-# Loading work.comparator(behav)
-# Loading work.hazard_detect_unit(behav)
-# Loading work.forwarding_unit(behavioural)
-# Loading work.control(behavior)
-# Loading work.prediction_validate(behav)
-# Loading work.execution_stage(structural)
-# Loading work.mux2to1(behavioral)
-# Loading work.alu_control(behav)
-# Loading work.alu(behavioural)
-# Loading work.memory_stage(structural)
-# Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_memory(behavior)
-# ** Fatal: (vsim-3363) /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v(38): The array length (1) of VHDL port 'cs' does not match the width (8) of its Verilog connection (6th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/DM File: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd Line: 12
-# FATAL ERROR while loading design
-# Error loading design
-vlog -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module tb_riscv
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v(36): near "'": syntax error, unexpected ''', expecting ')'
-vlog -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module tb_riscv
-# 
-# Top level modules:
-# 	tb_riscv
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Compiling entity data_memory
-# -- Compiling architecture behavior of data_memory
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Refreshing ./work.tb_riscv
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# -- Compiling entity testbench
+# -- Compiling architecture struct of testbench
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(65): near "MemRead": expecting ',' or ')'
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(71): Statement cannot be labeled.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(74): (vcom-1136) Unknown identifier "memwrite".
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(86): VHDL Compiler exiting
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testbench
+# -- Compiling architecture struct of testbench
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(65): near "MemRead": expecting ',' or ')'
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(71): Statement cannot be labeled.
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(74): (vcom-1136) Unknown identifier "memwrite".
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(86): VHDL Compiler exiting
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testbench
+# -- Compiling architecture struct of testbench
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(74): (vcom-1136) Unknown identifier "memwrite".
+# ** Error: C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd(86): VHDL Compiler exiting
+# c:/altera/11.0sp1/modelsim_ase/win32aloem/vcom failed.
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testbench
+# -- Compiling architecture struct of testbench
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(struct)
 # Loading work.riscv(structural)
 # Loading work.fetch_stage(structure)
 # Loading work.genericreg(behavioral)
@@ -391,297 +228,383 @@ vsim -novopt work.tb_riscv
 # Loading work.alu(behavioural)
 # Loading work.memory_stage(structural)
 # Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Refreshing ./work.data_memory(behavior)
-# Loading work.data_memory(behavior)
-# Refreshing ./work.instruction_memory(structural)
-# Loading work.instruction_memory(structural)
-add wave *
-500 ns
-# invalid command name "500"
-run 500 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Fatal: (vsim-3421) Value 0 is out of range 1048576 to 1048597.
-#    Time: 0 ns  Iteration: 0  Process: /tb_riscv/IM/line__42 File: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-# Fatal error in Architecture structural at /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd line 42
-# 
-quit -sim
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity instruction_memory
-# -- Compiling architecture structural of instruction_memory
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.riscv(structural)
-# Loading work.fetch_stage(structure)
-# Loading work.genericreg(behavioral)
-# Loading work.prediction_table(behavioural)
-# Loading work.decode_stage(structural)
-# Loading work.register_file(behavioral)
-# Loading work.immediate_generator(behavioural)
-# Loading work.mux3to1(logicfunction)
-# Loading work.comparator(behav)
-# Loading work.hazard_detect_unit(behav)
-# Loading work.forwarding_unit(behavioural)
-# Loading work.control(behavior)
-# Loading work.prediction_validate(behav)
-# Loading work.execution_stage(structural)
-# Loading work.mux2to1(behavioral)
-# Loading work.alu_control(behav)
-# Loading work.alu(behavioural)
-# Loading work.memory_stage(structural)
-# Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_memory(behavior)
-# Refreshing ./work.instruction_memory(structural)
-# Loading work.instruction_memory(structural)
-add wave *
-run 500 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Fatal: (vsim-3421) Value 0 is out of range 1048576 to 1048597.
-#    Time: 0 ns  Iteration: 0  Process: /tb_riscv/IM/line__41 File: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-# Fatal error in Process line__41 at /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd line 46
-# 
-run
-# Cannot continue because of fatal error.
-run
-# Cannot continue because of fatal error.
-run
-# Cannot continue because of fatal error.
-run
-# Cannot continue because of fatal error.
-quit -sim
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/instruction_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity instruction_memory
-# -- Compiling architecture structural of instruction_memory
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.riscv(structural)
-# Loading work.fetch_stage(structure)
-# Loading work.genericreg(behavioral)
-# Loading work.prediction_table(behavioural)
-# Loading work.decode_stage(structural)
-# Loading work.register_file(behavioral)
-# Loading work.immediate_generator(behavioural)
-# Loading work.mux3to1(logicfunction)
-# Loading work.comparator(behav)
-# Loading work.hazard_detect_unit(behav)
-# Loading work.forwarding_unit(behavioural)
-# Loading work.control(behavior)
-# Loading work.prediction_validate(behav)
-# Loading work.execution_stage(structural)
-# Loading work.mux2to1(behavioral)
-# Loading work.alu_control(behav)
-# Loading work.alu(behavioural)
-# Loading work.memory_stage(structural)
-# Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_memory(behavior)
-# Refreshing ./work.instruction_memory(structural)
-# Loading work.instruction_memory(structural)
-add wave *
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/decode/branch_equal_unit
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/fetch/pt
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
-run
-# ** Fatal: (vsim-3421) Value 1 is out of range 67125248 to 67125368.
-#    Time: 115 ns  Iteration: 4  Process: /tb_riscv/DM/line__47 File: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-# Fatal error in Architecture behavior at /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd line 48
-# 
-run
-# Cannot continue because of fatal error.
-run
-# Cannot continue because of fatal error.
-run
-# Cannot continue because of fatal error.
-run
-# Cannot continue because of fatal error.
-quit -sim
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/riscv.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# ** Error: (vcom-7) Failed to open design unit file "/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/riscv.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/RISCV.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling entity riscv
-# -- Compiling architecture structural of riscv
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.riscv(structural)
-# Loading work.riscv(structural)
-# Loading work.fetch_stage(structure)
-# Loading work.genericreg(behavioral)
-# Loading work.prediction_table(behavioural)
-# Loading work.decode_stage(structural)
-# Loading work.register_file(behavioral)
-# Loading work.immediate_generator(behavioural)
-# Loading work.mux3to1(logicfunction)
-# Loading work.comparator(behav)
-# Loading work.hazard_detect_unit(behav)
-# Loading work.forwarding_unit(behavioural)
-# Loading work.control(behavior)
-# Loading work.prediction_validate(behav)
-# Loading work.execution_stage(structural)
-# Loading work.mux2to1(behavioral)
-# Loading work.alu_control(behav)
-# Loading work.alu(behavioural)
-# Loading work.memory_stage(structural)
-# Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading work.data_memory(behavior)
-# Loading work.instruction_memory(structural)
-add wave *
-run 500 ns
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/decode/branch_equal_unit
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/fetch/pt
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
-# ** Fatal: (vsim-3421) Value 1 is out of range 67125248 to 67125368.
-#    Time: 115 ns  Iteration: 4  Process: /tb_riscv/DM/line__47 File: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-# Fatal error in Architecture behavior at /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd line 48
-# 
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/decode/branch_equal_unit
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/fetch/pt
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
-run
-run
-run
-run
-restart
-quit -sim
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Compiling entity data_memory
-# -- Compiling architecture behavior of data_memory
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd(51): Illegal sequential statement.
-# ** Error: /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd(56): VHDL Compiler exiting
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-vcom -reportprogress 300 -work work /home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Compiling entity data_memory
-# -- Compiling architecture behavior of data_memory
-vsim -novopt work.tb_riscv
-# vsim -novopt work.tb_riscv 
-# Loading work.tb_riscv
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.riscv(structural)
-# Loading work.fetch_stage(structure)
-# Loading work.genericreg(behavioral)
-# Loading work.prediction_table(behavioural)
-# Loading work.decode_stage(structural)
-# Loading work.register_file(behavioral)
-# Loading work.immediate_generator(behavioural)
-# Loading work.mux3to1(logicfunction)
-# Loading work.comparator(behav)
-# Loading work.hazard_detect_unit(behav)
-# Loading work.forwarding_unit(behavioural)
-# Loading work.control(behavior)
-# Loading work.prediction_validate(behav)
-# Loading work.execution_stage(structural)
-# Loading work.mux2to1(behavioral)
-# Loading work.alu_control(behav)
-# Loading work.alu(behavioural)
-# Loading work.memory_stage(structural)
-# Loading work.write_back_stage(behavioral)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Refreshing ./work.data_memory(behavior)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
 # Loading work.data_memory(behavior)
 # Loading work.instruction_memory(structural)
 add wave *
 run 200 ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/DM
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/decode/branch_equal_unit
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/UUT/fetch/pt
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /tb_riscv/UUT/decode/reg_file
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+quit -sim
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testbench
+# -- Compiling architecture struct of testbench
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(struct)
+# Loading work.riscv(structural)
+# Loading work.fetch_stage(structure)
+# Loading work.genericreg(behavioral)
+# Loading work.prediction_table(behavioural)
+# Loading work.decode_stage(structural)
+# Loading work.register_file(behavioral)
+# Loading work.immediate_generator(behavioural)
+# Loading work.mux3to1(logicfunction)
+# Loading work.comparator(behav)
+# Loading work.hazard_detect_unit(behav)
+# Loading work.forwarding_unit(behavioural)
+# Loading work.control(behavior)
+# Loading work.prediction_validate(behav)
+# Loading work.execution_stage(structural)
+# Loading work.mux2to1(behavioral)
+# Loading work.alu_control(behav)
+# Loading work.alu(behavioural)
+# Loading work.memory_stage(structural)
+# Loading work.write_back_stage(behavioral)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(behavior)
+# Loading work.instruction_memory(structural)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+add wave *
+run 200ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 3  Instance: /tb_riscv/DM
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 15 ns  Iteration: 6  Instance: /testbench/dut/decode/branch_equal_unit
+quit -sim
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity testbench
+# -- Compiling architecture struct of testbench
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(struct)
+# Loading work.riscv(structural)
+# Loading work.fetch_stage(structure)
+# Loading work.genericreg(behavioral)
+# Loading work.prediction_table(behavioural)
+# Loading work.decode_stage(structural)
+# Loading work.register_file(behavioral)
+# Loading work.immediate_generator(behavioural)
+# Loading work.mux3to1(logicfunction)
+# Loading work.comparator(behav)
+# Loading work.hazard_detect_unit(behav)
+# Loading work.forwarding_unit(behavioural)
+# Loading work.control(behavior)
+# Loading work.prediction_validate(behav)
+# Loading work.execution_stage(structural)
+# Loading work.mux2to1(behavioral)
+# Loading work.alu_control(behav)
+# Loading work.alu(behavioural)
+# Loading work.memory_stage(structural)
+# Loading work.write_back_stage(behavioral)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(behavior)
+# Loading work.instruction_memory(structural)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+add wave *
+run 200 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+run
+run
+run
+quit -sim
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity immediate_generator
+# -- Compiling architecture behavioural of immediate_generator
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(struct)
+# Loading work.riscv(structural)
+# Loading work.fetch_stage(structure)
+# Loading work.genericreg(behavioral)
+# Loading work.prediction_table(behavioural)
+# Loading work.decode_stage(structural)
+# Loading work.register_file(behavioral)
+# Loading work.immediate_generator(behavioural)
+# Loading work.mux3to1(logicfunction)
+# Loading work.comparator(behav)
+# Loading work.hazard_detect_unit(behav)
+# Loading work.forwarding_unit(behavioural)
+# Loading work.control(behavior)
+# Loading work.prediction_validate(behav)
+# Loading work.execution_stage(structural)
+# Loading work.mux2to1(behavioral)
+# Loading work.alu_control(behav)
+# Loading work.alu(behavioural)
+# Loading work.memory_stage(structural)
+# Loading work.write_back_stage(behavioral)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(behavior)
+# Loading work.instruction_memory(structural)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+add wave *
+run 200 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+run 50 ns
+restart
+run 220 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+restart
+run 210 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+quit -sim
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity decode_stage
+# -- Compiling architecture structural of decode_stage
+vcom -reportprogress 30 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/Immediate_Generator.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity immediate_generator
+# -- Compiling architecture behavioural of immediate_generator
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(struct)
+# Loading work.riscv(structural)
+# Loading work.fetch_stage(structure)
+# Loading work.genericreg(behavioral)
+# Loading work.prediction_table(behavioural)
+# Loading work.decode_stage(structural)
+# Loading work.register_file(behavioral)
+# Loading work.immediate_generator(behavioural)
+# Loading work.mux3to1(logicfunction)
+# Loading work.comparator(behav)
+# Loading work.hazard_detect_unit(behav)
+# Loading work.forwarding_unit(behavioural)
+# Loading work.control(behavior)
+# Loading work.prediction_validate(behav)
+# Loading work.execution_stage(structural)
+# Loading work.mux2to1(behavioral)
+# Loading work.alu_control(behav)
+# Loading work.alu(behavioural)
+# Loading work.memory_stage(structural)
+# Loading work.write_back_stage(behavioral)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(behavior)
+# Loading work.instruction_memory(structural)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+add wave *
+run 210 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vcom -reportprogress 300 -work work {C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity hazard_detect_unit
+# -- Compiling architecture behav of hazard_detect_unit
+vsim work.testbench
+# vsim work.testbench 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(struct)
+# Loading work.riscv(structural)
+# Loading work.fetch_stage(structure)
+# Loading work.genericreg(behavioral)
+# Loading work.prediction_table(behavioural)
+# Loading work.decode_stage(structural)
+# Loading work.register_file(behavioral)
+# Loading work.immediate_generator(behavioural)
+# Loading work.mux3to1(logicfunction)
+# Loading work.comparator(behav)
+# Loading work.hazard_detect_unit(behav)
+# Loading work.forwarding_unit(behavioural)
+# Loading work.control(behavior)
+# Loading work.prediction_validate(behav)
+# Loading work.execution_stage(structural)
+# Loading work.mux2to1(behavioral)
+# Loading work.alu_control(behav)
+# Loading work.alu(behavioural)
+# Loading work.memory_stage(structural)
+# Loading work.write_back_stage(behavioral)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.data_memory(behavior)
+# Loading work.instruction_memory(structural)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_gen(beh)
+add wave *
+run 355 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/im
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dm
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/decode/branch_equal_unit
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/fetch/pt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut/decode/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /testbench/dm
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run

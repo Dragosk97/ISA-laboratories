@@ -53,7 +53,7 @@ architecture behavioural of Immediate_Generator is
                                   imm(11) <= instr_input(20);
                                   imm(19 downto 12) <= instr_input(19 downto 12);
                                   imm(10 downto 1) <= instr_input(30 downto 21);
-                                  imm(31 downto 13) <= (31 downto 13 => instr_input(31)); --sign extension
+                                  imm(31 downto 21) <= (31 downto 21 => instr_input(31)); --sign extension
                 when others => 
             end case;
         end process;
