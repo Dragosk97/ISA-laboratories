@@ -7,6 +7,7 @@ entity clk_gen is
   port (
     END_SIM : in  std_logic;
     CLK     : out std_logic;
+    start_address: out std_logic_vector(31 downto 0);
     RST_n   : out std_logic);
 end clk_gen;
 
@@ -35,6 +36,14 @@ begin  -- beh
     RST_n <= '0';
     wait for 3*Ts/2;
     RST_n <= '1';
+    wait;
+  end process;
+
+  process
+  begin  -- process
+    start_address <= (others => '0');
+    wait for 3*Ts/2;
+    start_address <= "00000000011100000000100000010011";
     wait;
   end process;
 
