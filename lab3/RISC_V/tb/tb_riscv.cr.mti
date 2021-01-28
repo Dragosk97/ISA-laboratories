@@ -1,0 +1,17 @@
+C:/Users/Gaspare/Desktop/git_rep/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v {1 {vlog -work work -nocovercells C:/Users/Gaspare/Desktop/git_rep/ISA-laboratories/lab3/RISC_V/tb/tb_riscv.v
+Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+-- Compiling module tb_riscv
+
+Top level modules:
+	tb_riscv
+
+} {} {}} C:/Users/Gaspare/Desktop/git_rep/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd {1 {vcom -work work -2002 -explicit C:/Users/Gaspare/Desktop/git_rep/ISA-laboratories/lab3/RISC_V/tb/clk_gen.vhd
+Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity clk_gen
+-- Compiling architecture beh of clk_gen
+
+} {} {}}

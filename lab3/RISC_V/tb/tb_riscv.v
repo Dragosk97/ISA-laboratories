@@ -14,11 +14,11 @@ module tb_riscv ();
    wire [31:0] instruction_address_i;
 
    clk_gen CG(.CLK(CLK_i),
-	      .RST_n(RST_n_i)
+	      .RST(RST_i),
 		  .start_address(start_address_i));
 
    RISCV UUT(.clk(CLK_i),
-	     .rst_n(RST_i),
+	     .rst(RST_i),
 		 .start_address(start_address_i),
 		 .data_mem_in(data_mem_in_i),
 		 .data_mem_out(data_mem_out_i),
@@ -28,18 +28,18 @@ module tb_riscv ();
 		 .instruction_in(instruction_in_i),
 		 .instruction_address(instruction_address_i));
       
-   data_memory DM( .address(.address_mem_out_i),
+   data_memory DM( .address(address_mem_out_i),
                    .data(data_mem_out_i),
                    .MemWrite(MemLoad_i),
                    .MemRead(MemRead_i),
                    .clock(CLK_i),
-                   .cs('1'),
+                   .cs(1),
                    .rst(RST_i),
                    .Qout(data_mem_in_i));
 
 
-   instruction_memory IM( .address(.instruction_address_i),
-                          .data(.instruction_in_i));
+   instruction_memory IM( .address(instruction_address_i),
+                          .data(instruction_in_i));
 
 endmodule
 
