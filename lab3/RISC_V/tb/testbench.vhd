@@ -29,7 +29,7 @@ architecture struct of testbench is
     component data_memory IS
         port (address: IN std_logic_vector(31 downto 0);
             data: IN signed(31 downto 0);
-            MemWrite, MemRead, clock, cs, rst: IN STD_LOGIC;
+            MemWrite, MemRead, clock, rst: IN STD_LOGIC;
             Qout: OUT signed(31 downto 0));
     end component;
 
@@ -45,7 +45,7 @@ architecture struct of testbench is
           RST  : out std_logic);
     end component;
 
-    signal clk, rst, one : std_logic;
+    signal clk, rst : std_logic;
     signal start_address : std_logic_vector(31 downto 0);
     signal data_mem_write, data_mem_read : signed(31 downto 0);
     signal address_data_mem : std_logic_vector(31 downto 0);
@@ -54,8 +54,6 @@ architecture struct of testbench is
     signal instruction_address : std_logic_vector(31 downto 0);
 
 begin
-
-    one <= '1';
 
     DUT : RISCV port map (
         clk => clk,
@@ -76,7 +74,6 @@ begin
         MemWrite => MemWrite,
         MemRead => MemRead,
         clock => clk,
-        cs => one,
         rst => rst,
         Qout => data_mem_read
     );
