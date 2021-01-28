@@ -9,7 +9,7 @@ use std.textio.all;
 ENTITY data_memory IS
 PORT (address: IN std_logic_vector(31 downto 0);
 		data: IN signed(31 downto 0);
-		MemWrite, MemRead, clock, cs, rst: IN STD_LOGIC;
+		MemWrite, MemRead, clock, rst: IN STD_LOGIC;
 		Qout: OUT signed(31 downto 0));
 END data_memory;
 
@@ -37,13 +37,23 @@ BEGIN
 			end loop;
 
 		ELSIF clock'event and clock='1' THEN
-			IF	cs='1' THEN
+			
 				IF MemWrite='1' then 
 					mem(to_integer(unsigned(address(31 downto 2)))) <= data;
 				END IF;
-			END IF;
+			
 		END IF;
 	END PROCESS;
-	Qout <= mem(to_integer(unsigned(address(31 downto 2)))) when (MemRead='1' and cs='1')
-		else x"00000000";
+	process(address, MemRead)
+		begin
+			if to_integer(unsigned(address(31 downto 2))) >= start_index and to_integer(unsigned(address(31 downto 2))) <= stop_index then
+				if MemRead = '1' then 				
+					Qout <= mem(to_integer(unsigned(address(31 downto 2))));
+				else 
+					Qout <= x"00000000";
+				end if;
+			else	  	
+				Qout <= (others => '0');
+			end if;
+	end process;
 END Behavior;

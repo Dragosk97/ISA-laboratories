@@ -12,7 +12,7 @@ module tb_riscv ();
    wire MemLoad_i;
    wire [31:0] instruction_in_i;
    wire [31:0] instruction_address_i;
-
+	
    clk_gen CG(.CLK(CLK_i),
 	      .RST(RST_i),
 		  .start_address(start_address_i));
@@ -33,7 +33,6 @@ module tb_riscv ();
                    .MemWrite(MemLoad_i),
                    .MemRead(MemRead_i),
                    .clock(CLK_i),
-                   .cs(1),
                    .rst(RST_i),
                    .Qout(data_mem_in_i));
 

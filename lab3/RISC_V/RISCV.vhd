@@ -203,6 +203,7 @@ SIGNAL rd_address_exmem : std_logic_vector(4 downto 0);
 SIGNAL result_exmem : signed(31 downto 0);
 SIGNAL MemLoad_exmem : std_logic;
 SIGNAL RegWrite_exmem : std_logic;
+signal address_mem_out_dummy: std_logic_vector(31 downto 0);
 -- MEM/WB
 SIGNAL rd_address_memwb : std_logic_vector(4 downto 0);
 SIGNAL rd_data : signed(31 downto 0);
@@ -341,7 +342,7 @@ port map (
     result_exmem => result_exmem,
     wb_exmem => wb_mux_sel_exmem
 );
-
+address_mem_out <= std_logic_vector(result_exmem);
 memory: memory_stage
 port map ( 
     clk => clk,
@@ -356,7 +357,7 @@ port map (
     data_mem_in=> data_mem_in,
     --output to data memory
     data_mem_out=> data_mem_out,
-    address_mem_out=> address_mem_out,
+    address_mem_out=> address_mem_out_dummy,
     --output to WB
     data_memwb=> data_memwb,
     result_memwb=> result_memwb,

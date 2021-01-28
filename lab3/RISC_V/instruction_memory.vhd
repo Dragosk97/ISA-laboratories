@@ -38,6 +38,12 @@ architecture structural of instruction_memory is
 		"00000000000000000000000000010011"
 	);
 	begin
-	
-		data <= rom_content(to_integer(unsigned(address(31 downto 2))));
+	process(address)
+		begin
+			if to_integer(unsigned(address(31 downto 2))) >= start_index and to_integer(unsigned(address(31 downto 2))) <= stop_index then
+				data <= rom_content(to_integer(unsigned(address(31 downto 2))));
+			else	  	
+				data <= (others => '0');
+			end if;
+	end process;
 end structural;
