@@ -1,6 +1,6 @@
 //`timescale 1ns
 
-module tb_fir ();
+module tb_riscv ();
 
    wire CLK_i;
    wire RST_n_i;
