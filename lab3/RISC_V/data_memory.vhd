@@ -15,13 +15,13 @@ END data_memory;
 
 ARCHITECTURE Behavior OF data_memory IS
 constant start_index : integer := 67125248;
-constant stop_index : integer:= 67125368;
+constant stop_index : integer:=   67125368;
 
 type ram_array is ARRAY(start_index to stop_index) of signed (31 downto 0);
 signal mem: ram_array;
 BEGIN
 	PROCESS (clock, rst)
-	file fp_in : text open READ_MODE is "../../tb/data_bin.txt";
+	file fp_in : text open READ_MODE is "../tb/data_bin.txt";
 	variable line_in : line;
 	variable x : bit_vector(31 downto 0);
 	BEGIN
@@ -31,8 +31,8 @@ BEGIN
 					readline(fp_in, line_in);
 					read(line_in, x);
 					mem(i) <= signed(to_stdlogicvector(x));
-				else
-					mem(i) <= x"00000000";
+--				else
+--					mem(i) <= x"00000000";
 				end if;
 			end loop;
 
@@ -44,5 +44,6 @@ BEGIN
 			END IF;
 		END IF;
 	END PROCESS;
-	Qout <= mem(to_integer(unsigned(address(31 downto 2)))) when (MemRead='1' and cs='1');
+	Qout <= mem(to_integer(unsigned(address(31 downto 2)))) when (MemRead='1' and cs='1')
+		else x"00000000";
 END Behavior;
