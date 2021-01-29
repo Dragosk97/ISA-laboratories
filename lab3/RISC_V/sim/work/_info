@@ -120,43 +120,43 @@ R8
 R9
 !s100 CkX;ITneJQhQAge7<jcUo1
 Econtrol
-R1
+Z24 w1611938607
 R2
 R3
 R4
-Z24 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd
-Z25 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd
+Z25 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd
+Z26 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/control.vhd
 l0
 L5
-V;<d<bJ^]E1ToE19I8dO`;2
+VZGAnD@AGH5XGFZWMnJhZ91
 R7
 32
 R8
 R9
-!s100 >k__XEbN8OaNl=>ni]A]51
+!s100 i7E7Q7d^ehPN_<`_Lkide3
 Abehavior
 R2
 R3
-DEx4 work 7 control 0 22 ;<d<bJ^]E1ToE19I8dO`;2
+DEx4 work 7 control 0 22 ZGAnD@AGH5XGFZWMnJhZ91
 l24
 L22
-VG1B8REmm[_7b3[kB2bRK53
+Vi0SnW`hFC6NcWT]YfNTh@3
 R7
 32
 R10
 R11
 R8
 R9
-!s100 5NYE>5:<:T4C7ea6a^3OH0
+!s100 7i7^>9EYUAA2SZR`Ejn160
 Edata_memory
-Z26 w1611861885
-Z27 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
-Z28 DPx4 ieee 16 std_logic_textio 0 22 8ONYdGiICLK<GeVc1o<IF0
+Z27 w1611861885
+Z28 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z29 DPx4 ieee 16 std_logic_textio 0 22 8ONYdGiICLK<GeVc1o<IF0
 R2
 R3
 R4
-Z29 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd
-Z30 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd
+Z30 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd
+Z31 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/data_memory.vhd
 l0
 L9
 VCLI0Vczjbj=08Q^OhHe^l0
@@ -166,8 +166,8 @@ R8
 R9
 !s100 <ElJTNBSME2ZLXghKKhg62
 Abehavior
-R27
 R28
+R29
 R2
 R3
 DEx4 work 11 data_memory 0 22 CLI0Vczjbj=08Q^OhHe^l0
@@ -179,46 +179,46 @@ R7
 Mx4 4 ieee 14 std_logic_1164
 Mx3 4 ieee 11 numeric_std
 Mx2 4 ieee 16 std_logic_textio
-Z31 Mx1 3 std 6 textio
+Z32 Mx1 3 std 6 textio
 R8
 R9
 !s100 IcXcYj[NXN8V@MgOM`nM@3
 Edecode_stage
-Z32 w1611868615
+Z33 w1611947039
 R2
 R3
 R4
-Z33 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
-Z34 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
+Z34 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
+Z35 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/decode_stage.vhd
 l0
 L5
-VYi>AOGP]5XXNNbRWdRVKD0
+V4l^7`XlcVOo<PDPUCNlgQ2
 R7
 32
 R8
 R9
-!s100 zfiB[?G7Jl5>5VX=XeHaK0
+!s100 Mc0Zc>z6K1[?J=?Z]3f6=2
 Astructural
 R2
 R3
-DEx4 work 12 decode_stage 0 22 Yi>AOGP]5XXNNbRWdRVKD0
-l196
+DEx4 work 12 decode_stage 0 22 4l^7`XlcVOo<PDPUCNlgQ2
+l199
 L58
-V^X@7:XTm@H?eCX4MFjYE03
+VZ:56[XMQiTL8CE;mlV8eb3
 R7
 32
 R10
 R11
 R8
 R9
-!s100 ?z[MPj_^0m^bUV5ek[4V_1
+!s100 ?lDLX4nCoP<CO=a`J_mZX0
 Eexecution_stage
-Z35 w1611769214
+Z36 w1611769214
 R2
 R3
 R4
-Z36 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
-Z37 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
+Z37 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
+Z38 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/execution_stage.vhd
 l0
 L5
 VgM:MN8ZKQd6i[4o3S6kG51
@@ -242,12 +242,12 @@ R8
 R9
 !s100 W:4HRf58gIgOhZmm0ME2R1
 Efetch_stage
-Z38 w1611770025
+Z39 w1611941183
 R2
 R3
 R4
-Z39 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
-Z40 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
+Z40 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
+Z41 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/fetch_stage.vhd
 l0
 L5
 VRXJKf?G`[e^<CFY0b`W?<2
@@ -260,23 +260,23 @@ Astructure
 R2
 R3
 DEx4 work 11 fetch_stage 0 22 RXJKf?G`[e^<CFY0b`W?<2
-l83
+l80
 L39
-Vo`@0bRnI:V`ndGfZ^z]M73
+V9@IEG7XzS2Q`HVELHZ6?l3
 R7
 32
 R10
 R11
 R8
 R9
-!s100 mUXU3Z`=d:KoUKO_1ME3Q1
+!s100 G`Q;00:f=;ASh<?10bCW20
 Eforwarding_unit
 R1
 R2
 R3
 R4
-Z41 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
-Z42 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
+Z42 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
+Z43 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/forwarding_unit.vhd
 l0
 L5
 VmF4X5XCE3JM7>_8hg@4;]1
@@ -304,8 +304,8 @@ R1
 R2
 R3
 R4
-Z43 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
-Z44 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
+Z44 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
+Z45 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/GenericReg.vhd
 l0
 L5
 VZ_>;C7bCPWIRib_Ya]^=_0
@@ -329,31 +329,31 @@ R8
 R9
 !s100 2V]h1Am;h^@<c4egl>eod2
 Ehazard_detect_unit
-Z45 w1611869384
+Z46 w1611869384
 R3
 R4
-Z46 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
-Z47 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
+Z47 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
+Z48 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/hazard_detect_unit.vhd
 l0
 L4
 VOndHMZeJY7XBE0S[h;P]T1
-!s100 3]1?Mfc2=7ihio16ZfTj]2
 R7
 32
 R8
 R9
+!s100 3]1?Mfc2=7ihio16ZfTj]2
 Abehav
 R3
-Z48 DEx4 work 18 hazard_detect_unit 0 22 OndHMZeJY7XBE0S[h;P]T1
+DEx4 work 18 hazard_detect_unit 0 22 OndHMZeJY7XBE0S[h;P]T1
 l22
 L20
 VDi18YkZo15g;ECn>H?_5z2
-!s100 kNVfmU7fhf?NPNElFXKHe0
 R7
 32
 R15
 R8
 R9
+!s100 kNVfmU7fhf?NPNElFXKHe0
 Eimmediate_generator
 Z49 w1611867865
 R2
@@ -376,15 +376,15 @@ DEx4 work 19 immediate_generator 0 22 MZDPVm<R@ZCTR1Vdk5LJ52
 l15
 L12
 V@4=]c@ZajdnHIZIDkHG<42
-!s100 A1fjO^k>K98dS0[e0l=No3
 R7
 32
 R10
 R11
 R8
 R9
+!s100 A1fjO^k>K98dS0[e0l=No3
 Einstruction_memory
-R26
+R27
 R2
 R3
 R4
@@ -529,7 +529,7 @@ R8
 R9
 !s100 VGzn58MKgCEWnJeaFJa9V1
 Eprediction_validate
-Z64 w1611414208
+Z64 w1611945397
 R2
 R3
 R4
@@ -537,26 +537,26 @@ Z65 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems 
 Z66 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/prediction_validate.vhd
 l0
 L5
-Vb`:TZ987;63HH[Bz4`8YX3
+VCVM`L]jjQf2VPl<ae7IE73
 R7
 32
 R8
 R9
-!s100 CnCZM<>SKFXaZb_d8:nOh2
+!s100 45cXofmJoJ6MNI5na5TX;3
 Abehav
 R2
 R3
-DEx4 work 19 prediction_validate 0 22 b`:TZ987;63HH[Bz4`8YX3
-l25
-L16
-V:0fRN2A1PWBWg>Fi0hlI?1
+DEx4 work 19 prediction_validate 0 22 CVM`L]jjQf2VPl<ae7IE73
+l26
+L17
+VGcBgi;RA71[V7d@W_HaQg0
 R7
 32
 R10
 R11
 R8
 R9
-!s100 A8E<1kaLOFhESMIi2L^4Z0
+!s100 3a@aR;a1lLYBK`hLm:zMA0
 Eregister_file
 R1
 R2
@@ -587,12 +587,12 @@ R8
 R9
 !s100 zGC[V`RfX=SY3A^[Tlbbn0
 Eriscv
-R26
+Z69 w1611942488
 R2
 R3
 R4
-Z69 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd
-Z70 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd
+Z70 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd
+Z71 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/RISCV.vhd
 l0
 L5
 VU3c77FGci;fH5@TNSI19I0
@@ -607,21 +607,21 @@ R3
 DEx4 work 5 riscv 0 22 U3c77FGci;fH5@TNSI19I0
 l241
 L24
-VmoMahQ3UECOUGmSoMX@931
+V1YXI0nbW`S5:;:e1O@?Pz2
+!s100 3[aTTFZ4DNLASDTA2K`aI0
 R7
 32
 R10
 R11
 R8
 R9
-!s100 XK:g`=cFfUiOmeF?5ZZhK0
 Etestbench
-Z71 w1611866078
+Z72 w1611866078
 R2
 R3
 R4
-Z72 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd
-Z73 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd
+Z73 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd
+Z74 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/tb/testbench.vhd
 l0
 L5
 V^]2^0JUcDh[WLDc2>]Bc>0
@@ -645,31 +645,31 @@ R8
 R9
 !s100 BcA4YiH89a90P_d2]C_fc3
 Ewrite_back_stage
-Z74 w1611420975
+Z75 w1611420975
 R2
 R3
 R4
-Z75 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
-Z76 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
+Z76 8C:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
+Z77 FC:/Users/utente/Documents/Roba da Università/Magistrale/Integrated systems architecture/Labs/git_repo/ISA-laboratories/lab3/RISC_V/write_back_stage.vhd
 l0
 L5
 V`3iNLMhcLW_=d<9V]9cbd1
+!s100 NgC`ZTD9DWC]H9M`1<Y4b2
 R7
 32
 R8
 R9
-!s100 NgC`ZTD9DWC]H9M`1<Y4b2
 Abehavioral
 R2
 R3
-DEx4 work 16 write_back_stage 0 22 `3iNLMhcLW_=d<9V]9cbd1
+Z78 DEx4 work 16 write_back_stage 0 22 `3iNLMhcLW_=d<9V]9cbd1
 l16
 L14
-VO`cJLNgj6=`hIThT:VlP;0
+Z79 VO`cJLNgj6=`hIThT:VlP;0
+Z80 !s100 cYzbKH`K5Z]O2S9^M`6UL3
 R7
 32
 R10
 R11
 R8
 R9
-!s100 cYzbKH`K5Z]O2S9^M`6UL3

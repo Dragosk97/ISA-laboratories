@@ -55,9 +55,6 @@ architecture structure of fetch_stage is
             Qout: OUT std_logic_vector(58 downto 0));
     END component;
 
-    -- Buffer signals
-    signal pc_ifix_buffer : std_logic_vector(31 downto 0);
-
     -- Prediction Table signals
     signal PT_in, PT_out : std_logic_vector(58 downto 0);
     signal PT_decision : std_logic;

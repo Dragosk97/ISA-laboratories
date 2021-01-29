@@ -7,10 +7,10 @@ PORT (opcode: IN std_logic_vector(6 downto 0); --Last 7 bits of the instruction
 	  RegWrite: out std_logic; --Write signal for the Register File
       is_rs1_valid: out std_logic; --The actual instruction use the filed as rs1?  
       is_rs2_valid:out std_logic; --The actual instruction use the filed as rs2?
-      mux1_PC_sel_idex: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
-      mux2_imm_sel_idex: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
-      mux_result_sel_idex: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
-      aluop_idex: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
+      mux1_PC_sel: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
+      mux2_imm_sel: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
+      mux_result_sel: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
+      aluop: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
       wb_mux_sel: out std_logic;
       MemRead: out std_logic;
       MemWrite: out std_logic;
@@ -44,10 +44,10 @@ BEGIN
         RegWrite <= '0';
         is_rs1_valid <= '0';
         is_rs2_valid <= '0';
-        mux1_PC_sel_idex <= '0';
-        mux2_imm_sel_idex <= '0';
-        mux_result_sel_idex <= "00";
-        aluop_idex <= "00";
+        mux1_PC_sel <= '0';
+        mux2_imm_sel <= '0';
+        mux_result_sel <= "00";
+        aluop <= "00";
         wb_mux_sel <= '1';
         MemRead <= '0';
         MemWrite <= '0';
@@ -58,19 +58,19 @@ BEGIN
                 when "0110011" => RegWrite <= '1';
                                   is_rs1_valid <= '1';
                                   is_rs2_valid <= '1';
-                                  mux1_PC_sel_idex <= '0';
-                                  mux2_imm_sel_idex <= '0';
-                                  mux_result_sel_idex <= "00";
-                                  aluop_idex <= "10";
+                                  mux1_PC_sel <= '0';
+                                  mux2_imm_sel <= '0';
+                                  mux_result_sel <= "00";
+                                  aluop <= "10";
                                   wb_mux_sel <= '1';   
                 --Instruction ADDI SRAI ANDI
                 when "0010011" => RegWrite <= '1';
                                   is_rs1_valid <= '1';
                                   is_rs2_valid <= '0';
-                                  mux1_PC_sel_idex <= '0';
-                                  mux2_imm_sel_idex <= '1';
-                                  mux_result_sel_idex <= "00";
-                                  aluop_idex <= "00";
+                                  mux1_PC_sel <= '0';
+                                  mux2_imm_sel <= '1';
+                                  mux_result_sel <= "00";
+                                  aluop <= "00";
                                   wb_mux_sel <= '1';
                                   MemRead <= '0';
                                   MemWrite <= '0';
@@ -79,37 +79,37 @@ BEGIN
                 when "0010111" =>   RegWrite <= '1';
                                     is_rs1_valid <= '0';
                                     is_rs2_valid <= '0';
-                                    mux1_PC_sel_idex <= '1';
-                                    mux2_imm_sel_idex <= '1';
-                                    mux_result_sel_idex <= "00";
-                                    aluop_idex <= "11"; --if the aluop is 11, in the alu control the add operation will be assigned 
+                                    mux1_PC_sel <= '1';
+                                    mux2_imm_sel <= '1';
+                                    mux_result_sel <= "00";
+                                    aluop <= "11"; --if the aluop is 11, in the alu control the add operation will be assigned 
                                     wb_mux_sel <= '1';
                 --Instruction LUI
                 when "0110111" =>   RegWrite <= '1';
                                     is_rs1_valid <= '0';
                                     is_rs2_valid <= '0';
-                                    --mux1_PC_sel_idex <= '0'; --it does not use the ALU, so this signal could be not defined
-                                    --mux2_imm_sel_idex <= '1'; -- it does not use the ALU, so this signal could be not defined
-                                    mux_result_sel_idex <= "01";
-                                    --aluop_idex <= "00";  --it does not use the ALU, so the aluop_idex could be not defined
+                                    --mux1_PC_sel <= '0'; --it does not use the ALU, so this signal could be not defined
+                                    --mux2_imm_sel <= '1'; -- it does not use the ALU, so this signal could be not defined
+                                    mux_result_sel <= "01";
+                                    --aluop <= "00";  --it does not use the ALU, so the aluop could be not defined
                                     wb_mux_sel <= '1';                            
                 --Instruction BEQ
                 when "1100011" =>   RegWrite <= '0';
                                     is_rs1_valid <= '1';
                                     is_rs2_valid <= '1';
-                                    --mux1_PC_sel_idex <= '0';
-                                    --mux2_imm_sel_idex <= '1';
-                                    --mux_result_sel_idex <= "00";
-                                    --aluop_idex <= "00"; 
+                                    --mux1_PC_sel <= '0';
+                                    --mux2_imm_sel <= '1';
+                                    --mux_result_sel <= "00";
+                                    --aluop <= "00"; 
                                     is_branch <= '1';               
                 --Instruction LW
                 when "0000011" =>   RegWrite <= '1';
                                     is_rs1_valid <= '1';
                                     is_rs2_valid <= '0';
-                                    mux1_PC_sel_idex <= '0';
-                                    mux2_imm_sel_idex <= '1';
-                                    mux_result_sel_idex <= "00";
-                                    aluop_idex <= "11"; 
+                                    mux1_PC_sel <= '0';
+                                    mux2_imm_sel <= '1';
+                                    mux_result_sel <= "00";
+                                    aluop <= "11"; 
                                     wb_mux_sel <= '0';
                                     MemRead <= '1';
                                     MemWrite <= '0';
@@ -117,10 +117,10 @@ BEGIN
                 when "1101111" =>   RegWrite <= '1';
                                     is_rs1_valid <= '0';
                                     is_rs2_valid <= '0';
-                                    --mux1_PC_sel_idex <= '0';  --The ALU is not used here
-                                    --mux2_imm_sel_idex <= '1';
-                                    mux_result_sel_idex <= "10";
-                                    --aluop_idex <= "00";
+                                    --mux1_PC_sel <= '0';  --The ALU is not used here
+                                    --mux2_imm_sel <= '1';
+                                    mux_result_sel <= "10";
+                                    --aluop <= "00";
                                     wb_mux_sel <= '1';
                                     MemRead <= '0';
                                     MemWrite <= '0'; 
@@ -129,10 +129,10 @@ BEGIN
                 when "0100011" =>   RegWrite <= '0';
                                     is_rs1_valid <= '1';
                                     is_rs2_valid <= '1';
-                                    mux1_PC_sel_idex <= '0';
-                                    mux2_imm_sel_idex <= '1';
-                                    mux_result_sel_idex <= "00";
-                                    aluop_idex <= "11";
+                                    mux1_PC_sel <= '0';
+                                    mux2_imm_sel <= '1';
+                                    mux_result_sel <= "00";
+                                    aluop <= "11";
                                     --wb_mux_sel <= "1";
                                     MemRead <= '0';
                                     MemWrite <= '1'; 

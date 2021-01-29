@@ -72,7 +72,7 @@ ARCHITECTURE structural of RISCV is
             -- EX/MEM
             rd_address_exmem : in std_logic_vector(4 downto 0);
             result_exmem : in signed(31 downto 0);
-            MemLoad_exmem : in std_logic;
+            MemRead_exmem : in std_logic;
             RegWrite_exmem : in std_logic;
     
             -- MEM/WB
@@ -274,7 +274,7 @@ port map (
     -- EX/MEM
     rd_address_exmem => rd_address_exmem,
     result_exmem => result_exmem,
-    MemLoad_exmem => MemLoad_exmem,
+    MemRead_exmem => MemRead_exmem,
     RegWrite_exmem => RegWrite_exmem,
     -- MEM/WB
     rd_address_memwb => rd_address_memwb,
@@ -342,7 +342,9 @@ port map (
     result_exmem => result_exmem,
     wb_exmem => wb_mux_sel_exmem
 );
+
 address_mem_out <= std_logic_vector(result_exmem);
+
 memory: memory_stage
 port map ( 
     clk => clk,

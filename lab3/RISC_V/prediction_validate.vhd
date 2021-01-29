@@ -9,6 +9,7 @@ entity prediction_validate is
         prediction : in std_logic;
         target_address : in std_logic_vector(31 downto 0);
         prediction_ta : in std_logic_vector(31 downto 0);
+        insert_nop : in std_logic;
         wrong_prediction : out std_logic
     );
 end prediction_validate;
@@ -24,6 +25,8 @@ architecture behav of prediction_validate is
     -- produced by the branch instruction.
 begin
     
-    wrong_prediction <= '1' when is_branch = '1' and (branch_decision /= prediction or (branch_decision = '1' and prediction_ta /= target_address))
+    wrong_prediction <= '1' when is_branch = '1' and
+            (branch_decision /= prediction or (branch_decision = '1' and prediction_ta /= target_address))
+            and insert_nop = '0'
         else '0';
 end behav ; -- behav

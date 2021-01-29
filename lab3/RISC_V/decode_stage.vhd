@@ -17,7 +17,7 @@ entity decode_stage is
         -- EX/MEM
         rd_address_exmem : in std_logic_vector(4 downto 0);
         result_exmem : in signed(31 downto 0);
-        MemLoad_exmem : in std_logic;
+        MemRead_exmem : in std_logic;
         RegWrite_exmem : in std_logic;
 
         -- MEM/WB
@@ -138,10 +138,10 @@ end component;
         RegWrite: out std_logic; --Write signal for the Register File
         is_rs1_valid: out std_logic; --The actual instruction use the filed as rs1?  
         is_rs2_valid:out std_logic; --The actual instruction use the filed as rs2?
-        mux1_PC_sel_idex: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
-        mux2_imm_sel_idex: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
-        mux_result_sel_idex: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
-        aluop_idex: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
+        mux1_PC_sel: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 1 the PC or not
+        mux2_imm_sel: out std_logic; --Signal for the multiplexer in the EX stage in order to choose as operand 2 the immediate value or not
+        mux_result_sel: out std_logic_vector(1 downto 0); -- Signal for the multiplexer in the EX stage at the output of the ALU among ALU_result immediate and PC+4
+        aluop: out std_logic_vector(1 downto 0);--control signals for the alu control in order to choose the correct operation inside the ALU
         wb_mux_sel: out std_logic;
         MemRead: out std_logic;
         MemWrite: out std_logic;
@@ -156,6 +156,7 @@ end component;
         prediction : in std_logic;
         target_address : in std_logic_vector(31 downto 0);
         prediction_ta : in std_logic_vector(31 downto 0);
+        insert_nop : in std_logic;
         wrong_prediction : out std_logic
         );
     end component;
@@ -179,8 +180,9 @@ end component;
     signal branch_decision_buff : std_logic;
     signal is_jump_buff : std_logic;
     signal wrong_prediction_buff : std_logic;
-    
+    signal aluop : std_logic_vector(1 downto 0);
     signal mux1_PC_sel, mux2_imm_sel : std_logic;
+    signal mux_result_sel : std_logic_vector(1 downto 0);
     signal wb_mux_sel: std_logic;
     
     signal target_address_buff: std_logic_vector(31 downto 0);
@@ -190,7 +192,8 @@ end component;
     signal insert_nop : std_logic;
     
     -- Buffer signals
-    signal MemLoad_idex_buff, RegWrite_idex_buff : std_logic;
+    signal RegWrite_idex_buff : std_logic;
+    signal MemRead_idex_buff : std_logic;
     signal rd_address_idex_buff : std_logic_vector(4 downto 0);
     
 begin
@@ -216,12 +219,14 @@ begin
             pc_idex <= x"00000000";
             immediate_idex <= x"00000000";
             RegWrite_idex_buff <= '0';
-            MemLoad_idex_buff <= '0';
-            MemRead_idex <= '0';
+            MemLoad_idex <= '0';
+            MemRead_idex_buff <= '0';
             wb_mux_sel_idex <= '0';
             mux1_PC_sel_idex <= '0';
             mux2_imm_sel_idex <= '0';
-            
+            mux_result_sel_idex <= "00";
+            aluop_idex <= "00";
+
         elsif clk'event and clk='1' then
             if clear_idex = '1' then
                 funct3_idex <= "000";
@@ -233,12 +238,14 @@ begin
                 pc_idex <= x"00000000";
                 immediate_idex <= x"00000000";
                 RegWrite_idex_buff <= '0';
-                MemLoad_idex_buff <= '0';
-                MemRead_idex <= '0';
+                MemLoad_idex <= '0';
+                MemRead_idex_buff <= '0';
                 wb_mux_sel_idex <= '0';
                 mux1_PC_sel_idex <= '0';
                 mux2_imm_sel_idex <= '0';
-                
+                mux_result_sel_idex <= "00";
+                aluop_idex <= "00";
+            
             else
                 funct3_idex <= funct3;
                 rd_address_idex_buff <= rd_address;
@@ -249,24 +256,27 @@ begin
                 pc_idex <= pc_ifid;
                 immediate_idex <= immediate;
                 RegWrite_idex_buff <= RegWrite;
-                MemLoad_idex_buff <= MemLoad;
-                MemRead_idex <= MemRead;
+                MemLoad_idex <= MemLoad;
+                MemRead_idex_buff <= MemRead;
                 wb_mux_sel_idex <= wb_mux_sel;
                 mux1_PC_sel_idex <= mux1_PC_sel;
-                mux2_imm_sel_idex <= mux2_imm_sel;
+                mux2_imm_sel_idex <= mux2_imm_sel;            
+                mux_result_sel_idex <= mux_result_sel;
+                aluop_idex <= aluop;
+            
             end if;
         end if;
     end process;
             
     -- Buffer output
-    MemLoad_idex <= MemLoad_idex_buff;
+    MemRead_idex <= MemRead_idex_buff;
     RegWrite_idex <= RegWrite_idex_buff;
     rd_address_idex <= rd_address_idex_buff;
     
     -- Register File instance
     reg_file : Register_File port map (
         write_data => result_memwb,
-        RegWrite => RegWrite,
+        RegWrite => RegWrite_memwb,
         read_reg1 => rs1_address,
         read_reg2 => rs2_address,
         write_reg => rd_address_memwb,
@@ -283,7 +293,7 @@ begin
     );
         
     -- Target address computation
-    target_address_buff <= std_logic_vector(signed(pc_ifid) + (immediate(30 downto 0)));
+    target_address_buff <= std_logic_vector(signed(pc_ifid) + (immediate(31 downto 0)));
         
     -- Branch Forwarding
     mux_fwd_1 : mux3to1 generic map (32) port map(
@@ -317,8 +327,8 @@ begin
         rd_address_idex => rd_address_idex_buff,
         rd_address_exmem => rd_address_exmem,
         is_branch => is_branch,
-        is_ex_load => MemLoad_idex_buff,
-        is_mem_load => MemLoad_exmem,
+        is_ex_load => MemRead_idex_buff,
+        is_mem_load => MemRead_exmem,
         is_ex_rd_valid => RegWrite_idex_buff,
         is_rs1_valid => is_rs1_valid,
         is_rs2_valid => is_rs2_valid,
@@ -351,10 +361,10 @@ begin
         RegWrite => RegWrite,
         is_rs1_valid => is_rs1_valid,
         is_rs2_valid => is_rs2_valid,
-        mux1_PC_sel_idex => mux1_PC_sel,
-        mux2_imm_sel_idex => mux2_imm_sel,
-        mux_result_sel_idex => mux_result_sel_idex,
-        aluop_idex => aluop_idex, 
+        mux1_PC_sel => mux1_PC_sel,
+        mux2_imm_sel => mux2_imm_sel,
+        mux_result_sel => mux_result_sel,
+        aluop => aluop, 
         wb_mux_sel => wb_mux_sel,
         MemRead => MemRead,
         MemWrite => MemLoad,
@@ -374,6 +384,7 @@ begin
         prediction => prediction_ifid,
         target_address => target_address_buff,
         prediction_ta => prediction_ta_ifid,
+        insert_nop => insert_nop,
         wrong_prediction => wrong_prediction_buff);
         
     target_address <= target_address_buff;
