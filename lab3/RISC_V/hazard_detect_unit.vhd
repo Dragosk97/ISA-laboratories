@@ -27,14 +27,18 @@ begin
 
         -- Branch hazard
         if is_branch = '1' then
-            
-            if is_ex_rd_valid = '1' and (rs1_address = rd_address_idex or rs2_address = rd_address_idex) then
-                insert_nop <= '1';
+            if rd_address_idex /= "00000" then
+                if is_ex_rd_valid = '1' and (rs1_address = rd_address_idex or rs2_address = rd_address_idex) then
+                    insert_nop <= '1';
+                end if;
             end if;
-            
-            if is_mem_load = '1' and (rs1_address = rd_address_exmem or rs2_address = rd_address_exmem) then
-                insert_nop <= '1';
+                
+            if rd_address_idex /= "00000" then
+                if is_mem_load = '1' and (rs1_address = rd_address_exmem or rs2_address = rd_address_exmem) then
+                    insert_nop <= '1';
+                end if;
             end if;
+
         end if;
 
         -- Load hazard

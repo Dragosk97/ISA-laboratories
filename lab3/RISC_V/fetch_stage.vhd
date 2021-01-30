@@ -158,7 +158,7 @@ begin
         d => pc_4,
         clk => clk,
         rst => rst,
-        en => one,
+        en => pc_en, --this value is not updated if pc is stalled 
         q => prev_pc_4
     );
 
