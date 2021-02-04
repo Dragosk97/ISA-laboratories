@@ -13,8 +13,7 @@ entity register_file is
 		clk           : in std_logic;
 		rst			  : in std_logic;
 		read_data1	  : out signed(31 downto 0);
-		read_data2	  : out signed(31 downto 0)
-    );
+		read_data2	  : out signed(31 downto 0));
 end register_file;
 
 architecture behavioral of register_file is
@@ -40,8 +39,7 @@ begin
 		end if;
 	end process;
 
-	--trasparency
-	read_data1 <= registers(to_integer(unsigned(read_reg1))) when ((read_reg1 /= write_reg) or RegWrite = '0') else write_data;
-	read_data2 <= registers(to_integer(unsigned(read_reg2))) when ((read_reg2 /= write_reg) or RegWrite = '0') else write_data;
+	read_data1 <= registers(to_integer(unsigned(read_reg1)));
+	read_data2 <= registers(to_integer(unsigned(read_reg2)));
 	
 end behavioral;
