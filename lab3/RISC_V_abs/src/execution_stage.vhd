@@ -56,6 +56,15 @@ component alu_control is
         alu_ctrl: out std_logic_vector(3 downto 0));
 end component;
 
+component mux4to1 is
+    generic (N : integer := 32);
+    port (
+        a, b, c, d : signed(N-1 downto 0);
+        sel : std_logic_vector(1 downto 0);
+        m_out : signed(N-1 downto 0)
+    );
+end component;
+
 component mux3to1 IS
     GENERIC (N: integer:=8);
     PORT (a, b, c: IN signed(N-1 downto 0);
@@ -82,6 +91,13 @@ port( rs1_address_idex: IN std_logic_vector(4 downto 0);
       mux1_fwd, mux2_fwd: OUT std_logic_vector(1 downto 0));
 end component;
 
+component abs_unit is
+    port (
+        a : in signed (31 downto 0);
+        abs_a : out signed(31 downto 0)
+    );
+end component;
+
 SIGNAL RegWrite_exmem_buff : std_logic;
 SIGNAL result_exmem_buff : signed(31 downto 0);
 SIGNAL rd_address_exmem_buff : std_logic_vector(4 downto 0);
@@ -95,6 +111,8 @@ SIGNAL alu_result : signed (31 downto 0);
 
 SIGNAL pc_signed: signed(31 downto 0);
 SIGNAL pc_next: signed(31 downto 0);
+
+SIGNAL abs_result : signed (31 downto 0);
 
 SIGNAL ex_result: signed (31 downto 0);
 
@@ -146,13 +164,19 @@ PORT MAP( data_inA => alu_inA,
 --final mux
 pc_next <= pc_signed + 4;
 
-result_mux: mux3to1 GENERIC MAP (32) 
+abs_fu : abs_unit port map (
+    a => mux1_fwd_out,
+    abs_a => abs_result
+);
+
+result_mux: mux4to1 GENERIC MAP (32) 
 PORT MAP( a => alu_result,
           b => immediate_idex,
           c => pc_next,
+          d => abs_result,
           sel => mux_result_sel_idex,
           m_out => ex_result);
-
+          
 --forwarding_unit
 forwarding: forwarding_unit
     PORT MAP( rs1_address_idex => rs1_address_idex,
