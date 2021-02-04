@@ -136,7 +136,13 @@ BEGIN
                                     --wb_mux_sel <= "1";
                                     MemRead <= '0';
                                     MemWrite <= '1'; 
-            
+                -- Instruction ABS
+                when "0000111" =>   RegWrite <= '1';
+                                    is_rs1_valid <= '1';
+                                    is_rs2_valid <= '0';
+                                    mux1_PC_sel <= '0';
+                                    mux_result_sel <= "11";
+
                 when others => 
             end case;
     
