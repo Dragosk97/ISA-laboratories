@@ -10,7 +10,7 @@ end instruction_memory;
 architecture structural of instruction_memory is
 	
 	constant start_index :integer := 1048576;
-	constant stop_index :integer := 1048597;
+	constant stop_index :integer := 1048594;
 	
 	type mem is array ( start_index to stop_index) of std_logic_vector(31 downto 0);
 	constant rom_content : mem := (

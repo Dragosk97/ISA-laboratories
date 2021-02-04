@@ -14,36 +14,29 @@ end forwarding_unit;
 
 architecture behavioural of forwarding_unit is
 begin
-    alu_process : process(rs1_address_idex,rs2_address_idex,rd_address_exmem,rd_address_memwb)
+    alu_process : process(rs1_address_idex,rs2_address_idex,rd_address_exmem,rd_address_memwb, memwb_fwd_en,exmem_fwd_en)
+    
     begin
+    mux1_fwd <= "00";
+    mux2_fwd <= "00";    
+        if memwb_fwd_en = '1' then
+            if rs1_address_idex = rd_address_memwb then
+                mux1_fwd <= "01";
+            end if;
+            if rs2_address_idex = rd_address_memwb then
+                mux2_fwd <= "01";
+            end if;     
+        end if;
+
         if exmem_fwd_en = '1' then 
             if rs1_address_idex = rd_address_exmem then
                 mux1_fwd <= "10";
-            else 
-                mux1_fwd <= "00";
             end if;
 
             if rs2_address_idex = rd_address_exmem then
                 mux2_fwd <= "10";
-            else
-                mux2_fwd <= "00";
             end if;
-        elsif memwb_fwd_en = '1' then
-            if rs1_address_idex = rd_address_memwb then
-                mux1_fwd <= "01";
-            else 
-                mux1_fwd <= "00";
-            end if;
-
-            if rs2_address_idex = rd_address_memwb then
-                mux2_fwd <= "01";
-            else
-                mux2_fwd <= "00";
-            end if;
-        else
-            mux1_fwd <= "00";
-            mux2_fwd <= "00";     
         end if;
-        
+                            
     end process;
 end behavioural;

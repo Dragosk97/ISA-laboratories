@@ -59,9 +59,9 @@ end component;
 component mux4to1 is
     generic (N : integer := 32);
     port (
-        a, b, c, d : signed(N-1 downto 0);
-        sel : std_logic_vector(1 downto 0);
-        m_out : signed(N-1 downto 0)
+        a, b, c, d : in signed(N-1 downto 0);
+        sel : in std_logic_vector(1 downto 0);
+        m_out : out signed(N-1 downto 0)
     );
 end component;
 
@@ -175,7 +175,8 @@ PORT MAP( a => alu_result,
           c => pc_next,
           d => abs_result,
           sel => mux_result_sel_idex,
-          m_out => ex_result);
+          m_out => ex_result
+          );
           
 --forwarding_unit
 forwarding: forwarding_unit
