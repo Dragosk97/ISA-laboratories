@@ -1,0 +1,141 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV
+Version: O-2018.06-SP4
+Date   : Sat Feb  6 21:49:27 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: decode/rs2_address_idex_reg[4]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: execution/result_exmem_buff_reg[31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  decode/rs2_address_idex_reg[4]/CK (DFFR_X1)             0.00 #     0.00 r
+  decode/rs2_address_idex_reg[4]/Q (DFFR_X1)              0.09       0.09 f
+  decode/rs2_address_idex[4] (decode_stage)               0.00       0.09 f
+  execution/rs2_address_idex[4] (execution_stage)         0.00       0.09 f
+  execution/forwarding/rs2_address_idex[4] (forwarding_unit_0)
+                                                          0.00       0.09 f
+  execution/forwarding/U29/Z (XOR2_X1)                    0.07       0.16 f
+  execution/forwarding/U32/ZN (NOR3_X1)                   0.06       0.23 r
+  execution/forwarding/U18/ZN (NAND3_X1)                  0.04       0.27 f
+  execution/forwarding/U25/ZN (NAND3_X1)                  0.03       0.30 r
+  execution/forwarding/U24/ZN (NOR2_X1)                   0.03       0.33 f
+  execution/forwarding/mux2_fwd[0] (forwarding_unit_0)
+                                                          0.00       0.33 f
+  execution/mux2_alu_fwd/sel[0] (mux3to1_N32_1)           0.00       0.33 f
+  execution/mux2_alu_fwd/U35/ZN (NAND2_X1)                0.04       0.37 r
+  execution/mux2_alu_fwd/U36/ZN (INV_X1)                  0.04       0.41 f
+  execution/mux2_alu_fwd/U30/ZN (NAND2_X1)                0.03       0.44 r
+  execution/mux2_alu_fwd/U26/ZN (NAND3_X1)                0.04       0.47 f
+  execution/mux2_alu_fwd/m_out[0] (mux3to1_N32_1)         0.00       0.47 f
+  execution/mux2_alu_imm/a[0] (mux2to1_n32_0)             0.00       0.47 f
+  execution/mux2_alu_imm/U7/ZN (NAND2_X1)                 0.03       0.50 r
+  execution/mux2_alu_imm/U9/ZN (NAND2_X1)                 0.03       0.54 f
+  execution/mux2_alu_imm/z[0] (mux2to1_n32_0)             0.00       0.54 f
+  execution/component_ALU/data_inB[0] (alu)               0.00       0.54 f
+  execution/component_ALU/r297/B[0] (alu_DW01_add_0)      0.00       0.54 f
+  execution/component_ALU/r297/U61/ZN (AND2_X1)           0.04       0.58 f
+  execution/component_ALU/r297/U72/ZN (NAND2_X1)          0.03       0.61 r
+  execution/component_ALU/r297/U73/ZN (NAND3_X1)          0.04       0.65 f
+  execution/component_ALU/r297/U216/ZN (NAND2_X1)         0.04       0.68 r
+  execution/component_ALU/r297/U218/ZN (NAND3_X1)         0.04       0.72 f
+  execution/component_ALU/r297/U14/ZN (NAND2_X1)          0.04       0.76 r
+  execution/component_ALU/r297/U39/ZN (NAND3_X1)          0.03       0.79 f
+  execution/component_ALU/r297/U113/ZN (NAND2_X1)         0.03       0.83 r
+  execution/component_ALU/r297/U37/ZN (NAND3_X1)          0.04       0.86 f
+  execution/component_ALU/r297/U121/ZN (NAND2_X1)         0.04       0.90 r
+  execution/component_ALU/r297/U32/ZN (NAND3_X1)          0.04       0.94 f
+  execution/component_ALU/r297/U168/ZN (NAND2_X1)         0.04       0.97 r
+  execution/component_ALU/r297/U147/ZN (NAND3_X1)         0.04       1.01 f
+  execution/component_ALU/r297/U186/ZN (NAND2_X1)         0.04       1.05 r
+  execution/component_ALU/r297/U49/ZN (NAND3_X1)          0.04       1.08 f
+  execution/component_ALU/r297/U191/ZN (NAND2_X1)         0.04       1.12 r
+  execution/component_ALU/r297/U194/ZN (NAND3_X1)         0.04       1.15 f
+  execution/component_ALU/r297/U163/ZN (NAND2_X1)         0.03       1.19 r
+  execution/component_ALU/r297/U38/ZN (NAND3_X1)          0.04       1.23 f
+  execution/component_ALU/r297/U64/ZN (NAND2_X1)          0.03       1.26 r
+  execution/component_ALU/r297/U67/ZN (NAND3_X1)          0.03       1.29 f
+  execution/component_ALU/r297/U1_11/CO (FA_X1)           0.10       1.39 f
+  execution/component_ALU/r297/U204/ZN (NAND2_X1)         0.04       1.43 r
+  execution/component_ALU/r297/U52/ZN (NAND3_X1)          0.04       1.47 f
+  execution/component_ALU/r297/U209/ZN (NAND2_X1)         0.03       1.50 r
+  execution/component_ALU/r297/U212/ZN (NAND3_X1)         0.04       1.54 f
+  execution/component_ALU/r297/U100/ZN (NAND2_X1)         0.03       1.57 r
+  execution/component_ALU/r297/U102/ZN (NAND3_X1)         0.03       1.60 f
+  execution/component_ALU/r297/U1_15/CO (FA_X1)           0.10       1.70 f
+  execution/component_ALU/r297/U108/ZN (NAND2_X1)         0.04       1.74 r
+  execution/component_ALU/r297/U41/ZN (NAND3_X1)          0.04       1.78 f
+  execution/component_ALU/r297/U128/ZN (NAND2_X1)         0.03       1.81 r
+  execution/component_ALU/r297/U131/ZN (NAND3_X1)         0.04       1.85 f
+  execution/component_ALU/r297/U142/ZN (NAND2_X1)         0.04       1.89 r
+  execution/component_ALU/r297/U144/ZN (NAND3_X1)         0.04       1.93 f
+  execution/component_ALU/r297/U15/ZN (NAND2_X1)          0.04       1.97 r
+  execution/component_ALU/r297/U81/ZN (NAND3_X1)          0.03       2.00 f
+  execution/component_ALU/r297/U93/ZN (NAND2_X1)          0.03       2.03 r
+  execution/component_ALU/r297/U96/ZN (NAND3_X1)          0.03       2.06 f
+  execution/component_ALU/r297/U1_21/CO (FA_X1)           0.10       2.16 f
+  execution/component_ALU/r297/U174/ZN (NAND2_X1)         0.04       2.19 r
+  execution/component_ALU/r297/U31/ZN (NAND3_X1)          0.04       2.23 f
+  execution/component_ALU/r297/U179/ZN (NAND2_X1)         0.03       2.26 r
+  execution/component_ALU/r297/U182/ZN (NAND3_X1)         0.03       2.30 f
+  execution/component_ALU/r297/U1_24/CO (FA_X1)           0.10       2.39 f
+  execution/component_ALU/r297/U198/ZN (NAND2_X1)         0.04       2.44 r
+  execution/component_ALU/r297/U200/ZN (NAND3_X1)         0.04       2.47 f
+  execution/component_ALU/r297/U157/ZN (NAND2_X1)         0.03       2.50 r
+  execution/component_ALU/r297/U159/ZN (NAND3_X1)         0.04       2.54 f
+  execution/component_ALU/r297/U1_27/CO (FA_X1)           0.10       2.63 f
+  execution/component_ALU/r297/U136/ZN (NAND2_X1)         0.04       2.68 r
+  execution/component_ALU/r297/U138/ZN (NAND3_X1)         0.04       2.71 f
+  execution/component_ALU/r297/U88/ZN (NAND2_X1)          0.04       2.75 r
+  execution/component_ALU/r297/U11/ZN (NAND3_X1)          0.04       2.79 f
+  execution/component_ALU/r297/U85/ZN (NAND2_X1)          0.03       2.81 r
+  execution/component_ALU/r297/U10/ZN (NAND3_X1)          0.03       2.85 f
+  execution/component_ALU/r297/U9/ZN (XNOR2_X1)           0.05       2.90 f
+  execution/component_ALU/r297/SUM[31] (alu_DW01_add_0)
+                                                          0.00       2.90 f
+  execution/component_ALU/U12/ZN (AOI21_X1)               0.04       2.94 r
+  execution/component_ALU/U14/ZN (INV_X1)                 0.02       2.97 f
+  execution/component_ALU/result[31] (alu)                0.00       2.97 f
+  execution/result_mux/a[31] (mux3to1_N32_0)              0.00       2.97 f
+  execution/result_mux/U3/ZN (INV_X1)                     0.02       2.99 r
+  execution/result_mux/U1/ZN (OAI222_X1)                  0.04       3.03 f
+  execution/result_mux/m_out[31] (mux3to1_N32_0)          0.00       3.03 f
+  execution/result_exmem_buff_reg[31]/D (DFFR_X1)         0.01       3.04 f
+  data arrival time                                                  3.04
+
+  clock MY_CLK (rise edge)                                2.58       2.58
+  clock network delay (ideal)                             0.00       2.58
+  clock uncertainty                                      -0.07       2.51
+  execution/result_exmem_buff_reg[31]/CK (DFFR_X1)        0.00       2.51 r
+  library setup time                                     -0.04       2.47
+  data required time                                                 2.47
+  --------------------------------------------------------------------------
+  data required time                                                 2.47
+  data arrival time                                                 -3.04
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.57
+
+
+1

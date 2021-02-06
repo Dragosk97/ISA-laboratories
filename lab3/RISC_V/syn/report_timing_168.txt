@@ -1,0 +1,90 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV
+Version: O-2018.06-SP4
+Date   : Sat Feb  6 20:34:38 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: decode/pc_idex_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: execution/result_exmem_buff_reg[31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  decode/pc_idex_reg[2]/CK (DFFR_X1)                      0.00 #     0.00 r
+  decode/pc_idex_reg[2]/QN (DFFR_X1)                      0.06       0.06 f
+  decode/U11/ZN (INV_X1)                                  0.04       0.10 r
+  decode/pc_idex[2] (decode_stage)                        0.00       0.10 r
+  execution/pc_idex[2] (execution_stage)                  0.00       0.10 r
+  execution/add_147/A[2] (execution_stage_DW01_add_1)     0.00       0.10 r
+  execution/add_147/U37/CO (HA_X1)                        0.06       0.16 r
+  execution/add_147/U48/ZN (AND2_X1)                      0.04       0.21 r
+  execution/add_147/U26/CO (HA_X1)                        0.06       0.26 r
+  execution/add_147/U25/CO (HA_X1)                        0.06       0.32 r
+  execution/add_147/U24/CO (HA_X1)                        0.06       0.38 r
+  execution/add_147/U23/CO (HA_X1)                        0.06       0.44 r
+  execution/add_147/U22/CO (HA_X1)                        0.06       0.50 r
+  execution/add_147/U21/CO (HA_X1)                        0.06       0.55 r
+  execution/add_147/U20/CO (HA_X1)                        0.06       0.61 r
+  execution/add_147/U19/CO (HA_X1)                        0.06       0.67 r
+  execution/add_147/U18/CO (HA_X1)                        0.06       0.73 r
+  execution/add_147/U17/CO (HA_X1)                        0.06       0.78 r
+  execution/add_147/U16/CO (HA_X1)                        0.06       0.84 r
+  execution/add_147/U15/CO (HA_X1)                        0.06       0.90 r
+  execution/add_147/U14/CO (HA_X1)                        0.06       0.96 r
+  execution/add_147/U13/CO (HA_X1)                        0.06       1.02 r
+  execution/add_147/U12/CO (HA_X1)                        0.06       1.07 r
+  execution/add_147/U11/CO (HA_X1)                        0.06       1.13 r
+  execution/add_147/U10/CO (HA_X1)                        0.06       1.19 r
+  execution/add_147/U9/CO (HA_X1)                         0.06       1.25 r
+  execution/add_147/U8/CO (HA_X1)                         0.06       1.30 r
+  execution/add_147/U7/CO (HA_X1)                         0.06       1.36 r
+  execution/add_147/U6/CO (HA_X1)                         0.06       1.42 r
+  execution/add_147/U5/CO (HA_X1)                         0.06       1.48 r
+  execution/add_147/U4/CO (HA_X1)                         0.06       1.53 r
+  execution/add_147/U3/CO (HA_X1)                         0.06       1.59 r
+  execution/add_147/U2/CO (HA_X1)                         0.06       1.65 r
+  execution/add_147/U47/ZN (XNOR2_X1)                     0.05       1.70 r
+  execution/add_147/SUM[31] (execution_stage_DW01_add_1)
+                                                          0.00       1.70 r
+  execution/result_mux/c[31] (mux3to1_N32_0)              0.00       1.70 r
+  execution/result_mux/U4/ZN (AOI22_X1)                   0.03       1.73 f
+  execution/result_mux/U2/ZN (OAI21_X1)                   0.04       1.77 r
+  execution/result_mux/m_out[31] (mux3to1_N32_0)          0.00       1.77 r
+  execution/result_exmem_buff_reg[31]/D (DFFR_X2)         0.01       1.78 r
+  data arrival time                                                  1.78
+
+  clock MY_CLK (rise edge)                                1.68       1.68
+  clock network delay (ideal)                             0.00       1.68
+  clock uncertainty                                      -0.07       1.61
+  execution/result_exmem_buff_reg[31]/CK (DFFR_X2)        0.00       1.61 r
+  library setup time                                     -0.03       1.58
+  data required time                                                 1.58
+  --------------------------------------------------------------------------
+  data required time                                                 1.58
+  data arrival time                                                 -1.78
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.21
+
+
+1
