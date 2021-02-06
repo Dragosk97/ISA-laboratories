@@ -1,0 +1,101 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV
+Version: O-2018.06-SP4
+Date   : Thu Feb  4 15:04:03 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: fetch/instruction_ifid_reg[5]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: fetch/pc_reg/q_reg[16]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  fetch/instruction_ifid_reg[5]/CK (DFFR_X1)              0.00 #     0.00 r
+  fetch/instruction_ifid_reg[5]/QN (DFFR_X1)              0.06       0.06 f
+  fetch/U41/ZN (INV_X1)                                   0.04       0.10 r
+  fetch/instruction_ifid[5] (fetch_stage)                 0.00       0.10 r
+  decode/instruction_ifid[5] (decode_stage)               0.00       0.10 r
+  decode/imm_gen/instr_input[5] (Immediate_Generator)     0.00       0.10 r
+  decode/imm_gen/U11/ZN (INV_X1)                          0.03       0.13 f
+  decode/imm_gen/U35/ZN (NAND3_X1)                        0.04       0.17 r
+  decode/imm_gen/U82/ZN (OAI22_X1)                        0.05       0.22 f
+  decode/imm_gen/U36/ZN (OAI211_X1)                       0.06       0.28 r
+  decode/imm_gen/U37/ZN (INV_X1)                          0.04       0.31 f
+  decode/imm_gen/U104/ZN (AOI21_X1)                       0.06       0.37 r
+  decode/imm_gen/U105/ZN (INV_X1)                         0.03       0.41 f
+  decode/imm_gen/immediate_out[15] (Immediate_Generator)
+                                                          0.00       0.41 f
+  decode/add_296/B[15] (decode_stage_DW01_add_1)          0.00       0.41 f
+  decode/add_296/U504/ZN (NAND2_X1)                       0.04       0.44 r
+  decode/add_296/U502/ZN (OAI21_X1)                       0.03       0.48 f
+  decode/add_296/U501/ZN (AOI21_X1)                       0.05       0.53 r
+  decode/add_296/U485/ZN (OAI21_X1)                       0.03       0.56 f
+  decode/add_296/U422/ZN (AOI21_X1)                       0.06       0.63 r
+  decode/add_296/U298/ZN (OAI21_X1)                       0.04       0.66 f
+  decode/add_296/U505/ZN (AOI21_X1)                       0.04       0.71 r
+  decode/add_296/U364/ZN (OAI21_X1)                       0.03       0.74 f
+  decode/add_296/U516/ZN (AOI21_X1)                       0.04       0.78 r
+  decode/add_296/U515/ZN (OAI21_X1)                       0.03       0.81 f
+  decode/add_296/U514/ZN (AOI21_X1)                       0.04       0.85 r
+  decode/add_296/U507/ZN (INV_X1)                         0.02       0.88 f
+  decode/add_296/U3/CO (FA_X1)                            0.09       0.97 f
+  decode/add_296/U281/ZN (XNOR2_X1)                       0.05       1.02 r
+  decode/add_296/SUM[31] (decode_stage_DW01_add_1)        0.00       1.02 r
+  decode/prediction_val/target_address[31] (prediction_validate)
+                                                          0.00       1.02 r
+  decode/prediction_val/U39/ZN (XNOR2_X1)                 0.06       1.08 r
+  decode/prediction_val/U13/ZN (AND3_X1)                  0.05       1.13 r
+  decode/prediction_val/U12/ZN (NAND2_X1)                 0.02       1.15 f
+  decode/prediction_val/U52/Z (MUX2_X1)                   0.07       1.22 f
+  decode/prediction_val/U1/ZN (AND2_X2)                   0.04       1.26 f
+  decode/prediction_val/wrong_prediction (prediction_validate)
+                                                          0.00       1.26 f
+  decode/wrong_prediction (decode_stage)                  0.00       1.26 f
+  fetch/wrong_prediction (fetch_stage)                    0.00       1.26 f
+  fetch/U159/ZN (AOI21_X1)                                0.04       1.30 r
+  fetch/U52/ZN (AND3_X1)                                  0.06       1.36 r
+  fetch/U15/ZN (AND2_X2)                                  0.05       1.41 r
+  fetch/U7/Z (BUF_X2)                                     0.06       1.47 r
+  fetch/U232/ZN (AOI22_X1)                                0.04       1.51 f
+  fetch/U234/ZN (OAI211_X1)                               0.04       1.55 r
+  fetch/pc_reg/d[16] (GenericReg_regwidth32_1)            0.00       1.55 r
+  fetch/pc_reg/U55/ZN (AOI22_X1)                          0.04       1.59 f
+  fetch/pc_reg/U56/ZN (INV_X1)                            0.03       1.62 r
+  fetch/pc_reg/q_reg[16]/D (DFF_X2)                       0.01       1.62 r
+  data arrival time                                                  1.62
+
+  clock MY_CLK (rise edge)                                1.49       1.49
+  clock network delay (ideal)                             0.00       1.49
+  clock uncertainty                                      -0.07       1.42
+  fetch/pc_reg/q_reg[16]/CK (DFF_X2)                      0.00       1.42 r
+  library setup time                                     -0.03       1.39
+  data required time                                                 1.39
+  --------------------------------------------------------------------------
+  data required time                                                 1.39
+  data arrival time                                                 -1.62
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.23
+
+
+1

@@ -1,0 +1,142 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_abs' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_abs
+Version: O-2018.06-SP4
+Date   : Sat Feb  6 16:37:11 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: fetch/instruction_ifid_reg[4]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: fetch/pc_reg/q_reg[12]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_abs          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  fetch/instruction_ifid_reg[4]/CK (DFFS_X1)              0.00 #     0.00 r
+  fetch/instruction_ifid_reg[4]/Q (DFFS_X1)               0.09       0.09 f
+  fetch/instruction_ifid[4] (fetch_stage)                 0.00       0.09 f
+  decode/instruction_ifid[4] (decode_stage)               0.00       0.09 f
+  decode/imm_gen/instr_input[4] (Immediate_Generator)     0.00       0.09 f
+  decode/imm_gen/U88/ZN (INV_X1)                          0.04       0.12 r
+  decode/imm_gen/U6/ZN (NOR3_X1)                          0.03       0.15 f
+  decode/imm_gen/U94/ZN (NAND3_X1)                        0.03       0.18 r
+  decode/imm_gen/U97/ZN (NAND2_X1)                        0.03       0.22 f
+  decode/imm_gen/U99/ZN (AOI22_X1)                        0.05       0.26 r
+  decode/imm_gen/U101/ZN (NOR2_X1)                        0.03       0.29 f
+  decode/imm_gen/immediate_out[0] (Immediate_Generator)
+                                                          0.00       0.29 f
+  decode/add_296/B[0] (decode_stage_DW01_add_0)           0.00       0.29 f
+  decode/add_296/U73/ZN (AND2_X1)                         0.04       0.34 f
+  decode/add_296/U80/ZN (NAND2_X1)                        0.03       0.37 r
+  decode/add_296/U49/ZN (NAND3_X1)                        0.04       0.40 f
+  decode/add_296/U114/ZN (NAND2_X1)                       0.04       0.44 r
+  decode/add_296/U116/ZN (NAND3_X1)                       0.04       0.47 f
+  decode/add_296/U119/ZN (NAND2_X1)                       0.03       0.50 r
+  decode/add_296/U122/ZN (NAND3_X1)                       0.03       0.54 f
+  decode/add_296/U1_4/CO (FA_X1)                          0.10       0.63 f
+  decode/add_296/U108/ZN (NAND2_X1)                       0.03       0.67 r
+  decode/add_296/U110/ZN (NAND3_X1)                       0.04       0.70 f
+  decode/add_296/U1_6/CO (FA_X1)                          0.10       0.80 f
+  decode/add_296/U126/ZN (NAND2_X1)                       0.04       0.84 r
+  decode/add_296/U25/ZN (NAND3_X1)                        0.04       0.88 f
+  decode/add_296/U158/ZN (NAND2_X1)                       0.04       0.91 r
+  decode/add_296/U27/ZN (NAND3_X1)                        0.04       0.95 f
+  decode/add_296/U52/ZN (NAND2_X1)                        0.03       0.98 r
+  decode/add_296/U55/ZN (NAND3_X1)                        0.03       1.01 f
+  decode/add_296/U1_10/CO (FA_X1)                         0.10       1.11 f
+  decode/add_296/U165/ZN (NAND2_X1)                       0.04       1.15 r
+  decode/add_296/U64/ZN (NAND3_X1)                        0.05       1.19 f
+  decode/add_296/U5/ZN (NAND2_X1)                         0.04       1.23 r
+  decode/add_296/U38/ZN (NAND3_X1)                        0.03       1.26 f
+  decode/add_296/U188/ZN (NAND2_X1)                       0.03       1.30 r
+  decode/add_296/U95/ZN (NAND3_X1)                        0.04       1.34 f
+  decode/add_296/U6/ZN (NAND2_X1)                         0.04       1.38 r
+  decode/add_296/U65/ZN (NAND3_X1)                        0.03       1.41 f
+  decode/add_296/U200/ZN (NAND2_X1)                       0.04       1.45 r
+  decode/add_296/U69/ZN (NAND3_X1)                        0.04       1.48 f
+  decode/add_296/U206/ZN (NAND2_X1)                       0.04       1.52 r
+  decode/add_296/U41/ZN (NAND3_X1)                        0.04       1.56 f
+  decode/add_296/U212/ZN (NAND2_X1)                       0.03       1.59 r
+  decode/add_296/U215/ZN (NAND3_X1)                       0.04       1.63 f
+  decode/add_296/U219/ZN (NAND2_X1)                       0.03       1.66 r
+  decode/add_296/U221/ZN (NAND3_X1)                       0.03       1.69 f
+  decode/add_296/U1_19/CO (FA_X1)                         0.10       1.78 f
+  decode/add_296/U85/ZN (NAND2_X1)                        0.04       1.83 r
+  decode/add_296/U43/ZN (NAND3_X1)                        0.04       1.86 f
+  decode/add_296/U91/ZN (NAND2_X1)                        0.03       1.89 r
+  decode/add_296/U93/ZN (NAND3_X1)                        0.04       1.93 f
+  decode/add_296/U1_22/CO (FA_X1)                         0.10       2.02 f
+  decode/add_296/U61/ZN (NAND2_X1)                        0.04       2.06 r
+  decode/add_296/U26/ZN (NAND3_X1)                        0.04       2.10 f
+  decode/add_296/U132/ZN (NAND2_X1)                       0.04       2.14 r
+  decode/add_296/U135/ZN (NAND3_X1)                       0.04       2.18 f
+  decode/add_296/U147/ZN (NAND2_X1)                       0.04       2.21 r
+  decode/add_296/U149/ZN (NAND3_X1)                       0.04       2.25 f
+  decode/add_296/U153/ZN (NAND2_X1)                       0.04       2.29 r
+  decode/add_296/U155/ZN (NAND3_X1)                       0.04       2.33 f
+  decode/add_296/U177/ZN (NAND2_X1)                       0.04       2.36 r
+  decode/add_296/U36/ZN (NAND3_X1)                        0.04       2.40 f
+  decode/add_296/U184/ZN (NAND2_X1)                       0.04       2.44 r
+  decode/add_296/U94/ZN (NAND3_X1)                        0.04       2.48 f
+  decode/add_296/U101/ZN (NAND2_X1)                       0.04       2.51 r
+  decode/add_296/U97/ZN (NAND3_X1)                        0.04       2.55 f
+  decode/add_296/U141/ZN (NAND2_X1)                       0.03       2.58 r
+  decode/add_296/U143/ZN (NAND3_X1)                       0.03       2.61 f
+  decode/add_296/U74/ZN (XNOR2_X1)                        0.05       2.67 r
+  decode/add_296/SUM[31] (decode_stage_DW01_add_0)        0.00       2.67 r
+  decode/prediction_val/target_address[31] (prediction_validate)
+                                                          0.00       2.67 r
+  decode/prediction_val/U50/ZN (XNOR2_X1)                 0.06       2.73 r
+  decode/prediction_val/U5/ZN (NAND2_X1)                  0.03       2.76 f
+  decode/prediction_val/U49/ZN (AOI22_X1)                 0.05       2.81 r
+  decode/prediction_val/U4/ZN (NOR2_X2)                   0.04       2.85 f
+  decode/prediction_val/wrong_prediction (prediction_validate)
+                                                          0.00       2.85 f
+  decode/wrong_prediction (decode_stage)                  0.00       2.85 f
+  fetch/wrong_prediction (fetch_stage)                    0.00       2.85 f
+  fetch/U50/ZN (AOI21_X1)                                 0.05       2.90 r
+  fetch/U53/Z (BUF_X1)                                    0.04       2.94 r
+  fetch/U446/ZN (NOR2_X1)                                 0.03       2.97 f
+  fetch/U155/Z (BUF_X2)                                   0.05       3.02 f
+  fetch/U98/ZN (AND2_X1)                                  0.04       3.07 f
+  fetch/U101/ZN (NOR3_X1)                                 0.04       3.11 r
+  fetch/U322/ZN (NAND2_X1)                                0.03       3.14 f
+  fetch/pc_reg/d[12] (GenericReg_regwidth32_1)            0.00       3.14 f
+  fetch/pc_reg/U45/ZN (AOI22_X1)                          0.04       3.18 r
+  fetch/pc_reg/U44/ZN (INV_X1)                            0.02       3.21 f
+  fetch/pc_reg/q_reg[12]/D (DFF_X1)                       0.01       3.21 f
+  data arrival time                                                  3.21
+
+  clock MY_CLK (rise edge)                                3.02       3.02
+  clock network delay (ideal)                             0.00       3.02
+  clock uncertainty                                      -0.07       2.95
+  fetch/pc_reg/q_reg[12]/CK (DFF_X1)                      0.00       2.95 r
+  library setup time                                     -0.04       2.91
+  data required time                                                 2.91
+  --------------------------------------------------------------------------
+  data required time                                                 2.91
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.30
+
+
+1
