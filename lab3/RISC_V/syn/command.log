@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sat Feb  6 21:47:18 2021
+#@ # Date:   Tue Feb  9 02:29:39 2021
 #@ # Run by: isa17@localhost.localdomain
 #@ 
 
@@ -42999,6 +42999,17 @@ gui_start
 #@ 
 #@ # -- End source /software/synopsys/syn_current_64.18/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
+source write_risc.scr
+#@ # -- Starting source write_risc.scr
+
+#@ create_clock -name MY_CLK -period 13.28 clk
+#@ ungroup -all -flatten
+#@ change_names -hierarchy -rules verilog
+#@ write_sdf ../netlist/riscv.sdf
+#@ write -f verilog -hierarchy -output ../netlist/riscv.v
+#@ write_sdc ../netlist/riscv.sdc
+#@ # -- End source write_risc.scr
+
 source riscv_syn.scr
 #@ # -- Starting source riscv_syn.scr
 
@@ -43028,7 +43039,7 @@ source riscv_syn.scr
 #@ elaborate RISCV -arch structural -lib WORK > ./elaborate.txt
 #@ uniquify
 #@ link
-#@ create_clock -name MY_CLK -period 2.58 clk
+#@ create_clock -name MY_CLK -period 3.32 clk
 #@ set_dont_touch_network MY_CLK
 #@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 #@ set_input_delay 0.5 -max -clock MY_CLK [remove_from_collection [all_inputs] clk]
@@ -43036,8 +43047,19 @@ source riscv_syn.scr
 #@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 #@ set_load $OLOAD [all_outputs]
 #@ compile
-#@ report_timing > report_timing_258.txt
+#@ report_timing > report_timing_332.txt
 #@ 
 #@ # -- End source riscv_syn.scr
 
-quit
+source write_risc.scr
+#@ # -- Starting source write_risc.scr
+
+#@ create_clock -name MY_CLK -period 13.28 clk
+#@ ungroup -all -flatten
+#@ change_names -hierarchy -rules verilog
+#@ write_sdf ../netlist/riscv.sdf
+#@ write -f verilog -hierarchy -output ../netlist/riscv.v
+#@ write_sdc ../netlist/riscv.sdc
+#@ # -- End source write_risc.scr
+
+report_area > report_area_f4.txt
