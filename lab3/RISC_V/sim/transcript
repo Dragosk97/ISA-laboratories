@@ -8,6 +8,8 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
+do script_activity_place_route.do
+# Cannot open macro file: script_activity_place_route.do
 do script_activity_post_route.do
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
