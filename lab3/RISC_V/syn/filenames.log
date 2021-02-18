@@ -262,3 +262,10 @@
 /software/synopsys/syn_current_64.18/auxx/gui/dv/dv_path_cat_view.tcl
 /software/synopsys/syn_current_64.18/auxx/gui/common/table/table.tcl
 /software/synopsys/syn_current_64.18/auxx/gui/common/table/table_internal.tcl
+/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
+/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb
+/software/synopsys/syn_current_64.18/libraries/syn/gtech.db
+/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb
+/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/netlist/RISCV.v
+/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/netlist/RISCV.v
+/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V/saif/RISCV_syn.saif

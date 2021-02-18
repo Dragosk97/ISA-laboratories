@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Thu Feb 18 15:13:01 2021
+#@ # Date:   Thu Feb 18 19:31:10 2021
 #@ # Run by: isa17@localhost.localdomain
 #@ 
 
@@ -42999,7 +42999,8 @@ gui_start
 #@ 
 #@ # -- End source /software/synopsys/syn_current_64.18/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
-vcd2saif -input ../vcd/RISCV_syn.vcd -output ../saif/RISCV_syn.saif
-vcd2saif -input ../vcd/RISCV_syn.vcd -output ../saif/RISCV_syn.saif
-vcd2saif -input ../vcd/RISCV_syn.vcd -output ../saif/RISCV_syn.saif
-q
+read_verilog -netlist ../netlist/RISCV.v
+read_saif -input ../saif/RISCV_syn.saif -instance tb_riscv/UUT -unit ns -scale 1
+create_clock -name MY_CLOCK CLK
+create_clock -name MY_CLOCK clk
+report_power > report_power_f4.txt
