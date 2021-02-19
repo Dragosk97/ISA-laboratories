@@ -4884,7 +4884,7 @@ do script_activity_post_route.do
 # Loading timing data from ../innovus/RISCV_abs.sdf
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ns  Iteration: 0  Region: /tb_riscv  File: ../tb/tb_riscv.v
-run 870 ns
+run 1300 ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb_riscv/IM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -4894,6 +4894,5 @@ run 870 ns
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 8  Instance: /tb_riscv/DM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 3  Instance: /tb_riscv/IM
-quit -sim
+#    Time: 6 ns  Iteration: 3  Instance: /tb_riscv/IM
 quit

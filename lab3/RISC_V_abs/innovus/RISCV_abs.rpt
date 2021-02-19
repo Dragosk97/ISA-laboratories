@@ -2,7 +2,7 @@
 *	Innovus 17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2021-Feb-19 14:21:41 (2021-Feb-19 13:21:41 GMT)
+* 	Date & Time:	2021-Feb-19 21:02:55 (2021-Feb-19 20:02:55 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -20,7 +20,7 @@
 *
 *	Switching Activity File used: 
 *	        ../vcd/design.vcd
-*			Vcd Window used(Start Time, Stop Time):(-2.57396e+33, -2.57396e+33) 
+*			Vcd Window used(Start Time, Stop Time):(5.39406e-11, 5.3931e-11) 
 *                     Vcd Scale Factor: 1 
 **                    Design annotation coverage: 0/11591 = 0% 
 *

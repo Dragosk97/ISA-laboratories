@@ -1,0 +1,122 @@
+m255
+13
+cModel Technology
+d/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V_abs/sim
+T_opt
+Vh9m8[e;@T>9A@0oz07?iL2
+06 8 4 ./work tb_riscv fast 0
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../innovus/RISCV_abs.sdf -suppress 1948
+tExplicit 1
+OE;O;6.2g;35
+Eclk_gen
+w1613761793
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../tb/clk_gen.vhd
+F../tb/clk_gen.vhd
+l0
+L6
+VFRWeS2g]0a@zTP68AiMBU2
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work clk_gen FRWeS2g]0a@zTP68AiMBU2
+l19
+L13
+V]l4A4?nIg:RUe;?fazEXX0
+OE;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-93 -work ./work
+tExplicit 1
+Edata_memory
+w1612620953
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../src/data_memory.vhd
+F../src/data_memory.vhd
+l0
+L9
+V><LO<[<:eZ53EfV5E1?J;1
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Abehavior
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_memory ><LO<[<:eZ53EfV5E1?J;1
+l22
+L16
+VEG5LGoIXh8S]BP7WCzAnQ1
+OE;C;6.2g;35
+31
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_textio
+M1 std textio
+o-93 -work ./work
+tExplicit 1
+Einstruction_memory
+w1612620953
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../src/instruction_memory.vhd
+F../src/instruction_memory.vhd
+l0
+L5
+VY_A?kQ75i@[PID@zkF<GF0
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
+Astructural
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work instruction_memory Y_A?kQ75i@[PID@zkF<GF0
+l37
+L10
+VeeZozOX<g=bkZSC@mfL]=1
+OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-93 -work ./work
+tExplicit 1
+vRISCV_abs
+I0n4kJLmz:oj3QiMWcfCX60
+V6glCdiOH6B0BiCd548SSQ0
+w1612979980
+8../innovus/RISCV_abs.v
+F../innovus/RISCV_abs.v
+L0 15
+V6glCdiOH6B0BiCd548SSQ0
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+n@r@i@s@c@v_abs
+vtb_riscv
+I1XU99WGQ?3TceS9eLVaNW2
+VDbzXSc;_bjz==iWj]6bAX0
+w1612620953
+8../tb/tb_riscv.v
+F../tb/tb_riscv.v
+L0 3
+VDbzXSc;_bjz==iWj]6bAX0
+OE;L;6.2g;35
+r1
+31
+o-work ./work
