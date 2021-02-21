@@ -14,13 +14,8 @@ The directories are organized as:
     contains all the screen from the P&R.
 - **./RISC_V**
     contains:
-    - **./alu**
-    - **./Control_unit**
-    - **./data_mem**
-    - **./forwarding_unit**
     - **./innovus**
     - **./netlist**
-    - **./rf**
     - **./saif**
     - **./sim**
     - **./src**
@@ -30,18 +25,20 @@ The directories are organized as:
 
 - **./RISC_V_abs**
     contains:
-    - the Python scripts for the MBE multiplier.
-    - the components of the multiplier in *.vhd* 
-    - **./matlab**:
-        - Matlab script for the generation of the inputs and outputs
-        - Matlab script for the bar graph
-    - **./tb**:
-        - files used for the testbench of the MBE multiplier
-    - **./sim**:
-        - *results_modelsim.txt* from ModelSim simulation and *output_check.py* to check the correctness of the MBE multiplier
- - **./sim_screen**
+    - **./innovus**
+    - **./netlist**
+    - **./saif**
+    - **./sim**
+    - **./src**
+    - **./syn**
+    - **./tb**
+    - **./vcd** 
    
- - **./schematics**   
+   
+- **./sim_screen**
+   
+- **./image_drawio**:
+    contains the drawings of the several stages of the processor 
    
    
    
