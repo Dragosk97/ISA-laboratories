@@ -11,7 +11,7 @@ Students:
 
 The directories are organized as:
 - **./post_place_route**
-    contains all the screen from the P&R.
+    contains all the screens from the P&R.
 - **./RISC_V**
     contains:
     - **./innovus**
@@ -36,6 +36,7 @@ The directories are organized as:
    
    
 - **./sim_screen**
+    contains the screens of the simulation taken from ModelSim 
    
 - **./image_drawio**:
     contains the drawings of the several stages of the processor 
