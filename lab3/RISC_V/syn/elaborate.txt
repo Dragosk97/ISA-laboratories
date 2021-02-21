@@ -113,7 +113,7 @@ Presto compilation completed successfully.
 Information: Building the design 'register_file'. (HDL-193)
 
 Inferred memory devices in process
-	in routine register_file line 26 in file
+	in routine register_file line 25 in file
 		'../src/Register_file.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -124,8 +124,8 @@ Statistics for MUX_OPs
 ======================================================
 | block name/line  | Inputs | Outputs | # sel inputs |
 ======================================================
-| register_file/44 |   32   |   32    |      5       |
-| register_file/45 |   32   |   32    |      5       |
+| register_file/42 |   32   |   32    |      5       |
+| register_file/43 |   32   |   32    |      5       |
 ======================================================
 Presto compilation completed successfully.
 Information: Building the design 'Immediate_Generator'. (HDL-193)

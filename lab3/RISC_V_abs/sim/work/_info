@@ -1,733 +1,122 @@
 m255
-K3
 13
 cModel Technology
-Z0 dC:\Users\huicai\Desktop\Magistrale 2 anno\ISA\ISA-laboratories\lab3\RISC_V_abs\sim
-Eabs_unit
-Z1 w1612463705
-Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z4 dC:\Users\huicai\Desktop\Magistrale 2 anno\ISA\ISA-laboratories\lab3\RISC_V_abs\sim
-Z5 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/abs_unit.vhd
-Z6 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/abs_unit.vhd
-l0
-L5
-V>EDB]zzb8:9?VSFB`P2Rk0
-Z7 OV;C;6.6d;45
-32
-Z8 o-work work -O0
-Z9 tExplicit 1
-!s100 g@PIGccWb0Y@?XeH=65DY1
-Abehav
-R2
-R3
-DEx4 work 8 abs_unit 0 22 >EDB]zzb8:9?VSFB`P2Rk0
-l14
-L12
-V5`jR0UNL?O^>Q1_0fN<md2
-R7
-32
-Z10 Mx2 4 ieee 14 std_logic_1164
-Z11 Mx1 4 ieee 11 numeric_std
-R8
-R9
-!s100 jP:am@^ei[KF3gjAiNbR72
-Ealu
-Z12 w1612459699
-R2
-R3
-R4
-Z13 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/alu.vhd
-Z14 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/alu.vhd
-l0
-L5
-VDz2agK5][RBFTgiA[;ngC1
-R7
-32
-R8
-R9
-!s100 1kf4P1a3VCi9I9lb7]TI_3
-Abehavioural
-R2
-R3
-DEx4 work 3 alu 0 22 Dz2agK5][RBFTgiA[;ngC1
-l13
-L12
-ViTKd=B4jUiPfS9]AUK]iC1
-R7
-32
-R10
-R11
-R8
-R9
-!s100 >h<j44j:zhH5R5][Q@Tii1
-Ealu_control
-R12
-R3
-R4
-Z15 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/alu_control.vhd
-Z16 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/alu_control.vhd
-l0
-L4
-Ve2[1OU;z<L[C>D0i4EK4f2
-R7
-32
-R8
-R9
-!s100 O>mbE=BmJkJ9fb`jR_f2`3
-Abehav
-R3
-DEx4 work 11 alu_control 0 22 e2[1OU;z<L[C>D0i4EK4f2
-l13
-L11
-VfdogQbZGf1lC340AbO2E:2
-R7
-32
-Z17 Mx1 4 ieee 14 std_logic_1164
-R8
-R9
-!s100 9oEN>HM5e<dm;fcXk`7;82
+d/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V_abs/sim
+T_opt
+Vh9m8[e;@T>9A@0oz07?iL2
+06 8 4 ./work tb_riscv fast 0
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_riscv/UUT=../innovus/RISCV_abs.sdf -suppress 1948
+tExplicit 1
+OE;O;6.2g;35
 Eclk_gen
-R12
-Z18 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
-Z19 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
-R3
-R4
-Z20 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/tb/clk_gen.vhd
-Z21 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/tb/clk_gen.vhd
+w1613761793
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../tb/clk_gen.vhd
+F../tb/clk_gen.vhd
 l0
 L6
-Vb0>31I<HO`jzB@h0l_^>93
-R7
-32
-R8
-R9
-!s100 ;WE>eN^U:dmBWYbm0ij0@0
+VFRWeS2g]0a@zTP68AiMBU2
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
 Abeh
-R18
-R19
-R3
-DEx4 work 7 clk_gen 0 22 b0>31I<HO`jzB@h0l_^>93
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work clk_gen FRWeS2g]0a@zTP68AiMBU2
 l19
 L13
-VkbBf:11WAS]hOUUHejDoa2
-R7
-32
-Z22 Mx3 4 ieee 14 std_logic_1164
-Mx2 4 ieee 15 std_logic_arith
-Mx1 4 ieee 18 std_logic_unsigned
-R8
-R9
-!s100 R<O<j3D2VDJkgc?dE55_O0
-Ecomparator
-R12
-R2
-R3
-R4
-Z23 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/comparator.vhd
-Z24 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/comparator.vhd
-l0
-L5
-VIBFIAR]5bBEl9V]Ef2=7m3
-R7
-32
-R8
-R9
-!s100 Tc;[ecWdFSPNMO<cPRjN>1
-Abehav
-R2
-R3
-DEx4 work 10 comparator 0 22 IBFIAR]5bBEl9V]Ef2=7m3
-l15
-L14
-VcobIbmfCYZ[>Zkhg5[=9P0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 CkX;ITneJQhQAge7<jcUo1
-Econtrol
-R1
-R2
-R3
-R4
-Z25 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/control.vhd
-Z26 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/control.vhd
-l0
-L5
-VZGAnD@AGH5XGFZWMnJhZ91
-R7
-32
-R8
-R9
-!s100 i7E7Q7d^ehPN_<`_Lkide3
-Abehavior
-R2
-R3
-DEx4 work 7 control 0 22 ZGAnD@AGH5XGFZWMnJhZ91
-l24
-L22
-V@oYXmCW:S=8?WPRd:eGaS1
-R7
-32
-R10
-R11
-R8
-R9
-!s100 MRQi_I1?a577[0IedM4D<2
+V]l4A4?nIg:RUe;?fazEXX0
+OE;C;6.2g;35
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-93 -work ./work
+tExplicit 1
 Edata_memory
-R12
-Z27 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
-Z28 DPx4 ieee 16 std_logic_textio 0 22 8ONYdGiICLK<GeVc1o<IF0
-R2
-R3
-R4
-Z29 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/data_memory.vhd
-Z30 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/data_memory.vhd
+w1612620953
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../src/data_memory.vhd
+F../src/data_memory.vhd
 l0
 L9
-VCLI0Vczjbj=08Q^OhHe^l0
-R7
-32
-R8
-R9
-!s100 <ElJTNBSME2ZLXghKKhg62
+V><LO<[<:eZ53EfV5E1?J;1
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
 Abehavior
-R27
-R28
-R2
-R3
-DEx4 work 11 data_memory 0 22 CLI0Vczjbj=08Q^OhHe^l0
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work data_memory ><LO<[<:eZ53EfV5E1?J;1
 l22
 L16
-V0iJOPAzMQIoV8h=Z]A:aW1
-R7
-32
-Mx4 4 ieee 14 std_logic_1164
-Mx3 4 ieee 11 numeric_std
-Mx2 4 ieee 16 std_logic_textio
-Z31 Mx1 3 std 6 textio
-R8
-R9
-!s100 IcXcYj[NXN8V@MgOM`nM@3
-Edecode_stage
-R12
-R2
-R3
-R4
-Z32 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/decode_stage.vhd
-Z33 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/decode_stage.vhd
-l0
-L5
-V4l^7`XlcVOo<PDPUCNlgQ2
-R7
-32
-R8
-R9
-!s100 Mc0Zc>z6K1[?J=?Z]3f6=2
-Astructural
-R2
-R3
-DEx4 work 12 decode_stage 0 22 4l^7`XlcVOo<PDPUCNlgQ2
-l199
-L58
-VZ:56[XMQiTL8CE;mlV8eb3
-R7
-32
-R10
-R11
-R8
-R9
-!s100 ?lDLX4nCoP<CO=a`J_mZX0
-Eexecution_stage
-Z34 w1612464577
-R2
-R3
-R4
-Z35 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/execution_stage.vhd
-Z36 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/execution_stage.vhd
-l0
-L5
-VgM:MN8ZKQd6i[4o3S6kG51
-R7
-32
-R8
-R9
-!s100 M]PCAQb=6_iN8NNmZ^L__3
-Astructural
-R2
-R3
-DEx4 work 15 execution_stage 0 22 gM:MN8ZKQd6i[4o3S6kG51
-l119
-L43
-V:cMdNOed27?d0ZB3]EAI82
-R7
-32
-R10
-R11
-R8
-R9
-!s100 MN<?UOVifkOBH>;j:nib?2
-Efetch_stage
-R12
-R2
-R3
-R4
-Z37 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/fetch_stage.vhd
-Z38 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/fetch_stage.vhd
-l0
-L5
-VRXJKf?G`[e^<CFY0b`W?<2
-R7
-32
-R8
-R9
-!s100 nnNWcHN]CAQQ7PC08KHU12
-Astructure
-R2
-R3
-DEx4 work 11 fetch_stage 0 22 RXJKf?G`[e^<CFY0b`W?<2
-l80
-L39
-Vo?iAW?H67OnFCVXKXU=J@2
-R7
-32
-R10
-R11
-R8
-R9
-!s100 26jI1<JF[Xa<bM[bNKeU>3
-Eforwarding_unit
-Z39 w1612467095
-R2
-R3
-R4
-Z40 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/forwarding_unit.vhd
-Z41 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/forwarding_unit.vhd
-l0
-L5
-VmF4X5XCE3JM7>_8hg@4;]1
-!s100 CG`Q1]lh_GdUa>eD<ce1>0
-R7
-32
-R8
-R9
-Abehavioural
-R2
-R3
-Z42 DEx4 work 15 forwarding_unit 0 22 mF4X5XCE3JM7>_8hg@4;]1
-l16
-L15
-VSiV0c<AC2_Aazl=1XOlFC1
-!s100 1mEHMYdieGF[MWl[iO88d1
-R7
-32
-R10
-R11
-R8
-R9
-Egenericreg
-R12
-R2
-R3
-R4
-Z43 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/GenericReg.vhd
-Z44 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/GenericReg.vhd
-l0
-L5
-VZ_>;C7bCPWIRib_Ya]^=_0
-R7
-32
-R8
-R9
-!s100 iVAnGZfVl9QnY6ZbZbGfY2
-Abehavioral
-R2
-R3
-DEx4 work 10 genericreg 0 22 Z_>;C7bCPWIRib_Ya]^=_0
-l15
-L14
-VmXACUBBeiJP>M8DISnDmB3
-R7
-32
-R10
-R11
-R8
-R9
-!s100 2V]h1Am;h^@<c4egl>eod2
-Ehazard_detect_unit
-R12
-R3
-R4
-Z45 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/hazard_detect_unit.vhd
-Z46 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/hazard_detect_unit.vhd
-l0
-L4
-VOndHMZeJY7XBE0S[h;P]T1
-R7
-32
-R8
-R9
-!s100 3]1?Mfc2=7ihio16ZfTj]2
-Abehav
-R3
-DEx4 work 18 hazard_detect_unit 0 22 OndHMZeJY7XBE0S[h;P]T1
-l22
-L20
-VUFJjX]]R:Q1[f@`dO5B^S3
-R7
-32
-R17
-R8
-R9
-!s100 3H5bT1z]90:R[7a^mbeWR1
-Eimmediate_generator
-R12
-R2
-R3
-R4
-Z47 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/Immediate_Generator.vhd
-Z48 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/Immediate_Generator.vhd
-l0
-L5
-VMZDPVm<R@ZCTR1Vdk5LJ52
-R7
-32
-R8
-R9
-!s100 J_n7al^`X3@=@XXFDz0<K2
-Abehavioural
-R2
-R3
-DEx4 work 19 immediate_generator 0 22 MZDPVm<R@ZCTR1Vdk5LJ52
-l15
-L12
-V@4=]c@ZajdnHIZIDkHG<42
-R7
-32
-R10
-R11
-R8
-R9
-!s100 A1fjO^k>K98dS0[e0l=No3
+VEG5LGoIXh8S]BP7WCzAnQ1
+OE;C;6.2g;35
+31
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_textio
+M1 std textio
+o-93 -work ./work
+tExplicit 1
 Einstruction_memory
-Z49 w1612464131
-R2
-R3
-R4
-Z50 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/instruction_memory.vhd
-Z51 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/instruction_memory.vhd
+w1612620953
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8../src/instruction_memory.vhd
+F../src/instruction_memory.vhd
 l0
 L5
-V]MA7jZM7?bD;8oJfan8_`3
-R7
-32
-R8
-R9
-!s100 gI7XfNHHink6OmQe<3[MS3
+VY_A?kQ75i@[PID@zkF<GF0
+OE;C;6.2g;35
+31
+o-93 -work ./work
+tExplicit 1
 Astructural
-R2
-R3
-DEx4 work 18 instruction_memory 0 22 ]MA7jZM7?bD;8oJfan8_`3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work instruction_memory Y_A?kQ75i@[PID@zkF<GF0
 l37
 L10
-VbCkV97?D`ZM9?8lWlN]gB0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 ?mM8IeQQCZU5VSP2FGf6T3
-Ememory_stage
-R12
-R2
-R3
-R4
-Z52 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/memory_stage.vhd
-Z53 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/memory_stage.vhd
-l0
-L5
-V9NZ]`;gT:4bHI[KFk_@GT1
-R7
-32
-R8
-R9
-!s100 @RQzjlW1MHgidkVV@MC5^0
-Astructural
-R2
-R3
-DEx4 work 12 memory_stage 0 22 9NZ]`;gT:4bHI[KFk_@GT1
-l35
-L33
-Vd4QY3:CE>nS?D6<dKBdRa2
-R7
-32
-R10
-R11
-R8
-R9
-!s100 Aj`I:D?:THSSjZzfgKaaB3
-Emux2to1
-R12
-R2
-R3
-R4
-Z54 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/mux2to1.vhd
-Z55 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/mux2to1.vhd
-l0
-L5
-V85D>X[anH7cn`m;ZB<ed>1
-R7
-32
-R8
-R9
-!s100 `mJo3`ehb6iT`4GIL]2o01
-Abehavioral
-R2
-R3
-DEx4 work 7 mux2to1 0 22 85D>X[anH7cn`m;ZB<ed>1
-l16
-L15
-V7:AFjP5Bh?HA=4n=hL3BM3
-R7
-32
-R10
-R11
-R8
-R9
-!s100 HD50]Mah8ce:eGKQ`Tl:h2
-Emux3to1
-R12
-R2
-R3
-R4
-Z56 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/mux3to1.vhd
-Z57 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/mux3to1.vhd
-l0
-L5
-V?<D93i3kM1:F:ccI5EB<n3
-R7
-32
-R8
-R9
-!s100 LCm9cP@foFJaW9gREanXN2
-Alogicfunction
-R2
-R3
-DEx4 work 7 mux3to1 0 22 ?<D93i3kM1:F:ccI5EB<n3
-l13
-L12
-VzDaEZ2GTEz1JNT3DL3Tof0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 5k4If4ARo`2j?bBz?TjOE0
-Emux4to1
-Z58 w1612464173
-R2
-R3
-R4
-Z59 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/mux4to1.vhd
-Z60 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/mux4to1.vhd
-l0
-L5
-VOJnOT5W_TZ;z]?YUPN4<G1
-R7
-32
-R8
-R9
-!s100 [YR8bBRM0c8Uf9AALM4Pz3
-Abehav
-R2
-R3
-DEx4 work 7 mux4to1 0 22 OJnOT5W_TZ;z]?YUPN4<G1
-l16
-L14
-Vfo8DQ8o5b:aVCEK3XIHUe3
-R7
-32
-R10
-R11
-R8
-R9
-!s100 egNH<Mo=48IbaQ@=MG^2C2
-Eprediction_table
-R12
-R2
-R3
-R4
-Z61 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/prediction_table.vhd
-Z62 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/prediction_table.vhd
-l0
-L5
-VW[IlF^:5LWmY]:PYWo6WR1
-R7
-32
-R8
-R9
-!s100 5:B7Y[T^kQc0dfa[J[R9D0
-Abehavioural
-R2
-R3
-DEx4 work 16 prediction_table 0 22 W[IlF^:5LWmY]:PYWo6WR1
-l26
-L13
-VFYhNHOnkH<>1mY`ZlA@PP0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 VGzn58MKgCEWnJeaFJa9V1
-Eprediction_validate
-R12
-R2
-R3
-R4
-Z63 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/prediction_validate.vhd
-Z64 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/prediction_validate.vhd
-l0
-L5
-VCVM`L]jjQf2VPl<ae7IE73
-R7
-32
-R8
-R9
-!s100 45cXofmJoJ6MNI5na5TX;3
-Abehav
-R2
-R3
-DEx4 work 19 prediction_validate 0 22 CVM`L]jjQf2VPl<ae7IE73
-l26
-L17
-VGcBgi;RA71[V7d@W_HaQg0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 3a@aR;a1lLYBK`hLm:zMA0
-Eregister_file
-R1
-R2
-R3
-R4
-Z65 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/Register_file.vhd
-Z66 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/Register_file.vhd
-l0
-L5
-VM[UZd84lIml3MEm=Tm[=m2
-R7
-32
-R8
-R9
-!s100 Hj;l85PAUE_ZTZEWhmmez0
-Abehavioral
-R2
-R3
-DEx4 work 13 register_file 0 22 M[UZd84lIml3MEm=Tm[=m2
-l24
-L19
-VZnm>@inRk5?U=1_bO;W5n3
-R7
-32
-R10
-R11
-R8
-R9
-!s100 eT9g0mfBAQ[IJUVLzTMVX1
-Eriscv_abs
-R12
-R2
-R3
-R4
-Z67 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/RISCV.vhd
-Z68 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/RISCV.vhd
-l0
-L5
-V<U_BBhN<M:4mLj;[O26:o3
-R7
-32
-R8
-R9
-!s100 lkk[KX]:fU=W=jjRoonPW1
-Astructural
-R2
-R3
-DEx4 work 9 riscv_abs 0 22 <U_BBhN<M:4mLj;[O26:o3
-l241
-L24
-V@88QJ;MBD_l6J3n_h4WfO0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 Tg8QN?j=VG2>K`f8;b`;b0
-Etestbench
-R12
-R2
-R3
-R4
-Z69 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/tb/testbench.vhd
-Z70 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/tb/testbench.vhd
-l0
-L5
-V^]2^0JUcDh[WLDc2>]Bc>0
-R7
-32
-R8
-R9
-!s100 P2Ae5Lk?mS<;fEAjI0YIW1
-Astruct
-R2
-R3
-DEx4 work 9 testbench 0 22 ^]2^0JUcDh[WLDc2>]Bc>0
-l56
-L8
-VHgfF_LSHeh>aVTKQHekOb1
-!s100 iZn96e?4LT60Ycbb5LWG33
-R7
-32
-R10
-R11
-R8
-R9
-Ewrite_back_stage
-R12
-R2
-R3
-R4
-Z71 8C:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/write_back_stage.vhd
-Z72 FC:/Users/huicai/Desktop/Magistrale 2 anno/ISA/ISA-laboratories/lab3/RISC_V_abs/src/write_back_stage.vhd
-l0
-L5
-V`3iNLMhcLW_=d<9V]9cbd1
-R7
-32
-R8
-R9
-!s100 NgC`ZTD9DWC]H9M`1<Y4b2
-Abehavioral
-R2
-R3
-DEx4 work 16 write_back_stage 0 22 `3iNLMhcLW_=d<9V]9cbd1
-l16
-L14
-VO`cJLNgj6=`hIThT:VlP;0
-R7
-32
-R10
-R11
-R8
-R9
-!s100 cYzbKH`K5Z]O2S9^M`6UL3
+VeeZozOX<g=bkZSC@mfL]=1
+OE;C;6.2g;35
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+o-93 -work ./work
+tExplicit 1
+vRISCV_abs
+I0n4kJLmz:oj3QiMWcfCX60
+V6glCdiOH6B0BiCd548SSQ0
+w1612979980
+8../innovus/RISCV_abs.v
+F../innovus/RISCV_abs.v
+L0 15
+V6glCdiOH6B0BiCd548SSQ0
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+n@r@i@s@c@v_abs
+vtb_riscv
+I1XU99WGQ?3TceS9eLVaNW2
+VDbzXSc;_bjz==iWj]6bAX0
+w1612620953
+8../tb/tb_riscv.v
+F../tb/tb_riscv.v
+L0 3
+VDbzXSc;_bjz==iWj]6bAX0
+OE;L;6.2g;35
+r1
+31
+o-work ./work

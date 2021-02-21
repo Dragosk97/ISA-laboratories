@@ -1,0 +1,193 @@
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'RISCV_abs'.
+Information: Building the design 'fetch_stage'. (HDL-193)
+
+Inferred memory devices in process
+	in routine fetch_stage line 85 in file
+		'../src/fetch_stage.vhd'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|  instruction_ifid_reg  | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  instruction_ifid_reg  | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   pc_ifid_buffer_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  prediction_ifid_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| prediction_ta_ifid_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decode_stage'. (HDL-193)
+
+Inferred memory devices in process
+	in routine decode_stage line 210 in file
+		'../src/decode_stage.vhd'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|      aluop_idex_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     funct3_idex_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| rd_address_idex_buff_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   rs1_address_idex_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   rs2_address_idex_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      data1_idex_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      data2_idex_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       pc_idex_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    immediate_idex_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  RegWrite_idex_buff_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     MemLoad_idex_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  MemRead_idex_buff_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   wb_mux_sel_idex_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   mux1_PC_sel_idex_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  mux2_imm_sel_idex_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| mux_result_sel_idex_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+====================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'execution_stage'. (HDL-193)
+
+Inferred memory devices in process
+	in routine execution_stage line 193 in file
+		'../src/execution_stage.vhd'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+|  RegWrite_exmem_buff_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    data2_fwd_exmem_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       wb_exmem_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     MemRead_exmem_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     MemLoad_exmem_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| rd_address_exmem_buff_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   result_exmem_buff_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'memory_stage'. (HDL-193)
+
+Inferred memory devices in process
+	in routine memory_stage line 41 in file
+		'../src/memory_stage.vhd'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|  RegWrite_memwb_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    data_memwb_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   result_memwb_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| rd_address_memwb_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| wb_mux_sel_memwb_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_back_stage'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'GenericReg' instantiated from design 'fetch_stage' with
+	the parameters "regwidth=32". (HDL-193)
+
+Inferred memory devices in process
+	in routine GenericReg_regwidth32 line 17 in file
+		'../src/GenericReg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'prediction_table'. (HDL-193)
+
+Inferred memory devices in process
+	in routine prediction_table line 27 in file
+		'../src/prediction_table.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  944  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=========================================================
+|  block name/line    | Inputs | Outputs | # sel inputs |
+=========================================================
+| prediction_table/38 |   16   |   59    |      4       |
+=========================================================
+Presto compilation completed successfully.
+Information: Building the design 'register_file'. (HDL-193)
+
+Inferred memory devices in process
+	in routine register_file line 25 in file
+		'../src/Register_file.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    registers_reg    | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+| register_file/42 |   32   |   32    |      5       |
+| register_file/43 |   32   |   32    |      5       |
+======================================================
+Presto compilation completed successfully.
+Information: Building the design 'Immediate_Generator'. (HDL-193)
+
+Statistics for case statements in always block at line 16 in file
+	'../src/Immediate_Generator.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mux3to1' instantiated from design 'decode_stage' with
+	the parameters "N=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'comparator' instantiated from design 'decode_stage' with
+	the parameters "n=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'hazard_detect_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'forwarding_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'control'. (HDL-193)
+
+Statistics for case statements in always block at line 26 in file
+	'../src/control.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            56            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'prediction_validate'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1' instantiated from design 'execution_stage' with
+	the parameters "n=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'alu_control'. (HDL-193)
+
+Statistics for case statements in always block at line 14 in file
+	'../src/alu_control.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            16            |    auto/auto     |
+|            18            |    auto/auto     |
+|            26            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+
+Statistics for case statements in always block at line 14 in file
+	'../src/alu.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            16            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'abs_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux4to1' instantiated from design 'execution_stage' with
+	the parameters "N=32". (HDL-193)
+Presto compilation completed successfully.
+1

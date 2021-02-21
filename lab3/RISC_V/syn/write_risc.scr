@@ -1,0 +1,6 @@
+create_clock -name MY_CLK -period 13.28 clk
+ungroup -all -flatten
+change_names -hierarchy -rules verilog
+write_sdf ../netlist/riscv.sdf
+write -f verilog -hierarchy -output ../netlist/riscv.v
+write_sdc ../netlist/riscv.sdc

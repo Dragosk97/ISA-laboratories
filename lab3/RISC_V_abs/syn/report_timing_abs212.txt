@@ -1,0 +1,109 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV_abs' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV_abs
+Version: O-2018.06-SP4
+Date   : Sat Feb  6 16:17:50 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: execution/rd_address_exmem_buff_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: execution/result_exmem_buff_reg[31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV_abs          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  execution/rd_address_exmem_buff_reg[2]/CK (DFFR_X1)     0.00 #     0.00 r
+  execution/rd_address_exmem_buff_reg[2]/QN (DFFR_X1)     0.06       0.06 f
+  execution/U13/ZN (INV_X1)                               0.04       0.10 r
+  execution/forwarding/rd_address_exmem[2] (forwarding_unit_0)
+                                                          0.00       0.10 r
+  execution/forwarding/U18/ZN (XNOR2_X1)                  0.06       0.16 r
+  execution/forwarding/U9/ZN (AND3_X1)                    0.06       0.22 r
+  execution/forwarding/U21/ZN (NAND2_X1)                  0.03       0.25 f
+  execution/forwarding/U36/ZN (NAND4_X1)                  0.03       0.27 r
+  execution/forwarding/U12/ZN (NOR2_X1)                   0.03       0.30 f
+  execution/forwarding/mux1_fwd[0] (forwarding_unit_0)
+                                                          0.00       0.30 f
+  execution/mux1_alu_fwd/sel[0] (mux3to1_N32_1)           0.00       0.30 f
+  execution/mux1_alu_fwd/U13/ZN (OR2_X1)                  0.06       0.36 f
+  execution/mux1_alu_fwd/U7/ZN (AND2_X1)                  0.05       0.41 f
+  execution/mux1_alu_fwd/U24/ZN (NAND2_X1)                0.03       0.44 r
+  execution/mux1_alu_fwd/U22/ZN (NAND3_X1)                0.04       0.48 f
+  execution/mux1_alu_fwd/m_out[0] (mux3to1_N32_1)         0.00       0.48 f
+  execution/abs_fu/a[0] (abs_unit)                        0.00       0.48 f
+  execution/abs_fu/sub_abs_15/B[0] (abs_unit_DW01_sub_1)
+                                                          0.00       0.48 f
+  execution/abs_fu/sub_abs_15/U82/ZN (INV_X1)             0.04       0.52 r
+  execution/abs_fu/sub_abs_15/U36/CO (HA_X1)              0.05       0.57 r
+  execution/abs_fu/sub_abs_15/U72/ZN (AND2_X1)            0.04       0.61 r
+  execution/abs_fu/sub_abs_15/U75/ZN (AND3_X2)            0.05       0.67 r
+  execution/abs_fu/sub_abs_15/U26/CO (HA_X1)              0.06       0.72 r
+  execution/abs_fu/sub_abs_15/U25/CO (HA_X1)              0.06       0.78 r
+  execution/abs_fu/sub_abs_15/U24/CO (HA_X1)              0.06       0.84 r
+  execution/abs_fu/sub_abs_15/U23/CO (HA_X1)              0.06       0.90 r
+  execution/abs_fu/sub_abs_15/U22/CO (HA_X1)              0.06       0.96 r
+  execution/abs_fu/sub_abs_15/U21/CO (HA_X1)              0.06       1.01 r
+  execution/abs_fu/sub_abs_15/U20/CO (HA_X1)              0.06       1.07 r
+  execution/abs_fu/sub_abs_15/U19/CO (HA_X1)              0.06       1.13 r
+  execution/abs_fu/sub_abs_15/U18/CO (HA_X1)              0.06       1.19 r
+  execution/abs_fu/sub_abs_15/U17/CO (HA_X1)              0.06       1.24 r
+  execution/abs_fu/sub_abs_15/U16/CO (HA_X1)              0.06       1.30 r
+  execution/abs_fu/sub_abs_15/U15/CO (HA_X1)              0.06       1.36 r
+  execution/abs_fu/sub_abs_15/U14/CO (HA_X1)              0.06       1.42 r
+  execution/abs_fu/sub_abs_15/U13/CO (HA_X1)              0.06       1.48 r
+  execution/abs_fu/sub_abs_15/U12/CO (HA_X1)              0.06       1.53 r
+  execution/abs_fu/sub_abs_15/U11/CO (HA_X1)              0.06       1.59 r
+  execution/abs_fu/sub_abs_15/U10/CO (HA_X1)              0.06       1.65 r
+  execution/abs_fu/sub_abs_15/U9/CO (HA_X1)               0.06       1.71 r
+  execution/abs_fu/sub_abs_15/U8/CO (HA_X1)               0.06       1.76 r
+  execution/abs_fu/sub_abs_15/U7/CO (HA_X1)               0.06       1.82 r
+  execution/abs_fu/sub_abs_15/U6/CO (HA_X1)               0.06       1.88 r
+  execution/abs_fu/sub_abs_15/U5/CO (HA_X1)               0.06       1.94 r
+  execution/abs_fu/sub_abs_15/U4/CO (HA_X1)               0.06       1.99 r
+  execution/abs_fu/sub_abs_15/U3/CO (HA_X1)               0.06       2.05 r
+  execution/abs_fu/sub_abs_15/U2/CO (HA_X1)               0.06       2.11 r
+  execution/abs_fu/sub_abs_15/U80/ZN (XNOR2_X1)           0.05       2.16 r
+  execution/abs_fu/sub_abs_15/DIFF[31] (abs_unit_DW01_sub_1)
+                                                          0.00       2.16 r
+  execution/abs_fu/U41/ZN (AND2_X1)                       0.04       2.20 r
+  execution/abs_fu/abs_a[31] (abs_unit)                   0.00       2.20 r
+  execution/result_mux/d[31] (mux4to1_N32)                0.00       2.20 r
+  execution/result_mux/U115/ZN (AOI22_X1)                 0.03       2.23 f
+  execution/result_mux/U117/ZN (NAND2_X1)                 0.03       2.26 r
+  execution/result_mux/m_out[31] (mux4to1_N32)            0.00       2.26 r
+  execution/result_exmem_buff_reg[31]/D (DFFR_X2)         0.01       2.27 r
+  data arrival time                                                  2.27
+
+  clock MY_CLK (rise edge)                                2.12       2.12
+  clock network delay (ideal)                             0.00       2.12
+  clock uncertainty                                      -0.07       2.05
+  execution/result_exmem_buff_reg[31]/CK (DFFR_X2)        0.00       2.05 r
+  library setup time                                     -0.03       2.02
+  data required time                                                 2.02
+  --------------------------------------------------------------------------
+  data required time                                                 2.02
+  data arrival time                                                 -2.27
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.25
+
+
+1
