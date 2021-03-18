@@ -1,1 +1,0 @@
-/home/isa17/Desktop/ISA-laboratories/lab3/RISC_V_abs/netlist/RISCV_abs.sdc
