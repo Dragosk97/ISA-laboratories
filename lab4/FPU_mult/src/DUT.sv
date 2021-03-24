@@ -1,7 +1,8 @@
 module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic [1:0] {INITIAL,WAIT,SEND} state);
     
-    //adder adder_under_test(.A(in_inter.A),.B(in_inter.B),.OUT(out_inter.data));
     FPmul fpmul_under_test(.FP_A(in_inter.A),.FP_B(in_inter.B),.clk(in_inter.clk),.FP_Z(out_inter.data)); //module
+	
+	integer cnt;
 
     always_ff @(posedge in_inter.clk)
     begin
@@ -9,22 +10,29 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
             in_inter.ready <= 0;
             out_inter.data <= 'x;
             out_inter.valid <= 0;
+			cnt = 0;
             state <= INITIAL;
         end
         else case(state)
                 INITIAL: begin
                     in_inter.ready <= 1;
+					cnt = 0;
                     state <= WAIT;
                 end
                 
                 WAIT: begin
                     if(in_inter.valid) begin
                         in_inter.ready <= 0;
-                        //out_inter.data <= in_inter.A + in_inter.B;
                         $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
-                        $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
+                        $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",in_inter.A,in_inter.B,out_inter.data);
                         out_inter.valid <= 1;
-                        state <= SEND;
+						if(cnt==5) begin
+                        	state <= SEND;
+						end 
+						else begin
+							cnt++;
+							state <= WAIT;
+						end
                     end
                 end
                 
