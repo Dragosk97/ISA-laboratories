@@ -21,8 +21,8 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                     if(in_inter.valid) begin
                         in_inter.ready <= 0;
                         //out_inter.data <= in_inter.A + in_inter.B;
-                        $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",in_inter.A,in_inter.B,out_inter.data);
-                        $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",in_inter.A,in_inter.B,out_inter.data);
+                        $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
+                        $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
                         out_inter.valid <= 1;
                         state <= SEND;
                     end
