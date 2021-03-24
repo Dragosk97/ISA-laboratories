@@ -29,26 +29,9 @@ class comparator #(type T = packet_out) extends uvm_scoreboard;
   endfunction
 
   task run_phase(uvm_phase phase);
-    my_packet_o before_tx;
-    my_packet_o after_tx;
-
-    forever begin
-      before_fifo.get(before_tx);
-      'uvm_info("FIFO_before", $sformatf("RES=%0h",before_tx.res), UVM_MEDIUM);
     phase.raise_objection(this);
-
-    after_fifo.get(after_tx);
-    'uvm_info("FIFO_after", $sformatf("RES=%0h",after_tx.res), UVM_MEDIUM);
-
-    if( !after_tx.compare(before_tx)) begin
-      m_mismatches++;
-    end
-    else begin
-      m_matches++;
-    end
-    // @(end_of_simulation);
+    @(end_of_simulation);
     phase.drop_objection(this);
-    end
   endtask
 
   virtual task put(T t);
