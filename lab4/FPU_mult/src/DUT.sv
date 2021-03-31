@@ -17,7 +17,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                 INITIAL: begin
                     in_inter.ready <= 1;
 					cnt = 0;
-                    state <= WAIT;
+                    state <= WAIT_PIPEFILL;
                 end
                 
                 WAIT: begin
