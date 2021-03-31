@@ -15,7 +15,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
         end
         else case(state)
                 INITIAL: begin
-                    in_inter.ready <= 1;
+                    in_inter.ready <= 0;
 					cnt = 0;
                     state <= WAIT_PIPEFILL;
                 end
@@ -54,21 +54,21 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
 						end
                     end
                 end
-                
-                SEND_FILL: begin
-                    if(out_inter.ready) begin
-                        out_inter.valid <= 0;
-                        in_inter.ready <= 1;
+                    
+                // SEND_FILL: begin
+                //     if(out_inter.ready) begin
+                //         out_inter.valid <= 0;
+                //         in_inter.ready <= 1;
                         
-                        if(cnt==1) begin
-                        	state <= WAIT;
-						end 
-						else begin
-							cnt++;
-							state <= WAIT_PIPEFILL;
-						end
-                    end
-                end
+                //         if(cnt==1) begin
+                //         	state <= WAIT;
+				// 		end 
+				// 		else begin
+				// 			cnt++;
+				// 			state <= WAIT_PIPEFILL;
+				// 		end
+                //     end
+                // end
         endcase
     end
 endmodule: DUT
