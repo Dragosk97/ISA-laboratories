@@ -26,13 +26,17 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                         $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
                         $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",in_inter.A,in_inter.B,out_inter.data);
                         out_inter.valid <= 1;
-						if(cnt==5) begin
-                        	state <= SEND;
-						end 
-						else begin
-							cnt++;
-							state <= WAIT;
-						end
+                        state <= SEND;
+                    end
+                end
+
+                WAIT_PIPEFILL: begin
+                    if(in_inter.valid) begin
+                        in_inter.ready <= 0;
+                        $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
+                        $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",in_inter.A,in_inter.B,out_inter.data);
+                        out_inter.valid <= 0;
+                        state <= SEND;
                     end
                 end
                 
@@ -40,7 +44,14 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                     if(out_inter.ready) begin
                         out_inter.valid <= 0;
                         in_inter.ready <= 1;
-                        state <= WAIT;
+                        
+                        if(cnt==5) begin
+                        	state <= WAIT;
+						end 
+						else begin
+							cnt++;
+							state <= WAIT_PIPEFILL;
+						end
                     end
                 end
         endcase
