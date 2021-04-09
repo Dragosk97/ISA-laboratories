@@ -9,10 +9,10 @@ z2
 cModel Technology
 Z0 d/home/isa17/Desktop/ISA-laboratories/lab4/FPU_mult/sim
 T_opt
-!s110 1617966711
-VE8m@R:?:eGCJAAfgbM77e2
+!s110 1617968910
+Vmok9;:7ODaFTPb`BOTOn<0
 04 3 4 work top fast 0
-=1-000ae431a4f1-60703672-e8242-55fd
+=1-000ae431a4f1-60703f09-5050a-4031
 o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
@@ -25,18 +25,18 @@ Z5 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 >Q7TPNlaOI`lYMMAPkO<91
-IczZmI4oBJ>aKE5H^bPm233
+!s100 TFPDTSENC@mJh3FeP86[;3
+IE0?EOmP3dVF?cBK8eDHDz0
 Z6 !s105 top_sv_unit
 S1
 R0
-Z7 w1617966657
+Z7 w1617968859
 8../src/DUT.sv
 Z8 F../src/DUT.sv
 L0 1
 Z9 OL;L;10.7c;67
 31
-Z10 !s108 1617966700.000000
+Z10 !s108 1617968899.000000
 Z11 !s107 ../tb/simple_test.sv|../tb/env.sv|../tb/comparator.sv|../tb/refmod.sv|../tb/agent_out.sv|../tb/agent.sv|../tb/monitor_out.sv|../tb/monitor.sv|../tb/driver_out.sv|../tb/driver.sv|../tb/sequencer.sv|../tb/sequence_in.sv|../tb/packet_out.sv|../tb/packet_in.sv|../src/DUT.sv|../src/dut_if.sv|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../tb/top.sv|
 Z12 !s90 -reportprogress|300|-sv|../tb/top.sv|
 !i113 0
@@ -81,9 +81,9 @@ V3^Pgk7S^XUmezjQ3QTIdO2
 !s100 _:IcS7863Zib:g7IE<QAf0
 Z20 OL;C;10.7c;67
 32
-Z21 !s110 1617966698
+Z21 !s110 1617968897
 !i10b 1
-Z22 !s108 1617966698.000000
+Z22 !s108 1617968897.000000
 Z23 !s90 -reportprogress|30|-work|work|../src/FA.vhd|
 Z24 !s107 ../src/FA.vhd|
 !i113 0
@@ -121,9 +121,9 @@ Vzjc?iGchdeJn<bggWRPLL1
 !s100 UIfZ<B9e`aCZ8<W3KH@`n1
 R20
 32
-Z30 !s110 1617966697
+Z30 !s110 1617968896
 !i10b 1
-Z31 !s108 1617966697.000000
+Z31 !s108 1617968895.000000
 Z32 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/multiplier/fpmul_pipeline.vhd|
 Z33 !s107 ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd|
 !i113 0
@@ -166,9 +166,9 @@ V:D0egi>nFN9AK7^9ALS2j3
 !s100 :3j_NH:3ASmWeM>c2?Oi23
 R20
 32
-Z40 !s110 1617966695
+Z40 !s110 1617968894
 !i10b 1
-Z41 !s108 1617966694.000000
+Z41 !s108 1617968893.000000
 Z42 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/multiplier/fpmul_stage1_struct.vhd|
 Z43 !s107 ../src/fpuvhdl/multiplier/fpmul_stage1_struct.vhd|
 !i113 0
@@ -210,7 +210,7 @@ R20
 32
 R40
 !i10b 1
-Z47 !s108 1617966695.000000
+Z47 !s108 1617968894.000000
 Z48 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd|
 Z49 !s107 ../src/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd|
 !i113 0
@@ -249,7 +249,7 @@ VZ24GY86Rf`7WV8;ENKM2O0
 !s100 MMcBTY60X3ifGNKdiG4hd2
 R20
 32
-Z52 !s110 1617966696
+Z52 !s110 1617968895
 !i10b 1
 R47
 Z53 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/multiplier/fpmul_stage3_struct.vhd|
@@ -295,14 +295,14 @@ R20
 32
 R52
 !i10b 1
-Z60 !s108 1617966696.000000
-Z61 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/multiplier/fpmul_stage4_struct.vhd|
-Z62 !s107 ../src/fpuvhdl/multiplier/fpmul_stage4_struct.vhd|
+R31
+Z60 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/multiplier/fpmul_stage4_struct.vhd|
+Z61 !s107 ../src/fpuvhdl/multiplier/fpmul_stage4_struct.vhd|
 !i113 0
 R25
 R26
 Astruct
-Z63 DEx4 work 6 packfp 0 22 7T7QG<UU[BmP1lg:dSfA<2
+Z62 DEx4 work 6 packfp 0 22 7T7QG<UU[BmP1lg:dSfA<2
 R56
 R57
 R34
@@ -317,9 +317,9 @@ R20
 32
 R52
 !i10b 1
+R31
 R60
 R61
-R62
 !i113 0
 R25
 R26
@@ -330,19 +330,19 @@ R27
 R16
 R17
 R0
-Z64 8../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd
-Z65 F../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd
+Z63 8../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd
+Z64 F../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd
 l0
 L17
 Vd>eLIXJz7SBlKWLg5V6<62
 !s100 BUjUAMkjQc3i8Jl5B5FoX0
 R20
 32
-Z66 !s110 1617966693
+Z65 !s110 1617968891
 !i10b 1
-Z67 !s108 1617966692.000000
-Z68 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd|
-Z69 !s107 ../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd|
+Z66 !s108 1617968891.000000
+Z67 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd|
+Z68 !s107 ../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd|
 !i113 0
 R25
 R26
@@ -358,11 +358,11 @@ VSSkE5KTmN1c<H?_iHYknZ3
 !s100 I6J0=:VN^oWBdKzYW7[Mg3
 R20
 32
-R66
+R65
 !i10b 1
+R66
 R67
 R68
-R69
 !i113 0
 R25
 R26
@@ -373,19 +373,19 @@ R27
 R16
 R17
 R0
-Z70 8../src/fpuvhdl/common/fpround_fpround.vhd
-Z71 F../src/fpuvhdl/common/fpround_fpround.vhd
+Z69 8../src/fpuvhdl/common/fpround_fpround.vhd
+Z70 F../src/fpuvhdl/common/fpround_fpround.vhd
 l0
 L17
 VcGZDW<j1eXjeGooNN]D^K3
 !s100 Ie14d[iLcC63KLGjc:z<A1
 R20
 32
-Z72 !s110 1617966694
+Z71 !s110 1617968893
 !i10b 1
-Z73 !s108 1617966693.000000
-Z74 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/fpround_fpround.vhd|
-Z75 !s107 ../src/fpuvhdl/common/fpround_fpround.vhd|
+Z72 !s108 1617968892.000000
+Z73 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/fpround_fpround.vhd|
+Z74 !s107 ../src/fpuvhdl/common/fpround_fpround.vhd|
 !i113 0
 R25
 R26
@@ -401,11 +401,11 @@ V0cJikFM=[iV5RjQ8Tmaol1
 !s100 ndTGM7]9X@o`5EOkU2jll3
 R20
 32
-R72
+R71
 !i10b 1
+R72
 R73
 R74
-R75
 !i113 0
 R25
 R26
@@ -414,8 +414,8 @@ R14
 R16
 R17
 R0
-Z76 8../src/HA.vhd
-Z77 F../src/HA.vhd
+Z75 8../src/HA.vhd
+Z76 F../src/HA.vhd
 l0
 L4
 VRRn2XH=FQPE1a2B^1n1C<3
@@ -424,7 +424,7 @@ R20
 32
 R30
 !i10b 1
-R31
+Z77 !s108 1617968896.000000
 Z78 !s90 -reportprogress|30|-work|work|../src/HA.vhd|
 Z79 !s107 ../src/HA.vhd|
 !i113 0
@@ -442,7 +442,7 @@ R20
 32
 R30
 !i10b 1
-R31
+R77
 R78
 R79
 !i113 0
@@ -462,9 +462,9 @@ VB:7hB4Of0IS8C<>_H3T:X1
 !s100 GTJS9QD`6`jlC=3`R2Jb@2
 R20
 32
-Z83 !s110 1617966699
+Z83 !s110 1617968898
 !i10b 1
-Z84 !s108 1617966699.000000
+Z84 !s108 1617968898.000000
 Z85 !s90 -reportprogress|30|-work|work|../src/MBE_mult.vhd|
 Z86 !s107 ../src/MBE_mult.vhd|
 !i113 0
@@ -544,11 +544,11 @@ V7T7QG<UU[BmP1lg:dSfA<2
 !s100 01>7]i`Z0N7NH9g:Ga>l=0
 R20
 32
-R66
+Z93 !s110 1617968892
 !i10b 1
-R73
-Z93 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/packfp_packfp.vhd|
-Z94 !s107 ../src/fpuvhdl/common/packfp_packfp.vhd|
+R72
+Z94 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/packfp_packfp.vhd|
+Z95 !s107 ../src/fpuvhdl/common/packfp_packfp.vhd|
 !i113 0
 R25
 R26
@@ -556,18 +556,18 @@ Apackfp
 R27
 R16
 R17
-R63
+R62
 l34
 L33
 VI<7QK?Z>dO7bAUoE[HQF?0
 !s100 boEIjXMzHClblfW8W7BJS0
 R20
 32
-R66
-!i10b 1
-R73
 R93
+!i10b 1
+R72
 R94
+R95
 !i113 0
 R25
 R26
@@ -585,8 +585,8 @@ R6
 S1
 R0
 w1617963945
-Z95 8../tb/top.sv
-Z96 F../tb/top.sv
+Z96 8../tb/top.sv
+Z97 F../tb/top.sv
 L0 21
 R9
 31
@@ -610,8 +610,8 @@ Ib?BQcRUQi=A[7aBn5ImaK2
 S1
 R0
 R7
-R95
 R96
+R97
 F/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
 F/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
 F/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
@@ -655,19 +655,19 @@ R27
 R16
 R17
 R0
-Z97 8../src/fpuvhdl/common/unpackfp_unpackfp.vhd
-Z98 F../src/fpuvhdl/common/unpackfp_unpackfp.vhd
+Z98 8../src/fpuvhdl/common/unpackfp_unpackfp.vhd
+Z99 F../src/fpuvhdl/common/unpackfp_unpackfp.vhd
 l0
 L15
 VBzbGHDM`OVeOR[gW2FMzd3
 !s100 iXK2eKKm@g^[^1N:863BC1
 R20
 32
-R72
+R71
 !i10b 1
 R41
-Z99 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/unpackfp_unpackfp.vhd|
-Z100 !s107 ../src/fpuvhdl/common/unpackfp_unpackfp.vhd|
+Z100 !s90 -reportprogress|30|-work|work|../src/fpuvhdl/common/unpackfp_unpackfp.vhd|
+Z101 !s107 ../src/fpuvhdl/common/unpackfp_unpackfp.vhd|
 !i113 0
 R25
 R26
@@ -682,11 +682,11 @@ VZcLVYePeKZDS@;?Wcm=@F1
 !s100 LM2:M<W34`8Dk4EdA2IlO0
 R20
 32
-R72
+R71
 !i10b 1
 R41
-R99
 R100
+R101
 !i113 0
 R25
 R26

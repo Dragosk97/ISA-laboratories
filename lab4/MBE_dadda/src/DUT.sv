@@ -18,6 +18,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                 end
                 
                 WAIT: begin
+					$display("MBE: WAIT");
                     if(in_inter.valid) begin
                         in_inter.ready <= 0;
                         //out_inter.data <= in_inter.A + in_inter.B;
@@ -29,6 +30,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                 end
                 
                 SEND: begin
+					$display("MBE: SEND");
                     if(out_inter.ready) begin
                         out_inter.valid <= 0;
                         in_inter.ready <= 1;
