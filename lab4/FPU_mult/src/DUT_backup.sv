@@ -15,43 +15,40 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
         end
         else case(state)
                 INITIAL: begin
-                    in_inter.ready <= 0;
+                    in_inter.ready <= 1;
 					cnt = 0;
                     state <= WAIT_PIPEFILL;
                 end
-                
+
+                WAIT_PIPEFILL: begin
+                    in_inter.ready <= 0;
+                    out_inter.valid <= 0;
+                    if (cnt==1) begin
+                        state <= WAIT;
+                    end
+                    else begin
+                        state <=WAIT_PIPEFILL;
+                        cnt++;
+                    end
+                end
+
                 WAIT: begin
                     if(in_inter.valid) begin
                         in_inter.ready <= 0;
-                        $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
+                        $display("dadda_mult: input A = %g, input B = %g, output OUT = %g",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
                         $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",in_inter.A,in_inter.B,out_inter.data);
                         out_inter.valid <= 1;
                         state <= SEND;
                     end
                 end
 
-                WAIT_PIPEFILL: begin
-                    if(in_inter.valid) begin
-                        in_inter.ready <= 0;
-                        $display("dadda_mult: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(in_inter.A),$bitstoshortreal(in_inter.B),$bitstoshortreal(out_inter.data));
-                        $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",in_inter.A,in_inter.B,out_inter.data);
-                        out_inter.valid <= 0;
-                        state <= SEND;
-                    end
-                end
-                
                 SEND: begin
                     if(out_inter.ready) begin
                         out_inter.valid <= 0;
-                        in_inter.ready <= 1;
+                        in_inter.ready <= 1;				
+                        cnt=0;
+                        state <= WAIT_PIPEFILL;
                         
-                        if(cnt==1) begin
-                        	state <= WAIT;
-						end 
-						else begin
-							cnt++;
-							state <= WAIT_PIPEFILL;
-						end
                     end
                 end
                     
