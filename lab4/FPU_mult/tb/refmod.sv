@@ -36,7 +36,7 @@ class refmod extends uvm_component;
 			            
 			tr_out.data = $shortrealtobits($bitstoshortreal(var_A) * $bitstoshortreal(var_B)); //multiplier
             $display("REFMOD compute");
-            $display("refmod: input A = %f, input B = %f, output OUT = %f",$bitstoshortreal(var_A), $bitstoshortreal(var_B), $bitstoshortreal(tr_out.data));
+            $display("refmod: input A = %g, input B = %g, output OUT = %g",$bitstoshortreal(var_A), $bitstoshortreal(var_B), $bitstoshortreal(tr_out.data));
 			$display("refmod: input A = %b, input B = %b, output OUT = %b",var_A, var_B, tr_out.data);
             out.put(tr_out);
         end

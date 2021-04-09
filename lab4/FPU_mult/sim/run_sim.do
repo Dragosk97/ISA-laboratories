@@ -14,4 +14,4 @@ vcom -reportprogress 30 -work work ../src/MBE_mult.vhd
 
 vlog -sv ../tb/top.sv
 vsim top
-run 4 us
+run 7 us
