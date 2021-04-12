@@ -12,6 +12,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
             out_inter.data <= 'x;
             out_inter.valid <= 0;
 			A_pipe <= 0;
+			B_pipe <= 0;
 			//cnt = 0;
             state <= INITIAL;
         end
