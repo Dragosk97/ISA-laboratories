@@ -1,7 +1,7 @@
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 `include "../src/dut_if.sv"
-`include "../src/DUT_generic.sv"
+`include "../src/DUT.sv"
 `include "../tb/packet_in.sv"
 `include "../tb/packet_out.sv"
 `include "../tb/sequence_in.sv"
@@ -12,7 +12,7 @@ import uvm_pkg::*;
 `include "../tb/monitor_out.sv"
 `include "../tb/agent.sv"
 `include "../tb/agent_out.sv"
-`include "../tb/refmod_generic.sv"
+`include "../tb/refmod.sv"
 `include "../tb/comparator.sv"
 `include "../tb/env.sv"
 `include "../tb/simple_test.sv"
