@@ -28,11 +28,11 @@ The directories are organized as:
 - **./FPU_mult**: 
    - **./sim**: it contains the script to be run and the result of the simulation on QuestaSim, which is the transcript file
    - **./src**: 
-         - _DUT_generic.sv_: device under test of the first version
-         - _DUT.sv_: device under test of the second version
+      - _DUT_generic.sv_: device under test of the first version
+      - _DUT.sv_: device under test of the second version
    - **./tb**:
-         - _refmod_generic.sv_: this file is referring to the first version 
-         - _refmod.sv_: this refers to the second case     
+      - _refmod_generic.sv_: this file is referring to the first version 
+      - _refmod.sv_: this refers to the second case     
 
 
    
