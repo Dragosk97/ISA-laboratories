@@ -10,22 +10,22 @@ Students:
 -	Liu Huicai		273375
 
 The directories are organized as:
-- **./adder**
+- **./adder**: it contains the testing of a simple adder
 
-- **./adder_64bit**
+- **./adder_64bit**: modification of the wordlength
 
-- **./adder_constraints**
+- **./adder_constraints**: constraints applied of the inputs
    
-- **./adder_mismatch**
+- **./adder_mismatch**: the refmod is changed in order to see the mismatches
    
 - **./MBE_dadda**
    
 - **./FPU_mult**
    
 All the folders are internally organized as: 
-- **./sim**
-- **./src**
-- **./tb**
+- **./sim**: it contains the result of the simulation on QuestaSim, which is the transcript file
+- **./src**: it contains the DUT
+- **./tb**: it contains the UVM framework
    
    
    
