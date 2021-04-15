@@ -14,13 +14,13 @@ The directories are organized as:
 
 - **./adder_64bit**: modification of the wordlength
 
-- **./adder_constraints**: constraints applied of the inputs
+- **./adder_constraints**: constraints applied to the inputs
    
 - **./adder_mismatch**: the refmod is changed in order to see the mismatches
    
 - **./MBE_dadda**
    
-- **./FPU_mult**
+- **./FPU_mult**: __DUT_generic.sv__
    
 All the folders are internally organized as: 
 - **./sim**: it contains the result of the simulation on QuestaSim, which is the transcript file
