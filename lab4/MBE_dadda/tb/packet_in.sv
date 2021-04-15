@@ -2,6 +2,11 @@ class packet_in extends uvm_sequence_item;
     rand integer A;
     rand integer B;
 
+    constraint my_range {
+        A inside {[0:2^(24)-1]};
+        B inside {[0:2^(24)-1]};
+    }
+
     `uvm_object_utils_begin(packet_in)
         `uvm_field_int(A, UVM_ALL_ON|UVM_HEX)
         `uvm_field_int(B, UVM_ALL_ON|UVM_HEX)
