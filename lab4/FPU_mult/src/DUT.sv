@@ -20,10 +20,10 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
 					A_pipe <= in_inter.A;
 					B_pipe <= in_inter.B;
                     in_inter.ready <= 1;
-                    state <= WAIT_PIPEFILL;
+                    state <= PIPEFILL;
                 end
 
-                WAIT_PIPEFILL: begin
+                PIPEFILL: begin
 					$display("FPU_mult: WAIT_PIPEFILL");
                     $display("-- input A: %b, input B: %b; output Z: %b", in_inter.A, in_inter.B, out_inter.data);
 					if(in_inter.valid) begin
@@ -56,7 +56,6 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                     $display("-- input A: %b, input B: %b; output Z: %b", in_inter.A, in_inter.B, out_inter.data);
                     $display("");
 
-
 					$display("dadda_mult: input A = %g, input B = %g, output OUT = %g",$bitstoshortreal(A_pipe),$bitstoshortreal(B_pipe),$bitstoshortreal(out_inter.data));
                     $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",A_pipe,B_pipe,out_inter.data);
 					A_pipe <= in_inter.A;
@@ -64,7 +63,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                     if(out_inter.ready) begin
                         out_inter.valid <= 0;
                         in_inter.ready <= 1;				
-                        state <= WAIT_PIPEFILL; 
+                        state <= PIPEFILL; 
                     end
                 end
         endcase
