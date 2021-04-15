@@ -12,9 +12,9 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-do run_sim.do
+do run_sim_generic.do
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:31 on Apr 15,2021
+# Start time: 20:48:17 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/common/fpnormalize_fpnormalize.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -23,10 +23,10 @@ do run_sim.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity FPnormalize
 # -- Compiling architecture FPnormalize of FPnormalize
-# End time: 20:58:31 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:18 on Apr 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:31 on Apr 15,2021
+# Start time: 20:48:18 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/common/packfp_packfp.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,10 +34,10 @@ do run_sim.do
 # -- Loading package std_logic_arith
 # -- Compiling entity PackFP
 # -- Compiling architecture PackFP of PackFP
-# End time: 20:58:32 on Apr 15,2021, Elapsed time: 0:00:01
+# End time: 20:48:18 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:32 on Apr 15,2021
+# Start time: 20:48:18 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/common/fpround_fpround.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -46,10 +46,10 @@ do run_sim.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity FPround
 # -- Compiling architecture FPround of FPround
-# End time: 20:58:32 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:19 on Apr 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:32 on Apr 15,2021
+# Start time: 20:48:19 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/common/unpackfp_unpackfp.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -57,10 +57,10 @@ do run_sim.do
 # -- Loading package std_logic_arith
 # -- Compiling entity UnpackFP
 # -- Compiling architecture UnpackFP of UnpackFP
-# End time: 20:58:33 on Apr 15,2021, Elapsed time: 0:00:01
+# End time: 20:48:19 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:33 on Apr 15,2021
+# Start time: 20:48:20 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/multiplier/fpmul_stage1_struct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -69,10 +69,10 @@ do run_sim.do
 # -- Compiling entity FPmul_stage1
 # -- Compiling architecture struct of FPmul_stage1
 # -- Loading entity UnpackFP
-# End time: 20:58:33 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:20 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:33 on Apr 15,2021
+# Start time: 20:48:20 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/multiplier/fpmul_stage2_struct_mbe.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -80,10 +80,10 @@ do run_sim.do
 # -- Loading package std_logic_arith
 # -- Compiling entity FPmul_stage2
 # -- Compiling architecture struct of FPmul_stage2
-# End time: 20:58:34 on Apr 15,2021, Elapsed time: 0:00:01
+# End time: 20:48:20 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:34 on Apr 15,2021
+# Start time: 20:48:20 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/multiplier/fpmul_stage3_struct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -94,10 +94,10 @@ do run_sim.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading entity FPnormalize
 # -- Loading entity FPround
-# End time: 20:58:34 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:21 on Apr 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:34 on Apr 15,2021
+# Start time: 20:48:21 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/multiplier/fpmul_stage4_struct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -108,10 +108,10 @@ do run_sim.do
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Loading entity FPnormalize
 # -- Loading entity PackFP
-# End time: 20:58:35 on Apr 15,2021, Elapsed time: 0:00:01
+# End time: 20:48:21 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:35 on Apr 15,2021
+# Start time: 20:48:22 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/fpuvhdl/multiplier/fpmul_pipeline.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -123,30 +123,30 @@ do run_sim.do
 # -- Loading entity FPmul_stage2
 # -- Loading entity FPmul_stage3
 # -- Loading entity FPmul_stage4
-# End time: 20:58:35 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:22 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:36 on Apr 15,2021
+# Start time: 20:48:22 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/HA.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity HA
 # -- Compiling architecture struct of HA
-# End time: 20:58:36 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:23 on Apr 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:36 on Apr 15,2021
+# Start time: 20:48:23 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/FA.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FA
 # -- Compiling architecture struct of FA
-# End time: 20:58:37 on Apr 15,2021, Elapsed time: 0:00:01
+# End time: 20:48:23 on Apr 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:37 on Apr 15,2021
+# Start time: 20:48:23 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/MBE.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -154,10 +154,10 @@ do run_sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MBE_n
 # -- Compiling architecture behavioural of MBE_n
-# End time: 20:58:37 on Apr 15,2021, Elapsed time: 0:00:00
+# End time: 20:48:24 on Apr 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:37 on Apr 15,2021
+# Start time: 20:48:24 on Apr 15,2021
 # vcom -reportprogress 30 -work work ../src/MBE_mult.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -165,13 +165,13 @@ do run_sim.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity MBE_mult
 # -- Compiling architecture behavioural of MBE_mult
-# End time: 20:58:38 on Apr 15,2021, Elapsed time: 0:00:01
+# End time: 20:48:25 on Apr 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 20:58:38 on Apr 15,2021
-# vlog -reportprogress 300 -sv ../tb/top.sv 
-# ** Note: (vlog-2286) ../tb/top.sv(2): Using implicit +incdir+/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Compiling package top_sv_unit
+# Start time: 20:48:25 on Apr 15,2021
+# vlog -reportprogress 300 -sv ../tb/top_generic.sv 
+# ** Note: (vlog-2286) ../tb/top_generic.sv(2): Using implicit +incdir+/software/mentor/questa10.7c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package top_generic_sv_unit
 # -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 # ** Warning: ../tb/monitor.sv(49): (vlog-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
 # ** Warning: ../tb/monitor_out.sv(48): (vlog-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
@@ -181,16 +181,16 @@ do run_sim.do
 # 
 # Top level modules:
 # 	top
-# End time: 20:58:44 on Apr 15,2021, Elapsed time: 0:00:06
+# End time: 20:48:30 on Apr 15,2021, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 2
 # vsim top 
-# Start time: 20:58:44 on Apr 15,2021
+# Start time: 20:48:30 on Apr 15,2021
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: ../tb/monitor.sv(49): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
 # ** Warning: ../tb/monitor_out.sv(48): (vopt-2240) Treating stand-alone use of function 'begin_tr' as an implicit VOID cast.
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
-# Loading work.top_sv_unit(fast)
+# Loading work.top_generic_sv_unit(fast)
 # Loading work.top(fast)
 # Loading work.DUT(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
@@ -212,10 +212,10 @@ do run_sim.do
 # Loading work.fpround(fpround)#1
 # Loading work.fpmul_stage4(struct)#1
 # Loading work.packfp(packfp)#1
-# ** Warning: (vsim-3839) Variable '/top/out/data', driven via a port connection, is multiply driven. See ../src/DUT.sv(3).
-#    Time: 0 ns  Iteration: 0  Instance: /top/sum File: ../src/DUT.sv Line: 12
+# ** Warning: (vsim-3839) Variable '/top/out/data', driven via a port connection, is multiply driven. See ../src/DUT_generic.sv(3).
+#    Time: 0 ns  Iteration: 0  Instance: /top/sum File: ../src/DUT_generic.sv Line: 17
 # ** Warning: (vsim-3764) Stand-alone call to function 'begin_tr' treated as implicit void cast.
-#    Time: 0 ns  Iteration: 0  Region: /top_sv_unit::driver File: ../tb/driver.sv Line: 67
+#    Time: 0 ns  Iteration: 0  Region: /top_generic_sv_unit::driver File: ../tb/driver.sv Line: 67
 # Loading /software/mentor/questa10.7c/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -274,1245 +274,738 @@ do run_sim.do
 #    Time: 15 ns  Iteration: 2  Instance: /top/sum/fpmul_under_test/I2
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 15 ns  Iteration: 2  Instance: /top/sum/fpmul_under_test/I2
-# FP_mult: WAIT
-# -- input A: 00101011100100100110001111011001, input B: 00001010011100000010010111111101; output Z: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# REFMOD compute
-# refmod: input A = 0, input B = 0, output OUT = 0
-# refmod: input A = 00000000000000000000000000000000, input B = 00000000000000000000000000000000, output OUT = 00000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 00101011100100100110001111011001, input B: 00001010011100000010010111111101; output Z: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# FP_mult: SEND
-# -- input A: 00101011100100100110001111011001, input B: 00001010011100000010010111111101; output Z: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# FP_mult: input A = 0, input B = 0, output OUT = 0
-# FP_mult: input A = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, input B = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, output OUT = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# UVM_INFO @ 55: reporter [MISCMP] Miscompare for exp.data: lhs = 'h0 : rhs = 'h0xxxxxxxx
-# UVM_INFO @ 55: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
-# UVM_WARNING @ 55: uvm_test_top.env_h.comp [Comparator Mismatch] 
-# FP_mult: WAIT
-# -- input A: 00000100110010100111111010001011, input B: 10100001000100100111100111110100; output Z: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # REFMOD compute
 # refmod: input A = 1.04016e-12, input B = 1.15627e-32, output OUT = 1.26117e-44
 # refmod: input A = 00101011100100100110001111011001, input B = 00001010011100000010010111111101, output OUT = 00000000000000000000000000001001
-# FP_mult: PIPEFILL
-# -- input A: 00000100110010100111111010001011, input B: 10100001000100100111100111110100; output Z: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # FP_mult: SEND
-# -- input A: 00000100110010100111111010001011, input B: 10100001000100100111100111110100; output Z: 00000000000000000000000000000000
 # FP_mult: input A = 1.04016e-12, input B = 1.15627e-32, output OUT = 0
 # FP_mult: input A = 00101011100100100110001111011001, input B = 00001010011100000010010111111101, output OUT = 00000000000000000000000000000000
 # UVM_INFO @ 85: reporter [MISCMP] Miscompare for exp.data: lhs = 'h9 : rhs = 'h0
 # UVM_INFO @ 85: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
 # UVM_WARNING @ 85: uvm_test_top.env_h.comp [Comparator Mismatch] 
-# FP_mult: WAIT
-# -- input A: 00001111100011001011000101110100, input B: 11100011010001010000100100011010; output Z: 00000000000000000000000000000000
 # REFMOD compute
 # refmod: input A = 4.76062e-36, input B = -4.96281e-19, output OUT = -0
 # refmod: input A = 00000100110010100111111010001011, input B = 10100001000100100111100111110100, output OUT = 10000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 00001111100011001011000101110100, input B: 11100011010001010000100100011010; output Z: 00000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 00001111100011001011000101110100, input B: 11100011010001010000100100011010; output Z: 10000000000000000000000000000000
 # FP_mult: input A = 4.76062e-36, input B = -4.96281e-19, output OUT = -0
 # FP_mult: input A = 00000100110010100111111010001011, input B = 10100001000100100111100111110100, output OUT = 10000000000000000000000000000000
-# UVM_INFO @ 115: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11111110001100001111011010001100, input B: 11110100010111100000111001101111; output Z: 10000000000000000000000000000000
+# UVM_INFO @ 145: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.38734e-29, input B = -3.63466e+21, output OUT = -5.04252e-08
 # refmod: input A = 00001111100011001011000101110100, input B = 11100011010001010000100100011010, output OUT = 10110011010110001001001100011110
-# FP_mult: PIPEFILL
-# -- input A: 11111110001100001111011010001100, input B: 11110100010111100000111001101111; output Z: 10000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 11111110001100001111011010001100, input B: 11110100010111100000111001101111; output Z: 10110011010110001001001100011110
 # FP_mult: input A = 1.38734e-29, input B = -3.63466e+21, output OUT = -5.04252e-08
 # FP_mult: input A = 00001111100011001011000101110100, input B = 11100011010001010000100100011010, output OUT = 10110011010110001001001100011110
-# UVM_INFO @ 145: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10011111110111100000100101001111, input B: 11011101011110011000010111101101; output Z: 10110011010110001001001100011110
+# UVM_INFO @ 205: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -5.88061e+37, input B = -7.03725e+31, output OUT = inf
 # refmod: input A = 11111110001100001111011010001100, input B = 11110100010111100000111001101111, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 10011111110111100000100101001111, input B: 11011101011110011000010111101101; output Z: 10110011010110001001001100011110
 # FP_mult: SEND
-# -- input A: 10011111110111100000100101001111, input B: 11011101011110011000010111101101; output Z: 01111111100000000000000000000000
 # FP_mult: input A = -5.88061e+37, input B = -7.03725e+31, output OUT = inf
 # FP_mult: input A = 11111110001100001111011010001100, input B = 11110100010111100000111001101111, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 175: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00001000010111101000011100010110, input B: 01000010010000011100101111110100; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 265: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -9.40361e-20, input B = -1.12375e+18, output OUT = 0.105673
 # refmod: input A = 10011111110111100000100101001111, input B = 11011101011110011000010111101101, output OUT = 00111101110110000110101100110110
-# FP_mult: PIPEFILL
-# -- input A: 00001000010111101000011100010110, input B: 01000010010000011100101111110100; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 00001000010111101000011100010110, input B: 01000010010000011100101111110100; output Z: 00111101110110000110101100110110
 # FP_mult: input A = -9.40361e-20, input B = -1.12375e+18, output OUT = 0.105673
 # FP_mult: input A = 10011111110111100000100101001111, input B = 11011101011110011000010111101101, output OUT = 00111101110110000110101100110110
-# UVM_INFO @ 205: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11100000001011111110001101011011, input B: 11101011010001101100101111001101; output Z: 00111101110110000110101100110110
+# UVM_INFO @ 325: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 6.69645e-34, input B = 48.4492, output OUT = 3.24437e-32
 # refmod: input A = 00001000010111101000011100010110, input B = 01000010010000011100101111110100, output OUT = 00001011001010000111010100100001
-# FP_mult: PIPEFILL
-# -- input A: 11100000001011111110001101011011, input B: 11101011010001101100101111001101; output Z: 00111101110110000110101100110110
 # FP_mult: SEND
-# -- input A: 11100000001011111110001101011011, input B: 11101011010001101100101111001101; output Z: 00001011001010000111010100100001
 # FP_mult: input A = 6.69645e-34, input B = 48.4492, output OUT = 3.24437e-32
 # FP_mult: input A = 00001000010111101000011100010110, input B = 01000010010000011100101111110100, output OUT = 00001011001010000111010100100001
-# UVM_INFO @ 235: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10010110111000011011110110000001, input B: 11001000111100010001110000110000; output Z: 00001011001010000111010100100001
+# UVM_INFO @ 385: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -5.06963e+19, input B = -2.4033e+26, output OUT = inf
 # refmod: input A = 11100000001011111110001101011011, input B = 11101011010001101100101111001101, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 10010110111000011011110110000001, input B: 11001000111100010001110000110000; output Z: 00001011001010000111010100100001
 # FP_mult: SEND
-# -- input A: 10010110111000011011110110000001, input B: 11001000111100010001110000110000; output Z: 01111111100000000000000000000000
 # FP_mult: input A = -5.06963e+19, input B = -2.4033e+26, output OUT = inf
 # FP_mult: input A = 11100000001011111110001101011011, input B = 11101011010001101100101111001101, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 265: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11100110110101000110101101011100, input B: 11001110011001010101000000111101; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 445: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -3.64703e-25, input B = -493794, output OUT = 1.80088e-19
 # refmod: input A = 10010110111000011011110110000001, input B = 11001000111100010001110000110000, output OUT = 00100000010101001001110001000001
-# FP_mult: PIPEFILL
-# -- input A: 11100110110101000110101101011100, input B: 11001110011001010101000000111101; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 11100110110101000110101101011100, input B: 11001110011001010101000000111101; output Z: 00100000010101001001110001000001
 # FP_mult: input A = -3.64703e-25, input B = -493794, output OUT = 1.80088e-19
 # FP_mult: input A = 10010110111000011011110110000001, input B = 11001000111100010001110000110000, output OUT = 00100000010101001001110001000001
-# UVM_INFO @ 295: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10001101011101001001111010100100, input B: 10101111001000100101100101001001; output Z: 00100000010101001001110001000001
+# UVM_INFO @ 505: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -5.01561e+23, input B = -9.6181e+08, output OUT = 4.82407e+32
 # refmod: input A = 11100110110101000110101101011100, input B = 11001110011001010101000000111101, output OUT = 01110101101111100100011010011101
-# FP_mult: PIPEFILL
-# -- input A: 10001101011101001001111010100100, input B: 10101111001000100101100101001001; output Z: 00100000010101001001110001000001
 # FP_mult: SEND
-# -- input A: 10001101011101001001111010100100, input B: 10101111001000100101100101001001; output Z: 01110101101111100100011010011101
 # FP_mult: input A = -5.01561e+23, input B = -9.6181e+08, output OUT = 4.82407e+32
 # FP_mult: input A = 11100110110101000110101101011100, input B = 11001110011001010101000000111101, output OUT = 01110101101111100100011010011101
-# UVM_INFO @ 325: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01011011111001011010001011111001, input B: 01010101001010000000111011110010; output Z: 01110101101111100100011010011101
+# UVM_INFO @ 565: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -7.53793e-31, input B = -1.47655e-10, output OUT = 1.11301e-40
 # refmod: input A = 10001101011101001001111010100100, input B = 10101111001000100101100101001001, output OUT = 00000000000000010011011001000011
-# FP_mult: PIPEFILL
-# -- input A: 01011011111001011010001011111001, input B: 01010101001010000000111011110010; output Z: 01110101101111100100011010011101
 # FP_mult: SEND
-# -- input A: 01011011111001011010001011111001, input B: 01010101001010000000111011110010; output Z: 00000000000000000000000000000000
 # FP_mult: input A = -7.53793e-31, input B = -1.47655e-10, output OUT = 0
 # FP_mult: input A = 10001101011101001001111010100100, input B = 10101111001000100101100101001001, output OUT = 00000000000000000000000000000000
-# UVM_INFO @ 355: reporter [MISCMP] Miscompare for exp.data: lhs = 'h13643 : rhs = 'h0
-# UVM_INFO @ 355: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
-# UVM_WARNING @ 355: uvm_test_top.env_h.comp [Comparator Mismatch] 
-# FP_mult: WAIT
-# -- input A: 11001010010010110111101101101101, input B: 11011101100010101011111110001000; output Z: 00000000000000000000000000000000
+# UVM_INFO @ 625: reporter [MISCMP] Miscompare for exp.data: lhs = 'h13643 : rhs = 'h0
+# UVM_INFO @ 625: reporter [MISCMP] 1 Miscompare(s) for object tr@825 vs. exp@617
+# UVM_WARNING @ 625: uvm_test_top.env_h.comp [Comparator Mismatch] 
 # REFMOD compute
 # refmod: input A = 1.29274e+17, input B = 1.15489e+13, output OUT = 1.49297e+30
 # refmod: input A = 01011011111001011010001011111001, input B = 01010101001010000000111011110010, output OUT = 01110001100101101100000001011011
-# FP_mult: PIPEFILL
-# -- input A: 11001010010010110111101101101101, input B: 11011101100010101011111110001000; output Z: 00000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 11001010010010110111101101101101, input B: 11011101100010101011111110001000; output Z: 01110001100101101100000001011011
 # FP_mult: input A = 1.29274e+17, input B = 1.15489e+13, output OUT = 1.49297e+30
 # FP_mult: input A = 01011011111001011010001011111001, input B = 01010101001010000000111011110010, output OUT = 01110001100101101100000001011011
-# UVM_INFO @ 385: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01100110000110100011100001100011, input B: 00100011110101111111111011100011; output Z: 01110001100101101100000001011011
+# UVM_INFO @ 685: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -3.33385e+06, input B = -1.24973e+18, output OUT = 4.16642e+24
 # refmod: input A = 11001010010010110111101101101101, input B = 11011101100010101011111110001000, output OUT = 01101000010111001001000110001100
-# FP_mult: PIPEFILL
-# -- input A: 01100110000110100011100001100011, input B: 00100011110101111111111011100011; output Z: 01110001100101101100000001011011
 # FP_mult: SEND
-# -- input A: 01100110000110100011100001100011, input B: 00100011110101111111111011100011; output Z: 01101000010111001001000110001100
 # FP_mult: input A = -3.33385e+06, input B = -1.24973e+18, output OUT = 4.16642e+24
 # FP_mult: input A = 11001010010010110111101101101101, input B = 11011101100010101011111110001000, output OUT = 01101000010111001001000110001100
-# UVM_INFO @ 415: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11010011011011111101111111100011, input B: 00010100111010010111000001010011; output Z: 01101000010111001001000110001100
+# UVM_INFO @ 745: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.82071e+23, input B = 2.34183e-17, output OUT = 4.2638e+06
 # refmod: input A = 01100110000110100011100001100011, input B = 00100011110101111111111011100011, output OUT = 01001010100000100001111011101000
-# FP_mult: PIPEFILL
-# -- input A: 11010011011011111101111111100011, input B: 00010100111010010111000001010011; output Z: 01101000010111001001000110001100
 # FP_mult: SEND
-# -- input A: 11010011011011111101111111100011, input B: 00010100111010010111000001010011; output Z: 01001010100000100001111011101000
 # FP_mult: input A = 1.82071e+23, input B = 2.34183e-17, output OUT = 4.2638e+06
 # FP_mult: input A = 01100110000110100011100001100011, input B = 00100011110101111111111011100011, output OUT = 01001010100000100001111011101000
-# UVM_INFO @ 445: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00000101011110110001011100100001, input B: 01110101001000100011010000111001; output Z: 01001010100000100001111011101000
+# UVM_INFO @ 805: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.03025e+12, input B = 2.35713e-26, output OUT = -2.42844e-14
 # refmod: input A = 11010011011011111101111111100011, input B = 00010100111010010111000001010011, output OUT = 10101000110110101011110000000101
-# FP_mult: PIPEFILL
-# -- input A: 00000101011110110001011100100001, input B: 01110101001000100011010000111001; output Z: 01001010100000100001111011101000
 # FP_mult: SEND
-# -- input A: 00000101011110110001011100100001, input B: 01110101001000100011010000111001; output Z: 10101000110110101011110000000101
 # FP_mult: input A = -1.03025e+12, input B = 2.35713e-26, output OUT = -2.42844e-14
 # FP_mult: input A = 11010011011011111101111111100011, input B = 00010100111010010111000001010011, output OUT = 10101000110110101011110000000101
-# UVM_INFO @ 475: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10110111001010010010010100011110, input B: 10011011011101101100011111000110; output Z: 10101000110110101011110000000101
+# UVM_INFO @ 865: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.18062e-35, input B = 2.05618e+32, output OUT = 0.00242757
 # refmod: input A = 00000101011110110001011100100001, input B = 01110101001000100011010000111001, output OUT = 00111011000111110001011111011011
-# FP_mult: PIPEFILL
-# -- input A: 10110111001010010010010100011110, input B: 10011011011101101100011111000110; output Z: 10101000110110101011110000000101
 # FP_mult: SEND
-# -- input A: 10110111001010010010010100011110, input B: 10011011011101101100011111000110; output Z: 00111011000111110001011111011011
 # FP_mult: input A = 1.18062e-35, input B = 2.05618e+32, output OUT = 0.00242757
 # FP_mult: input A = 00000101011110110001011100100001, input B = 01110101001000100011010000111001, output OUT = 00111011000111110001011111011011
-# UVM_INFO @ 505: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00110100001110011000001000100001, input B: 00100100100111011001010001011011; output Z: 00111011000111110001011111011011
+# UVM_INFO @ 925: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.00818e-05, input B = -2.04132e-22, output OUT = 2.05802e-27
 # refmod: input A = 10110111001010010010010100011110, input B = 10011011011101101100011111000110, output OUT = 00010011001000110000110110101010
-# FP_mult: PIPEFILL
-# -- input A: 00110100001110011000001000100001, input B: 00100100100111011001010001011011; output Z: 00111011000111110001011111011011
 # FP_mult: SEND
-# -- input A: 00110100001110011000001000100001, input B: 00100100100111011001010001011011; output Z: 00010011001000110000110110101010
 # FP_mult: input A = -1.00818e-05, input B = -2.04132e-22, output OUT = 2.05802e-27
 # FP_mult: input A = 10110111001010010010010100011110, input B = 10011011011101101100011111000110, output OUT = 00010011001000110000110110101010
-# UVM_INFO @ 535: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01011101100000010111110111011010, input B: 01000000000101001000101011010010; output Z: 00010011001000110000110110101010
+# UVM_INFO @ 985: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.72768e-07, input B = 6.83392e-17, output OUT = 1.18068e-23
 # refmod: input A = 00110100001110011000001000100001, input B = 00100100100111011001010001011011, output OUT = 00011001011001000110000010011111
-# FP_mult: PIPEFILL
-# -- input A: 01011101100000010111110111011010, input B: 01000000000101001000101011010010; output Z: 00010011001000110000110110101010
 # FP_mult: SEND
-# -- input A: 01011101100000010111110111011010, input B: 01000000000101001000101011010010; output Z: 00011001011001000110000010011111
 # FP_mult: input A = 1.72768e-07, input B = 6.83392e-17, output OUT = 1.18068e-23
 # FP_mult: input A = 00110100001110011000001000100001, input B = 00100100100111011001010001011011, output OUT = 00011001011001000110000010011111
-# UVM_INFO @ 565: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01100100000100101100101110111111, input B: 00011010011111110110110111101110; output Z: 00011001011001000110000010011111
+# UVM_INFO @ 1045: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.16636e+18, input B = 2.32097, output OUT = 2.70708e+18
 # refmod: input A = 01011101100000010111110111011010, input B = 01000000000101001000101011010010, output OUT = 01011110000101100100010111110100
-# FP_mult: PIPEFILL
-# -- input A: 01100100000100101100101110111111, input B: 00011010011111110110110111101110; output Z: 00011001011001000110000010011111
 # FP_mult: SEND
-# -- input A: 01100100000100101100101110111111, input B: 00011010011111110110110111101110; output Z: 01011110000101100100010111110100
 # FP_mult: input A = 1.16636e+18, input B = 2.32097, output OUT = 2.70708e+18
 # FP_mult: input A = 01011101100000010111110111011010, input B = 01000000000101001000101011010010, output OUT = 01011110000101100100010111110100
-# UVM_INFO @ 595: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01001000110100110111010111111111, input B: 11110111111001100000111111000011; output Z: 01011110000101100100010111110100
+# UVM_INFO @ 1105: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.08316e+22, input B = 5.28216e-23, output OUT = 0.572143
 # refmod: input A = 01100100000100101100101110111111, input B = 00011010011111110110110111101110, output OUT = 00111111000100100111011111111100
-# FP_mult: PIPEFILL
-# -- input A: 01001000110100110111010111111111, input B: 11110111111001100000111111000011; output Z: 01011110000101100100010111110100
 # FP_mult: SEND
-# -- input A: 01001000110100110111010111111111, input B: 11110111111001100000111111000011; output Z: 00111111000100100111011111111100
 # FP_mult: input A = 1.08316e+22, input B = 5.28216e-23, output OUT = 0.572143
 # FP_mult: input A = 01100100000100101100101110111111, input B = 00011010011111110110110111101110, output OUT = 00111111000100100111011111111100
-# UVM_INFO @ 625: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10011100110011011100011010010001, input B: 00000010100011001111000011011011; output Z: 00111111000100100111011111111100
+# UVM_INFO @ 1165: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 433072, input B = -9.33241e+33, output OUT = -inf
 # refmod: input A = 01001000110100110111010111111111, input B = 11110111111001100000111111000011, output OUT = 11111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 10011100110011011100011010010001, input B: 00000010100011001111000011011011; output Z: 00111111000100100111011111111100
 # FP_mult: SEND
-# -- input A: 10011100110011011100011010010001, input B: 00000010100011001111000011011011; output Z: 11111111100000000000000000000000
 # FP_mult: input A = 433072, input B = -9.33241e+33, output OUT = -inf
 # FP_mult: input A = 01001000110100110111010111111111, input B = 11110111111001100000111111000011, output OUT = 11111111100000000000000000000000
-# UVM_INFO @ 655: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10011011011000010011000001101011, input B: 11001111001111010001010100000110; output Z: 11111111100000000000000000000000
+# UVM_INFO @ 1225: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.36171e-21, input B = 2.07094e-37, output OUT = -0
 # refmod: input A = 10011100110011011100011010010001, input B = 00000010100011001111000011011011, output OUT = 10000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 10011011011000010011000001101011, input B: 11001111001111010001010100000110; output Z: 11111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 10011011011000010011000001101011, input B: 11001111001111010001010100000110; output Z: 10000000000000000000000000000000
 # FP_mult: input A = -1.36171e-21, input B = 2.07094e-37, output OUT = -0
 # FP_mult: input A = 10011100110011011100011010010001, input B = 00000010100011001111000011011011, output OUT = 10000000000000000000000000000000
-# UVM_INFO @ 685: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11001011011101101111111101000101, input B: 01111011100101010101000001100111; output Z: 10000000000000000000000000000000
+# UVM_INFO @ 1285: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.86272e-22, input B = -3.17227e+09, output OUT = 5.90906e-13
 # refmod: input A = 10011011011000010011000001101011, input B = 11001111001111010001010100000110, output OUT = 00101011001001100101001100111101
-# FP_mult: PIPEFILL
-# -- input A: 11001011011101101111111101000101, input B: 01111011100101010101000001100111; output Z: 10000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 11001011011101101111111101000101, input B: 01111011100101010101000001100111; output Z: 00101011001001100101001100111101
 # FP_mult: input A = -1.86272e-22, input B = -3.17227e+09, output OUT = 5.90906e-13
 # FP_mult: input A = 10011011011000010011000001101011, input B = 11001111001111010001010100000110, output OUT = 00101011001001100101001100111101
-# UVM_INFO @ 715: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10100110111000101111100101010011, input B: 11100011011110101100001111000111; output Z: 00101011001001100101001100111101
+# UVM_INFO @ 1345: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.61872e+07, input B = 1.55057e+36, output OUT = -inf
 # refmod: input A = 11001011011101101111111101000101, input B = 01111011100101010101000001100111, output OUT = 11111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 10100110111000101111100101010011, input B: 11100011011110101100001111000111; output Z: 00101011001001100101001100111101
 # FP_mult: SEND
-# -- input A: 10100110111000101111100101010011, input B: 11100011011110101100001111000111; output Z: 11111111100000000000000000000000
 # FP_mult: input A = -1.61872e+07, input B = 1.55057e+36, output OUT = -inf
 # FP_mult: input A = 11001011011101101111111101000101, input B = 01111011100101010101000001100111, output OUT = 11111111100000000000000000000000
-# UVM_INFO @ 745: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10110101000110001100011001101111, input B: 11101000000101101100011110011100; output Z: 11111111100000000000000000000000
+# UVM_INFO @ 1405: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.57495e-15, input B = -4.62579e+21, output OUT = 7.28538e+06
 # refmod: input A = 10100110111000101111100101010011, input B = 11100011011110101100001111000111, output OUT = 01001010110111100101010100001111
-# FP_mult: PIPEFILL
-# -- input A: 10110101000110001100011001101111, input B: 11101000000101101100011110011100; output Z: 11111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 10110101000110001100011001101111, input B: 11101000000101101100011110011100; output Z: 01001010110111100101010100001111
 # FP_mult: input A = -1.57495e-15, input B = -4.62579e+21, output OUT = 7.28538e+06
 # FP_mult: input A = 10100110111000101111100101010011, input B = 11100011011110101100001111000111, output OUT = 01001010110111100101010100001111
-# UVM_INFO @ 775: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101010000000001100101001000101, input B: 10001100010010000110111000100110; output Z: 01001010110111100101010100001111
+# UVM_INFO @ 1465: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -5.69132e-07, input B = -2.84815e+24, output OUT = 1.62097e+18
 # refmod: input A = 10110101000110001100011001101111, input B = 11101000000101101100011110011100, output OUT = 01011101101100111111011011001001
-# FP_mult: PIPEFILL
-# -- input A: 01101010000000001100101001000101, input B: 10001100010010000110111000100110; output Z: 01001010110111100101010100001111
 # FP_mult: SEND
-# -- input A: 01101010000000001100101001000101, input B: 10001100010010000110111000100110; output Z: 01011101101100111111011011001001
 # FP_mult: input A = -5.69132e-07, input B = -2.84815e+24, output OUT = 1.62097e+18
 # FP_mult: input A = 10110101000110001100011001101111, input B = 11101000000101101100011110011100, output OUT = 01011101101100111111011011001001
-# UVM_INFO @ 805: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10111000000010001000110011000110, input B: 00010101010010110000100001100010; output Z: 01011101101100111111011011001001
+# UVM_INFO @ 1525: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 3.89244e+25, input B = -1.54406e-31, output OUT = -6.01016e-06
 # refmod: input A = 01101010000000001100101001000101, input B = 10001100010010000110111000100110, output OUT = 10110110110010011010101011100000
-# FP_mult: PIPEFILL
-# -- input A: 10111000000010001000110011000110, input B: 00010101010010110000100001100010; output Z: 01011101101100111111011011001001
 # FP_mult: SEND
-# -- input A: 10111000000010001000110011000110, input B: 00010101010010110000100001100010; output Z: 10110110110010011010101011100000
 # FP_mult: input A = 3.89244e+25, input B = -1.54406e-31, output OUT = -6.01016e-06
 # FP_mult: input A = 01101010000000001100101001000101, input B = 10001100010010000110111000100110, output OUT = 10110110110010011010101011100000
-# UVM_INFO @ 835: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11101001010001001110000111110110, input B: 01010010100011101001011110100011; output Z: 10110110110010011010101011100000
+# UVM_INFO @ 1585: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -3.2556e-05, input B = 4.10021e-26, output OUT = -1.33487e-30
 # refmod: input A = 10111000000010001000110011000110, input B = 00010101010010110000100001100010, output OUT = 10001101110110001001100000110011
-# FP_mult: PIPEFILL
-# -- input A: 11101001010001001110000111110110, input B: 01010010100011101001011110100011; output Z: 10110110110010011010101011100000
 # FP_mult: SEND
-# -- input A: 11101001010001001110000111110110, input B: 01010010100011101001011110100011; output Z: 10001101110110001001100000110011
 # FP_mult: input A = -3.2556e-05, input B = 4.10021e-26, output OUT = -1.33487e-30
 # FP_mult: input A = 10111000000010001000110011000110, input B = 00010101010010110000100001100010, output OUT = 10001101110110001001100000110011
-# UVM_INFO @ 865: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01111011001110010010100101000010, input B: 00111010001111100111111101111110; output Z: 10001101110110001001100000110011
+# UVM_INFO @ 1645: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.4876e+25, input B = 3.06215e+11, output OUT = -4.55526e+36
 # refmod: input A = 11101001010001001110000111110110, input B = 01010010100011101001011110100011, output OUT = 11111100010110110101001111101010
-# FP_mult: PIPEFILL
-# -- input A: 01111011001110010010100101000010, input B: 00111010001111100111111101111110; output Z: 10001101110110001001100000110011
 # FP_mult: SEND
-# -- input A: 01111011001110010010100101000010, input B: 00111010001111100111111101111110; output Z: 11111100010110110101001111101010
 # FP_mult: input A = -1.4876e+25, input B = 3.06215e+11, output OUT = -4.55526e+36
 # FP_mult: input A = 11101001010001001110000111110110, input B = 01010010100011101001011110100011, output OUT = 11111100010110110101001111101010
-# UVM_INFO @ 895: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00010110100101000010101000100010, input B: 00111101100010011011001111010101; output Z: 11111100010110110101001111101010
+# UVM_INFO @ 1705: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 9.61412e+35, input B = 0.000726692, output OUT = 6.9865e+32
 # refmod: input A = 01111011001110010010100101000010, input B = 00111010001111100111111101111110, output OUT = 01110110000010011100100011010110
-# FP_mult: PIPEFILL
-# -- input A: 00010110100101000010101000100010, input B: 00111101100010011011001111010101; output Z: 11111100010110110101001111101010
 # FP_mult: SEND
-# -- input A: 00010110100101000010101000100010, input B: 00111101100010011011001111010101; output Z: 01110110000010011100100011010110
 # FP_mult: input A = 9.61412e+35, input B = 0.000726692, output OUT = 6.9865e+32
 # FP_mult: input A = 01111011001110010010100101000010, input B = 00111010001111100111111101111110, output OUT = 01110110000010011100100011010110
-# UVM_INFO @ 925: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11110101111000101110001100011101, input B: 10000110011101011101010110110100; output Z: 01110110000010011100100011010110
+# UVM_INFO @ 1765: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.39373e-25, input B = 0.0672375, output OUT = 1.60948e-26
 # refmod: input A = 00010110100101000010101000100010, input B = 00111101100010011011001111010101, output OUT = 00010100100111110110010101000010
-# FP_mult: PIPEFILL
-# -- input A: 11110101111000101110001100011101, input B: 10000110011101011101010110110100; output Z: 01110110000010011100100011010110
 # FP_mult: SEND
-# -- input A: 11110101111000101110001100011101, input B: 10000110011101011101010110110100; output Z: 00010100100111110110010101000010
 # FP_mult: input A = 2.39373e-25, input B = 0.0672375, output OUT = 1.60948e-26
 # FP_mult: input A = 00010110100101000010101000100010, input B = 00111101100010011011001111010101, output OUT = 00010100100111110110010101000010
-# UVM_INFO @ 955: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00101110110100011000100100100100, input B: 11000100010101111000001000101111; output Z: 00010100100111110110010101000010
+# UVM_INFO @ 1825: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -5.75227e+32, input B = -4.62364e-35, output OUT = 0.0265964
 # refmod: input A = 11110101111000101110001100011101, input B = 10000110011101011101010110110100, output OUT = 00111100110110011110000011000001
-# FP_mult: PIPEFILL
-# -- input A: 00101110110100011000100100100100, input B: 11000100010101111000001000101111; output Z: 00010100100111110110010101000010
 # FP_mult: SEND
-# -- input A: 00101110110100011000100100100100, input B: 11000100010101111000001000101111; output Z: 00111100110110011110000011000001
 # FP_mult: input A = -5.75227e+32, input B = -4.62364e-35, output OUT = 0.0265964
 # FP_mult: input A = 11110101111000101110001100011101, input B = 10000110011101011101010110110100, output OUT = 00111100110110011110000011000001
-# UVM_INFO @ 985: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10110110011110100010010100100011, input B: 10101001001001001101111100101010; output Z: 00111100110110011110000011000001
+# UVM_INFO @ 1885: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 9.52858e-11, input B = -862.034, output OUT = -8.21396e-08
 # refmod: input A = 00101110110100011000100100100100, input B = 11000100010101111000001000101111, output OUT = 10110011101100000110010010111011
-# FP_mult: PIPEFILL
-# -- input A: 10110110011110100010010100100011, input B: 10101001001001001101111100101010; output Z: 00111100110110011110000011000001
 # FP_mult: SEND
-# -- input A: 10110110011110100010010100100011, input B: 10101001001001001101111100101010; output Z: 10110011101100000110010010111011
 # FP_mult: input A = 9.52858e-11, input B = -862.034, output OUT = -8.21396e-08
 # FP_mult: input A = 00101110110100011000100100100100, input B = 11000100010101111000001000101111, output OUT = 10110011101100000110010010111011
-# UVM_INFO @ 1015: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01011100000101001111001101011011, input B: 01100111100110001010111011100101; output Z: 10110011101100000110010010111011
+# UVM_INFO @ 1945: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -3.72745e-06, input B = -3.66089e-14, output OUT = 1.36458e-19
 # refmod: input A = 10110110011110100010010100100011, input B = 10101001001001001101111100101010, output OUT = 00100000001000010001100111011010
-# FP_mult: PIPEFILL
-# -- input A: 01011100000101001111001101011011, input B: 01100111100110001010111011100101; output Z: 10110011101100000110010010111011
 # FP_mult: SEND
-# -- input A: 01011100000101001111001101011011, input B: 01100111100110001010111011100101; output Z: 00100000001000010001100111011010
 # FP_mult: input A = -3.72745e-06, input B = -3.66089e-14, output OUT = 1.36458e-19
 # FP_mult: input A = 10110110011110100010010100100011, input B = 10101001001001001101111100101010, output OUT = 00100000001000010001100111011010
-# UVM_INFO @ 1045: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01110100111001111010000111101011, input B: 10100001001001011111011011010000; output Z: 00100000001000010001100111011010
+# UVM_INFO @ 2005: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.67703e+17, input B = 1.44205e+24, output OUT = inf
 # refmod: input A = 01011100000101001111001101011011, input B = 01100111100110001010111011100101, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 01110100111001111010000111101011, input B: 10100001001001011111011011010000; output Z: 00100000001000010001100111011010
 # FP_mult: SEND
-# -- input A: 01110100111001111010000111101011, input B: 10100001001001011111011011010000; output Z: 01111111100000000000000000000000
 # FP_mult: input A = 1.67703e+17, input B = 1.44205e+24, output OUT = inf
 # FP_mult: input A = 01011100000101001111001101011011, input B = 01100111100110001010111011100101, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 1075: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01100110111100100001110011011000, input B: 00101011001010000101011110101001; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 2065: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.46815e+32, input B = -5.62308e-19, output OUT = -8.2555e+13
 # refmod: input A = 01110100111001111010000111101011, input B = 10100001001001011111011011010000, output OUT = 11010110100101100010101010101110
-# FP_mult: PIPEFILL
-# -- input A: 01100110111100100001110011011000, input B: 00101011001010000101011110101001; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 01100110111100100001110011011000, input B: 00101011001010000101011110101001; output Z: 11010110100101100010101010101110
 # FP_mult: input A = 1.46815e+32, input B = -5.62308e-19, output OUT = -8.2555e+13
 # FP_mult: input A = 01110100111001111010000111101011, input B = 10100001001001011111011011010000, output OUT = 11010110100101100010101010101110
-# UVM_INFO @ 1105: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00001110101100111010011010101101, input B: 01011111000101000000010011000101; output Z: 11010110100101100010101010101110
+# UVM_INFO @ 2125: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 5.71672e+23, input B = 5.98072e-13, output OUT = 3.41901e+11
 # refmod: input A = 01100110111100100001110011011000, input B = 00101011001010000101011110101001, output OUT = 01010010100111110011010111010101
-# FP_mult: PIPEFILL
-# -- input A: 00001110101100111010011010101101, input B: 01011111000101000000010011000101; output Z: 11010110100101100010101010101110
 # FP_mult: SEND
-# -- input A: 00001110101100111010011010101101, input B: 01011111000101000000010011000101; output Z: 01010010100111110011010111010101
 # FP_mult: input A = 5.71672e+23, input B = 5.98072e-13, output OUT = 3.41901e+11
 # FP_mult: input A = 01100110111100100001110011011000, input B = 00101011001010000101011110101001, output OUT = 01010010100111110011010111010101
-# UVM_INFO @ 1135: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01100010001000000111000010110001, input B: 10111110110101000010110010011011; output Z: 01010010100111110011010111010101
+# UVM_INFO @ 2185: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 4.42874e-30, input B = 1.06659e+19, output OUT = 4.72364e-11
 # refmod: input A = 00001110101100111010011010101101, input B = 01011111000101000000010011000101, output OUT = 00101110010011111011111101101010
-# FP_mult: PIPEFILL
-# -- input A: 01100010001000000111000010110001, input B: 10111110110101000010110010011011; output Z: 01010010100111110011010111010101
 # FP_mult: SEND
-# -- input A: 01100010001000000111000010110001, input B: 10111110110101000010110010011011; output Z: 00101110010011111011111101101010
 # FP_mult: input A = 4.42874e-30, input B = 1.06659e+19, output OUT = 4.72364e-11
 # FP_mult: input A = 00001110101100111010011010101101, input B = 01011111000101000000010011000101, output OUT = 00101110010011111011111101101010
-# UVM_INFO @ 1165: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11101011010111110011000110000100, input B: 01001010010101010000000100000011; output Z: 00101110010011111011111101101010
+# UVM_INFO @ 2245: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 7.399e+20, input B = -0.414403, output OUT = -3.06617e+20
 # refmod: input A = 01100010001000000111000010110001, input B = 10111110110101000010110010011011, output OUT = 11100001100001001111100101000111
-# FP_mult: PIPEFILL
-# -- input A: 11101011010111110011000110000100, input B: 01001010010101010000000100000011; output Z: 00101110010011111011111101101010
 # FP_mult: SEND
-# -- input A: 11101011010111110011000110000100, input B: 01001010010101010000000100000011; output Z: 11100001100001001111100101000111
 # FP_mult: input A = 7.399e+20, input B = -0.414403, output OUT = -3.06617e+20
 # FP_mult: input A = 01100010001000000111000010110001, input B = 10111110110101000010110010011011, output OUT = 11100001100001001111100101000111
-# UVM_INFO @ 1195: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01100001100110101010111000011110, input B: 00110000110010101010011011000010; output Z: 11100001100001001111100101000111
+# UVM_INFO @ 2305: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -2.69824e+26, input B = 3.48986e+06, output OUT = -9.41648e+32
 # refmod: input A = 11101011010111110011000110000100, input B = 01001010010101010000000100000011, output OUT = 11110110001110011011010100010101
-# FP_mult: PIPEFILL
-# -- input A: 01100001100110101010111000011110, input B: 00110000110010101010011011000010; output Z: 11100001100001001111100101000111
 # FP_mult: SEND
-# -- input A: 01100001100110101010111000011110, input B: 00110000110010101010011011000010; output Z: 11110110001110011011010100010101
 # FP_mult: input A = -2.69824e+26, input B = 3.48986e+06, output OUT = -9.41648e+32
 # FP_mult: input A = 11101011010111110011000110000100, input B = 01001010010101010000000100000011, output OUT = 11110110001110011011010100010101
-# UVM_INFO @ 1225: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00010000000001010000011010111100, input B: 10000011010010001000110001000100; output Z: 11110110001110011011010100010101
+# UVM_INFO @ 2365: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 3.56668e+20, input B = 1.47448e-09, output OUT = 5.25901e+11
 # refmod: input A = 01100001100110101010111000011110, input B = 00110000110010101010011011000010, output OUT = 01010010111101001110010001001100
-# FP_mult: PIPEFILL
-# -- input A: 00010000000001010000011010111100, input B: 10000011010010001000110001000100; output Z: 11110110001110011011010100010101
 # FP_mult: SEND
-# -- input A: 00010000000001010000011010111100, input B: 10000011010010001000110001000100; output Z: 01010010111101001110010001001100
 # FP_mult: input A = 3.56668e+20, input B = 1.47448e-09, output OUT = 5.25901e+11
 # FP_mult: input A = 01100001100110101010111000011110, input B = 00110000110010101010011011000010, output OUT = 01010010111101001110010001001100
-# UVM_INFO @ 1255: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01000001111011110111111000001001, input B: 11111001011000001100101100110001; output Z: 01010010111101001110010001001100
+# UVM_INFO @ 2425: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.62348e-29, input B = -5.89357e-37, output OUT = -0
 # refmod: input A = 00010000000001010000011010111100, input B = 10000011010010001000110001000100, output OUT = 10000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 01000001111011110111111000001001, input B: 11111001011000001100101100110001; output Z: 01010010111101001110010001001100
 # FP_mult: SEND
-# -- input A: 01000001111011110111111000001001, input B: 11111001011000001100101100110001; output Z: 10000000000000000000000000000000
 # FP_mult: input A = 2.62348e-29, input B = -5.89357e-37, output OUT = -0
 # FP_mult: input A = 00010000000001010000011010111100, input B = 10000011010010001000110001000100, output OUT = 10000000000000000000000000000000
-# UVM_INFO @ 1285: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11111110101110010110010010100100, input B: 11110111101111011001011110000010; output Z: 10000000000000000000000000000000
+# UVM_INFO @ 2485: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 29.9365, input B = -7.29497e+34, output OUT = -2.18386e+36
 # refmod: input A = 01000001111011110111111000001001, input B = 11111001011000001100101100110001, output OUT = 11111011110100100100110001011111
-# FP_mult: PIPEFILL
-# -- input A: 11111110101110010110010010100100, input B: 11110111101111011001011110000010; output Z: 10000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 11111110101110010110010010100100, input B: 11110111101111011001011110000010; output Z: 11111011110100100100110001011111
 # FP_mult: input A = 29.9365, input B = -7.29497e+34, output OUT = -2.18386e+36
 # FP_mult: input A = 01000001111011110111111000001001, input B = 11111001011000001100101100110001, output OUT = 11111011110100100100110001011111
-# UVM_INFO @ 1315: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01110011011110110100011110010010, input B: 00111011100100010010010001000100; output Z: 11111011110100100100110001011111
+# UVM_INFO @ 2545: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.23215e+38, input B = -7.69076e+33, output OUT = inf
 # refmod: input A = 11111110101110010110010010100100, input B = 11110111101111011001011110000010, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 01110011011110110100011110010010, input B: 00111011100100010010010001000100; output Z: 11111011110100100100110001011111
 # FP_mult: SEND
-# -- input A: 01110011011110110100011110010010, input B: 00111011100100010010010001000100; output Z: 01111111100000000000000000000000
 # FP_mult: input A = -1.23215e+38, input B = -7.69076e+33, output OUT = inf
 # FP_mult: input A = 11111110101110010110010010100100, input B = 11110111101111011001011110000010, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 1345: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11110000100110100100011010011011, input B: 01000111010110100011011011101010; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 2605: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.99084e+31, input B = 0.00442937, output OUT = 8.81818e+28
 # refmod: input A = 01110011011110110100011110010010, input B = 00111011100100010010010001000100, output OUT = 01101111100011100111011100100011
-# FP_mult: PIPEFILL
-# -- input A: 11110000100110100100011010011011, input B: 01000111010110100011011011101010; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 11110000100110100100011010011011, input B: 01000111010110100011011011101010; output Z: 01101111100011100111011100100011
 # FP_mult: input A = 1.99084e+31, input B = 0.00442937, output OUT = 8.81818e+28
 # FP_mult: input A = 01110011011110110100011110010010, input B = 00111011100100010010010001000100, output OUT = 01101111100011100111011100100011
-# UVM_INFO @ 1375: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11101001011111101100110111000011, input B: 00001100001001111100100001100010; output Z: 01101111100011100111011100100011
+# UVM_INFO @ 2665: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -3.81968e+29, input B = 55862.9, output OUT = -2.13379e+34
 # refmod: input A = 11110000100110100100011010011011, input B = 01000111010110100011011011101010, output OUT = 11111000100000111000000100111000
-# FP_mult: PIPEFILL
-# -- input A: 11101001011111101100110111000011, input B: 00001100001001111100100001100010; output Z: 01101111100011100111011100100011
 # FP_mult: SEND
-# -- input A: 11101001011111101100110111000011, input B: 00001100001001111100100001100010; output Z: 11111000100000111000000100111000
 # FP_mult: input A = -3.81968e+29, input B = 55862.9, output OUT = -2.13379e+34
 # FP_mult: input A = 11110000100110100100011010011011, input B = 01000111010110100011011011101010, output OUT = 11111000100000111000000100111000
-# UVM_INFO @ 1405: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01110000001010001011011001101110, input B: 11000001010111000101001001110001; output Z: 11111000100000111000000100111000
+# UVM_INFO @ 2725: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.92524e+25, input B = 1.29255e-31, output OUT = -2.48848e-06
 # refmod: input A = 11101001011111101100110111000011, input B = 00001100001001111100100001100010, output OUT = 10110110001001101111111110101101
-# FP_mult: PIPEFILL
-# -- input A: 01110000001010001011011001101110, input B: 11000001010111000101001001110001; output Z: 11111000100000111000000100111000
 # FP_mult: SEND
-# -- input A: 01110000001010001011011001101110, input B: 11000001010111000101001001110001; output Z: 10110110001001101111111110101101
 # FP_mult: input A = -1.92524e+25, input B = 1.29255e-31, output OUT = -2.48848e-06
 # FP_mult: input A = 11101001011111101100110111000011, input B = 00001100001001111100100001100010, output OUT = 10110110001001101111111110101101
-# UVM_INFO @ 1435: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101001110001000010100001001110, input B: 01001100110001100010000010000111; output Z: 10110110001001101111111110101101
+# UVM_INFO @ 2785: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.08856e+29, input B = -13.7701, output OUT = -2.87597e+30
 # refmod: input A = 01110000001010001011011001101110, input B = 11000001010111000101001001110001, output OUT = 11110010000100010011001100011011
-# FP_mult: PIPEFILL
-# -- input A: 01101001110001000010100001001110, input B: 01001100110001100010000010000111; output Z: 10110110001001101111111110101101
 # FP_mult: SEND
-# -- input A: 01101001110001000010100001001110, input B: 01001100110001100010000010000111; output Z: 11110010000100010011001100011011
 # FP_mult: input A = 2.08856e+29, input B = -13.7701, output OUT = -2.87597e+30
 # FP_mult: input A = 01110000001010001011011001101110, input B = 11000001010111000101001001110001, output OUT = 11110010000100010011001100011011
-# UVM_INFO @ 1465: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01010101101000110110010010100000, input B: 11010111110000111101001010011110; output Z: 11110010000100010011001100011011
+# UVM_INFO @ 2845: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.96425e+25, input B = 1.03876e+08, output OUT = 3.07913e+33
 # refmod: input A = 01101001110001000010100001001110, input B = 01001100110001100010000010000111, output OUT = 01110111000101111101000000011001
-# FP_mult: PIPEFILL
-# -- input A: 01010101101000110110010010100000, input B: 11010111110000111101001010011110; output Z: 11110010000100010011001100011011
 # FP_mult: SEND
-# -- input A: 01010101101000110110010010100000, input B: 11010111110000111101001010011110; output Z: 01110111000101111101000000011001
 # FP_mult: input A = 2.96425e+25, input B = 1.03876e+08, output OUT = 3.07913e+33
 # FP_mult: input A = 01101001110001000010100001001110, input B = 01001100110001100010000010000111, output OUT = 01110111000101111101000000011001
-# UVM_INFO @ 1495: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01000010010001111001110111110110, input B: 00111111100111100011100101110100; output Z: 01110111000101111101000000011001
+# UVM_INFO @ 2905: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.24566e+13, input B = -4.30619e+14, output OUT = -9.67022e+27
 # refmod: input A = 01010101101000110110010010100000, input B = 11010111110000111101001010011110, output OUT = 11101101111110011111100000100111
-# FP_mult: PIPEFILL
-# -- input A: 01000010010001111001110111110110, input B: 00111111100111100011100101110100; output Z: 01110111000101111101000000011001
 # FP_mult: SEND
-# -- input A: 01000010010001111001110111110110, input B: 00111111100111100011100101110100; output Z: 11101101111110011111100000100111
 # FP_mult: input A = 2.24566e+13, input B = -4.30619e+14, output OUT = -9.67022e+27
 # FP_mult: input A = 01010101101000110110010010100000, input B = 11010111110000111101001010011110, output OUT = 11101101111110011111100000100111
-# UVM_INFO @ 1525: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11000010011001101101111110000001, input B: 11101111110111001100100110100001; output Z: 11101101111110011111100000100111
+# UVM_INFO @ 2965: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 49.9043, input B = 1.23613, output OUT = 61.6881
 # refmod: input A = 01000010010001111001110111110110, input B = 00111111100111100011100101110100, output OUT = 01000010011101101100000010010101
-# FP_mult: PIPEFILL
-# -- input A: 11000010011001101101111110000001, input B: 11101111110111001100100110100001; output Z: 11101101111110011111100000100111
 # FP_mult: SEND
-# -- input A: 11000010011001101101111110000001, input B: 11101111110111001100100110100001; output Z: 01000010011101101100000010010101
 # FP_mult: input A = 49.9043, input B = 1.23613, output OUT = 61.6881
 # FP_mult: input A = 01000010010001111001110111110110, input B = 00111111100111100011100101110100, output OUT = 01000010011101101100000010010101
-# UVM_INFO @ 1555: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10111101111001011010000000001101, input B: 10011000110011100001011101010010; output Z: 01000010011101101100000010010101
+# UVM_INFO @ 3025: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -57.7183, input B = -1.36661e+29, output OUT = 7.88783e+30
 # refmod: input A = 11000010011001101101111110000001, input B = 11101111110111001100100110100001, output OUT = 01110010110001110001110111101010
-# FP_mult: PIPEFILL
-# -- input A: 10111101111001011010000000001101, input B: 10011000110011100001011101010010; output Z: 01000010011101101100000010010101
 # FP_mult: SEND
-# -- input A: 10111101111001011010000000001101, input B: 10011000110011100001011101010010; output Z: 01110010110001110001110111101010
 # FP_mult: input A = -57.7183, input B = -1.36661e+29, output OUT = 7.88783e+30
 # FP_mult: input A = 11000010011001101101111110000001, input B = 11101111110111001100100110100001, output OUT = 01110010110001110001110111101010
-# UVM_INFO @ 1585: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11011000011101100100000001110000, input B: 10111110011110111111001000010000; output Z: 01110010110001110001110111101010
+# UVM_INFO @ 3085: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -0.112122, input B = -5.32733e-24, output OUT = 5.97309e-25
 # refmod: input A = 10111101111001011010000000001101, input B = 10011000110011100001011101010010, output OUT = 00010111001110001101101110110101
-# FP_mult: PIPEFILL
-# -- input A: 11011000011101100100000001110000, input B: 10111110011110111111001000010000; output Z: 01110010110001110001110111101010
 # FP_mult: SEND
-# -- input A: 11011000011101100100000001110000, input B: 10111110011110111111001000010000; output Z: 00010111001110001101101110110101
 # FP_mult: input A = -0.112122, input B = -5.32733e-24, output OUT = 5.97309e-25
 # FP_mult: input A = 10111101111001011010000000001101, input B = 10011000110011100001011101010010, output OUT = 00010111001110001101101110110101
-# UVM_INFO @ 1615: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00000010110111011000100000100001, input B: 10011101000110101001100111011011; output Z: 00010111001110001101101110110101
+# UVM_INFO @ 3145: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.08303e+15, input B = -0.246041, output OUT = 2.66468e+14
 # refmod: input A = 11011000011101100100000001110000, input B = 10111110011110111111001000010000, output OUT = 01010111011100100101101000000110
-# FP_mult: PIPEFILL
-# -- input A: 00000010110111011000100000100001, input B: 10011101000110101001100111011011; output Z: 00010111001110001101101110110101
 # FP_mult: SEND
-# -- input A: 00000010110111011000100000100001, input B: 10011101000110101001100111011011; output Z: 01010111011100100101101000000110
 # FP_mult: input A = -1.08303e+15, input B = -0.246041, output OUT = 2.66468e+14
 # FP_mult: input A = 11011000011101100100000001110000, input B = 10111110011110111111001000010000, output OUT = 01010111011100100101101000000110
-# UVM_INFO @ 1645: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00000100001010111010110111111001, input B: 10010110001111010011100111001100; output Z: 01010111011100100101101000000110
+# UVM_INFO @ 3205: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 3.25512e-37, input B = -2.04613e-21, output OUT = -0
 # refmod: input A = 00000010110111011000100000100001, input B = 10011101000110101001100111011011, output OUT = 10000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 00000100001010111010110111111001, input B: 10010110001111010011100111001100; output Z: 01010111011100100101101000000110
 # FP_mult: SEND
-# -- input A: 00000100001010111010110111111001, input B: 10010110001111010011100111001100; output Z: 10000000000000000000000000000000
 # FP_mult: input A = 3.25512e-37, input B = -2.04613e-21, output OUT = -0
 # FP_mult: input A = 00000010110111011000100000100001, input B = 10011101000110101001100111011011, output OUT = 10000000000000000000000000000000
-# UVM_INFO @ 1675: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01110100011010111100001011001101, input B: 01001111000001000000101111001001; output Z: 10000000000000000000000000000000
+# UVM_INFO @ 3265: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.01808e-36, input B = -1.52855e-25, output OUT = -0
 # refmod: input A = 00000100001010111010110111111001, input B = 10010110001111010011100111001100, output OUT = 10000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 01110100011010111100001011001101, input B: 01001111000001000000101111001001; output Z: 10000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 01110100011010111100001011001101, input B: 01001111000001000000101111001001; output Z: 10000000000000000000000000000000
 # FP_mult: input A = 2.01808e-36, input B = -1.52855e-25, output OUT = -0
 # FP_mult: input A = 00000100001010111010110111111001, input B = 10010110001111010011100111001100, output OUT = 10000000000000000000000000000000
-# UVM_INFO @ 1705: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00111101110010111011000101100011, input B: 11000110010001111101100010010011; output Z: 10000000000000000000000000000000
+# UVM_INFO @ 3325: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 7.47156e+31, input B = 2.21536e+09, output OUT = inf
 # refmod: input A = 01110100011010111100001011001101, input B = 01001111000001000000101111001001, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 00111101110010111011000101100011, input B: 11000110010001111101100010010011; output Z: 10000000000000000000000000000000
 # FP_mult: SEND
-# -- input A: 00111101110010111011000101100011, input B: 11000110010001111101100010010011; output Z: 01111111100000000000000000000000
 # FP_mult: input A = 7.47156e+31, input B = 2.21536e+09, output OUT = inf
 # FP_mult: input A = 01110100011010111100001011001101, input B = 01001111000001000000101111001001, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 1735: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00110111111011111101000110001001, input B: 10001110110100011101101111101100; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 3385: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 0.0994594, input B = -12790.1, output OUT = -1272.1
 # refmod: input A = 00111101110010111011000101100011, input B = 11000110010001111101100010010011, output OUT = 11000100100111110000001100110111
-# FP_mult: PIPEFILL
-# -- input A: 00110111111011111101000110001001, input B: 10001110110100011101101111101100; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 00110111111011111101000110001001, input B: 10001110110100011101101111101100; output Z: 11000100100111110000001100110111
 # FP_mult: input A = 0.0994594, input B = -12790.1, output OUT = -1272.1
 # FP_mult: input A = 00111101110010111011000101100011, input B = 11000110010001111101100010010011, output OUT = 11000100100111110000001100110111
-# UVM_INFO @ 1765: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11010001011000010011001010001100, input B: 10110000111000100101111011011101; output Z: 11000100100111110000001100110111
+# UVM_INFO @ 3445: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.85886e-05, input B = -5.17343e-30, output OUT = -1.47901e-34
 # refmod: input A = 00110111111011111101000110001001, input B = 10001110110100011101101111101100, output OUT = 10000111010001001001100000010110
-# FP_mult: PIPEFILL
-# -- input A: 11010001011000010011001010001100, input B: 10110000111000100101111011011101; output Z: 11000100100111110000001100110111
 # FP_mult: SEND
-# -- input A: 11010001011000010011001010001100, input B: 10110000111000100101111011011101; output Z: 10000111010001001001100000010110
 # FP_mult: input A = 2.85886e-05, input B = -5.17343e-30, output OUT = -1.47901e-34
 # FP_mult: input A = 00110111111011111101000110001001, input B = 10001110110100011101101111101100, output OUT = 10000111010001001001100000010110
-# UVM_INFO @ 1795: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11000110110100000000000001011000, input B: 01100111011001110101101111011110; output Z: 10000111010001001001100000010110
+# UVM_INFO @ 3505: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -6.0451e+10, input B = -1.64706e-09, output OUT = 99.5666
 # refmod: input A = 11010001011000010011001010001100, input B = 10110000111000100101111011011101, output OUT = 01000010110001110010001000010011
-# FP_mult: PIPEFILL
-# -- input A: 11000110110100000000000001011000, input B: 01100111011001110101101111011110; output Z: 10000111010001001001100000010110
 # FP_mult: SEND
-# -- input A: 11000110110100000000000001011000, input B: 01100111011001110101101111011110; output Z: 01000010110001110010001000010011
 # FP_mult: input A = -6.0451e+10, input B = -1.64706e-09, output OUT = 99.5666
 # FP_mult: input A = 11010001011000010011001010001100, input B = 10110000111000100101111011011101, output OUT = 01000010110001110010001000010011
-# UVM_INFO @ 1825: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00110100000111010001110111110100, input B: 11000111000100101110000110100001; output Z: 01000010110001110010001000010011
+# UVM_INFO @ 3565: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -26624.2, input B = 1.09256e+24, output OUT = -2.90885e+28
 # refmod: input A = 11000110110100000000000001011000, input B = 01100111011001110101101111011110, output OUT = 11101110101110111111101011110100
-# FP_mult: PIPEFILL
-# -- input A: 00110100000111010001110111110100, input B: 11000111000100101110000110100001; output Z: 01000010110001110010001000010011
 # FP_mult: SEND
-# -- input A: 00110100000111010001110111110100, input B: 11000111000100101110000110100001; output Z: 11101110101110111111101011110100
 # FP_mult: input A = -26624.2, input B = 1.09256e+24, output OUT = -2.90885e+28
 # FP_mult: input A = 11000110110100000000000001011000, input B = 01100111011001110101101111011110, output OUT = 11101110101110111111101011110100
-# UVM_INFO @ 1855: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101010000000101011101110011010, input B: 11100111111000111111110001111010; output Z: 11101110101110111111101011110100
+# UVM_INFO @ 3625: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.46327e-07, input B = -37601.6, output OUT = -0.00550212
 # refmod: input A = 00110100000111010001110111110100, input B = 11000111000100101110000110100001, output OUT = 10111011101101000100101100011111
-# FP_mult: PIPEFILL
-# -- input A: 01101010000000101011101110011010, input B: 11100111111000111111110001111010; output Z: 11101110101110111111101011110100
 # FP_mult: SEND
-# -- input A: 01101010000000101011101110011010, input B: 11100111111000111111110001111010; output Z: 10111011101101000100101100011111
 # FP_mult: input A = 1.46327e-07, input B = -37601.6, output OUT = -0.00550212
 # FP_mult: input A = 00110100000111010001110111110100, input B = 11000111000100101110000110100001, output OUT = 10111011101101000100101100011111
-# UVM_INFO @ 1885: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00111001100111110001111001001101, input B: 01010010111001010101111101000111; output Z: 10111011101101000100101100011111
+# UVM_INFO @ 3685: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 3.95116e+25, input B = -2.15327e+24, output OUT = -inf
 # refmod: input A = 01101010000000101011101110011010, input B = 11100111111000111111110001111010, output OUT = 11111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 00111001100111110001111001001101, input B: 01010010111001010101111101000111; output Z: 10111011101101000100101100011111
 # FP_mult: SEND
-# -- input A: 00111001100111110001111001001101, input B: 01010010111001010101111101000111; output Z: 11111111100000000000000000000000
 # FP_mult: input A = 3.95116e+25, input B = -2.15327e+24, output OUT = -inf
 # FP_mult: input A = 01101010000000101011101110011010, input B = 11100111111000111111110001111010, output OUT = 11111111100000000000000000000000
-# UVM_INFO @ 1915: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11110010000011001101000101101101, input B: 00011111101110101110000110101101; output Z: 11111111100000000000000000000000
+# UVM_INFO @ 3745: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 0.000303494, input B = 4.92573e+11, output OUT = 1.49493e+08
 # refmod: input A = 00111001100111110001111001001101, input B = 01010010111001010101111101000111, output OUT = 01001101000011101001000101010011
-# FP_mult: PIPEFILL
-# -- input A: 11110010000011001101000101101101, input B: 00011111101110101110000110101101; output Z: 11111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 11110010000011001101000101101101, input B: 00011111101110101110000110101101; output Z: 01001101000011101001000101010011
 # FP_mult: input A = 0.000303494, input B = 4.92573e+11, output OUT = 1.49493e+08
 # FP_mult: input A = 00111001100111110001111001001101, input B = 01010010111001010101111101000111, output OUT = 01001101000011101001000101010011
-# UVM_INFO @ 1945: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01110111111011111110010011111010, input B: 00000110110110111100110001111101; output Z: 01001101000011101001000101010011
+# UVM_INFO @ 3805: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -2.78919e+30, input B = 7.91474e-20, output OUT = -2.20757e+11
 # refmod: input A = 11110010000011001101000101101101, input B = 00011111101110101110000110101101, output OUT = 11010010010011011001100010011001
-# FP_mult: PIPEFILL
-# -- input A: 01110111111011111110010011111010, input B: 00000110110110111100110001111101; output Z: 01001101000011101001000101010011
 # FP_mult: SEND
-# -- input A: 01110111111011111110010011111010, input B: 00000110110110111100110001111101; output Z: 11010010010011011001100010011001
 # FP_mult: input A = -2.78919e+30, input B = 7.91474e-20, output OUT = -2.20757e+11
 # FP_mult: input A = 11110010000011001101000101101101, input B = 00011111101110101110000110101101, output OUT = 11010010010011011001100010011001
-# UVM_INFO @ 1975: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10100100111111111001001001010100, input B: 11110000101000010101000001000011; output Z: 11010010010011011001100010011001
+# UVM_INFO @ 3865: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 9.73127e+33, input B = 8.26791e-35, output OUT = 0.804573
 # refmod: input A = 01110111111011111110010011111010, input B = 00000110110110111100110001111101, output OUT = 00111111010011011111100010000001
-# FP_mult: PIPEFILL
-# -- input A: 10100100111111111001001001010100, input B: 11110000101000010101000001000011; output Z: 11010010010011011001100010011001
 # FP_mult: SEND
-# -- input A: 10100100111111111001001001010100, input B: 11110000101000010101000001000011; output Z: 00111111010011011111100010000001
 # FP_mult: input A = 9.73127e+33, input B = 8.26791e-35, output OUT = 0.804573
 # FP_mult: input A = 01110111111011111110010011111010, input B = 00000110110110111100110001111101, output OUT = 00111111010011011111100010000001
-# UVM_INFO @ 2005: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00110111100111100101001110110000, input B: 01111101000110111100010001011001; output Z: 00111111010011011111100010000001
+# UVM_INFO @ 3925: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.10837e-16, input B = -3.99393e+29, output OUT = 4.42673e+13
 # refmod: input A = 10100100111111111001001001010100, input B = 11110000101000010101000001000011, output OUT = 01010110001000010000101100100111
-# FP_mult: PIPEFILL
-# -- input A: 00110111100111100101001110110000, input B: 01111101000110111100010001011001; output Z: 00111111010011011111100010000001
 # FP_mult: SEND
-# -- input A: 00110111100111100101001110110000, input B: 01111101000110111100010001011001; output Z: 01010110001000010000101100100111
 # FP_mult: input A = -1.10837e-16, input B = -3.99393e+29, output OUT = 4.42673e+13
 # FP_mult: input A = 10100100111111111001001001010100, input B = 11110000101000010101000001000011, output OUT = 01010110001000010000101100100111
-# UVM_INFO @ 2035: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00010010101011100111001010010101, input B: 11111011010010011000100001101101; output Z: 01010110001000010000101100100111
+# UVM_INFO @ 3985: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.8874e-05, input B = 1.29406e+37, output OUT = 2.44242e+32
 # refmod: input A = 00110111100111100101001110110000, input B = 01111101000110111100010001011001, output OUT = 01110101010000001010110000110101
-# FP_mult: PIPEFILL
-# -- input A: 00010010101011100111001010010101, input B: 11111011010010011000100001101101; output Z: 01010110001000010000101100100111
 # FP_mult: SEND
-# -- input A: 00010010101011100111001010010101, input B: 11111011010010011000100001101101; output Z: 01110101010000001010110000110101
 # FP_mult: input A = 1.8874e-05, input B = 1.29406e+37, output OUT = 2.44242e+32
 # FP_mult: input A = 00110111100111100101001110110000, input B = 01111101000110111100010001011001, output OUT = 01110101010000001010110000110101
-# UVM_INFO @ 2065: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101011011010011010111001100101, input B: 10100110101100001001101011001100; output Z: 01110101010000001010110000110101
+# UVM_INFO @ 4045: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.10092e-27, input B = -1.04642e+36, output OUT = -1.15202e+09
 # refmod: input A = 00010010101011100111001010010101, input B = 11111011010010011000100001101101, output OUT = 11001110100010010101010011101110
-# FP_mult: PIPEFILL
-# -- input A: 01101011011010011010111001100101, input B: 10100110101100001001101011001100; output Z: 01110101010000001010110000110101
 # FP_mult: SEND
-# -- input A: 01101011011010011010111001100101, input B: 10100110101100001001101011001100; output Z: 11001110100010010101010011101110
 # FP_mult: input A = 1.10092e-27, input B = -1.04642e+36, output OUT = -1.15202e+09
 # FP_mult: input A = 00010010101011100111001010010101, input B = 11111011010010011000100001101101, output OUT = 11001110100010010101010011101110
-# UVM_INFO @ 2095: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00010100101010111001101000001101, input B: 00101100101111110010100010000010; output Z: 11001110100010010101010011101110
+# UVM_INFO @ 4105: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 2.82503e+26, input B = -1.22544e-15, output OUT = -3.46191e+11
 # refmod: input A = 01101011011010011010111001100101, input B = 10100110101100001001101011001100, output OUT = 11010010101000010011010100110011
-# FP_mult: PIPEFILL
-# -- input A: 00010100101010111001101000001101, input B: 00101100101111110010100010000010; output Z: 11001110100010010101010011101110
 # FP_mult: SEND
-# -- input A: 00010100101010111001101000001101, input B: 00101100101111110010100010000010; output Z: 11010010101000010011010100110011
 # FP_mult: input A = 2.82503e+26, input B = -1.22544e-15, output OUT = -3.46191e+11
 # FP_mult: input A = 01101011011010011010111001100101, input B = 10100110101100001001101011001100, output OUT = 11010010101000010011010100110011
-# UVM_INFO @ 2125: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11100001010100000000100010010110, input B: 01000010011011000110111100100100; output Z: 11010010101000010011010100110011
+# UVM_INFO @ 4165: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.73273e-26, input B = 5.43304e-12, output OUT = 9.41403e-38
 # refmod: input A = 00010100101010111001101000001101, input B = 00101100101111110010100010000010, output OUT = 00000010000000000010001100010111
-# FP_mult: PIPEFILL
-# -- input A: 11100001010100000000100010010110, input B: 01000010011011000110111100100100; output Z: 11010010101000010011010100110011
 # FP_mult: SEND
-# -- input A: 11100001010100000000100010010110, input B: 01000010011011000110111100100100; output Z: 00000010000000000010001100010111
 # FP_mult: input A = 1.73273e-26, input B = 5.43304e-12, output OUT = 9.41403e-38
 # FP_mult: input A = 00010100101010111001101000001101, input B = 00101100101111110010100010000010, output OUT = 00000010000000000010001100010111
-# UVM_INFO @ 2155: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01110110100111110011001110101001, input B: 01010010111010101010000100111100; output Z: 00000010000000000010001100010111
+# UVM_INFO @ 4225: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -2.39846e+20, input B = 59.1085, output OUT = -1.4177e+22
 # refmod: input A = 11100001010100000000100010010110, input B = 01000010011011000110111100100100, output OUT = 11100100010000000010001000111011
-# FP_mult: PIPEFILL
-# -- input A: 01110110100111110011001110101001, input B: 01010010111010101010000100111100; output Z: 00000010000000000010001100010111
 # FP_mult: SEND
-# -- input A: 01110110100111110011001110101001, input B: 01010010111010101010000100111100; output Z: 11100100010000000010001000111011
 # FP_mult: input A = -2.39846e+20, input B = 59.1085, output OUT = -1.4177e+22
 # FP_mult: input A = 11100001010100000000100010010110, input B = 01000010011011000110111100100100, output OUT = 11100100010000000010001000111011
-# UVM_INFO @ 2185: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11001001001100011000111110101110, input B: 11110001001101111010110110111001; output Z: 11100100010000000010001000111011
+# UVM_INFO @ 4285: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.6145e+33, input B = 5.03864e+11, output OUT = inf
 # refmod: input A = 01110110100111110011001110101001, input B = 01010010111010101010000100111100, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 11001001001100011000111110101110, input B: 11110001001101111010110110111001; output Z: 11100100010000000010001000111011
 # FP_mult: SEND
-# -- input A: 11001001001100011000111110101110, input B: 11110001001101111010110110111001; output Z: 01111111100000000000000000000000
 # FP_mult: input A = 1.6145e+33, input B = 5.03864e+11, output OUT = inf
 # FP_mult: input A = 01110110100111110011001110101001, input B = 01010010111010101010000100111100, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 2215: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10000010000101100001110000010010, input B: 01000011111100101110000011100100; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 4345: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -727291, input B = -9.09532e+29, output OUT = 6.61495e+35
 # refmod: input A = 11001001001100011000111110101110, input B = 11110001001101111010110110111001, output OUT = 01111010111111101100110001101000
-# FP_mult: PIPEFILL
-# -- input A: 10000010000101100001110000010010, input B: 01000011111100101110000011100100; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 10000010000101100001110000010010, input B: 01000011111100101110000011100100; output Z: 01111010111111101100110001101000
 # FP_mult: input A = -727291, input B = -9.09532e+29, output OUT = 6.61495e+35
 # FP_mult: input A = 11001001001100011000111110101110, input B = 11110001001101111010110110111001, output OUT = 01111010111111101100110001101000
-# UVM_INFO @ 2245: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00110101110011111110001111000100, input B: 10110101110111000110011110010101; output Z: 01111010111111101100110001101000
+# UVM_INFO @ 4405: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.10283e-37, input B = 485.757, output OUT = -5.35708e-35
 # refmod: input A = 10000010000101100001110000010010, input B = 01000011111100101110000011100100, output OUT = 10000110100011100110101001100111
-# FP_mult: PIPEFILL
-# -- input A: 00110101110011111110001111000100, input B: 10110101110111000110011110010101; output Z: 01111010111111101100110001101000
 # FP_mult: SEND
-# -- input A: 00110101110011111110001111000100, input B: 10110101110111000110011110010101; output Z: 10000110100011100110101001100111
 # FP_mult: input A = -1.10283e-37, input B = 485.757, output OUT = -5.35708e-35
 # FP_mult: input A = 10000010000101100001110000010010, input B = 01000011111100101110000011100100, output OUT = 10000110100011100110101001100111
-# UVM_INFO @ 2275: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01100011011010001001101111111000, input B: 11001001110010101011110101011100; output Z: 10000110100011100110101001100111
+# UVM_INFO @ 4465: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.5489e-06, input B = -1.64214e-06, output OUT = -2.54351e-12
 # refmod: input A = 00110101110011111110001111000100, input B = 10110101110111000110011110010101, output OUT = 10101100001100101111101111011010
-# FP_mult: PIPEFILL
-# -- input A: 01100011011010001001101111111000, input B: 11001001110010101011110101011100; output Z: 10000110100011100110101001100111
 # FP_mult: SEND
-# -- input A: 01100011011010001001101111111000, input B: 11001001110010101011110101011100; output Z: 10101100001100101111101111011010
 # FP_mult: input A = 1.5489e-06, input B = -1.64214e-06, output OUT = -2.54351e-12
 # FP_mult: input A = 00110101110011111110001111000100, input B = 10110101110111000110011110010101, output OUT = 10101100001100101111101111011010
-# UVM_INFO @ 2305: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00111000111101111010000110111010, input B: 00011100100101110100001100101000; output Z: 10101100001100101111101111011010
+# UVM_INFO @ 4525: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 4.29088e+21, input B = -1.66084e+06, output OUT = -7.12649e+27
 # refmod: input A = 01100011011010001001101111111000, input B = 11001001110010101011110101011100, output OUT = 11101101101110000011011100100000
-# FP_mult: PIPEFILL
-# -- input A: 00111000111101111010000110111010, input B: 00011100100101110100001100101000; output Z: 10101100001100101111101111011010
 # FP_mult: SEND
-# -- input A: 00111000111101111010000110111010, input B: 00011100100101110100001100101000; output Z: 11101101101110000011011100100000
 # FP_mult: input A = 4.29088e+21, input B = -1.66084e+06, output OUT = -7.12649e+27
 # FP_mult: input A = 01100011011010001001101111111000, input B = 11001001110010101011110101011100, output OUT = 11101101101110000011011100100000
-# UVM_INFO @ 2335: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00101011010111100001001001110110, input B: 10010101001001000000100010110101; output Z: 11101101101110000011011100100000
+# UVM_INFO @ 4585: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 0.00011808, input B = 1.00097e-21, output OUT = 1.18195e-25
 # refmod: input A = 00111000111101111010000110111010, input B = 00011100100101110100001100101000, output OUT = 00010110000100100101000101011011
-# FP_mult: PIPEFILL
-# -- input A: 00101011010111100001001001110110, input B: 10010101001001000000100010110101; output Z: 11101101101110000011011100100000
 # FP_mult: SEND
-# -- input A: 00101011010111100001001001110110, input B: 10010101001001000000100010110101; output Z: 00010110000100100101000101011011
 # FP_mult: input A = 0.00011808, input B = 1.00097e-21, output OUT = 1.18195e-25
 # FP_mult: input A = 00111000111101111010000110111010, input B = 00011100100101110100001100101000, output OUT = 00010110000100100101000101011011
-# UVM_INFO @ 2365: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11110011000010101110101100111110, input B: 00010010010000101111000100010000; output Z: 00010110000100100101000101011011
+# UVM_INFO @ 4645: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 7.88959e-13, input B = -3.31264e-26, output OUT = -2.61354e-38
 # refmod: input A = 00101011010111100001001001110110, input B = 10010101001001000000100010110101, output OUT = 10000001000011100100101101100001
-# FP_mult: PIPEFILL
-# -- input A: 11110011000010101110101100111110, input B: 00010010010000101111000100010000; output Z: 00010110000100100101000101011011
 # FP_mult: SEND
-# -- input A: 11110011000010101110101100111110, input B: 00010010010000101111000100010000; output Z: 10000001000011100100101101100001
 # FP_mult: input A = 7.88959e-13, input B = -3.31264e-26, output OUT = -2.61354e-38
 # FP_mult: input A = 00101011010111100001001001110110, input B = 10010101001001000000100010110101, output OUT = 10000001000011100100101101100001
-# UVM_INFO @ 2395: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01111010101101011110011011010010, input B: 00100001010111011001101111000110; output Z: 10000001000011100100101101100001
+# UVM_INFO @ 4705: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.10063e+31, input B = 6.15127e-28, output OUT = -6770.27
 # refmod: input A = 11110011000010101110101100111110, input B = 00010010010000101111000100010000, output OUT = 11000101110100111001001000101010
-# FP_mult: PIPEFILL
-# -- input A: 01111010101101011110011011010010, input B: 00100001010111011001101111000110; output Z: 10000001000011100100101101100001
 # FP_mult: SEND
-# -- input A: 01111010101101011110011011010010, input B: 00100001010111011001101111000110; output Z: 11000101110100111001001000101010
 # FP_mult: input A = -1.10063e+31, input B = 6.15127e-28, output OUT = -6770.27
 # FP_mult: input A = 11110011000010101110101100111110, input B = 00010010010000101111000100010000, output OUT = 11000101110100111001001000101010
-# UVM_INFO @ 2425: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101101110101011100000001010111, input B: 01100001111100100100000101101100; output Z: 11000101110100111001001000101010
+# UVM_INFO @ 4765: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 4.72244e+35, input B = 7.50839e-19, output OUT = 3.54579e+17
 # refmod: input A = 01111010101101011110011011010010, input B = 00100001010111011001101111000110, output OUT = 01011100100111010111011011110011
-# FP_mult: PIPEFILL
-# -- input A: 01101101110101011100000001010111, input B: 01100001111100100100000101101100; output Z: 11000101110100111001001000101010
 # FP_mult: SEND
-# -- input A: 01101101110101011100000001010111, input B: 01100001111100100100000101101100; output Z: 01011100100111010111011011110011
 # FP_mult: input A = 4.72244e+35, input B = 7.50839e-19, output OUT = 3.54579e+17
 # FP_mult: input A = 01111010101101011110011011010010, input B = 00100001010111011001101111000110, output OUT = 01011100100111010111011011110011
-# UVM_INFO @ 2455: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00101100011011111001111000000010, input B: 00110100100101000111000100011111; output Z: 01011100100111010111011011110011
+# UVM_INFO @ 4825: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 8.2691e+27, input B = 5.58603e+20, output OUT = inf
 # refmod: input A = 01101101110101011100000001010111, input B = 01100001111100100100000101101100, output OUT = 01111111100000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 00101100011011111001111000000010, input B: 00110100100101000111000100011111; output Z: 01011100100111010111011011110011
 # FP_mult: SEND
-# -- input A: 00101100011011111001111000000010, input B: 00110100100101000111000100011111; output Z: 01111111100000000000000000000000
 # FP_mult: input A = 8.2691e+27, input B = 5.58603e+20, output OUT = inf
 # FP_mult: input A = 01101101110101011100000001010111, input B = 01100001111100100100000101101100, output OUT = 01111111100000000000000000000000
-# UVM_INFO @ 2485: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00100101010010100101101001011100, input B: 01010011101010101000110011010000; output Z: 01111111100000000000000000000000
+# UVM_INFO @ 4885: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 3.40517e-12, input B = 2.76495e-07, output OUT = 9.4151e-19
 # refmod: input A = 00101100011011111001111000000010, input B = 00110100100101000111000100011111, output OUT = 00100001100010101111000100111011
-# FP_mult: PIPEFILL
-# -- input A: 00100101010010100101101001011100, input B: 01010011101010101000110011010000; output Z: 01111111100000000000000000000000
 # FP_mult: SEND
-# -- input A: 00100101010010100101101001011100, input B: 01010011101010101000110011010000; output Z: 00100001100010101111000100111011
 # FP_mult: input A = 3.40517e-12, input B = 2.76495e-07, output OUT = 9.4151e-19
 # FP_mult: input A = 00101100011011111001111000000010, input B = 00110100100101000111000100011111, output OUT = 00100001100010101111000100111011
-# UVM_INFO @ 2515: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01011000001111111001101110111100, input B: 10011011100001000001001101100110; output Z: 00100001100010101111000100111011
+# UVM_INFO @ 4945: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.75513e-16, input B = 1.46501e+12, output OUT = 0.000257129
 # refmod: input A = 00100101010010100101101001011100, input B = 01010011101010101000110011010000, output OUT = 00111001100001101100111101001111
-# FP_mult: PIPEFILL
-# -- input A: 01011000001111111001101110111100, input B: 10011011100001000001001101100110; output Z: 00100001100010101111000100111011
 # FP_mult: SEND
-# -- input A: 01011000001111111001101110111100, input B: 10011011100001000001001101100110; output Z: 00111001100001101100111101001111
 # FP_mult: input A = 1.75513e-16, input B = 1.46501e+12, output OUT = 0.000257129
 # FP_mult: input A = 00100101010010100101101001011100, input B = 01010011101010101000110011010000, output OUT = 00111001100001101100111101001111
-# UVM_INFO @ 2545: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10101101110000001101010011010101, input B: 11100000110111100010000101010011; output Z: 00111001100001101100111101001111
+# UVM_INFO @ 5005: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 8.42702e+14, input B = -2.18501e-22, output OUT = -1.84131e-07
 # refmod: input A = 01011000001111111001101110111100, input B = 10011011100001000001001101100110, output OUT = 10110100010001011011010110100100
-# FP_mult: PIPEFILL
-# -- input A: 10101101110000001101010011010101, input B: 11100000110111100010000101010011; output Z: 00111001100001101100111101001111
 # FP_mult: SEND
-# -- input A: 10101101110000001101010011010101, input B: 11100000110111100010000101010011; output Z: 10110100010001011011010110100100
 # FP_mult: input A = 8.42702e+14, input B = -2.18501e-22, output OUT = -1.84131e-07
 # FP_mult: input A = 01011000001111111001101110111100, input B = 10011011100001000001001101100110, output OUT = 10110100010001011011010110100100
-# UVM_INFO @ 2575: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00111001011011100001001100001111, input B: 01100100100100100011000100001010; output Z: 10110100010001011011010110100100
+# UVM_INFO @ 5065: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -2.19224e-11, input B = -1.28049e+20, output OUT = 2.80715e+09
 # refmod: input A = 10101101110000001101010011010101, input B = 11100000110111100010000101010011, output OUT = 01001111001001110101000110101011
-# FP_mult: PIPEFILL
-# -- input A: 00111001011011100001001100001111, input B: 01100100100100100011000100001010; output Z: 10110100010001011011010110100100
 # FP_mult: SEND
-# -- input A: 00111001011011100001001100001111, input B: 01100100100100100011000100001010; output Z: 01001111001001110101000110101011
 # FP_mult: input A = -2.19224e-11, input B = -1.28049e+20, output OUT = 2.80715e+09
 # FP_mult: input A = 10101101110000001101010011010101, input B = 11100000110111100010000101010011, output OUT = 01001111001001110101000110101011
-# UVM_INFO @ 2605: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11110010101111011100000111110001, input B: 00111011000100000000000000010100; output Z: 01001111001001110101000110101011
+# UVM_INFO @ 5125: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 0.000227045, input B = 2.15741e+22, output OUT = 4.89829e+18
 # refmod: input A = 00111001011011100001001100001111, input B = 01100100100100100011000100001010, output OUT = 01011110100001111111010001111010
-# FP_mult: PIPEFILL
-# -- input A: 11110010101111011100000111110001, input B: 00111011000100000000000000010100; output Z: 01001111001001110101000110101011
 # FP_mult: SEND
-# -- input A: 11110010101111011100000111110001, input B: 00111011000100000000000000010100; output Z: 01011110100001111111010001111010
 # FP_mult: input A = 0.000227045, input B = 2.15741e+22, output OUT = 4.89829e+18
 # FP_mult: input A = 00111001011011100001001100001111, input B = 01100100100100100011000100001010, output OUT = 01011110100001111111010001111010
-# UVM_INFO @ 2635: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10000111000100111111111000101011, input B: 11100010011101100000100110111001; output Z: 01011110100001111111010001111010
+# UVM_INFO @ 5185: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -7.51707e+30, input B = 0.00219727, output OUT = -1.6517e+28
 # refmod: input A = 11110010101111011100000111110001, input B = 00111011000100000000000000010100, output OUT = 11101110010101010111101001001101
-# FP_mult: PIPEFILL
-# -- input A: 10000111000100111111111000101011, input B: 11100010011101100000100110111001; output Z: 01011110100001111111010001111010
 # FP_mult: SEND
-# -- input A: 10000111000100111111111000101011, input B: 11100010011101100000100110111001; output Z: 11101110010101010111101001001101
 # FP_mult: input A = -7.51707e+30, input B = 0.00219727, output OUT = -1.6517e+28
 # FP_mult: input A = 11110010101111011100000111110001, input B = 00111011000100000000000000010100, output OUT = 11101110010101010111101001001101
-# UVM_INFO @ 2665: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10001010010011010111101000011010, input B: 01011111000101111100010111101111; output Z: 11101110010101010111101001001101
+# UVM_INFO @ 5245: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.11337e-34, input B = -1.13465e+21, output OUT = 1.26329e-13
 # refmod: input A = 10000111000100111111111000101011, input B = 11100010011101100000100110111001, output OUT = 00101010000011100011101111011100
-# FP_mult: PIPEFILL
-# -- input A: 10001010010011010111101000011010, input B: 01011111000101111100010111101111; output Z: 11101110010101010111101001001101
 # FP_mult: SEND
-# -- input A: 10001010010011010111101000011010, input B: 01011111000101111100010111101111; output Z: 00101010000011100011101111011100
 # FP_mult: input A = -1.11337e-34, input B = -1.13465e+21, output OUT = 1.26329e-13
 # FP_mult: input A = 10000111000100111111111000101011, input B = 11100010011101100000100110111001, output OUT = 00101010000011100011101111011100
-# UVM_INFO @ 2695: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11100110000010001111111011111011, input B: 00100001101110000100101000110101; output Z: 00101010000011100011101111011100
+# UVM_INFO @ 5305: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -9.89336e-33, input B = 1.09364e+19, output OUT = -1.08198e-13
 # refmod: input A = 10001010010011010111101000011010, input B = 01011111000101111100010111101111, output OUT = 10101001111100111010001111001000
-# FP_mult: PIPEFILL
-# -- input A: 11100110000010001111111011111011, input B: 00100001101110000100101000110101; output Z: 00101010000011100011101111011100
 # FP_mult: SEND
-# -- input A: 11100110000010001111111011111011, input B: 00100001101110000100101000110101; output Z: 10101001111100111010001111001000
 # FP_mult: input A = -9.89336e-33, input B = 1.09364e+19, output OUT = -1.08198e-13
 # FP_mult: input A = 10001010010011010111101000011010, input B = 01011111000101111100010111101111, output OUT = 10101001111100111010001111001000
-# UVM_INFO @ 2725: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101110000010110101111101001100, input B: 00110111010101011101011000000100; output Z: 10101001111100111010001111001000
+# UVM_INFO @ 5365: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.61736e+23, input B = 1.2488e-18, output OUT = -201976
 # refmod: input A = 11100110000010001111111011111011, input B = 00100001101110000100101000110101, output OUT = 11001000010001010011110111110101
-# FP_mult: PIPEFILL
-# -- input A: 01101110000010110101111101001100, input B: 00110111010101011101011000000100; output Z: 10101001111100111010001111001000
 # FP_mult: SEND
-# -- input A: 01101110000010110101111101001100, input B: 00110111010101011101011000000100; output Z: 11001000010001010011110111110101
 # FP_mult: input A = -1.61736e+23, input B = 1.2488e-18, output OUT = -201976
 # FP_mult: input A = 11100110000010001111111011111011, input B = 00100001101110000100101000110101, output OUT = 11001000010001010011110111110101
-# UVM_INFO @ 2755: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01101100011101110110011100101000, input B: 10000001101110010011000100010101; output Z: 11001000010001010011110111110101
+# UVM_INFO @ 5425: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.07834e+28, input B = 1.27456e-05, output OUT = 1.37441e+23
 # refmod: input A = 01101110000010110101111101001100, input B = 00110111010101011101011000000100, output OUT = 01100101111010001101010110011100
-# FP_mult: PIPEFILL
-# -- input A: 01101100011101110110011100101000, input B: 10000001101110010011000100010101; output Z: 11001000010001010011110111110101
 # FP_mult: SEND
-# -- input A: 01101100011101110110011100101000, input B: 10000001101110010011000100010101; output Z: 01100101111010001101010110011100
 # FP_mult: input A = 1.07834e+28, input B = 1.27456e-05, output OUT = 1.37441e+23
 # FP_mult: input A = 01101110000010110101111101001100, input B = 00110111010101011101011000000100, output OUT = 01100101111010001101010110011100
-# UVM_INFO @ 2785: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 11010100011110101110110010111000, input B: 00011100111111111110000101101000; output Z: 01100101111010001101010110011100
+# UVM_INFO @ 5485: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.19637e+27, input B = -6.80287e-38, output OUT = -8.13873e-11
 # refmod: input A = 01101100011101110110011100101000, input B = 10000001101110010011000100010101, output OUT = 10101110101100101111100011111011
-# FP_mult: PIPEFILL
-# -- input A: 11010100011110101110110010111000, input B: 00011100111111111110000101101000; output Z: 01100101111010001101010110011100
 # FP_mult: SEND
-# -- input A: 11010100011110101110110010111000, input B: 00011100111111111110000101101000; output Z: 10101110101100101111100011111011
 # FP_mult: input A = 1.19637e+27, input B = -6.80287e-38, output OUT = -8.13873e-11
 # FP_mult: input A = 01101100011101110110011100101000, input B = 10000001101110010011000100010101, output OUT = 10101110101100101111100011111011
-# UVM_INFO @ 2815: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00110001110101100011011101010010, input B: 00100110100010111110000111111011; output Z: 10101110101100101111100011111011
+# UVM_INFO @ 5545: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -4.31085e+12, input B = 1.69328e-21, output OUT = -7.29946e-09
 # refmod: input A = 11010100011110101110110010111000, input B = 00011100111111111110000101101000, output OUT = 10110001111110101100111010111011
-# FP_mult: PIPEFILL
-# -- input A: 00110001110101100011011101010010, input B: 00100110100010111110000111111011; output Z: 10101110101100101111100011111011
 # FP_mult: SEND
-# -- input A: 00110001110101100011011101010010, input B: 00100110100010111110000111111011; output Z: 10110001111110101100111010111011
 # FP_mult: input A = -4.31085e+12, input B = 1.69328e-21, output OUT = -7.29946e-09
 # FP_mult: input A = 11010100011110101110110010111000, input B = 00011100111111111110000101101000, output OUT = 10110001111110101100111010111011
-# UVM_INFO @ 2845: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10111110001010000101111110000011, input B: 11001111101011111010100001010010; output Z: 10110001111110101100111010111011
+# UVM_INFO @ 5605: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 6.23451e-09, input B = 9.70631e-16, output OUT = 6.05141e-24
 # refmod: input A = 00110001110101100011011101010010, input B = 00100110100010111110000111111011, output OUT = 00011000111010100001101001000100
-# FP_mult: PIPEFILL
-# -- input A: 10111110001010000101111110000011, input B: 11001111101011111010100001010010; output Z: 10110001111110101100111010111011
 # FP_mult: SEND
-# -- input A: 10111110001010000101111110000011, input B: 11001111101011111010100001010010; output Z: 00011000111010100001101001000100
 # FP_mult: input A = 6.23451e-09, input B = 9.70631e-16, output OUT = 6.05141e-24
 # FP_mult: input A = 00110001110101100011011101010010, input B = 00100110100010111110000111111011, output OUT = 00011000111010100001101001000100
-# UVM_INFO @ 2875: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 00011100110101101010010010000101, input B: 11100011010011010010100011001110; output Z: 00011000111010100001101001000100
+# UVM_INFO @ 5665: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -0.164427, input B = -5.89409e+09, output OUT = 9.69146e+08
 # refmod: input A = 10111110001010000101111110000011, input B = 11001111101011111010100001010010, output OUT = 01001110011001110000111111111110
-# FP_mult: PIPEFILL
-# -- input A: 00011100110101101010010010000101, input B: 11100011010011010010100011001110; output Z: 00011000111010100001101001000100
 # FP_mult: SEND
-# -- input A: 00011100110101101010010010000101, input B: 11100011010011010010100011001110; output Z: 01001110011001110000111111111110
 # FP_mult: input A = -0.164427, input B = -5.89409e+09, output OUT = 9.69146e+08
 # FP_mult: input A = 10111110001010000101111110000011, input B = 11001111101011111010100001010010, output OUT = 01001110011001110000111111111110
-# UVM_INFO @ 2905: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10101010001111101111001000001111, input B: 11010111111010011100000000001000; output Z: 01001110011001110000111111111110
+# UVM_INFO @ 5725: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.42039e-21, input B = -3.78452e+21, output OUT = -5.37548
 # refmod: input A = 00011100110101101010010010000101, input B = 11100011010011010010100011001110, output OUT = 11000000101011000000001111110101
-# FP_mult: PIPEFILL
-# -- input A: 10101010001111101111001000001111, input B: 11010111111010011100000000001000; output Z: 01001110011001110000111111111110
 # FP_mult: SEND
-# -- input A: 10101010001111101111001000001111, input B: 11010111111010011100000000001000; output Z: 11000000101011000000001111110101
 # FP_mult: input A = 1.42039e-21, input B = -3.78452e+21, output OUT = -5.37548
 # FP_mult: input A = 00011100110101101010010010000101, input B = 11100011010011010010100011001110, output OUT = 11000000101011000000001111110101
-# UVM_INFO @ 2935: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01000101100111011111000010111110, input B: 11011111111010010011010001000111; output Z: 11000000101011000000001111110101
+# UVM_INFO @ 5785: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -1.69594e-13, input B = -5.14022e+14, output OUT = 87.1749
 # refmod: input A = 10101010001111101111001000001111, input B = 11010111111010011100000000001000, output OUT = 01000010101011100101100110001011
-# FP_mult: PIPEFILL
-# -- input A: 01000101100111011111000010111110, input B: 11011111111010010011010001000111; output Z: 11000000101011000000001111110101
 # FP_mult: SEND
-# -- input A: 01000101100111011111000010111110, input B: 11011111111010010011010001000111; output Z: 01000010101011100101100110001011
 # FP_mult: input A = -1.69594e-13, input B = -5.14022e+14, output OUT = 87.1749
 # FP_mult: input A = 10101010001111101111001000001111, input B = 11010111111010011100000000001000, output OUT = 01000010101011100101100110001011
-# UVM_INFO @ 2965: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01001011011100101100010110010110, input B: 01001010110000000001011001101011; output Z: 01000010101011100101100110001011
+# UVM_INFO @ 5845: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 5054.09, input B = -3.36083e+19, output OUT = -1.69859e+23
 # refmod: input A = 01000101100111011111000010111110, input B = 11011111111010010011010001000111, output OUT = 11100110000011111110000001011110
-# FP_mult: PIPEFILL
-# -- input A: 01001011011100101100010110010110, input B: 01001010110000000001011001101011; output Z: 01000010101011100101100110001011
 # FP_mult: SEND
-# -- input A: 01001011011100101100010110010110, input B: 01001010110000000001011001101011; output Z: 11100110000011111110000001011110
 # FP_mult: input A = 5054.09, input B = -3.36083e+19, output OUT = -1.69859e+23
 # FP_mult: input A = 01000101100111011111000010111110, input B = 11011111111010010011010001000111, output OUT = 11100110000011111110000001011110
-# UVM_INFO @ 2995: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 10000110111000001110100001111001, input B: 00000111110100011011010111111100; output Z: 11100110000011111110000001011110
+# UVM_INFO @ 5905: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = 1.59103e+07, input B = 6.29433e+06, output OUT = 1.00145e+14
 # refmod: input A = 01001011011100101100010110010110, input B = 01001010110000000001011001101011, output OUT = 01010110101101100010100101110011
-# FP_mult: PIPEFILL
-# -- input A: 10000110111000001110100001111001, input B: 00000111110100011011010111111100; output Z: 11100110000011111110000001011110
 # FP_mult: SEND
-# -- input A: 10000110111000001110100001111001, input B: 00000111110100011011010111111100; output Z: 01010110101101100010100101110011
 # FP_mult: input A = 1.59103e+07, input B = 6.29433e+06, output OUT = 1.00145e+14
 # FP_mult: input A = 01001011011100101100010110010110, input B = 01001010110000000001011001101011, output OUT = 01010110101101100010100101110011
-# UVM_INFO @ 3025: uvm_test_top.env_h.comp [Comparator Match] 
-# FP_mult: WAIT
-# -- input A: 01001000010001100111001010101000, input B: 10111000000000010001100111101010; output Z: 01010110101101100010100101110011
+# UVM_INFO @ 5965: uvm_test_top.env_h.comp [Comparator Match] 
 # REFMOD compute
 # refmod: input A = -8.4601e-35, input B = 3.15538e-34, output OUT = -0
 # refmod: input A = 10000110111000001110100001111001, input B = 00000111110100011011010111111100, output OUT = 10000000000000000000000000000000
-# FP_mult: PIPEFILL
-# -- input A: 01001000010001100111001010101000, input B: 10111000000000010001100111101010; output Z: 01010110101101100010100101110011
 # FP_mult: SEND
-# -- input A: 01001000010001100111001010101000, input B: 10111000000000010001100111101010; output Z: 10000000000000000000000000000000
 # FP_mult: input A = -8.4601e-35, input B = 3.15538e-34, output OUT = -0
 # FP_mult: input A = 10000110111000001110100001111001, input B = 00000111110100011011010111111100, output OUT = 10000000000000000000000000000000
-# UVM_INFO @ 3055: uvm_test_top.env_h.comp [Comparator Match] 
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3055: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../tb/env.sv(42) @ 3055: uvm_test_top.env_h [env] Reporting matched 98
-# UVM_ERROR ../tb/env.sv(44) @ 3055: uvm_test_top.env_h [env] Saw 3 mismatched samples
+# UVM_INFO @ 6025: uvm_test_top.env_h.comp [Comparator Match] 
+# REFMOD compute
+# refmod: input A = 203211, input B = -3.07801e-05, output OUT = -6.25485
+# refmod: input A = 01001000010001100111001010101000, input B = 10111000000000010001100111101010, output OUT = 11000000110010000010011110111010
+# FP_mult: SEND
+# FP_mult: input A = 203211, input B = -3.07801e-05, output OUT = -6.25485
+# FP_mult: input A = 01001000010001100111001010101000, input B = 10111000000000010001100111101010, output OUT = 11000000110010000010011110111010
+# UVM_INFO @ 6085: uvm_test_top.env_h.comp [Comparator Match] 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 6085: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../tb/env.sv(42) @ 6085: uvm_test_top.env_h [env] Reporting matched 99
+# UVM_ERROR ../tb/env.sv(44) @ 6085: uvm_test_top.env_h [env] Saw 2 mismatched samples
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  109
-# UVM_WARNING :    3
+# UVM_INFO :  108
+# UVM_WARNING :    2
 # UVM_ERROR :    1
 # UVM_FATAL :    0
 # ** Report counts by id
-# [Comparator Match]    98
-# [Comparator Mismatch]     3
-# [MISCMP]     6
+# [Comparator Match]    99
+# [Comparator Mismatch]     2
+# [MISCMP]     4
 # [Questa UVM]     2
 # [RNTST]     1
 # [TEST_DONE]     1
 # [env]     2
 # ** Note: $finish    : /software/mentor/questa10.7c/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 3055 ns  Iteration: 61  Instance: /top
+#    Time: 6085 ns  Iteration: 58  Instance: /top
 # Break in Task uvm_pkg/uvm_root::run_test at /software/mentor/questa10.7c/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# End time: 21:01:26 on Apr 15,2021, Elapsed time: 0:02:42
+# End time: 20:50:29 on Apr 15,2021, Elapsed time: 0:01:59
 # Errors: 0, Warnings: 21

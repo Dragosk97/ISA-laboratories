@@ -24,7 +24,7 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                 end
 
                 WAIT: begin
-					$display("FPU_mult: WAIT");
+					$display("FP_mult: WAIT");
                     $display("-- input A: %b, input B: %b; output Z: %b", in_inter.A, in_inter.B, out_inter.data);
 					if(in_inter.valid) begin
                         in_inter.ready <= 0;
@@ -34,18 +34,17 @@ module DUT(dut_if.port_in in_inter, dut_if.port_out out_inter, output enum logic
                 end
 	
                 PIPEFILL: begin
-						$display("FPU_mult: PIPEFILL");
+						$display("FP_mult: PIPEFILL");
                         $display("-- input A: %b, input B: %b; output Z: %b", in_inter.A, in_inter.B, out_inter.data);
                         out_inter.valid <= 1;
                         state <= SEND;
                     end
 
                 SEND: begin
-					$display("FPU_mult: SEND");
+					$display("FP_mult: SEND");
                     $display("-- input A: %b, input B: %b; output Z: %b", in_inter.A, in_inter.B, out_inter.data);
-                    $display("");
-					$display("dadda_mult: input A = %g, input B = %g, output OUT = %g",$bitstoshortreal(A_pipe),$bitstoshortreal(B_pipe),$bitstoshortreal(out_inter.data));
-                    $display("dadda_mult: input A = %b, input B = %b, output OUT = %b",A_pipe,B_pipe,out_inter.data);
+					$display("FP_mult: input A = %g, input B = %g, output OUT = %g",$bitstoshortreal(A_pipe),$bitstoshortreal(B_pipe),$bitstoshortreal(out_inter.data));
+                    $display("FP_mult: input A = %b, input B = %b, output OUT = %b",A_pipe,B_pipe,out_inter.data);
 					A_pipe <= in_inter.A;
 					B_pipe <= in_inter.B;
                     if(out_inter.ready) begin
