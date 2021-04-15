@@ -20,7 +20,7 @@ The directories are organized as:
    
 - **./MBE_dadda**
  
-All the folders are internally organized as: 
+- All the folders are internally organized as: 
       - **./sim**: it contains the result of the simulation on QuestaSim, which is the transcript file
       - **./src**: it contains the DUT
       - **./tb**: it contains the UVM framework   
