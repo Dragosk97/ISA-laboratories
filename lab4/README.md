@@ -26,8 +26,8 @@ The directories are organized as:
     - **./tb**: it contains the UVM framework   
 
 - **./FPU_mult**: 
-    here two versions of the following files are provided, where _<file>_generic.<ext>_
-    is relative to the generic DUT pipeline length, while the _<file>.<ext>_ is the version
+    here two versions of the following files are provided, where _\<file\>_generic.\<ext\>_
+    is relative to the generic DUT pipeline length, while the _\<file\>.\<ext\>_ is the version
     relative to the specific DUT, analyzing two data at the same time.
    - **./sim**: 
         - _run_sim_generic.do_
