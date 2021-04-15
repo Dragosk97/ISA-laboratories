@@ -26,22 +26,19 @@ The directories are organized as:
     - **./tb**: it contains the UVM framework   
 
 - **./FPU_mult**: 
-   - **./sim**: it contains the script to be run and the result of the simulation on QuestaSim, which is the transcript file
-   - **./src**: 
-      - _DUT_generic.sv_: device under test of the first version
-      - _DUT.sv_: device under test of the second version
-   - **./tb**:
-      - _refmod_generic.sv_: this file is referring to the first version 
-      - _refmod.sv_: this refers to the second case     
-
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+    here two versions of the following files are provided, where _<file>_generic.<ext>_
+    is relative to the generic DUT pipeline length, while the _<file>.<ext>_ is the version
+    relative to the specific DUT, analyzing two data at the same time.
+   - **./sim**: 
+        - _run_sim_generic.do_
+        - _run_sim.do_
+        - _transcript_generic_
+        - _transcript_
+    - **./src**: 
+        - _DUT_generic.sv_
+        - _DUT.sv_
+    - **./tb**:
+        - _refmod_generic.sv_ 
+        - _refmod.sv_
+        - _top_generic.sv_
+        - _top.sv_
