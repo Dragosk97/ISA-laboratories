@@ -3,8 +3,8 @@ class packet_in extends uvm_sequence_item;
     rand integer B;
 
     constraint my_range {
-        A inside {[0:2^(24)-1]};
-        B inside {[0:2^(24)-1]};
+        A inside {[0:(1<<24)-1]};
+        B inside {[0:(1<<24)-1]};
     }
 
     `uvm_object_utils_begin(packet_in)
